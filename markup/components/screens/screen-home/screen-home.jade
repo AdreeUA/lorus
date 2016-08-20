@@ -1,0 +1,12 @@
+include ../../header/header
+include ../../icon-link/icon-link
+
+mixin screen-home(data)
+    +b.screen-home()&attributes(attributes)
+        +header(header.default).screen-home__header
+        
+        +e.content
+            +e.labels
+                -var labels = ['logistics', 'pl', 'engineering'];
+                each label in labels
+                    +icon-link(iconLink.homeScreen[label]).screen-home__label 

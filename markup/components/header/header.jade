@@ -1,3 +1,18 @@
+include ../logo/logo
+include ../nav/nav
+include ../link/link
+include ../search-mini/search-mini
+
 mixin header(data) 
-    +b.header()&attributes(attributes) 
+    +b.header()&attributes(attributes)
+    
+        +e.left
+            +logo(logo.main).header__logo
+            +nav(nav.header)._horiz.header__nav(itemClass='header__nav-item')
+        
+        +e.right
+            +search-mini.header__search
+            +link.header__lang
+                | in English
+        
         block

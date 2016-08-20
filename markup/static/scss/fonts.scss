@@ -1,3 +1,5 @@
 @include font-face('ProximaNova', '../fonts/ProximaNova-Thin', 100, $exts: woff woff2 ttf);
-@include font-face('ProximaNova', '../fonts/ProximaNovaLight', 300, $exts: woff woff2 ttf);
+@include font-face('ProximaNova', '../fonts/ProximaNova-Light', 300, $exts: woff woff2 ttf);
 @include font-face('ProximaNova', '../fonts/ProximaNovaRegular', normal, $exts: woff woff2 ttf);
+
+$font-1: ProximaNova, Arial, sans-serif;

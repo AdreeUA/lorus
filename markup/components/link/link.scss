@@ -1,3 +1,16 @@
 .link {
+    border-bottom: 1px solid;
 
+    color: $color-1;
+    font-size: rem(44);
+    font-weight: 300;
+    text-decoration: none;
+
+    transition: color .4s, border-color .4s;
+
+    &:hover {
+        color: #000;
+
+        border-color: $color-2;
+    }
 }

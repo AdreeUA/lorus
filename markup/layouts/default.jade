@@ -1,5 +1,6 @@
 include ../../node_modules/bemto.jade/bemto
 
+include ../components/page/page
 include ../components/header/header
 include ../components/footer/footer
 
@@ -8,10 +9,11 @@ html(lang='ru')
     include ../components/head/head
 
     body
-        +header()
-        
-        block content
-        
-        +footer()
+        +page
+            +header
+            
+            block content
+            
+            +footer
 
         script(src='%=static=%js/main%=hash=%%=min=%.js')

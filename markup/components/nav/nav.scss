@@ -1,3 +1,14 @@
 .nav {
 
+    &__menu {
+        @include list-reset();
+    }
+
+    &_horiz {
+        font-size: 0;
+
+        .nav__item {
+            display: inline-block;
+        }
+    }
 }

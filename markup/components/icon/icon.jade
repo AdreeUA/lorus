@@ -1,0 +1,2 @@
+mixin icon(data)
+    != jadeHelpers.Icon.call(locals, {iconName: data.icon, className: `icon icon_${data.icon} ${data.class || ''}`})

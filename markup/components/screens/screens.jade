@@ -1,0 +1,8 @@
+include screen-home/screen-home
+
+mixin screens(data)
+    -var screens = ['screen-home']
+
+    +b.screens()&attributes(attributes)
+        each screen in screens
+            +#{screen}.screens__item

@@ -1,0 +1,22 @@
+.screen-home {
+    $content-width: rem(2190);
+
+    &__content {
+        padding: rem(160) calc(50% - #{$content-width} / 2);
+    }
+
+    &__labels {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        flex-grow: 1;
+        padding: 0 rem(74);
+
+        vertical-align: middle;
+    }
+}

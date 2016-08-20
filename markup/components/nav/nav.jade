@@ -1,3 +1,17 @@
+include ../screenreader/screenreader
+include ../link/link
+
 mixin nav(data)
-    +b.nav()&attributes(attributes)
+    +b.NAV.nav()&attributes(attributes)
+        +screenreader()
+            | #{data.screenreader || 'Навигация'}
+            
+        +e.UL.menu
+            
+            each item in data.items
+                -var itemClass = item.active ? '_active ' + attributes.itemClass : attributes.itemClass
+                +e.item(class=itemClass)
+                    +link({ href: item.href }).nav__link
+                        | #{item.text}
+            
         block

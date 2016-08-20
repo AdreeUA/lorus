@@ -1,3 +1,5 @@
 mixin link(data)
-    +b.link()&attributes(attributes)
+    -data = data || {};
+
+    +b.link(href=(data.href || jv0))&attributes(attributes)
         block

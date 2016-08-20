@@ -1,0 +1,11 @@
+include ../icon/icon
+include ../screenreader/screenreader
+
+mixin search-mini(data)
+    -data = data || {}
+
+    +b.LABEL.search-mini()&attributes(attributes)
+        form
+            +e.INPUT.field(type='search' name=(data.name || 'search') placeholder=(data.placeholder || 'Поиск'))
+            +icon({ icon: 'search', class: 'icon_stroke search-mini__icon' })
+        block
