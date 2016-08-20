@@ -1,0 +1,15 @@
+include ../screenreader/screenreader
+
+mixin logo(data)
+    +b.logo(href=(data.href ? data.href : false) target=(data.href ? '_blank' : false))&attributes(attributes)
+        if data.picture
+            -var picture = data.picture
+            +e.PICTURE.img-wrapper
+                each img in picture
+                    source(srcset=img.src media=img.media)
+                +e.IMG.img(src="#", alt=data.alt  title=data.title)
+        else
+            +e.IMG.img(src=data.src alt=data.alt  title=data.title)
+
+        if data.screenreader
+            +screenreader()= data.screenreader

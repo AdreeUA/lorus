@@ -1,0 +1,5 @@
+mixin screenreader(data)
+    -data = data || {};
+
+    +b(data.tag || 'h2').screenreader()&attributes(attributes)
+        block
