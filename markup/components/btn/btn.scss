@@ -1,0 +1,20 @@
+.btn {
+    display: inline-block;
+    padding: 0 em(68, 32);
+
+    color: #000;
+    text-decoration: none;
+    font-size: rem(32);
+    line-height: em(90, 32);
+    vertical-align: top;
+
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px #b7b5b2;
+
+    transition: background-color .4s, box-shadow .4s;
+
+    &:hover {
+        background: $color-2;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+    }
+}

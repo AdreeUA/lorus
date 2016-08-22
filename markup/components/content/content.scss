@@ -1,0 +1,11 @@
+.content {
+
+    p {
+        margin: 0;
+        font-size: rem(32);
+
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+}

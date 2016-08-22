@@ -1,0 +1,28 @@
+.info-list {
+
+    &__slider {
+        position: relative;
+
+        .slick-dots {
+            position: absolute;
+            right: rem(44);
+            bottom: rem(22);
+        }
+
+        .slick-arrow {
+            position: absolute;
+            right: 100%;
+            z-index: 1;
+
+            margin-right: rem(60);
+        }
+
+        .slick-prev {
+            top: rem(100);
+        }
+
+        .slick-next {
+            top: rem(220);
+        }
+    }
+}

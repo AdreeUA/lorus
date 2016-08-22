@@ -1,0 +1,6 @@
+include ../../slider/slider
+include ../info
+
+mixin info-list(data)
+    +b.info-list()&attributes(attributes)
+        +slider(data.slider, { contentClass: 'info-list__item' })._theme_basic.info-list__slider

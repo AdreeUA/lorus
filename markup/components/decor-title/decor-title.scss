@@ -1,0 +1,11 @@
+.decor-title {
+    margin: 0;
+
+    &__row {
+        display: table;
+        padding: 0 em(100, 70);
+        padding-left: em(44, 70);
+
+        background: #fff;
+    }
+}

@@ -1,5 +1,6 @@
 include ../../header/header
 include ../../icon-link/icon-link
+include ../../info/info-list/info-list
 
 mixin screen-home(data)
     +b.screen-home()&attributes(attributes)
@@ -9,4 +10,6 @@ mixin screen-home(data)
             +e.labels
                 -var labels = ['logistics', 'pl', 'engineering'];
                 each label in labels
-                    +icon-link(iconLink.homeScreen[label]).screen-home__label 
+                    +icon-link(iconLink.homeScreen[label]).screen-home__label
+                    
+            +info-list(infoList.default).screen-home__slider

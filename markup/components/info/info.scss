@@ -1,0 +1,76 @@
+.info {
+    $template-width: 2170;
+    $img-width: 1510;
+    $content-width: 2170 - $img-width;
+
+    position: relative;
+
+    &__main {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        position: relative;
+
+        padding-top: rem(56);
+        margin-bottom: rem(112);
+
+        font-size: rem(90);
+        line-height: 1.4;
+        font-weight: 300;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: rem(74);
+
+            width: rem(168);
+            height: 1px;
+
+            background: #000;
+        }
+    }
+
+    &__content {
+        width: percentage($content-width / $template-width);
+        padding-left: percentage(60 / $template-width);
+        padding-right: percentage(90 / $template-width);
+        min-height: rem(330);
+    }
+
+    &__img-wrapper {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        width: percentage($img-width / $template-width);
+
+        text-align: right;
+
+        overflow: hidden;
+        border-radius: 0 rem(10) rem(10) 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            width: rem(70);
+
+            background: $color-2;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        margin-left: auto;
+    }
+}
+
+@import './info-list/info-list';

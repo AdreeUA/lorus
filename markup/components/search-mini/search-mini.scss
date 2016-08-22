@@ -11,10 +11,11 @@
         height: rem(60);
         margin-right: rem(10);
         padding: 0;
-        border: 1px solid #555;
+        border: 1px solid $color-1;
 
         vertical-align: middle;
 
+        background: transparent;
         border-radius: 4px;
         transform: scaleX(0);
         transform-origin: right center;
