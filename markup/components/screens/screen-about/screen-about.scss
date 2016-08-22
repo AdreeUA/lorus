@@ -1,0 +1,29 @@
+.screen-about {
+    background: $color-3;
+
+    &__header {
+        margin-bottom: rem(70);
+    }
+
+    &__nav-btn {
+        transform: rotate(90deg);
+    }
+
+    &__top {
+        padding-left: rem(480);
+    }
+
+    &__title {
+        margin-bottom: rem(180);
+    }
+
+    &__content {
+        width: rem(800);
+        margin-bottom: rem(240);
+    }
+
+    &__bottom {
+        padding: rem(270) rem(138)  rem(80) rem(214);
+        background: #fff;
+    }
+}

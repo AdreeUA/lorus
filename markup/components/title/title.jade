@@ -1,0 +1,5 @@
+mixin title(data)
+    -data = data || {}
+
+    +b(data.tag || 'h2').title()&attributes(attributes)
+        block

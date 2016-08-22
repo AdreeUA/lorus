@@ -1,7 +1,7 @@
 .screen-home {
     $content-width: rem(2190);
 
-    background: #e9e9e8;
+    background: $color-3;
 
     &__content {
         padding: rem(160) calc(50% - #{$content-width} / 2);

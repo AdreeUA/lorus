@@ -7,5 +7,5 @@ mixin search-mini(data)
     +b.LABEL.search-mini()&attributes(attributes)
         form
             +e.INPUT.field(type='search' name=(data.name || 'search') placeholder=(data.placeholder || 'Поиск'))
-            +icon({ icon: 'search', class: 'icon_stroke search-mini__icon' })
+            +icon({ icon: 'search', class: 'search-mini__icon' })
         block

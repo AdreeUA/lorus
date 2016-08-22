@@ -1,3 +1,9 @@
 var data = {header: {
-    default: {}
+    default: {
+        type: 'default'
+    },
+
+    screen: {
+        type: 'screen'
+    }
 }}

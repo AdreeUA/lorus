@@ -2,5 +2,5 @@ include ../icon/icon
 
 mixin icon-link(data)
     +b.icon-link(href=(data.href || jv0))&attributes(attributes)
-        +icon({ icon: data.icon, class: `icon_stroke icon-link__icon icon-link__icon_${data.icon}` })
+        +icon({ icon: data.icon, class: `icon-link__icon icon-link__icon_${data.icon}` })
         +e.SPAN.link= data.text

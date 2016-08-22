@@ -1,0 +1,6 @@
+mixin stats(data)
+    +b.UL.stats()&attributes(attributes)
+        each item in data.items
+            +e.item
+                +e.SPAN.num!= item.num
+                +e.SPAN.text!= item.text

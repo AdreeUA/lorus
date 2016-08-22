@@ -1,0 +1,12 @@
+include ../icon/icon
+
+mixin icon-btn(data)
+    -data = data || {}
+    -tag = data.tag || 'a'
+
+    +b(tag).icon-btn(href=(tag === 'a' ? jv0 : false))&attributes(attributes)
+        if data.icon
+            +icon({ icon: data.icon, class: 'icon-btn__icon' })
+            
+        else 
+            block

@@ -1,4 +1,4 @@
 mixin decor-title(data)
-    +b(tag=(data.tag || 'h2')).decor-title()&attributes(attributes)
+    +b(data.tag || 'h2').decor-title()&attributes(attributes)
         each row in data.rows
             +e.SPAN.row= row 

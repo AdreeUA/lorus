@@ -1,0 +1,36 @@
+.stats {
+    @include list-reset();
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        color: $color-1;
+        font-weight: 300;
+    }
+
+    &__num {
+        display: block;
+        font-size: rem(82);
+    }
+
+    &__text {
+        position: relative;
+
+        display: block;
+        min-height: rem(220);
+
+        font-size: rem(42);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: rem(170);
+            height: 1px;
+
+            background-color: currentColor;
+        }
+    }
+}

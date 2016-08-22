@@ -1,18 +1,37 @@
 include ../logo/logo
 include ../nav/nav
 include ../link/link
+include ../icon-btn/icon-btn
+include ../hamburger/hamburger
 include ../search-mini/search-mini
 
-mixin header(data) 
-    +b.header()&attributes(attributes)
+mixin header(data, classList) 
+    -data = data || {}
+    -classList = classList || {}
+
+    +b.header(
+        class={'_theme_default': data.type === 'default', '_theme_screen': data.type === 'screen'}
+        )&attributes(attributes)
     
-        +e.left
-            +logo(logo.main).header__logo
-            +nav(nav.header)._horiz.header__nav(itemClass='header__nav-item')
+        //- ==================== хедер на главном экране ======================
+        if data.type === 'default'
+    
+            +e.left
+                +logo(logo.main).header__logo
+                +nav(nav.header)._horiz.header__nav(itemClass='header__nav-item')
+            
+            +e.right
+                +search-mini.header__search
+                +link.header__lang
+                    | in English
+                    
+        //- ==================== хедер на остальных экранах ======================
+        if data.type === 'screen'
         
-        +e.right
-            +search-mini.header__search
-            +link.header__lang
-                | in English
-        
+            +e.left
+                +hamburger.header__hamburger
+            
+            +e.right
+                +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn])
+                
         block

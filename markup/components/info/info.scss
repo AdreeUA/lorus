@@ -38,6 +38,10 @@
         padding-left: percentage(60 / $template-width);
         padding-right: percentage(90 / $template-width);
         min-height: rem(330);
+
+        p {
+            color: #000;
+        }
     }
 
     &__img-wrapper {

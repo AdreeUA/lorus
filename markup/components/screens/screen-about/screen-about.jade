@@ -1,0 +1,23 @@
+include ../../header/header
+include ../../title/title
+include ../../content/content
+include ../../stats/stats
+
+mixin screen-about(data)
+    +b.SECTION.screen-about()&attributes(attributes)
+        +header(header.screen, { navBtn: 'screen-about__nav-btn' })
+        
+        +e.top
+            +title.screen-about__title
+                | О компании
+                
+            +content.screen-about__content
+                p
+                    | Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических 
+                    | услуг, эксперт в области логистики производственных предприятий. 
+                    | Компания обладает компетенциями в области управления цепочками 
+                    | поставок и разработки решений по оптимизации логистических процессов 
+                    | предприятия, отраслевой экспертизой и собственной инфраструктурой.
+                    
+        +e.bottom
+            +stats(stats.default).screen-about__stats
