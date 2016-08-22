@@ -5,6 +5,10 @@
 
     background: url('%=static=%assets/screens/screen-mission/bg-mission.svg') no-repeat right 100% / auto 100%;
 
+    &__nav-btn {
+        transform: rotate(90deg);
+    }
+
     &__title {
         margin-top: rem(-50);
         margin-left: rem(236);

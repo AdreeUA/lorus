@@ -3,4 +3,22 @@
 
     font-size: rem(90);
     font-weight: 300;
+
+    &_underline {
+        position: relative;
+
+        padding-bottom: rem(70);
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: rem(168);
+            height: 1px;
+
+            background: currentColor;
+        }
+    }
 }

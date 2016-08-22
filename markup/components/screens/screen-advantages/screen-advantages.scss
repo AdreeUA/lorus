@@ -1,0 +1,61 @@
+.screen-advantages {
+    $content-width: rem(2238);
+
+    position: relative;
+
+    padding-bottom: rem(112);
+
+    background: #fff;
+    background: linear-gradient(to right, $color-3 rem(100), #fff 0);
+
+    &__wrapper {
+        padding: 0 calc(50% - #{$content-width} / 2);
+    }
+
+    &__title {
+        margin-bottom: rem(182);
+    }
+
+    &__nav-btn {
+        transform: rotate(180deg);
+    }
+
+    &__row {
+        @include clearfix();
+
+        &:not(:last-child) {
+            margin-bottom: rem(140);
+        }
+    }
+
+    &__text-block {
+        float: left;
+        width: rem(820);
+
+        &:nth-child(2) {
+            float: right;
+        }
+
+        h2 {
+            margin-bottom: rem(80);
+        }
+
+        p {
+            position: relative;
+
+            padding-left: rem(64);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                height: rem(222);
+                width: 1px;
+
+                background: currentColor;
+            }
+        }
+    }
+}

@@ -1,9 +1,10 @@
 include screen-home/screen-home
 include screen-about/screen-about
 include screen-mission/screen-mission
+include screen-advantages/screen-advantages
 
 mixin screens(data)
-    -var screens = ['screen-home', 'screen-about', 'screen-mission']
+    -var screens = ['screen-home', 'screen-about', 'screen-mission', 'screen-advantages']
 
     +b.screens()&attributes(attributes)
         each screen in screens
