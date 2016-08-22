@@ -1,0 +1,33 @@
+include ../../header/header
+include ../../title/title
+include ../../content/content
+include ../../decor-title/decor-title
+
+mixin screen-mission(data)
+    +b.SECTION.screen-mission()&attributes(attributes)
+        +header(header.screen)
+    
+        +title.screen-mission__title
+            | Миссия компании
+            
+        +decor-title({ tag: 'div', rows: [
+            'Поднять Ваш бизнес ', 'на новую высоту'
+        ]}).screen-mission__subtitle
+        
+        +e.photo-wrapper
+            +e.IMG.photo(src='%=static=%img/assets/screens/screen-mission/mission-photo.png' alt='Фотография гор')
+        
+        +e.content
+            +e.text-col
+                +content
+                    p
+                        | Для этого мы используем лучшие логистические решения и 
+                        | инновационный подход, добиваемся экспертного лидерства 
+                        | на рынке и наращиваем собственные активы.
+                        
+            +e.text-col_theme_plate
+                +content
+                    p
+                        | Мы не просто организовываем поставки.<br> Наша цель —  
+                        | оптимизировать работу вашего предприятия, снизить 
+                        | издержки и открыть новые возможности для роста.

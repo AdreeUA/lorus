@@ -1,1 +1,1 @@
-var data = {decor-title: {}}
+var data = {decorTitle: {}}

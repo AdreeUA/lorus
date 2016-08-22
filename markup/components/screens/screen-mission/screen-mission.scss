@@ -1,0 +1,58 @@
+.screen-mission {
+    position: relative;
+
+    padding-bottom: rem(70);
+
+    background: url('%=static=%assets/screens/screen-mission/bg-mission.svg') no-repeat right 100% / auto 100%;
+
+    &__title {
+        margin-top: rem(-50);
+        margin-left: rem(236);
+        margin-bottom: rem(188);
+    }
+
+    &__subtitle {
+        position: absolute;
+        top: rem(466);
+
+        margin-left: rem(66);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 0 rem(132);
+    }
+
+    &__text-col {
+        position: relative;
+
+        padding: rem(80) rem(86);
+        width: percentage(930 / (2555 - 132 * 2));
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+
+            width: rem(170);
+            height: 1px;
+
+            background: currentColor;
+        }
+
+        &_theme_plate {
+            border: 1px solid;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__photo-wrapper {
+        margin-left: rem(144);
+        margin-bottom: rem(114);
+    }
+}

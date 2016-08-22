@@ -1,5 +1,8 @@
 .screen-about {
+    position: relative;
+
     background: $color-3;
+    background: linear-gradient(-55deg, $color-3 33%, #efefef 0, #efefef 50%, $color-3 0);
 
     &__header {
         margin-bottom: rem(70);
@@ -22,7 +25,23 @@
         margin-bottom: rem(240);
     }
 
+    &__photo-wrapper {
+        position: absolute;
+        top: rem(130);
+        right: 0;
+        z-index: 2;
+
+        width: rem(1452);
+    }
+
+    &__photo {
+        max-width: 100%;
+    }
+
     &__bottom {
+        position: relative;
+        z-index: 1;
+
         padding: rem(270) rem(138)  rem(80) rem(214);
         background: #fff;
     }
