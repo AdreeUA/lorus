@@ -2,6 +2,7 @@ include ../../header/header
 include ../../title/title
 include ../../content/content
 include ../../partners/partners
+include ../../footer/footer
 
 mixin screen-team(data)
     +b.SECTION.screen-team()&attributes(attributes)
@@ -29,3 +30,5 @@ mixin screen-team(data)
                 src='%=static=%img/assets/screens/screen-team/team-photo.jpg'
                 srcset='%=static=%img/assets/screens/screen-team/team-photo@2x.jpg 2x'
                 alt='')
+                
+        +footer

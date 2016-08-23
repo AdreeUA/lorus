@@ -13,4 +13,37 @@
 
         border-color: $color-2;
     }
+
+    &_theme_fill {
+        position: relative;
+        z-index: 1;
+
+        color: #000;
+
+        border-color: $color-2;
+
+        transition: none;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -.3em;
+            bottom: 0;
+            left: -.3em;
+            z-index: -1;
+
+            background: $color-2;
+            opacity: 0;
+
+            transition: opacity .4s;
+        }
+
+        &:hover {
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
 }

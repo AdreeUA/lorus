@@ -1,0 +1,10 @@
+include ../logo/logo
+include ../link/link
+
+mixin made-by(data)
+    +b.made-by()&attributes(attributes)
+        +logo(logo.qb).made-by__logo
+        +e.P.text
+            | Разработано<br> в 
+            +link({ href: 'http://qb.digital/' }).made-by__link
+                | qb.digital

@@ -6,6 +6,14 @@ var data = {logo: {
         screenreader: 'Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.'
     },
 
+    qb: {
+        src: '%=static=%img/assets/logo/qb',
+        ext: 'png',
+        srcset: true,
+        href: 'http://qb.digital/',
+        alt: 'Логотип компании QB'
+    },
+
     partners: {
         sollers: {
             src: '%=static=%img/assets/logo/partner1',

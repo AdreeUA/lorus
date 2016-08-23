@@ -1,3 +1,72 @@
 .footer {
+    padding-top: rem(60);
+    padding-bottom: rem(70);
 
+    background: #fff;
+
+    &__wrapper {
+        @include align-justify();
+    }
+
+    &__col {
+        display: inline-block;
+
+        vertical-align: bottom;
+    }
+
+    &__item {
+        position: relative;
+
+        display: inline-flex;
+        align-items: flex-end;
+        min-height: rem(138);
+
+        vertical-align: top;
+        color: $color-1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: 1px;
+
+            background: currentColor;
+        }
+
+        &_copyright {
+            font-size: rem(29);
+            line-height: 1.4;
+
+            &::before {
+                width: rem(170);
+            }
+        }
+
+        &_phone {
+            margin-right: rem(188);
+
+            &::before {
+                width: rem(126);
+            }
+        }
+
+        &_mail {
+
+            &::before {
+                width: rem(60);
+            }
+        }
+    }
+
+    &__phone {
+        color: inherit;
+        text-decoration: none;
+        font-size: rem(32);
+    }
+
+    &__mail {
+        font-size: rem(32);
+    }
 }

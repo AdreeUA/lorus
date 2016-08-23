@@ -1,0 +1,32 @@
+.made-by {
+    color: $color-1;
+
+    &__logo {
+        display: inline-block;
+        margin-right: rem(14);
+
+        vertical-align: middle;
+
+        opacity: .2;
+
+        transition: opacity .4s;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        margin: 0;
+
+        font-size: rem(32);
+        vertical-align: middle;
+    }
+
+    &__link {
+        font-size: inherit;
+
+        border-color: $color-2;
+    }
+}
