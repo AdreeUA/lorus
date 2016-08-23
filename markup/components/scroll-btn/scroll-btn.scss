@@ -1,0 +1,32 @@
+.scroll-btn {
+    width: rem(56);
+
+    color: #000;
+    text-align: center;
+
+    opacity: .3;
+
+    &__mouse {
+        display: block;
+        width: 100%;
+        margin-bottom: rem(16);
+    }
+
+    &:hover {
+
+        .scroll-btn__arrow {
+            animation: scroll-anim 2.5s infinite;
+        }
+    }
+}
+
+@keyframes scroll-anim {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(100%);
+    }
+}

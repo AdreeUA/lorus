@@ -1,6 +1,8 @@
 .screen-home {
     $content-width: rem(2190);
 
+    position: relative;
+
     background: $color-3;
 
     &__content {
@@ -21,5 +23,15 @@
         padding: 0 rem(74);
 
         vertical-align: middle;
+    }
+
+    &__slider {
+        padding-right: rem(40);
+    }
+
+    &__scroll {
+        position: absolute;
+        right: calc(50% - #{rem(2335)} / 2);
+        bottom: rem(86);
     }
 }

@@ -2,8 +2,11 @@
     $template-width: 2170;
     $img-width: 1510;
     $content-width: 2170 - $img-width;
+    $shadow-size: 60px;
 
     position: relative;
+
+    padding-bottom: $shadow-size;
 
     &__main {
         position: relative;
@@ -49,7 +52,7 @@
         z-index: 1;
         right: 0;
         top: 0;
-        bottom: 0;
+        bottom: $shadow-size;
 
         width: percentage($img-width / $template-width);
 
@@ -57,6 +60,7 @@
 
         overflow: hidden;
         border-radius: 0 rem(10) rem(10) 0;
+        box-shadow: 0 #{$shadow-size} #{$shadow-size} -#{$shadow-size} rgba(0, 0, 0, .6);
 
         &::before {
             content: '';

@@ -1,5 +1,6 @@
 include ../../header/header
 include ../../icon-link/icon-link
+include ../../scroll-btn/scroll-btn
 include ../../info/info-list/info-list
 
 mixin screen-home(data)
@@ -13,3 +14,5 @@ mixin screen-home(data)
                     +icon-link(iconLink.homeScreen[label]).screen-home__label
                     
             +info-list(infoList.default).screen-home__slider
+            
+            +scroll-btn.screen-home__scroll

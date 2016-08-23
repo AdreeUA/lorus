@@ -1,0 +1,11 @@
+include ../icon/icon
+include ../screenreader/screenreader
+
+mixin scroll-btn(data)
+    +b.scroll-btn(href=jv0)&attributes(attributes)
+        +screenreader({ tag: 'span' })
+            | Листать на следующий экран
+        +icon({ icon: 'mouse', class: 'scroll-btn__mouse' })
+        +icon({ icon: 'figure-arrow', class: 'scroll-btn__arrow' })
+        
+        block

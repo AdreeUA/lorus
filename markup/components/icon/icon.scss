@@ -39,4 +39,14 @@
 
         stroke-width: 3px;
     }
+
+    &_mouse {
+        width: rem(56);
+        height: rem(90);
+    }
+
+    &_figure-arrow {
+        width: rem(26);
+        height: rem(40);
+    }
 }
