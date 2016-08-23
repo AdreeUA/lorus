@@ -2,7 +2,9 @@ var data = {infoList: {
     default: {
         slider: {
             settings: {
-                dots: true
+                fade: true,
+                dots: true,
+                speed: false
             },
             template: 'info',
             items(data) {

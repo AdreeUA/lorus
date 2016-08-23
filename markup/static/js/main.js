@@ -2,6 +2,7 @@ import polyfills from './libraries/polyfills';
 import { Component } from 'helpers-js';
 
 import { Slider } from 'components/slider/slider';
+import { InfoList } from 'components/info/info-list/info-list';
 
 'use strict';
 
@@ -10,4 +11,5 @@ $(() => {
     // ================ Здесь инициализируем модули =====================
 
     Component.init('.slider', Slider);
+    Component.init('.info-list', InfoList);
 });

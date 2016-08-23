@@ -20,7 +20,7 @@ export class Slider extends Component {
     _onBeforeChange(e, slick, currentSlide, nextSlide) {
         e.stopPropagation();
 
-        const event = new CustomEvent('changeSlide', {
+        const event = new CustomEvent('beforeChangeSlide', {
             bubbles: false,
             detail: {
                 currentSlide: currentSlide,
@@ -50,14 +50,13 @@ export class Slider extends Component {
         let $slider = $(this.block);
 
         $slider.one('init', e => {
-            const event = new CustomEvent('init', {
+            const event = new CustomEvent('initSlider', {
                 bubbles: false
             });
 
             this.block.dispatchEvent(event);
         });
 
-        console.log($slider);
         $slider.slick();
         this.initialized = true;
     }
@@ -68,7 +67,7 @@ export class Slider extends Component {
         let $slider = $(this.block);
 
         $slider.one('destroy', e => {
-            const event = new CustomEvent('destroy', {
+            const event = new CustomEvent('destroySlider', {
                 bubbles: false
             });
 

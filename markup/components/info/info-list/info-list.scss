@@ -9,6 +9,14 @@
             bottom: rem(22);
         }
 
+        .slick-slide {
+            transition: opacity 0s 1.4s;
+        }
+
+        .slick-active {
+            transition: opacity 0s .8s;
+        }
+
         .slick-arrow {
             position: absolute;
             right: 100%;

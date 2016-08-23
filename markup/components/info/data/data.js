@@ -14,10 +14,9 @@ var data = {info: {
 
     two: {
         title: {
-            rows: ['Сквозной сервис ', 'из Китая, Кореи и Японии']
+            rows: ['Товары ', 'из Бангладеша, Индии и Туркменистана']
         },
-        content: `<p>Доставка контейнеров из стран АТР с точным графиком, конкурентными ставками и
-                выгодными условиями хранения.</p>`,
+        content: `<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste officiis asperiores.</p>`,
         img: {
             src: '%=static=%img/assets/info/info-1',
             format: 'jpg',
@@ -27,10 +26,9 @@ var data = {info: {
 
     three: {
         title: {
-            rows: ['Сквозной сервис ', 'из Китая, Кореи и Японии']
+            rows: ['Отвызная доставка ', 'с полуострова Ява']
         },
-        content: `<p>Доставка контейнеров из стран АТР с точным графиком, конкурентными ставками и
-                выгодными условиями хранения.</p>`,
+        content: `<p> nam veniam magnam vel doloribus possimus hic, odit voluptatem, magni quis, repellat accusantium ullam. Quibusdam ipsam assumenda totam.</p>`,
         img: {
             src: '%=static=%img/assets/info/info-1',
             format: 'jpg',

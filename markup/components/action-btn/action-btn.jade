@@ -1,7 +1,3 @@
-include ../icon/icon
-
 mixin action-btn(data)
     +b.action-btn()&attributes(attributes)
-        +e.icon-wrapper
-            if data.icon
-                +icon({ icon: data.icon, class: 'action-btn__icon' })
+        block
