@@ -11,6 +11,7 @@
     &__num {
         display: block;
         font-size: rem(82);
+        white-space: nowrap;
     }
 
     &__text {

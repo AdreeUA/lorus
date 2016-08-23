@@ -5,8 +5,7 @@
 
     padding-bottom: rem(112);
 
-    background: #fff;
-    background: linear-gradient(to right, $color-3 rem(100), #fff 0);
+    background: url('%=static=%assets/screens/screen-advantages/bg-advantages.svg') no-repeat left 0 / auto 105%;
 
     &__wrapper {
         padding: 0 calc(50% - #{$content-width} / 2);

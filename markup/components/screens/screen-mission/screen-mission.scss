@@ -56,7 +56,12 @@
     }
 
     &__photo-wrapper {
+        height: rem(882);
         margin-left: rem(144);
         margin-bottom: rem(114);
+    }
+
+    &__photo {
+        height: 100%;
     }
 }

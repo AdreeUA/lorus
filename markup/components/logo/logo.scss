@@ -6,5 +6,21 @@
 
     &__img {
         max-width: 100%;
+
+        &_sollers {
+            height: rem(156);
+        }
+
+        &_optima {
+            height: rem(192);
+        }
+
+        &_prof-it {
+            height: rem(156);
+        }
+
+        &_pl {
+            height: rem(168);
+        }
     }
 }

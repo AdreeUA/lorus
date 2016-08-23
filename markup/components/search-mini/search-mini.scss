@@ -7,7 +7,7 @@
 
     &__field {
         display: inline-block;
-        width: 0;
+        width: rem(400);
         height: rem(60);
         padding: 0;
         border: 1px solid $color-1;
@@ -16,17 +16,16 @@
 
         background: transparent;
         border-radius: 4px;
-        transform: scaleX(0);
+        transform: scaleX(0) translateX(0);
         transform-origin: right center;
 
-        transition: transform .5s, padding .5s, width 0s .5s;
+        transition: transform .5s, padding .5s;
 
         &:focus {
-            width: rem(400);
             padding: 0 rem(20);
 
             outline: none;
-            transform: scaleX(1);
+            transform: scaleX(1) translateX(rem(-15));
 
             transition: transform .5s, padding .5s;
 

@@ -19,6 +19,7 @@ var data = {logo: {
             src: '%=static=%img/assets/logo/partner1',
             ext: 'jpg',
             srcset: true,
+            mod: 'sollers',
             alt: 'Логотип компании Sollers'
         },
 
@@ -26,6 +27,7 @@ var data = {logo: {
             src: '%=static=%img/assets/logo/partner2',
             ext: 'jpg',
             srcset: true,
+            mod: 'optima',
             alt: 'Логотип компании Optima'
         },
 
@@ -33,6 +35,7 @@ var data = {logo: {
             src: '%=static=%img/assets/logo/partner3',
             ext: 'jpg',
             srcset: true,
+            mod: 'prof-it',
             alt: 'Логотип компании Prof-IT'
         },
 
@@ -40,6 +43,7 @@ var data = {logo: {
             src: '%=static=%img/assets/logo/partner4',
             ext: 'jpg',
             srcset: true,
+            mod: 'pl',
             alt: 'Логотип компании PL'
         }
     }

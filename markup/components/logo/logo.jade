@@ -11,6 +11,7 @@ mixin logo(data)
                 +e.IMG.img(src="#", alt=data.alt  title=data.title)
         else
             +e.IMG.img(
+                class=(data.mod ? `_${data.mod}` : '') 
                 src=`${data.src}.${data.ext}` 
                 srcset=(data.srcset ? `${data.src}@2x.${data.ext} 2x` : false) 
                 alt=data.alt  
