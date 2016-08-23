@@ -13,6 +13,13 @@ tars init --exclude-html --exclude-css --silent --source http://gitolite.digital
 Советую создать алиасы для этих команд, н-р, *tac* для `tars add-component`.
 Тогда новый компонент можно будет создавать так: `tac header -s`.
 
+## Как обновлять проект
+
+При выходе новой версии Тарса, уже существующтй проект надо обновлять с помощью такой команды
+
+```javascript
+tars update-project --exclude-html --exclude-css --source http://gitolite.digitalwant.ru/a.kosyanenko/tars/repository/archive.zip?ref=custom
+```
 
 ## Плюшки
 
