@@ -8,4 +8,5 @@ mixin search-mini(data)
         form
             +e.INPUT.field(type='search' name=(data.name || 'search') placeholder=(data.placeholder || 'Поиск'))
             +icon({ icon: 'search', class: 'search-mini__icon' })
+            +e.BUTTON.submit(type='submit')
         block

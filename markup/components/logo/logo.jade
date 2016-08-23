@@ -1,6 +1,7 @@
 include ../screenreader/screenreader
 
 mixin logo(data)
+
     +b.logo(href=data.href)&attributes(attributes)
         if data.picture
             -var picture = data.picture
@@ -9,7 +10,11 @@ mixin logo(data)
                     source(srcset=img.src media=img.media)
                 +e.IMG.img(src="#", alt=data.alt  title=data.title)
         else
-            +e.IMG.img(src=data.src alt=data.alt  title=data.title)
+            +e.IMG.img(
+                src=`${data.src}.${data.ext}` 
+                srcset=(data.srcset ? `${data.src}@2x.${data.ext} 2x` : false) 
+                alt=data.alt  
+                title=data.title)
 
         if data.screenreader
             +screenreader()= data.screenreader

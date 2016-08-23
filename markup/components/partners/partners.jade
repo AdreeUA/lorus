@@ -1,0 +1,10 @@
+include ../logo/logo
+
+mixin partners(data)
+    +b.partners()&attributes(attributes)
+        if data.title
+            +e.H3.title= data.title
+            
+        +e.UL.list
+            each item in data.items
+                +logo(item).partners__logo

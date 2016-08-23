@@ -1,0 +1,22 @@
+.partners {
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: rem(50);
+
+        font-size: rem(44);
+        font-weight: 300;
+        line-height: (85/44);
+    }
+
+    &__list {
+        @include list-reset();
+
+        font-size: 0;
+        @include align-justify();
+    }
+
+    &__logo {
+        font-size: 1rem;
+    }
+}
