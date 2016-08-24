@@ -1,22 +1,5 @@
 mixin clip-img(data)
-    -var i = 1;
-    +b.SVG.clip-img(
-        width='100%'
-        height='100%'
-        viewbox='0 0 100 100'
-        xmlns='http://www.w3.org/2000/svg'
-        xmlns:xlink='http://www.w3.org/1999/xlink')&attributes(attributes)
-        
-        defs
-            clipPath(id=`myClip-${i}` clipPathUnits='objectBoundingBox')
-                if data.type === 'left-diagonal'
-                    polygon(points='0 48, 0 100, 100 100, 0 100')
-        
-        +e.IMAGE.img(
-            xlink:href!=data.src 
-            alt=data.alt 
-            width='100'
-            height='100'
-            clip-path=`url(#myClip-${i})`)
-        -i++
+    +b.clip-img()&attributes(attributes)
+        +e.wrapper
+            +e.IMG.img(src=data.src alt='')
      

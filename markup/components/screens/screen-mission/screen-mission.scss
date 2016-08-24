@@ -19,6 +19,7 @@
     &__subtitle {
         position: absolute;
         top: rem(466);
+        z-index: 2;
 
         margin-left: rem(66);
 
@@ -58,13 +59,8 @@
         }
     }
 
-    &__photo-wrapper {
-        height: rem(882);
+    &__photo {
         margin-left: rem(144);
         margin-bottom: rem(114);
-    }
-
-    &__photo {
-        height: 100%;
     }
 }

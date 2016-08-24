@@ -1,5 +1,6 @@
 include ../../title/title
 include ../../content/content
+include ../../clip-img/clip-img
 include ../../decor-title/decor-title
 
 mixin screen-mission(data)
@@ -11,8 +12,9 @@ mixin screen-mission(data)
             'Поднять Ваш бизнес ', 'на новую высоту'
         ]}).screen-mission__subtitle
         
-        +e.photo-wrapper
-            +e.IMG.photo(src='%=static=%img/assets/screens/screen-mission/mission-photo.png' alt='Фотография гор')
+        +clip-img({
+            src: '%=static=%img/assets/screens/screen-mission/mission-photo.jpg'
+        })._shape_hexagon.screen-mission__photo
         
         +e.content
             +e.text-col

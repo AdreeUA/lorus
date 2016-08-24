@@ -4,7 +4,7 @@
     padding-top: rem(124);
 
     background: $color-3;
-    background: linear-gradient(-55deg, $color-3 33%, #efefef 0, #efefef 50%, $color-3 0);
+    background: linear-gradient(-58deg, $color-3 32rem, #efefef 0, #efefef 55rem, $color-3 0);
 
     &__header {
         margin-bottom: rem(70);
@@ -23,17 +23,11 @@
         margin-bottom: rem(240);
     }
 
-    &__photo-wrapper {
+    &__photo {
         position: absolute;
-        top: rem(130);
+        top: rem(164);
         right: 0;
         z-index: 2;
-
-        height: rem(1000);
-    }
-
-    &__photo {
-        height: 100%;
     }
 
     &__bottom {

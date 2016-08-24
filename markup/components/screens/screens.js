@@ -69,6 +69,7 @@ export class Screens extends Component {
 
     _onWheel(e) {
         let slideScrolled = e.target.closest('.screens__horizontal');
+        console.log('wheel');
 
         if (!slideScrolled) return;
 

@@ -1,6 +1,7 @@
 include ../../title/title
 include ../../content/content
 include ../../stats/stats
+include ../../clip-img/clip-img
 
 mixin screen-about(data)
     +b.SECTION.screen-about()&attributes(attributes)
@@ -16,8 +17,9 @@ mixin screen-about(data)
                     | поставок и разработки решений по оптимизации логистических процессов 
                     | предприятия, отраслевой экспертизой и собственной инфраструктурой.
                     
-            +e.photo-wrapper
-                +e.IMG.photo(src='%=static=%img/assets/screens/screen-about/about-photo.png' alt='Порт')
+            +clip-img({ 
+                src: '%=static=%img/assets/screens/screen-about/about-photo.jpg' 
+                })._shape_trapeze.screen-about__photo
                     
         +e.bottom
             +stats(stats.default).screen-about__stats
