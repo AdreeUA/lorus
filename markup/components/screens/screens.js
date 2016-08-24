@@ -1,6 +1,17 @@
 import { Component, indexOf } from 'helpers-js';
+import { ScreenAbout } from './screen-about/screen-about';
+import { ScreenHome } from './screen-home/screen-home';
+import { ScreenMission } from './screen-mission/screen-mission';
+import { ScreenAdvantages } from './screen-advantages/screen-advantages';
+import { ScreenTeam } from './screen-team/screen-team';
 
 import 'fullpage.js';
+
+const about = new ScreenAbout(document.querySelector('.screen-about')),
+      home = new ScreenHome(document.querySelector('.screen-home')),
+      mission = new ScreenMission(document.querySelector('.screen-mission')),
+      advantages = new ScreenAdvantages(document.querySelector('.screen-advantages')),
+      team = new ScreenTeam(document.querySelector('.screen-team'));
 
 export class Screens extends Component {
     constructor(block) {
@@ -15,18 +26,28 @@ export class Screens extends Component {
     }
 
     _init() {
-        let header = document.querySelector('.header_theme_screen');
+        let verticals = this.block.querySelectorAll('.screens__vertical');
 
-        function toggleNavClasses(active) {
-            let classList = ['header_nav_top', 'header_nav_left', 'header_nav_right'];
-
-            classList.forEach(className => {
-                if (className === active) header.classList.add(className);
-                else header.classList.remove(className);
+        let dispatchEvents = (curScreen, newScreen, direction) => {
+            const hideEvent = new CustomEvent('hide', {
+                bubbles: true,
+                detail: {
+                    direction
+                }
             });
-        }
+            curScreen.dispatchEvent(hideEvent);
+
+            const showEvent = new CustomEvent('show', {
+                bubbles: true,
+                detail: {
+                    direction
+                }
+            });
+            newScreen.dispatchEvent(showEvent);
+        };
 
         $(this.block).fullpage({
+            scrollingSpeed: 1500,
             sectionSelector: '.screens__vertical',
             slideSelector: '.screens__horizontal',
             verticalCentered: false,
@@ -36,31 +57,22 @@ export class Screens extends Component {
             keyboardScrolling: false,
 
             onSlideLeave (anchorLink, index, slideIndex, direction, nextSlideIndex) {
-                if (index === 1 && slideIndex === 0) {
-                    header.classList.add('header_show');
-                } else if (index === 1 && slideIndex === 1 && direction === 'left') {
-                    header.classList.remove('header_show');
-                }
+                let activeVertical = verticals[index - 1],
+                    curScreen = activeVertical.querySelectorAll('.screens__item')[slideIndex],
+                    activeScreen = activeVertical.querySelectorAll('.screens__item')[nextSlideIndex];
 
-                if (index === 2) {
-                    if (nextSlideIndex === 1) {
-                        toggleNavClasses('header_nav_top');
-                    } else if (nextSlideIndex === 0) {
-                        toggleNavClasses('header_nav_right');
-                    }
-                }
+                dispatchEvents(curScreen, activeScreen, direction);
             },
 
             onLeave (index, nextIndex, direction) {
-                if (direction === 'down') {
-                    toggleNavClasses('header_nav_top');
-                } else {
-                    if (nextIndex === 2) {
-                        toggleNavClasses('header_nav_right');
-                    } else if (nextIndex === 1) {
-                        toggleNavClasses('header_nav_left');
-                    }
-                }
+                let curVertical = verticals[index - 1],
+                    curScreen = curVertical.querySelector('.screens__item.active') ||
+                                curVertical.querySelector('.screens__item'),
+                    activeVertical = verticals[nextIndex - 1],
+                    activeScreen = activeVertical.querySelector('.screens__item.active') ||
+                                   activeVertical.querySelector('.screens__item');
+
+                dispatchEvents(curScreen, activeScreen, direction);
             }
         });
 
@@ -69,7 +81,6 @@ export class Screens extends Component {
 
     _onWheel(e) {
         let slideScrolled = e.target.closest('.screens__horizontal');
-        console.log('wheel');
 
         if (!slideScrolled) return;
 

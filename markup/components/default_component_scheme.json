@@ -20,7 +20,7 @@
             "content": ".__componentName__ {\n\n}"
         }, {
             "name": "__componentName__.js",
-            "content": "import Component from 'helpers-js/Component';\n\nexport class  extends Component {\n    constructor(block) {\n        super(block, '__componentName__');\n        if (this._ready) return this;\n        this._ready = true;\n    }\n}\n"
+            "content": "import { Component } from 'helpers-js';\n\nexport class  extends Component {\n    constructor(block) {\n        super(block, '__componentName__');\n        if (this._ready) return this;\n        this._ready = true;\n    }\n}\n"
         }
     ]
 }

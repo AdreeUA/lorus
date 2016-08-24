@@ -24,6 +24,7 @@
         margin-left: rem(66);
 
         filter: drop-shadow(0 10px 40px rgba(0, 0, 0, .2));
+        transform: translate3d(0, 0, 0); // костыль для хрома, чтобы картинка не перекрывала заголовок при анимации
     }
 
     &__content {
