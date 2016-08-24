@@ -17,8 +17,6 @@ export const animate = (options) => {
 
     let start = performance.now();
 
-    console.dir(options);
-
     requestAnimationFrame(function animate(time) {
         // timeFraction от 0 до 1
         let timeFraction = (time - start) / options.duration;
