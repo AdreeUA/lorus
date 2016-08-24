@@ -7,6 +7,7 @@
   "dependencies": {
     "babel-preset-es2015": "^6.13.2",
     "bemto.jade": "git://github.com/kizu/bemto.git",
+    "fullpage.js": "^2.8.4",
     "jquery": "^3.1.0",
     "shortid": "^2.2.6",
     "slick-carousel": "^1.6.0",

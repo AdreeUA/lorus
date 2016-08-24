@@ -1,12 +1,9 @@
-include ../../header/header
 include ../../title/title
 include ../../content/content
 include ../../decor-title/decor-title
 
 mixin screen-mission(data)
     +b.SECTION.screen-mission()&attributes(attributes)
-        +header(header.screen, { navBtn: 'screen-mission__nav-btn' })
-    
         +title.screen-mission__title
             | Миссия компании
             

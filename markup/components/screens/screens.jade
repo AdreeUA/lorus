@@ -6,6 +6,7 @@ include screen-team/screen-team
 
 mixin screens(data)
     +b.screens()&attributes(attributes)
+        +header(header.screen)
         +e.vertical
             +screen-home.screens__item.screens__horizontal
             +screen-about.screens__item.screens__horizontal

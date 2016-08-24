@@ -1,11 +1,8 @@
-include ../../header/header
 include ../../title/title
 include ../../content/content
 
 mixin screen-advantages(data)
     +b.SECTION.screen-advantages()&attributes(attributes)
-        +header(header.screen, { navBtn: 'screen-advantages__nav-btn' })
-        
         +e.wrapper
             +title._underline.screen-advantages__title
                 | Преимущества компании

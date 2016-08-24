@@ -1,6 +1,8 @@
 .screen-about {
     position: relative;
 
+    padding-top: rem(124);
+
     background: $color-3;
     background: linear-gradient(-55deg, $color-3 33%, #efefef 0, #efefef 50%, $color-3 0);
 
@@ -41,7 +43,7 @@
         right: 0;
         z-index: 1;
 
-        padding: rem(270) rem(138)  rem(80) rem(214);
+        padding: rem(270) rem(138)  rem(80) rem(234);
         background: #fff;
     }
 }

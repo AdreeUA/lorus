@@ -46,4 +46,38 @@
     &_theme_default {
         padding: rem(100) calc(50% - #{$content-width} / 2) 0;
     }
+
+    &_theme_screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        visibility: hidden;
+
+        transition: visibility 0s .4s;
+
+        .header__left {
+            transform: translateX(-100%);
+
+            transition: transform .4s;
+        }
+
+        .header__right {
+            transform: translateX(100%);
+
+            transition: transform .4s;
+        }
+
+        &.header_show {
+            visibility: visible;
+
+            transition: none;
+
+            .header__left,
+            .header__right {
+                transform: translateX(0);
+            }
+        }
+    }
 }

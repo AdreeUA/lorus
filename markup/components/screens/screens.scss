@@ -5,6 +5,18 @@
 @import './screen-team/screen-team';
 
 .screens {
+    position: relative;
+
+    &__header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        background: transparent;
+        opacity: 0;
+        visibility: hidden;
+    }
 
     &__item {
         height: 100vh;
