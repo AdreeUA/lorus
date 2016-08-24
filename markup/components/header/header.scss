@@ -43,6 +43,10 @@
         vertical-align: middle;
     }
 
+    &__nav-btn {
+        transition: transform .4s;
+    }
+
     &_theme_default {
         padding: rem(100) calc(50% - #{$content-width} / 2) 0;
     }
@@ -78,6 +82,24 @@
             .header__right {
                 transform: translateX(0);
             }
+        }
+    }
+
+    &_nav_top {
+        .header__nav-btn {
+            transform: rotate(90deg);
+        }
+    }
+
+    &_nav_left {
+        .header__nav-btn {
+            transform: rotate(0);
+        }
+    }
+
+    &_nav_right {
+        .header__nav-btn {
+            transform: rotate(180deg);
         }
     }
 }

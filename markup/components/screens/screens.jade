@@ -7,12 +7,12 @@ include screen-team/screen-team
 mixin screens(data)
     +b.screens()&attributes(attributes)
         +header(header.screen)
-        +e.vertical
+        +e.vertical(data-direction='right')
             +screen-home.screens__item.screens__horizontal
             +screen-about.screens__item.screens__horizontal
-        +e.vertical
-            +screen-mission.screens__item.screens__horizontal
+        +e.vertical(data-direction='left')
             +screen-advantages.screens__item.screens__horizontal
+            +screen-mission.screens__item.screens__horizontal.active
         +e.vertical
             +screen-team.screens__item
             

@@ -1,3 +1,5 @@
+import { forEach } from './forEach';
+
 /**
  * Получить индекс элемента в наборе
  * @param {HTMLElement} element - элемент
