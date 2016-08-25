@@ -1,13 +1,17 @@
 import { Component, indexOf } from 'helpers-js';
+
 import { ScreenAbout } from './screen-about/screen-about';
 import { ScreenHome } from './screen-home/screen-home';
 import { ScreenMission } from './screen-mission/screen-mission';
 import { ScreenAdvantages } from './screen-advantages/screen-advantages';
 import { ScreenTeam } from './screen-team/screen-team';
+import { Hamburger } from 'components/hamburger/hamburger';
 
 import 'fullpage.js';
 
-const about = new ScreenAbout(document.querySelector('.screen-about')),
+const headerHamburger = new Hamburger(document.querySelector('.header__hamburger')),
+      mainMenu = document.querySelector('.header__slide-menu'),
+      about = new ScreenAbout(document.querySelector('.screen-about')),
       home = new ScreenHome(document.querySelector('.screen-home')),
       mission = new ScreenMission(document.querySelector('.screen-mission')),
       advantages = new ScreenAdvantages(document.querySelector('.screen-advantages')),
@@ -21,6 +25,8 @@ export class Screens extends Component {
         this._ready = true;
 
         this._onWheel = this._onWheel.bind(this);
+        this._onMenuOpen = this._onMenuOpen.bind(this);
+        this._onMenuClose = this._onMenuClose.bind(this);
 
         this._init();
     }
@@ -63,6 +69,7 @@ export class Screens extends Component {
                     activeScreen = activeVertical.querySelectorAll('.screens__item')[nextSlideIndex];
 
                 dispatchEvents(curScreen, activeScreen, direction);
+                headerHamburger.close();
             },
 
             onLeave (index, nextIndex, direction) {
@@ -74,10 +81,29 @@ export class Screens extends Component {
                                    activeVertical.querySelector('.screens__item');
 
                 dispatchEvents(curScreen, activeScreen, direction);
+                headerHamburger.close();
             }
         });
 
         this.block.addEventListener('wheel', this._onWheel);
+        mainMenu.addEventListener('open', this._onMenuOpen);
+        mainMenu.addEventListener('close', this._onMenuClose);
+    }
+
+    disableScroll() {
+        $.fn.fullpage.setAllowScrolling(false);
+    }
+
+    enableScroll() {
+        $.fn.fullpage.setAllowScrolling(true);
+    }
+
+    _onMenuOpen(e) {
+        this.disableScroll();
+    }
+
+    _onMenuClose(e) {
+        this.enableScroll();
     }
 
     _onWheel(e) {

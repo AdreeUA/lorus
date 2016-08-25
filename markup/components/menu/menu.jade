@@ -5,9 +5,9 @@ mixin menu(data)
     +b.menu()&attributes(attributes)
         +search-mini().menu__search
         +e.service
-            +nav(nav.service).nav__link_mod.menu__nav(itemClass='menu__nav-item')
+            +nav(nav.service, { itemClass: 'menu__nav-item' }).nav__link_mod.menu__nav
         +e.menu
-            +nav(nav.menu).nav__link_mod.menu__nav(itemClass='menu__nav-item')
+            +nav(nav.menu, { itemClass: 'menu__nav-item' }).nav__link_mod.menu__nav
         +btn.menu__btn
             | Написать нам
         +e.phone(href='tel:+74957775457') 8 495 777 54 57

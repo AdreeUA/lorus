@@ -1,9 +1,24 @@
 .menu {
     position: relative;
-    height: rem(1683);
+
+    height: 100vh;
     width: rem(882);
 
-    background-color: rgba(225,231,27,.8);
+    background-color: rgba($color-2, .8);
+    transform: translateX(-100%);
+
+    transition: transform .5s;
+
+    &::after {
+        content: '';
+        opacity: 0;
+
+        transition: opacity .5s;
+    }
+
+    &_open {
+        transform: translateX(0);
+    }
 
     &__nav-item {
         padding: rem(20) 0 rem(20) rem(168) ;
@@ -12,8 +27,9 @@
     &__btn {
         margin: rem(158) rem(138) 0;
 
-        color: #5C5E1D;
-        box-shadow: inset 0 0 0 1px #5C5E1D;
+        color: #5c5e1d;
+
+        box-shadow: inset 0 0 0 1px #5c5e1d;
     }
 
     &__service {
@@ -28,7 +44,7 @@
         display: inline-block;
         margin: rem(44) rem(138);
 
-        color: #5C5E1D;
+        color: #5c5e1d;
         text-decoration: none;
         font-size: rem(50);
     }

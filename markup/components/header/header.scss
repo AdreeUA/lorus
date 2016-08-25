@@ -2,6 +2,21 @@
     display: flex;
     align-items: flex-start;
 
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        height: 0;
+
+        background: rgba(0, 0, 0, 0);
+        transform: scale(0);
+        border-radius: 50%;
+
+        transition: transform .4s, border-radius .4s, background .4s;
+    }
+
     &__logo {
         display: inline-block;
         width: rem(452);
@@ -45,6 +60,18 @@
         transition: transform .4s;
     }
 
+    &__hamburger {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__slide-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+
     &_theme_default {
         position: relative;
         z-index: 10;
@@ -72,7 +99,7 @@
         .header__right {
             transform: translateX(100%);
 
-            transition: transform .4s;
+            transition: filter .4s, transform .4s;
         }
 
         &.header_show {
@@ -102,6 +129,23 @@
     &_nav_right {
         .header__nav-btn {
             transform: rotate(180deg);
+        }
+    }
+
+    &_overlay {
+
+        &::after {
+            left: rem(882);
+
+            height: 100vh;
+
+            background: rgba(0, 0, 0, .8);
+            border-radius: 0;
+            transform: scale(1);
+        }
+
+        .header__right {
+            filter: blur(5px);
         }
     }
 }

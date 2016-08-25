@@ -1,5 +1,13 @@
 .hamburger {
-    @include hide-text();
+    display: inline-block;
+
+    vertical-align: middle;
+
+    &__inner {
+        @include hide-text();
+
+        transition: background .4s;
+    }
 
     &__line {
         width: rem(42);
@@ -7,25 +15,47 @@
 
         background: currentColor;
 
+        transition: background .4s;
+
         &::before,
         &::after {
             content: '';
             position: absolute;
+            top: 0;
             left: 0;
             right: 0;
 
             height: 100%;
-            background: inherit;
+            background: currentColor;
+
+            transition: transform .4s;
         }
 
         &::before {
-            bottom: 100%;
-            margin-bottom: rem(10);
+            transform: translateY(-260%);
         }
 
         &::after {
-            top: 100%;
-            margin-top: rem(10);
+            transform: translateY(260%);
+        }
+    }
+
+    &_open {
+
+        .hamburger__inner {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .hamburger__line {
+            background: rgba(0, 0, 0, 0);
+
+            &::before {
+                transform: translateY(0) rotate(45deg);
+            }
+
+            &::after {
+                transform: translateY(0) rotate(-45deg);
+            }
         }
     }
 }

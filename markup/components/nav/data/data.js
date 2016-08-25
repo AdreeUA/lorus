@@ -12,11 +12,11 @@ var data = {nav: {
         screenreader: 'Навигация по странице',
         title: 'Навигация',
         items: [
-            { text: 'Главная страница' },
-            { text: 'О компании' },
-            { text: 'Миссия' },
-            { text: 'Преимущества' },
-            { text: 'Команда' }
+            { text: 'Главная страница', href: '#first/home' },
+            { text: 'О компании', href: '#first/about' },
+            { text: 'Миссия', href: '#second/mission' },
+            { text: 'Преимущества', href: '#second/advantages' },
+            { text: 'Команда', href: '#third' }
         ]
     },
     service: {

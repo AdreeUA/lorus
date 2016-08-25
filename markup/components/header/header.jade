@@ -1,5 +1,6 @@
 include ../logo/logo
 include ../nav/nav
+include ../menu/menu
 include ../link/link
 include ../icon-btn/icon-btn
 include ../hamburger/hamburger
@@ -10,7 +11,9 @@ mixin header(data, classList)
     -classList = classList || {}
 
     +b.header(
-        class={'_theme_default': data.type === 'default', '_theme_screen': data.type === 'screen'}
+        class={
+            '_theme_default': data.type === 'default', 
+            '_theme_screen': data.type === 'screen'}
         )&attributes(attributes)
     
         //- ==================== хедер на главном экране ======================
@@ -30,8 +33,9 @@ mixin header(data, classList)
         
             +e.left
                 +hamburger.header__hamburger
+                +menu.header__slide-menu
             
             +e.right
                 +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn])
-                
+
         block

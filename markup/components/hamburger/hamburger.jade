@@ -1,7 +1,7 @@
 include ../icon-btn/icon-btn
 
-
 mixin hamburger(data)
-        +icon-btn._theme_inverse.hamburger
+    +b.hamburger&attributes(attributes)
+        +icon-btn._theme_inverse.hamburger__inner
             +e.icon.hamburger__line
             | Открыть меню

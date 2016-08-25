@@ -10,9 +10,14 @@ export class ScreenHome extends Component {
         this._ready = true;
 
         this.block.addEventListener('show', this._onShow.bind(this));
+        this.block.addEventListener('hide', this._onHide.bind(this));
     }
 
     _onShow(e) {
         header.hide();
+    }
+
+    _onHide(e) {
+        header.show()
     }
 }

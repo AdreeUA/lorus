@@ -17,10 +17,6 @@ export class ScreenAbout extends Component {
     }
 
     _onShow(e) {
-        if (e.detail.direction === 'right') {
-            header.show();
-        }
-
         this.photo.move(e.detail.direction);
         header.toggleNavClasses('header_nav_left');
         header.changeNavHref('#first/home');
