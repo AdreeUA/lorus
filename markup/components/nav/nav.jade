@@ -5,11 +5,12 @@ mixin nav(data, classList)
     -classList = classList || {}
 
     +b.NAV.nav()&attributes(attributes)
-        +screenreader()
-            | #{data.screenreader || 'Навигация'}
-
-        if data.title
+        if !data.title
+            +screenreader()
+                | #{data.screenreader || 'Навигация'}
+        else
             +e.H2.title=data.title
+            
         +e.UL.menu
             each item in data.items
                 +e.item(class=[(item.active ? '_active' : ''), classList.itemClass])
