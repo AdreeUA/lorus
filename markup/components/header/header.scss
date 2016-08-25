@@ -1,6 +1,4 @@
 .header {
-    $content-width: rem(2335);
-
     display: flex;
     align-items: flex-start;
 
@@ -48,7 +46,10 @@
     }
 
     &_theme_default {
-        padding: rem(100) calc(50% - #{$content-width} / 2) 0;
+        position: relative;
+        z-index: 10;
+
+        padding: rem(100) rem(150) 0 rem(100);
     }
 
     &_theme_screen {
@@ -56,6 +57,7 @@
         top: 0;
         left: 0;
         right: 0;
+        z-index: 100;
 
         visibility: hidden;
 

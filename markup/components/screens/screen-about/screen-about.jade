@@ -1,5 +1,6 @@
 include ../../title/title
 include ../../content/content
+include ../../line/line
 include ../../stats/stats
 include ../../clip-img/clip-img
 
@@ -20,6 +21,8 @@ mixin screen-about(data)
             +clip-img({ 
                 src: '%=static=%img/assets/screens/screen-about/about-photo.jpg' 
                 })._shape_trapeze.screen-about__photo
-                    
+                
+        +line(line.about).screen-about__line
+        
         +e.bottom
             +stats(stats.default).screen-about__stats

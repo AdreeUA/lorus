@@ -1,4 +1,5 @@
 include ../../header/header
+include ../../line/line
 include ../../icon-link/icon-link
 include ../../scroll-btn/scroll-btn
 include ../../info/info-list/info-list
@@ -8,6 +9,8 @@ mixin screen-home(data)
         +header(header.default).screen-home__header
         
         +e.content
+            +line(line.home).screen-home__line
+        
             +e.labels
                 -var labels = ['logistics', 'pl', 'engineering'];
                 each label in labels

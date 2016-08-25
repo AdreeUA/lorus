@@ -1,0 +1,6 @@
+include ../icon/icon
+
+mixin line(data)
+    +b.line()&attributes(attributes)
+        +icon({ icon: `line-${data.name}`, class: 'line__icon line__icon_static' })
+        +icon({ icon: `line-${data.name}`, class: 'line__icon line__icon_active' })

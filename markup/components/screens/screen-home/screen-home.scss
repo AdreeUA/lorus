@@ -5,6 +5,15 @@
 
     background: $color-3;
 
+    &__line {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: rem(1222);
+        height: rem(368);
+    }
+
     &__content {
         padding: rem(160) calc(50% - #{$content-width} / 2);
     }
