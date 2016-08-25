@@ -11,4 +11,25 @@
             display: inline-block;
         }
     }
+
+    &__title {
+        font-size: rem(50);
+        color: black;
+        padding: rem(38) rem(138);
+        margin: 0;
+    }
+
+    &__describe {
+        width: rem(478);
+        position: relative;
+        left: rem(168);
+    }
+
+    &__link_mod {
+        .link {
+            color: #000;
+            font-weight: 400;
+        }
+    }
 }
+

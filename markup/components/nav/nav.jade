@@ -7,12 +7,14 @@ mixin nav(data, classList)
     +b.NAV.nav()&attributes(attributes)
         +screenreader()
             | #{data.screenreader || 'Навигация'}
-            
+
+        if data.title
+            +e.H2.title=data.title
         +e.UL.menu
-            
             each item in data.items
                 +e.item(class=[(item.active ? '_active' : ''), classList.itemClass])
                     +link({ href: item.href }).nav__link
                         | #{item.text}
-            
+        if data.describe
+            +e.describe= data.describe
         block
