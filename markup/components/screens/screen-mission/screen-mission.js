@@ -18,6 +18,7 @@ export class ScreenMission extends Component {
 
     _onShow(e) {
         header.toggleNavClasses('header_nav_top');
+        header.changeNavHref('#first/about');
 
         this.photo.move(e.detail.direction);
     }

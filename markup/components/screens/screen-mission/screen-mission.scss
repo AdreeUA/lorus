@@ -19,12 +19,28 @@
     &__subtitle {
         position: absolute;
         top: rem(466);
-        z-index: 2;
+        z-index: 3;
 
         margin-left: rem(66);
 
         filter: drop-shadow(0 10px 40px rgba(0, 0, 0, .2));
         transform: translate3d(0, 0, 0); // костыль для хрома, чтобы картинка не перекрывала заголовок при анимации
+    }
+
+    &__line {
+        position: absolute;
+        top: 0;
+        left: -2px;
+        z-index: 1;
+
+        width: rem(2488);
+        height: rem(1174);
+    }
+
+    &__flag {
+        position: absolute;
+        top: rem(420);
+        left: rem(1730);
     }
 
     &__content {
@@ -61,6 +77,8 @@
     }
 
     &__photo {
+        z-index: 2;
+
         margin-left: rem(144);
         margin-bottom: rem(114);
     }

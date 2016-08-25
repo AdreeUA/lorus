@@ -14,5 +14,6 @@ export class ScreenTeam extends Component {
 
     _onShow(e) {
         header.toggleNavClasses('header_nav_top');
+        header.changeNavHref('#second/advantages');
     }
 }

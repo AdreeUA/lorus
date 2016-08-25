@@ -8,11 +8,11 @@ mixin screens(data)
     +b.screens()&attributes(attributes)
         +header(header.screen)
         +e.vertical(data-direction='right')
-            +screen-home.screens__item.screens__horizontal
-            +screen-about.screens__item.screens__horizontal
+            +screen-home.screens__item.screens__horizontal(data-anchor='home')
+            +screen-about.screens__item.screens__horizontal(data-anchor='about')
         +e.vertical(data-direction='left')
-            +screen-advantages.screens__item.screens__horizontal
-            +screen-mission.screens__item.screens__horizontal.active
+            +screen-advantages.screens__item.screens__horizontal(data-anchor='advantages')
+            +screen-mission.screens__item.screens__horizontal.active(data-anchor='mission')
         +e.vertical
             +screen-team.screens__item
             

@@ -11,6 +11,10 @@ var data = {line: {
         name: 'mission'
     },
 
+    advantages: {
+        name: 'advantages'
+    },
+
     team: {
         name: 'team'
     }

@@ -17,6 +17,14 @@ export class Header extends Component {
         });
     }
 
+    changeNavHref(href) {
+        let navBtn = this.block.querySelector('.header__nav-btn');
+
+        if (!navBtn) return;
+
+        navBtn.setAttribute('href', href);
+    }
+
     show() {
         this.block.classList.add('header_show');
     }

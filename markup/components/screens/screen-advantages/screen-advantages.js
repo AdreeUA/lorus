@@ -16,6 +16,7 @@ export class ScreenAdvantages extends Component {
 
     _onShow(e) {
         header.toggleNavClasses('header_nav_right');
+        header.changeNavHref('#second/mission');
 
         if (this.firstShow) {
             let plane = this.block.querySelector('.screen-advantages__plane');

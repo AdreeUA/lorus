@@ -47,6 +47,7 @@ export class Screens extends Component {
         };
 
         $(this.block).fullpage({
+            anchors:['first', 'second', 'third'],
             scrollingSpeed: 1500,
             sectionSelector: '.screens__vertical',
             slideSelector: '.screens__horizontal',

@@ -1,5 +1,6 @@
 include ../../title/title
 include ../../content/content
+include ../../line/line
 
 mixin screen-advantages(data)
     +b.SECTION.screen-advantages()&attributes(attributes)
@@ -8,6 +9,8 @@ mixin screen-advantages(data)
                 | Преимущества компании
                 
             +e.plane
+            
+            +line(line.advantages).screen-advantages__line
                 
             +e.content
                 +e.row

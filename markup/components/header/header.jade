@@ -18,7 +18,7 @@ mixin header(data, classList)
     
             +e.left
                 +logo(logo.main).header__logo
-                +nav(nav.header)._horiz.header__nav(itemClass='header__nav-item')
+                +nav(nav.header, { itemClass: 'header__nav-item' })._horiz.header__nav 
             
             +e.right
                 +search-mini.header__search

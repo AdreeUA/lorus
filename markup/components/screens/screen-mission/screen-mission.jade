@@ -1,4 +1,6 @@
 include ../../title/title
+include ../../line/line
+include ../../icon/icon
 include ../../content/content
 include ../../clip-img/clip-img
 include ../../decor-title/decor-title
@@ -15,6 +17,9 @@ mixin screen-mission(data)
         +clip-img({
             src: '%=static=%img/assets/screens/screen-mission/mission-photo.jpg'
         })._shape_hexagon.screen-mission__photo
+        
+        +line(line.mission).screen-mission__line
+            +icon({ icon: 'flag', class: 'screen-mission__flag' })
         
         +e.content
             +e.text-col

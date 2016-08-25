@@ -27,6 +27,14 @@
         }
     }
 
+    &__line {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        width: rem(1496);
+    }
+
     &__wrapper {
         padding: 0 calc(50% - #{$content-width} / 2);
     }

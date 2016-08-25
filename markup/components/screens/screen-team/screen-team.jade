@@ -1,10 +1,14 @@
 include ../../title/title
 include ../../content/content
 include ../../partners/partners
+include ../../line/line
 include ../../footer/footer
 
 mixin screen-team(data)
     +b.SECTION.screen-team()&attributes(attributes)
+    
+        +line(line.team).screen-team__line
+        
         +e.main
         
             +title.screen-team__title

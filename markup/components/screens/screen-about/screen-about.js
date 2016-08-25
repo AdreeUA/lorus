@@ -23,6 +23,7 @@ export class ScreenAbout extends Component {
 
         this.photo.move(e.detail.direction);
         header.toggleNavClasses('header_nav_left');
+        header.changeNavHref('#first/home');
     }
 
     _onHide(e) {
