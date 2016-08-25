@@ -8,6 +8,25 @@
 
     background: url('%=static=%assets/screens/screen-advantages/bg-advantages.svg') no-repeat left 0 / auto 105%;
 
+    &__plane {
+        position: absolute;
+        top: rem(1286);
+        right: 100%;
+        z-index: 5;
+
+        width: rem(764);
+        height: rem(604);
+
+        background: url('%=static=%assets/screens/screen-advantages/plane.png') no-repeat center center / contain;
+
+        transition: top ($anim-time * 2), right ($anim-time * 2);
+
+        &_trigger {
+            top: rem(90);
+            right: calc(50% - #{$content-width} / 2 + #{rem(436)});
+        }
+    }
+
     &__wrapper {
         padding: 0 calc(50% - #{$content-width} / 2);
     }
@@ -25,6 +44,13 @@
 
         &:not(:last-child) {
             margin-bottom: rem(140);
+        }
+
+        &:first-child {
+
+            .screen-advantages__text-block:last-child {
+                margin-right: rem(-214);
+            }
         }
     }
 
