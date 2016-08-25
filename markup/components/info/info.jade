@@ -7,11 +7,11 @@ mixin info(data)
         +e.main
             +decor-title(data.title).info__title
             +content.info__content!= data.content
-                
+
             +btn.info__btn
                 | Подробнее
-                
+
         +e.img-wrapper
-            +e.IMG.img(src=`${data.img.src}.${data.img.format}` 
-                       srcset=`${data.img.src}@2x.${data.img.format} 2x` 
+            +e.IMG.img(src=`${data.img.src}.${data.img.format}`
+                       srcset=`${data.img.src}@2x.${data.img.format} 2x`
                        alt=data.img.alt)
