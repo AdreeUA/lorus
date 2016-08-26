@@ -1,0 +1,33 @@
+include ../../../decor-title/decor-title
+include ../../../icon/icon
+
+mixin block-2(data)
+    +b.block-2.service__block
+        +e.left.service__left
+            +decor-title({ tag: 'div', rows: [
+            'Поручите перевозку своего груза', 'опытному оператору:'
+        ]}).block-2__subtitle
+            +e.IMG.photo(
+                    src='%=static=%img/assets/service/through-service/through-service-2.jpg'
+                    alt='')
+            +e.icons
+                +e.calendar
+                    != jadeHelpers.Icon.call(locals, {iconName: 'calendar', className: 'block-2__icon'})
+                    +e.desc Транзитное время не более 4-х недель
+                +e.money
+                    != jadeHelpers.Icon.call(locals, {iconName: 'money', className: 'block-2__icon'})
+                    +e.desc Фиксация ставок в рублях
+
+        +e.right.service__right
+            +title.service__title.block-2__title
+                | Быстро и выгодно
+            +content
+                h4
+                    | Бережём Ваше время
+                    | и оптимизируем расходы на хранение
+
+                p
+                    | Проверенная схема сквозного сервиса позволяет разработать удобный
+                    | график для каждого клиента. Транзитное время составляет не более 4-х
+                    | недель.
+

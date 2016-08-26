@@ -1,0 +1,40 @@
+.block-4 {
+    padding-bottom: rem(40);
+
+    &__left {
+        width: rem(450);
+    }
+
+    &__right {
+        width: rem(550);
+    }
+
+    &__photo {
+        padding-top: rem(70);
+    }
+
+    &__decorh {
+        padding-bottom: rem(20);
+    }
+
+    &__decorp {
+
+        padding-left: rem(30);
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: rem(4);
+            content: '';
+            background-color: #E3EC3A;
+            height: 100%;
+            width: 3px;
+
+        }
+    }
+
+    &__title {
+        font-size: rem-2(76);
+        font-weight: 400;
+    }
+}

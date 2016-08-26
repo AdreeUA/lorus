@@ -1,5 +1,12 @@
 .through-service {
-    background: url('%=static=%assets/service/through-service/');
+    background: url('%=static=%assets/service/through-service/bg-through-service.svg');
+
+    background-size: cover;
 
     @import './block-1/block-1';
+    @import './block-2/block-2';
+    @import './block-3/block-3';
+    @import './block-4/block-4';
+
+
 }
