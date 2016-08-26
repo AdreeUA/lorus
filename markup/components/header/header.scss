@@ -115,6 +115,14 @@
         }
     }
 
+    &_theme_inner {
+        display: block;
+        
+        .header__nav-btn {
+            display: block;
+        }
+    }
+
     &_nav_top {
         .header__nav-btn {
             transform: rotate(90deg);
