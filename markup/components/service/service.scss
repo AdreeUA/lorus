@@ -33,6 +33,11 @@
     &__right {
         float: right;
     }
+
+    &__text-decor {
+        padding-left: rem(80);
+    }
+
 }
 
 @import './through-service/through-service';

@@ -10,6 +10,8 @@
         padding: 0 em(100, $base-font);
         padding-left: em(44, $base-font);
 
+        white-space: nowrap;
+
         background: #fff;
 
         &:first-child {
