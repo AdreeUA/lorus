@@ -8,13 +8,9 @@
 
     padding-bottom: $shadow-size;
 
-    &__main {
-        position: relative;
-        z-index: 2;
-    }
-
     &__title {
         position: relative;
+        z-index: 2;
 
         padding-top: rem-2(56);
         margin-bottom: rem-2(112);
@@ -58,6 +54,8 @@
         padding-left: rem-2(70);
 
         text-align: right;
+        text-decoration: none;
+        color: inherit;
 
         overflow: hidden;
         border-radius: 0 rem-2(10) rem-2(10) 0;
@@ -69,10 +67,18 @@
             top: 0;
             bottom: 0;
             left: 0;
+            z-index: 2;
 
             width: rem-2(70);
 
             background: $color-2;
+        }
+
+        &:hover {
+
+            .info__img {
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -81,6 +87,8 @@
         height: 100%;
 
         @include object-fit(cover);
+
+        transition: transform 1s;
     }
 
     &_hide {

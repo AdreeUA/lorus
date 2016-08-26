@@ -21,19 +21,19 @@
     }
 
     &__labels {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-bottom: rem-2(130);
+        padding-left: rem-2(130);
     }
 
     &__label {
-        display: inline-flex;
+        display: inline-block;
         align-items: center;
-        flex-grow: 1;
-        padding: 0 rem-2(74);
 
         vertical-align: middle;
+
+        &:not(:last-child) {
+            margin-right: rem-2(200);
+        }
     }
 
     &__slider {
