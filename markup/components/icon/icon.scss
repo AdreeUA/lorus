@@ -12,46 +12,46 @@
     }
 
     &_search {
-        width: rem(52);
-        height: rem(52);
+        width: rem-x2(52);
+        height: rem-x2(52);
 
         stroke-width: 3px;
     }
 
     &_loader {
-        width: rem(125);
-        height: rem(114);
+        width: rem-x2(125);
+        height: rem-x2(114);
     }
 
     &_pl {
-        width: rem(140);
-        height: rem(84);
+        width: rem-x2(140);
+        height: rem-x2(84);
     }
 
     &_chart {
-        width: rem(64);
-        height: rem(91);
+        width: rem-x2(64);
+        height: rem-x2(91);
     }
 
     &_arrow {
-        width: rem(26);
-        height: rem(34);
+        width: rem-x2(26);
+        height: rem-x2(34);
 
         stroke-width: 3px;
     }
 
     &_mouse {
-        width: rem(56);
-        height: rem(90);
+        width: rem-x2(56);
+        height: rem-x2(90);
     }
 
     &_figure-arrow {
-        width: rem(26);
-        height: rem(40);
+        width: rem-x2(26);
+        height: rem-x2(40);
     }
 
     &__flag {
-        width: rem(100);
-        height: rem(232);
+        width: rem-x2(100);
+        height: rem-x2(232);
     }
 }

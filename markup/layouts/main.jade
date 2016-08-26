@@ -2,8 +2,13 @@ include ../../node_modules/bemto.jade/bemto
 
 include ../components/page/page
 
+-var pageSettings = {};
+-pageSettings.title = 'Главная';
+
+block vars
+
 doctype html
-html(lang='ru')
+html(lang='ru').page-index
     include ../components/head/head
 
     body

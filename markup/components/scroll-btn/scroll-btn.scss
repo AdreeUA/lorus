@@ -1,5 +1,5 @@
 .scroll-btn {
-    width: rem(56);
+    width: rem-x2(56);
 
     color: #000;
     text-align: center;
@@ -9,7 +9,7 @@
     &__mouse {
         display: block;
         width: 100%;
-        margin-bottom: rem(16);
+        margin-bottom: rem-x2(16);
     }
 
     &:hover {

@@ -5,8 +5,8 @@
 
         .slick-dots {
             position: absolute;
-            right: rem(44);
-            bottom: rem(22);
+            right: rem-x2(44);
+            bottom: rem-x2(22);
             
             margin-bottom: 60px;
         }
@@ -24,15 +24,15 @@
             right: 100%;
             z-index: 1;
 
-            margin-right: rem(60);
+            margin-right: rem-x2(60);
         }
 
         .slick-prev {
-            top: rem(100);
+            top: rem-x2(100);
         }
 
         .slick-next {
-            top: rem(220);
+            top: rem-x2(220);
         }
     }
 }

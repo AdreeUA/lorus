@@ -1,13 +1,13 @@
 .title {
     margin: 0;
 
-    font-size: rem(90);
+    font-size: rem-x2(90);
     font-weight: 300;
 
     &_underline {
         position: relative;
 
-        padding-bottom: rem(70);
+        padding-bottom: rem-x2(70);
 
         &::before {
             content: '';
@@ -15,7 +15,7 @@
             bottom: 0;
             left: 0;
 
-            width: rem(168);
+            width: rem-x2(168);
             height: 1px;
 
             background: currentColor;

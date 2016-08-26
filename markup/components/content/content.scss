@@ -4,13 +4,13 @@
         margin-top: 0;
         margin-bottom: 1em;
 
-        font-size: rem(44);
+        font-size: rem-x2(44);
         font-weight: 300;
     }
 
     p {
         margin: 0;
-        font-size: rem(32);
+        font-size: rem-x2(32);
         color: #4d4a45;
 
         &:not(:last-child) {

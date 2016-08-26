@@ -1,0 +1,23 @@
+.service {
+    &__photo-wrapper {
+        position: relative;
+
+        overflow: hidden;
+        border-radius: 10px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: rem(86);
+            height: 100%;
+
+            background: url('%=static=%assets/service/service-shadow.svg');
+        }
+    }
+
+    &__photo {
+        max-width: 100%;
+    }
+}
+
+@import './through-service/through-service';

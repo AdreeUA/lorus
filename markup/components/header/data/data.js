@@ -5,5 +5,9 @@ var data = {header: {
 
     screen: {
         type: 'screen'
+    },
+
+    inner: {
+        type: 'inner'
     }
 }}

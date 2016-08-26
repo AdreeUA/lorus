@@ -1,5 +1,5 @@
 .clip-img {
-    font-size: rem(10);
+    font-size: rem-x2(10);
 
     &__wrapper {
         width: 100%;
@@ -86,7 +86,7 @@
                 left: 0;
                 z-index: 2;
 
-                width: rem(104);
+                width: rem-x2(104);
 
                 background: #3f76a0;
                 transform: skew(40deg);

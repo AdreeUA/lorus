@@ -1,0 +1,8 @@
+include ../service
+include ./block-1/block-1
+
+mixin through-service(data)
+    +service
+        +b.through-service()&attributes(attributes)
+            +container
+                +block-1

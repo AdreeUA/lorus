@@ -1,0 +1,7 @@
+include ../title/title
+include ../content/content
+include ../container/container
+
+mixin service(data)
+    +b.ARTICLE.service()&attributes(attributes)
+        block

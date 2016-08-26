@@ -2,8 +2,5 @@ extends ../layouts/main
 
 include ../components/screens/screens
 
-block head
-    -pageSettings.title = 'Главная';
-
 block content
     +screens(screens.default)

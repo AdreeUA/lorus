@@ -1,5 +1,5 @@
 .screen-home {
-    $content-width: rem(2190);
+    $content-width: rem-x2(2190);
 
     position: relative;
 
@@ -10,37 +10,37 @@
         top: 0;
         right: 0;
 
-        width: rem(1222);
-        height: rem(368);
+        width: rem-x2(1222);
+        height: rem-x2(368);
     }
 
     &__content {
-        padding: rem(160) calc(50% - #{$content-width} / 2);
+        padding: rem-x2(160) calc(50% - #{$content-width} / 2);
     }
 
     &__labels {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: rem(130);
+        margin-bottom: rem-x2(130);
     }
 
     &__label {
         display: inline-flex;
         align-items: center;
         flex-grow: 1;
-        padding: 0 rem(74);
+        padding: 0 rem-x2(74);
 
         vertical-align: middle;
     }
 
     &__slider {
-        padding-right: rem(40);
+        padding-right: rem-x2(40);
     }
 
     &__scroll {
         position: absolute;
-        right: calc(50% - #{rem(2335)} / 2);
-        bottom: rem(86);
+        right: calc(50% - #{rem-x2(2335)} / 2);
+        bottom: rem-x2(86);
     }
 }

@@ -4,13 +4,20 @@ include ../components/page/page
 include ../components/header/header
 include ../components/footer/footer
 
+-var pageSettings = {};
+-pageSettings.title = '';
+-pageSettings.useSocialMetaTags = false;
+
+block vars
+
 doctype html
-html(lang='ru')
+
+html(lang='ru' class=pageSettings.pageClass)
     include ../components/head/head
 
     body
         +page
-            +header
+            +header(header.inner)
             
             block content
             

@@ -19,24 +19,24 @@
 
     &__logo {
         display: inline-block;
-        width: rem(452);
-        margin-right: rem(154);
+        width: rem-x2(452);
+        margin-right: rem-x2(154);
 
         vertical-align: top;
     }
 
     &__nav {
         display: inline-block;
-        width: rem(740);
-        margin: rem(-38) rem(-20);
-        margin-top: rem(-14);
+        width: rem-x2(740);
+        margin: rem-x2(-38) rem-x2(-20);
+        margin-top: rem-x2(-14);
 
         vertical-align: top;
     }
 
     &__nav-item {
         width: 50%;
-        padding: rem(38) rem(20);
+        padding: rem-x2(38) rem-x2(20);
     }
 
     &__right {
@@ -45,7 +45,7 @@
 
     &__search {
         display: inline-block;
-        margin-right: rem(62);
+        margin-right: rem-x2(62);
 
         vertical-align: middle;
     }
@@ -76,7 +76,7 @@
         position: relative;
         z-index: 10;
 
-        padding: rem(100) rem(150) 0 rem(100);
+        padding: rem-x2(100) rem-x2(150) 0 rem-x2(100);
     }
 
     &_theme_screen {
@@ -135,7 +135,7 @@
     &_overlay {
 
         &::after {
-            left: rem(882);
+            left: rem-x2(882);
 
             height: 100vh;
 

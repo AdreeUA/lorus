@@ -9,13 +9,15 @@ import { Hamburger } from 'components/hamburger/hamburger';
 
 import 'fullpage.js';
 
-const headerHamburger = new Hamburger(document.querySelector('.header__hamburger')),
-      mainMenu = document.querySelector('.header__slide-menu'),
-      about = new ScreenAbout(document.querySelector('.screen-about')),
-      home = new ScreenHome(document.querySelector('.screen-home')),
-      mission = new ScreenMission(document.querySelector('.screen-mission')),
-      advantages = new ScreenAdvantages(document.querySelector('.screen-advantages')),
-      team = new ScreenTeam(document.querySelector('.screen-team'));
+if (document.querySelector('.screens')) {
+    const headerHamburger = new Hamburger(document.querySelector('.header__hamburger')),
+          mainMenu = document.querySelector('.header__slide-menu'),
+          about = new ScreenAbout(document.querySelector('.screen-about')),
+          home = new ScreenHome(document.querySelector('.screen-home')),
+          mission = new ScreenMission(document.querySelector('.screen-mission')),
+          advantages = new ScreenAdvantages(document.querySelector('.screen-advantages')),
+          team = new ScreenTeam(document.querySelector('.screen-team'));
+}
 
 export class Screens extends Component {
     constructor(block) {

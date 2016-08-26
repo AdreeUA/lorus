@@ -7,6 +7,8 @@ const cache = {};
 export class Component {
 
     constructor(block, className) {
+        if (!block) return;
+
         if (!block.classList.contains(className)) {
             throw new Error(`Элемент не является блоком ${className}`);
         }
@@ -35,7 +37,7 @@ Component.init = (blocks, Class) => {
         blocks = document.querySelectorAll(blocks);
     }
 
-    if (!blocks.length) return;
+    if (!blocks.length || !blocks) return;
 
     if (blocks instanceof HTMLElement) {
         return new Class(block);

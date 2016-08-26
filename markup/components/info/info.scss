@@ -16,10 +16,10 @@
     &__title {
         position: relative;
 
-        padding-top: rem(56);
-        margin-bottom: rem(112);
+        padding-top: rem-x2(56);
+        margin-bottom: rem-x2(112);
 
-        font-size: rem(90);
+        font-size: rem-x2(90);
         line-height: 1.4;
         font-weight: 300;
 
@@ -27,9 +27,9 @@
             content: '';
             position: absolute;
             top: 0;
-            left: rem(74);
+            left: rem-x2(74);
 
-            width: rem(168);
+            width: rem-x2(168);
             height: 1px;
 
             background: #000;
@@ -40,7 +40,7 @@
         width: percentage($content-width / $template-width);
         padding-left: percentage(60 / $template-width);
         padding-right: percentage(90 / $template-width);
-        min-height: rem(330);
+        min-height: rem-x2(330);
 
         p {
             color: #000;
@@ -59,7 +59,7 @@
         text-align: right;
 
         overflow: hidden;
-        border-radius: 0 rem(10) rem(10) 0;
+        border-radius: 0 rem-x2(10) rem-x2(10) 0;
         box-shadow: 0 #{$shadow-size} #{$shadow-size} -#{$shadow-size} rgba(0, 0, 0, .6);
 
         &::before {
@@ -69,7 +69,7 @@
             bottom: 0;
             left: 0;
 
-            width: rem(70);
+            width: rem-x2(70);
 
             background: $color-2;
         }

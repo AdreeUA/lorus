@@ -1,8 +1,8 @@
 .screen-mission {
     position: relative;
 
-    padding-bottom: rem(70);
-    padding-top: rem(124);
+    padding-bottom: rem-x2(70);
+    padding-top: rem-x2(124);
 
     background: url('%=static=%assets/screens/screen-mission/bg-mission.svg') no-repeat right 100% / auto 100%;
 
@@ -11,17 +11,17 @@
     }
 
     &__title {
-        margin-top: rem(-50);
-        margin-left: rem(234);
-        margin-bottom: rem(188);
+        margin-top: rem-x2(-50);
+        margin-left: rem-x2(234);
+        margin-bottom: rem-x2(188);
     }
 
     &__subtitle {
         position: absolute;
-        top: rem(466);
+        top: rem-x2(466);
         z-index: 3;
 
-        margin-left: rem(66);
+        margin-left: rem-x2(66);
 
         filter: drop-shadow(0 10px 40px rgba(0, 0, 0, .2));
         transform: translate3d(0, 0, 0); // костыль для хрома, чтобы картинка не перекрывала заголовок при анимации
@@ -33,27 +33,27 @@
         left: -2px;
         z-index: 1;
 
-        width: rem(2488);
-        height: rem(1174);
+        width: rem-x2(2488);
+        height: rem-x2(1174);
     }
 
     &__flag {
         position: absolute;
-        top: rem(420);
-        left: rem(1730);
+        top: rem-x2(420);
+        left: rem-x2(1730);
     }
 
     &__content {
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
-        padding: 0 rem(132);
+        padding: 0 rem-x2(132);
     }
 
     &__text-col {
         position: relative;
 
-        padding: rem(80) rem(86);
+        padding: rem-x2(80) rem-x2(86);
         width: percentage(930 / (2555 - 132 * 2));
 
         &::before {
@@ -61,7 +61,7 @@
             position: absolute;
             top: 0;
 
-            width: rem(170);
+            width: rem-x2(170);
             height: 1px;
 
             background: currentColor;
@@ -79,7 +79,7 @@
     &__photo {
         z-index: 2;
 
-        margin-left: rem(144);
-        margin-bottom: rem(114);
+        margin-left: rem-x2(144);
+        margin-bottom: rem-x2(114);
     }
 }

@@ -13,7 +13,8 @@ mixin header(data, classList)
     +b.header(
         class={
             '_theme_default': data.type === 'default', 
-            '_theme_screen': data.type === 'screen'}
+            '_theme_screen': data.type === 'screen',
+            '_theme_inner': data.type === 'inner'}
         )&attributes(attributes)
     
         //- ==================== хедер на главном экране ======================
@@ -37,5 +38,11 @@ mixin header(data, classList)
             
             +e.right
                 +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn])
+                
+        //- =================== Хедер на внутренних страницах =================
+        if data.type === 'inner'
+            +hamburger.header__hamburger
+            +menu.header__slide-menu
+            +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn])
 
         block

@@ -1,6 +1,6 @@
 .footer {
-    padding-top: rem(60);
-    padding-bottom: rem(70);
+    padding-top: rem-x2(60);
+    padding-bottom: rem-x2(70);
 
     background: #fff;
 
@@ -19,7 +19,7 @@
 
         display: inline-flex;
         align-items: flex-end;
-        min-height: rem(138);
+        min-height: rem-x2(138);
 
         vertical-align: top;
         color: $color-1;
@@ -36,26 +36,26 @@
         }
 
         &_copyright {
-            font-size: rem(29);
+            font-size: rem-x2(29);
             line-height: 1.4;
 
             &::before {
-                width: rem(170);
+                width: rem-x2(170);
             }
         }
 
         &_phone {
-            margin-right: rem(188);
+            margin-right: rem-x2(188);
 
             &::before {
-                width: rem(126);
+                width: rem-x2(126);
             }
         }
 
         &_mail {
 
             &::before {
-                width: rem(60);
+                width: rem-x2(60);
             }
         }
     }
@@ -63,10 +63,10 @@
     &__phone {
         color: inherit;
         text-decoration: none;
-        font-size: rem(32);
+        font-size: rem-x2(32);
     }
 
     &__mail {
-        font-size: rem(32);
+        font-size: rem-x2(32);
     }
 }
