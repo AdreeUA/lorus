@@ -1,9 +1,9 @@
 .screen-team {
-    $content-width: rem-x2(2134);
+    $content-width: rem-2(2134);
 
     position: relative;
 
-    padding-top: rem-x2(124);
+    padding-top: rem-2(124);
 
     background: $color-3;
     background-repeat: no-repeat;
@@ -20,10 +20,10 @@
     &__line {
         position: absolute;
         top: 0;
-        right: rem-x2(178);
+        right: rem-2(178);
         z-index: 2;
 
-        width: rem-x2(1722);
+        width: rem-2(1722);
     }
 
     &__photo-wrapper {
@@ -32,8 +32,8 @@
         right: 0;
         z-index: 1;
 
-        width: rem-x2(1736);
-        padding-left: rem-x2(70);
+        width: rem-2(1736);
+        padding-left: rem-2(70);
 
         line-height: 0;
 
@@ -46,7 +46,7 @@
             left: 0;
             bottom: 0;
 
-            width: rem-x2(70);
+            width: rem-2(70);
 
             background: #4c4c4c;
         }
@@ -61,22 +61,22 @@
         z-index: 2;
 
         padding: 0 calc(50% - #{$content-width} / 2);
-        padding-bottom: rem-x2(70);
+        padding-bottom: rem-2(70);
     }
 
     &__title {
-        margin-top: rem-x2(106);
-        margin-bottom: rem-x2(170);
+        margin-top: rem-2(106);
+        margin-bottom: rem-2(170);
     }
 
     &__content {
         position: relative;
         z-index: 3;
 
-        width: rem-x2(1326);
-        padding: rem-x2(60) rem-x2(92) rem-x2(78) rem-x2(76);
-        margin-left: rem-x2(70);
-        margin-bottom: rem-x2(196);
+        width: rem-2(1326);
+        padding: rem-2(60) rem-2(92) rem-2(78) rem-2(76);
+        margin-left: rem-2(70);
+        margin-bottom: rem-2(196);
 
         background: #fff;
         box-shadow: 0 20px 80px rgba(0, 0, 0, .2);
@@ -84,6 +84,6 @@
     }
 
     &__partners {
-        width: rem-x2(1606);
+        width: rem-2(1606);
     }
 }

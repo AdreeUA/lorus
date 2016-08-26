@@ -14,7 +14,7 @@ var data = {info: {
 
     two: {
         title: {
-            rows: ['Товары ', 'из Бангладеша, Индии и Туркменистана']
+            rows: ['Товары из Бангладеша ', 'Индии и Туркменистана']
         },
         content: `<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste officiis asperiores.</p>`,
         img: {

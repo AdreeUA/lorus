@@ -2,7 +2,7 @@
     display: inline-block;
 
     text-decoration: none;
-    font-size: rem-x2(38);
+    font-size: rem-2(38);
     color: #000;
     vertical-align: top;
 
@@ -18,12 +18,12 @@
     }
 
     &__icon {
-        margin-right: rem-x2(10);
+        margin-right: rem-2(10);
 
         opacity: .3;
 
         &_loader {
-            margin-top: rem-x2(-16);
+            margin-top: rem-2(-16);
         }
     }
 
@@ -31,8 +31,8 @@
         position: relative;
 
         display: inline-block;
-        padding: rem-x2(10) rem-x2(36);
-        padding-left: rem-x2(14);
+        padding: rem-2(10) rem-2(36);
+        padding-left: rem-2(14);
 
         vertical-align: middle;
 
@@ -42,8 +42,8 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: rem-x2(14);
-            right: rem-x2(24);
+            left: rem-2(14);
+            right: rem-2(24);
 
             height: 1px;
 

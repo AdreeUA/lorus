@@ -1,29 +1,29 @@
 .screen-advantages {
-    $content-width: rem-x2(2134);
+    $content-width: rem-2(2134);
 
     position: relative;
 
-    padding-bottom: rem-x2(112);
-    padding-top: rem-x2(124);
+    padding-bottom: rem-2(112);
+    padding-top: rem-2(124);
 
     background: url('%=static=%assets/screens/screen-advantages/bg-advantages.svg') no-repeat left 0 / auto 105%;
 
     &__plane {
         position: absolute;
-        top: rem-x2(1286);
+        top: rem-2(1286);
         right: 100%;
         z-index: 5;
 
-        width: rem-x2(764);
-        height: rem-x2(604);
+        width: rem-2(764);
+        height: rem-2(604);
 
         background: url('%=static=%assets/screens/screen-advantages/plane.png') no-repeat center center / contain;
 
         transition: top ($anim-time * 2), right ($anim-time * 2);
 
         &_trigger {
-            top: rem-x2(90);
-            right: calc(50% - #{$content-width} / 2 + #{rem-x2(436)});
+            top: rem-2(90);
+            right: calc(50% - #{$content-width} / 2 + #{rem-2(436)});
         }
     }
 
@@ -32,7 +32,7 @@
         bottom: 0;
         right: 0;
 
-        width: rem-x2(1496);
+        width: rem-2(1496);
     }
 
     &__wrapper {
@@ -40,7 +40,7 @@
     }
 
     &__title {
-        margin-bottom: rem-x2(182);
+        margin-bottom: rem-2(182);
     }
 
     &__nav-btn {
@@ -51,33 +51,33 @@
         @include clearfix();
 
         &:not(:last-child) {
-            margin-bottom: rem-x2(140);
+            margin-bottom: rem-2(140);
         }
 
         &:first-child {
 
             .screen-advantages__text-block:last-child {
-                margin-right: rem-x2(-214);
+                margin-right: rem-2(-214);
             }
         }
     }
 
     &__text-block {
         float: left;
-        width: rem-x2(820);
+        width: rem-2(820);
 
         &:nth-child(2) {
             float: right;
         }
 
         h2 {
-            margin-bottom: rem-x2(80);
+            margin-bottom: rem-2(80);
         }
 
         p {
             position: relative;
 
-            padding-left: rem-x2(64);
+            padding-left: rem-2(64);
 
             &::before {
                 content: '';
@@ -85,7 +85,7 @@
                 top: 0;
                 left: 0;
 
-                height: rem-x2(222);
+                height: rem-2(222);
                 width: 1px;
 
                 background: currentColor;

@@ -3,7 +3,7 @@
 
     margin: 0;
 
-    font-size: rem-x2($base-font);
+    font-size: rem-2($base-font);
 
     &__row {
         display: table;
@@ -13,11 +13,11 @@
         background: #fff;
 
         &:first-child {
-            padding-top: rem-x2(16);
+            padding-top: rem-2(16);
         }
 
         &:last-child {
-            padding-bottom: rem-x2(16);
+            padding-bottom: rem-2(16);
         }
     }
 }

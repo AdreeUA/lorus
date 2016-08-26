@@ -2,7 +2,7 @@
     position: relative;
 
     height: 100vh;
-    width: rem-x2(882);
+    width: rem-2(882);
 
     background-color: rgba($color-2, .8);
     transform: translateX(-100%);
@@ -21,11 +21,11 @@
     }
 
     &__nav-item {
-        padding: rem-x2(20) 0 rem-x2(20) rem-x2(168) ;
+        padding: rem-2(20) 0 rem-2(20) rem-2(168) ;
     }
 
     &__btn {
-        margin: rem-x2(158) rem-x2(138) 0;
+        margin: rem-2(158) rem-2(138) 0;
 
         color: #5c5e1d;
 
@@ -33,25 +33,25 @@
     }
 
     &__service {
-        padding-top: rem-x2(160);
+        padding-top: rem-2(160);
     }
 
     &__menu {
-        padding-top: rem-x2(100);
+        padding-top: rem-2(100);
     }
 
     &__phone {
         display: inline-block;
-        margin: rem-x2(44) rem-x2(138);
+        margin: rem-2(44) rem-2(138);
 
         color: #5c5e1d;
         text-decoration: none;
-        font-size: rem-x2(50);
+        font-size: rem-2(50);
     }
 
     &__search {
         position: absolute;
-        top: rem-x2(40);
-        right: rem-x2(40);
+        top: rem-2(40);
+        right: rem-2(40);
     }
 }

@@ -13,16 +13,16 @@
     }
 
     &__title {
-        font-size: rem-x2(50);
+        font-size: rem-2(50);
         color: black;
-        padding: rem-x2(38) rem-x2(138);
+        padding: rem-2(38) rem-2(138);
         margin: 0;
     }
 
     &__describe {
-        width: rem-x2(478);
+        width: rem-2(478);
         position: relative;
-        left: rem-x2(168);
+        left: rem-2(168);
     }
 
     &__link_mod {

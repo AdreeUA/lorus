@@ -5,9 +5,9 @@
 
         .slick-dots {
             position: absolute;
-            right: rem-x2(44);
-            bottom: rem-x2(22);
-            
+            right: rem-2(44);
+            bottom: rem-2(22);
+
             margin-bottom: 60px;
         }
 
@@ -21,18 +21,18 @@
 
         .slick-arrow {
             position: absolute;
-            right: 100%;
+            left: 0;
             z-index: 1;
 
-            margin-right: rem-x2(60);
+            margin-left: rem-2(-15);
         }
 
         .slick-prev {
-            top: rem-x2(100);
+            top: rem-2(100);
         }
 
         .slick-next {
-            top: rem-x2(220);
+            top: rem-2(220);
         }
     }
 }

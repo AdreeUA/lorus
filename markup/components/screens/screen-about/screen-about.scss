@@ -1,41 +1,41 @@
 .screen-about {
     position: relative;
 
-    padding-top: rem-x2(124);
+    padding-top: rem-2(124);
 
     background: $color-3;
     background: linear-gradient(-58deg, $color-3 32rem, #efefef 0, #efefef 55rem, $color-3 0);
 
     &__header {
-        margin-bottom: rem-x2(70);
+        margin-bottom: rem-2(70);
     }
 
     &__top {
-        padding-left: rem-x2(480);
+        padding-left: rem-2(480);
     }
 
     &__line {
         position: absolute;
-        top: rem-x2(318);
+        top: rem-2(318);
         left: -2px;
         z-index: 2;
 
-        width: rem-x2(2220);
-        height: rem-x2(1408);
+        width: rem-2(2220);
+        height: rem-2(1408);
     }
 
     &__title {
-        margin-bottom: rem-x2(180);
+        margin-bottom: rem-2(180);
     }
 
     &__content {
-        width: rem-x2(800);
-        margin-bottom: rem-x2(240);
+        width: rem-2(800);
+        margin-bottom: rem-2(240);
     }
 
     &__photo {
         position: absolute;
-        top: rem-x2(164);
+        top: rem-2(164);
         right: 0;
         z-index: 2;
     }
@@ -47,7 +47,7 @@
         right: 0;
         z-index: 1;
 
-        padding: rem-x2(270) rem-x2(138)  rem-x2(80) rem-x2(234);
+        padding: rem-2(270) rem-2(138)  rem-2(80) rem-2(234);
         background: #fff;
     }
 }

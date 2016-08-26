@@ -1,5 +1,6 @@
 .screen-home {
-    $content-width: rem-x2(2190);
+    $pr: 252;
+    $pl: 84;
 
     position: relative;
 
@@ -10,37 +11,44 @@
         top: 0;
         right: 0;
 
-        width: rem-x2(1222);
-        height: rem-x2(368);
+        width: rem-2(1222);
+        height: rem-2(368);
     }
 
     &__content {
-        padding: rem-x2(160) calc(50% - #{$content-width} / 2);
+        padding: rem-2(160) rem-2($pl);
+        padding-right: rem-2($pr);
     }
 
     &__labels {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: rem-x2(130);
+        margin-bottom: rem-2(130);
     }
 
     &__label {
         display: inline-flex;
         align-items: center;
         flex-grow: 1;
-        padding: 0 rem-x2(74);
+        padding: 0 rem-2(74);
 
         vertical-align: middle;
     }
 
     &__slider {
-        padding-right: rem-x2(40);
+
+        .slick-list {
+            margin-left: rem-2(-$pl);
+            margin-right: rem-2(-$pr);
+            padding-left: rem-2($pl + 70);
+            padding-right: rem-2($pr + 14);
+        }
     }
 
     &__scroll {
         position: absolute;
-        right: calc(50% - #{rem-x2(2335)} / 2);
-        bottom: rem-x2(86);
+        right: rem-2(130);
+        bottom: rem-2(86);
     }
 }

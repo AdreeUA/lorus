@@ -10,7 +10,7 @@
 
     &__num {
         display: block;
-        font-size: rem-x2(82);
+        font-size: rem-2(82);
         white-space: nowrap;
     }
 
@@ -18,9 +18,9 @@
         position: relative;
 
         display: block;
-        min-height: rem-x2(220);
+        min-height: rem-2(220);
 
-        font-size: rem-x2(42);
+        font-size: rem-2(42);
 
         &::after {
             content: '';
@@ -28,7 +28,7 @@
             bottom: 0;
             left: 0;
 
-            width: rem-x2(170);
+            width: rem-2(170);
             height: 1px;
 
             background-color: currentColor;

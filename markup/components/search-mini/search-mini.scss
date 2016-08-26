@@ -7,8 +7,8 @@
 
     &__field {
         display: inline-block;
-        width: rem-x2(400);
-        height: rem-x2(60);
+        width: rem-2(400);
+        height: rem-2(60);
         padding: 0;
         border: 1px solid $color-1;
 
@@ -22,10 +22,10 @@
         transition: transform .5s, padding .5s;
 
         &:focus {
-            padding: 0 rem-x2(20);
+            padding: 0 rem-2(20);
 
             outline: none;
-            transform: scaleX(1) translateX(rem-x2(-15));
+            transform: scaleX(1) translateX(rem-2(-15));
 
             transition: transform .5s, padding .5s;
 
@@ -41,8 +41,8 @@
         right: 0;
         z-index: 2;
 
-        width: rem-x2(52);
-        height: rem-x2(52);
+        width: rem-2(52);
+        height: rem-2(52);
         padding: 0;
 
         opacity: 0;
