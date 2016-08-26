@@ -8,15 +8,30 @@
         &::after {
             content: '';
             position: absolute;
+            top: 0;
+            bottom: 0;
             right: rem(86);
-            height: 100%;
 
-            background: url('%=static=%assets/service/service-shadow.svg');
+            width: rem(285);
+
+            background: url('%=static=%assets/service/service-photo-shadow.svg') no-repeat / auto 100%;
         }
     }
 
     &__photo {
         max-width: 100%;
+    }
+
+    &__block {
+        @include clearfix();
+    }
+
+    &__left {
+        float: left;
+    }
+
+    &__right {
+        float: right;
     }
 }
 
