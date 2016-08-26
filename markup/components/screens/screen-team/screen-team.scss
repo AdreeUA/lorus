@@ -20,10 +20,11 @@
     &__line {
         position: absolute;
         top: 0;
-        right: rem-2(178);
+        right: percentage(500/1225);
         z-index: 2;
 
         width: rem-2(1722);
+        margin-right: rem-2(-880);
     }
 
     &__photo-wrapper {

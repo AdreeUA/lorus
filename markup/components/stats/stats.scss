@@ -6,6 +6,17 @@
     &__item {
         color: $color-1;
         font-weight: 300;
+
+        &:last-child {
+            margin-left: rem-2(126);
+
+            .stats__text {
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
     }
 
     &__num {

@@ -8,11 +8,11 @@
 
     &__line {
         position: absolute;
-        top: 0;
+        top: rem-2(-12);
         right: 0;
 
-        width: rem-2(1222);
-        height: rem-2(368);
+        width: rem-2(1220);
+        height: rem-2(380);
     }
 
     &__content {

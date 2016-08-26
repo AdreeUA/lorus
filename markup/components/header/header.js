@@ -54,11 +54,14 @@ export class Header extends Component {
     }
 
     toggleNavClasses(active) {
-        let classList = ['header_nav_top', 'header_nav_left', 'header_nav_right'];
+        let classList = ['top', 'left', 'right'],
+            navBtn = this.block.querySelector('.header__nav-btn');
 
-        classList.forEach(className => {
-            if (className === active) this.block.classList.add(className);
-            else                      this.block.classList.remove(className);
+        if (!navBtn) return;
+
+        classList.forEach(direction => {
+            if (direction === active) navBtn.classList.add(`header__nav-btn_${direction}`);
+            else                      navBtn.classList.remove(`header__nav-btn_${direction}`);
         });
     }
 

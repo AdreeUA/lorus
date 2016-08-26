@@ -11,10 +11,6 @@
         height: 0;
 
         background: rgba(0, 0, 0, 0);
-        transform: scale(0);
-        border-radius: 50%;
-
-        transition: transform .4s, border-radius .4s, background .4s;
     }
 
     &__logo {
@@ -57,7 +53,28 @@
     }
 
     &__nav-btn {
-        transition: transform .4s;
+
+        .icon-btn__icon {
+            transition: transform .4s;
+        }
+
+        &_top {
+            .icon-btn__icon {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+
+        &_left {
+            .icon-btn__icon {
+                transform: translate(-50%, -50%) rotate(0);
+            }
+        }
+
+        &_right {
+            .icon-btn__icon {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
     }
 
     &__hamburger {
@@ -114,24 +131,6 @@
         }
     }
 
-    &_nav_top {
-        .header__nav-btn {
-            transform: rotate(90deg);
-        }
-    }
-
-    &_nav_left {
-        .header__nav-btn {
-            transform: rotate(0);
-        }
-    }
-
-    &_nav_right {
-        .header__nav-btn {
-            transform: rotate(180deg);
-        }
-    }
-
     &_overlay {
 
         &::after {
@@ -139,9 +138,9 @@
 
             height: 100vh;
 
-            background: rgba(0, 0, 0, .8);
-            border-radius: 0;
-            transform: scale(1);
+            background: rgba(0, 0, 0, .5);
+
+            transition: background .4s .4s;
         }
 
         .header__right {

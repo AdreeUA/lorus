@@ -29,10 +29,43 @@
 
     &__line {
         position: absolute;
-        bottom: 0;
-        right: 0;
 
-        width: rem-2(1496);
+        &_1 {
+            bottom: rem-2(680);
+            right: 0;
+
+            width: rem-2(600);
+            height: rem-2(140);
+        }
+
+        &_2 {
+            bottom: 0;
+            right: percentage(500/1225);
+
+            width: rem-2(460);
+            height: rem-2(840);
+        }
+    }
+
+    &__ship {
+        position: absolute;
+        top: rem-2(-56);
+        right: rem(20);
+
+        color: #d1d1d1;
+    }
+
+    &__wave {
+        position: absolute;
+        bottom: rem-2(750);
+        left: percentage(725/1225);
+        right: rem-2(620);
+
+        height: rem-2(22);
+
+        background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem-2(66) auto;
+
+        animation: wave 2.5s both linear infinite;
     }
 
     &__wrapper {
@@ -91,5 +124,11 @@
                 background: currentColor;
             }
         }
+    }
+}
+
+@keyframes wave {
+    100% {
+        background-position: rem-2(66) center;
     }
 }

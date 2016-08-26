@@ -8,7 +8,7 @@ export class ScreenAdvantages extends Screen {
     }
 
     _onShow(e) {
-        this.header.toggleNavClasses('header_nav_right');
+        this.header.toggleNavClasses('right');
         this.header.changeNavHref('#second/mission');
 
         if (this.firstShow) {

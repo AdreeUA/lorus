@@ -50,8 +50,13 @@
         height: rem-2(40);
     }
 
-    &__flag {
+    &_flag {
         width: rem-2(100);
         height: rem-2(232);
+    }
+
+    &_ship {
+        width: rem-2(174);
+        height: rem-2(120);
     }
 }

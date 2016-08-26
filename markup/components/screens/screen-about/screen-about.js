@@ -10,7 +10,7 @@ export class ScreenAbout extends Screen {
 
     _onShow(e) {
         this.photo.move(e.detail.direction);
-        this.header.toggleNavClasses('header_nav_left');
+        this.header.toggleNavClasses('left');
         this.header.changeNavHref('#first/home');
     }
 

@@ -3,16 +3,32 @@ var data = {line: {
         name: 'home'
     },
 
-    about: {
-        name: 'about'
+    about1: {
+        name: 'about-1'
     },
 
-    mission: {
+    about2: {
+        type: 'css'
+    },
+
+    about3: {
+        name: 'about-3'
+    },
+
+    mission1: {
         name: 'mission'
     },
 
-    advantages: {
-        name: 'advantages'
+    mission2: {
+        type: 'css'
+    },
+
+    advantages1: {
+        name: 'advantages-1'
+    },
+
+    advantages2: {
+        name: 'advantages-2'
     },
 
     team: {

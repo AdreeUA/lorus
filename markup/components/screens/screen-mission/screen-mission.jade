@@ -18,8 +18,9 @@ mixin screen-mission(data)
             src: '%=static=%img/assets/screens/screen-mission/mission-photo.jpg'
         })._shape_hexagon.screen-mission__photo
         
-        +line(line.mission).screen-mission__line
+        +line(line.mission1).screen-mission__line_1
             +icon({ icon: 'flag', class: 'screen-mission__flag' })
+        +line(line.mission2).screen-mission__line_2
         
         +e.content
             +e.text-col

@@ -1,10 +1,9 @@
 include ../made-by/made-by
 include ../link/link
-include ../container/container
 
 mixin footer(data) 
     +b.footer()&attributes(attributes)
-        +container.footer__wrapper
+        +e.wrapper
             +e.col
                 +e.item_copyright
                     | 2016 © Lorus SCM<br>

@@ -9,7 +9,7 @@ export class ScreenMission extends Screen {
     }
 
     _onShow(e) {
-        this.header.toggleNavClasses('header_nav_top');
+        this.header.toggleNavClasses('top');
         this.header.changeNavHref('#first/about');
 
         this.photo.move(e.detail.direction);

@@ -1,4 +1,6 @@
 .footer {
+    $content-width: rem-2(2134);
+
     padding-top: rem-2(60);
     padding-bottom: rem-2(70);
 
@@ -6,12 +8,19 @@
 
     &__wrapper {
         @include align-justify();
+        
+        padding-left: calc(50% - #{$content-width} / 2);
+        padding-right: rem-2(200);
     }
 
     &__col {
         display: inline-block;
 
         vertical-align: bottom;
+
+        &:last-child {
+            margin-left: percentage(100 / 1225);
+        }
     }
 
     &__item {
