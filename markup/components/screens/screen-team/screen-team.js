@@ -1,19 +1,12 @@
-import { Component } from 'helpers-js';
-import { Header } from 'components/header/header';
+import { Screen } from 'components/screens/screen';
 
-const header = new Header(document.querySelector('.header_theme_screen'));
-
-export class ScreenTeam extends Component {
+export class ScreenTeam extends Screen {
     constructor(block) {
         super(block, 'screen-team');
-        if (this._ready) return this;
-        this._ready = true;
-
-        this.block.addEventListener('show', this._onShow.bind(this));
     }
 
     _onShow(e) {
-        header.toggleNavClasses('header_nav_top');
-        header.changeNavHref('#second/advantages');
+        this.header.toggleNavClasses('header_nav_top');
+        this.header.changeNavHref('#second/advantages');
     }
 }

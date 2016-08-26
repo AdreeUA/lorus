@@ -9,32 +9,28 @@ import { Hamburger } from 'components/hamburger/hamburger';
 
 import 'fullpage.js';
 
-if (document.querySelector('.screens')) {
-    const headerHamburger = new Hamburger(document.querySelector('.header__hamburger')),
-          mainMenu = document.querySelector('.header__slide-menu'),
-          about = new ScreenAbout(document.querySelector('.screen-about')),
-          home = new ScreenHome(document.querySelector('.screen-home')),
-          mission = new ScreenMission(document.querySelector('.screen-mission')),
-          advantages = new ScreenAdvantages(document.querySelector('.screen-advantages')),
-          team = new ScreenTeam(document.querySelector('.screen-team'));
-}
-
 export class Screens extends Component {
     constructor(block) {
-        super(block, 'screens');
+        super(block, 'screens', function() {
+            this._onWheel = this._onWheel.bind(this);
+            this._onMenuOpen = this._onMenuOpen.bind(this);
+            this._onMenuClose = this._onMenuClose.bind(this);
+            this.headerHamburger = new Hamburger(document.querySelector('.header__hamburger'));
+            this.mainMenu = document.querySelector('.header__slide-menu');
 
-        if (this._ready) return this;
-        this._ready = true;
-
-        this._onWheel = this._onWheel.bind(this);
-        this._onMenuOpen = this._onMenuOpen.bind(this);
-        this._onMenuClose = this._onMenuClose.bind(this);
-
-        this._init();
+            this._init();
+        });
     }
 
     _init() {
-        let verticals = this.block.querySelectorAll('.screens__vertical');
+        let that = this,
+            verticals = this.block.querySelectorAll('.screens__vertical');
+
+        Component.init('.screen-about', ScreenAbout),
+        Component.init('.screen-home', ScreenHome),
+        Component.init('.screen-mission', ScreenMission),
+        Component.init('.screen-advantages', ScreenAdvantages),
+        Component.init('.screen-team', ScreenTeam);
 
         let dispatchEvents = (curScreen, newScreen, direction) => {
             const hideEvent = new CustomEvent('hide', {
@@ -70,8 +66,9 @@ export class Screens extends Component {
                     curScreen = activeVertical.querySelectorAll('.screens__item')[slideIndex],
                     activeScreen = activeVertical.querySelectorAll('.screens__item')[nextSlideIndex];
 
+                console.log(that);
                 dispatchEvents(curScreen, activeScreen, direction);
-                headerHamburger.close();
+                that.headerHamburger.close();
             },
 
             onLeave (index, nextIndex, direction) {
@@ -83,13 +80,13 @@ export class Screens extends Component {
                                    activeVertical.querySelector('.screens__item');
 
                 dispatchEvents(curScreen, activeScreen, direction);
-                headerHamburger.close();
+                that.headerHamburger.close();
             }
         });
 
         this.block.addEventListener('wheel', this._onWheel);
-        mainMenu.addEventListener('open', this._onMenuOpen);
-        mainMenu.addEventListener('close', this._onMenuClose);
+        this.mainMenu.addEventListener('open', this._onMenuOpen);
+        this.mainMenu.addEventListener('close', this._onMenuClose);
     }
 
     disableScroll() {

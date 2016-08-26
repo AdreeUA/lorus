@@ -1,25 +1,17 @@
-import { Component } from 'helpers-js';
-import { Header } from 'components/header/header';
+import { Screen } from 'components/screens/screen';
 import { ClipImg } from 'components/clip-img/clip-img';
 
-const header = new Header(document.querySelector('.header_theme_screen'));
-
-export class ScreenAbout extends Component {
+export class ScreenAbout extends Screen {
     constructor(block) {
-        super(block, 'screen-about');
-        if (this._ready) return this;
-        this._ready = true;
-
-        this.photo = new ClipImg(this.block.querySelector('.screen-about__photo'));
-
-        this.block.addEventListener('show', this._onShow.bind(this));
-        this.block.addEventListener('hide', this._onHide.bind(this));
+        super(block, 'screen-about', function() {
+            this.photo = new ClipImg(this.block.querySelector('.screen-about__photo'));
+        });
     }
 
     _onShow(e) {
         this.photo.move(e.detail.direction);
-        header.toggleNavClasses('header_nav_left');
-        header.changeNavHref('#first/home');
+        this.header.toggleNavClasses('header_nav_left');
+        this.header.changeNavHref('#first/home');
     }
 
     _onHide(e) {

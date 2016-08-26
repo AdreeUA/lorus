@@ -2,11 +2,9 @@ import { Component } from 'helpers-js';
 
 export class Menu  extends Component {
     constructor(block) {
-        super(block, 'menu');
-        if (this._ready) return this;
-        this._ready = true;
-
-        this.opened = false;
+        super(block, 'menu', function() {
+            this.opened = false;
+        });
     }
 
     open() {

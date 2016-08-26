@@ -1,24 +1,16 @@
-import { Component } from 'helpers-js';
-import { Header } from 'components/header/header';
+import { Screen } from 'components/screens/screen';
 import { ClipImg } from 'components/clip-img/clip-img';
 
-const header = new Header(document.querySelector('.header_theme_screen'));
-
-export class ScreenMission extends Component {
+export class ScreenMission extends Screen {
     constructor(block) {
-        super(block, 'screen-mission');
-        if (this._ready) return this;
-        this._ready = true;
-
-        this.photo = new ClipImg(this.block.querySelector('.screen-mission__photo'));
-
-        this.block.addEventListener('show', this._onShow.bind(this));
-        this.block.addEventListener('hide', this._onHide.bind(this));
+        super(block, 'screen-mission', function() {
+            this.photo = new ClipImg(this.block.querySelector('.screen-mission__photo'));
+        });
     }
 
     _onShow(e) {
-        header.toggleNavClasses('header_nav_top');
-        header.changeNavHref('#first/about');
+        this.header.toggleNavClasses('header_nav_top');
+        this.header.changeNavHref('#first/about');
 
         this.photo.move(e.detail.direction);
     }

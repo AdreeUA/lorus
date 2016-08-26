@@ -4,17 +4,14 @@ import 'slick-carousel';
 
 export class Slider extends Component {
     constructor(block) {
-        super(block, 'slider');
+        super(block, 'slider', function() {
+            this.initialized = false;
+            this.inMove = false;
+            this.init();
 
-        if (this._ready) return this;
-        this._ready = true;
-
-        this.initialized = false;
-        this.inMove = false;
-        this.init();
-
-        $(this.block).on('beforeChange', this._onBeforeChange.bind(this));
-        $(this.block).on('afterChange', this._onAfterChange.bind(this));
+            $(this.block).on('beforeChange', this._onBeforeChange.bind(this));
+            $(this.block).on('afterChange', this._onAfterChange.bind(this));
+        });
     }
 
     _onBeforeChange(e, slick, currentSlide, nextSlide) {

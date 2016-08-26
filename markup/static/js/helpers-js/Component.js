@@ -6,9 +6,8 @@ const cache = {};
 
 export class Component {
 
-    constructor(block, className) {
-        if (!block) return;
-
+    constructor(block, className, callback) {
+        if (!block) return false;
         if (!block.classList.contains(className)) {
             throw new Error(`Элемент не является блоком ${className}`);
         }
@@ -19,11 +18,14 @@ export class Component {
 
         if (cache[className][id]) return cache[className][id];
 
-        this._ready = false;
         this.block = block;
         this._className = className;
         block.setAttribute('data-id', id);
         cache[className][id] = this;
+
+        if (typeof callback === 'function') {
+            callback.bind(this)();
+        }
     }
 
     delete() {
@@ -37,10 +39,8 @@ Component.init = (blocks, Class) => {
         blocks = document.querySelectorAll(blocks);
     }
 
-    if (!blocks.length || !blocks) return;
-
     if (blocks instanceof HTMLElement) {
-        return new Class(block);
+        return new Class(blocks);
     }
 
     if (blocks instanceof NodeList) {

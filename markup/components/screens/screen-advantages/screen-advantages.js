@@ -1,22 +1,15 @@
-import { Component } from 'helpers-js';
-import { Header } from 'components/header/header';
+import { Screen } from 'components/screens/screen';
 
-const header = new Header(document.querySelector('.header_theme_screen'));
-
-export class ScreenAdvantages extends Component {
+export class ScreenAdvantages extends Screen {
     constructor(block) {
-        super(block, 'screen-advantages');
-        if (this._ready) return this;
-        this._ready = true;
-
-        this.firstShow = true;
-
-        this.block.addEventListener('show', this._onShow.bind(this));
+        super(block, 'screen-advantages', function() {
+            this.firstShow = true;
+        });
     }
 
     _onShow(e) {
-        header.toggleNavClasses('header_nav_right');
-        header.changeNavHref('#second/mission');
+        this.header.toggleNavClasses('header_nav_right');
+        this.header.changeNavHref('#second/mission');
 
         if (this.firstShow) {
             let plane = this.block.querySelector('.screen-advantages__plane');

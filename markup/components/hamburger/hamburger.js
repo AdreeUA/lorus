@@ -2,15 +2,13 @@ import { Component, transitionEnd } from 'helpers-js';
 
 export class Hamburger extends Component {
     constructor(block) {
-        super(block, 'hamburger');
-        if (this._ready) return this;
-        this._ready = true;
+        super(block, 'hamburger', function() {
+            this.opened = false;
+            this.inAnimation = false;
 
-        this.opened = false;
-        this.inAnimation = false;
-
-        this.block.addEventListener('click', (e) => {
-            this.toggle();
+            this.block.addEventListener('click', (e) => {
+                this.toggle();
+            });
         });
     }
 

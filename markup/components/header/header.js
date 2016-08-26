@@ -5,19 +5,17 @@ import { Hamburger } from 'components/hamburger/hamburger';
 
 let page = document.querySelector('.page');
 
+
 export class Header extends Component {
     constructor(block) {
-        super(block, 'header');
+        super(block, 'header', function() {
+            this.overlay = this.block.querySelector('.header__overlay');
 
-        if (this._ready) return this;
-        this._ready = true;
+            this._onHamburgerOpen = this._onHamburgerOpen.bind(this);
+            this._onHamburgerClose = this._onHamburgerClose.bind(this);
 
-        this.overlay = this.block.querySelector('.header__overlay');
-
-        this._onHamburgerOpen = this._onHamburgerOpen.bind(this);
-        this._onHamburgerClose = this._onHamburgerClose.bind(this);
-
-        this._init();
+            this._init();
+        });
     }
 
     _init() {
