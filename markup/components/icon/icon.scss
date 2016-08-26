@@ -59,4 +59,14 @@
         width: rem-2(174);
         height: rem-2(120);
     }
+
+    &_calendar {
+        width: rem(92);
+        height: rem(48);
+    }
+
+    &_money {
+        width: rem(97);
+        height: rem(41);
+    }
 }
