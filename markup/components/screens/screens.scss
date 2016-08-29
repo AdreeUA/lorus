@@ -7,6 +7,19 @@
 .screens {
     position: relative;
 
+    width: 200%;
+
+    &__row {
+        @include clearfix();
+
+        &_dir_left {
+
+            .screens__item {
+                float: right;
+            }
+        }
+    }
+
     &__header {
         position: fixed;
         left: 0;
@@ -20,5 +33,7 @@
 
     &__item {
         height: 100vh;
+        width: 50%;
+        float: left;
     }
 }

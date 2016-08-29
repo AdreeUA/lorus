@@ -9,6 +9,7 @@
     "bemto.jade": "git://github.com/kizu/bemto.git",
     "fullpage.js": "^2.8.4",
     "jquery": "^3.1.0",
+    "scrollmagic": "^2.0.5",
     "shortid": "^2.2.6",
     "slick-carousel": "^1.6.0",
     "svg4everybody": "^2.1.0"

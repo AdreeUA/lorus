@@ -2,7 +2,8 @@ import { Screen } from 'components/screens/screen';
 
 export class ScreenTeam extends Screen {
     constructor(block) {
-        super(block, 'screen-team');
+        super(block, 'screen-team', function() {
+        });
     }
 
     _onShow(e) {

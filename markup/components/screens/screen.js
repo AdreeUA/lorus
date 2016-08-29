@@ -1,13 +1,31 @@
+import ScrollMagic from 'scrollmagic';
+
 import { Component } from 'helpers-js';
 
 import { Header } from 'components/header/header';
+import { controller_v, controller_h, Screens } from './screens.js';
 
 export class Screen extends Component {
     constructor(block, className, callback) {
         super(block, className, function() {
             this.header = new Header(document.querySelector('.header_theme_screen'));
-            this.block.addEventListener('show', this._onShow.bind(this));
-            this.block.addEventListener('hide', this._onHide.bind(this));
+            this.controller_v = controller_v;
+            this.controller_h = controller_h;
+
+            // this.scene_v = new ScrollMagic.Scene({
+            //     triggerElement: `.${className}`,
+            //     duration: '100%'
+            // })
+            // .addTo(this.controller_v);
+            //
+            // this.scene_h = new ScrollMagic.Scene({
+            //     triggerElement: `.${className}`,
+            //     duration: '50%'
+            // })
+            // .addTo(this.controller_h);
+            //
+            // this.scene_v.on('end', this._onEnd_v.bind(this));
+            // this.scene_h.on('end', this._onEnd_h.bind(this));
 
             if (typeof callback === 'function') {
                 callback.bind(this)();
@@ -15,6 +33,19 @@ export class Screen extends Component {
         });
     }
 
-    _onSHow(e) {}
-    _onHide(e) {}
+    _onEnd_v(e) {}
+
+    _onEnd_h(e) {}
+
+    setActive(num) {
+        Screens.active = num;
+    }
+
+    setScrollDir(dir) {
+        Screens.scrollDir = dir;
+    }
+
+    getDirection() {
+        return Screens.direction;
+    }
 }

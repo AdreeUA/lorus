@@ -8,6 +8,8 @@ export const getCoords = (elem) => {
 
     return {
         top: box.top + pageYOffset,
-        left: box.left + pageXOffset
+        bottom: box.bottom + pageYOffset,
+        left: box.left + pageXOffset,
+        right: box.right + pageXOffset
     };
 };

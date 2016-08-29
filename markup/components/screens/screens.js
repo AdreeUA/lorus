@@ -1,4 +1,6 @@
-import { Component, indexOf } from 'helpers-js';
+import ScrollMagic from 'scrollmagic';
+
+import { Component, indexOf, smothScroll } from 'helpers-js';
 
 import { ScreenAbout } from './screen-about/screen-about';
 import { ScreenHome } from './screen-home/screen-home';
@@ -7,7 +9,8 @@ import { ScreenAdvantages } from './screen-advantages/screen-advantages';
 import { ScreenTeam } from './screen-team/screen-team';
 import { Hamburger } from 'components/hamburger/hamburger';
 
-import 'fullpage.js';
+export const controller_v = new ScrollMagic.Controller();
+export const controller_h = new ScrollMagic.Controller({ vertical: false });
 
 export class Screens extends Component {
     constructor(block) {
@@ -18,71 +21,36 @@ export class Screens extends Component {
             this.headerHamburger = new Hamburger(document.querySelector('.header__hamburger'));
             this.mainMenu = document.querySelector('.header__slide-menu');
 
+            this.scrollEnabled = true;
+
             this._init();
         });
     }
 
     _init() {
-        let that = this,
-            verticals = this.block.querySelectorAll('.screens__vertical');
 
-        Component.init('.screen-about', ScreenAbout),
-        Component.init('.screen-home', ScreenHome),
-        Component.init('.screen-mission', ScreenMission),
-        Component.init('.screen-advantages', ScreenAdvantages),
-        Component.init('.screen-team', ScreenTeam);
+        let that = this;
 
-        let dispatchEvents = (curScreen, newScreen, direction) => {
-            const hideEvent = new CustomEvent('hide', {
-                bubbles: true,
-                detail: {
-                    direction
-                }
-            });
-            curScreen.dispatchEvent(hideEvent);
+        this.screens = [
+            new ScreenAbout(this.block.querySelector('.screen-about')),
+            new ScreenHome(this.block.querySelector('.screen-home')),
+            new ScreenMission(this.block.querySelector('.screen-mission')),
+            new ScreenAdvantages(this.block.querySelector('.screen-advantages')),
+            new ScreenTeam(this.block.querySelector('.screen-team'))
+        ];
 
-            const showEvent = new CustomEvent('show', {
-                bubbles: true,
-                detail: {
-                    direction
-                }
-            });
-            newScreen.dispatchEvent(showEvent);
+        this.dirMap = {
+            horizontal: {
+                '-1': 'left',
+                '1': 'right'
+            },
+            vertical: {
+                '-1': 'up',
+                '1': 'down'
+            }
         };
 
-        $(this.block).fullpage({
-            anchors:['first', 'second', 'third'],
-            scrollingSpeed: 1500,
-            sectionSelector: '.screens__vertical',
-            slideSelector: '.screens__horizontal',
-            verticalCentered: false,
-            fixedElements: '.header_theme_screen',
-            loopHorizontal: false,
-            controlArrows: false,
-            keyboardScrolling: false,
-
-            onSlideLeave (anchorLink, index, slideIndex, direction, nextSlideIndex) {
-                let activeVertical = verticals[index - 1],
-                    curScreen = activeVertical.querySelectorAll('.screens__item')[slideIndex],
-                    activeScreen = activeVertical.querySelectorAll('.screens__item')[nextSlideIndex];
-
-                console.log(that);
-                dispatchEvents(curScreen, activeScreen, direction);
-                that.headerHamburger.close();
-            },
-
-            onLeave (index, nextIndex, direction) {
-                let curVertical = verticals[index - 1],
-                    curScreen = curVertical.querySelector('.screens__item.active') ||
-                                curVertical.querySelector('.screens__item'),
-                    activeVertical = verticals[nextIndex - 1],
-                    activeScreen = activeVertical.querySelector('.screens__item.active') ||
-                                   activeVertical.querySelector('.screens__item');
-
-                dispatchEvents(curScreen, activeScreen, direction);
-                that.headerHamburger.close();
-            }
-        });
+        this.rows = this.block.querySelectorAll('.screens__row');
 
         this.block.addEventListener('wheel', this._onWheel);
         this.mainMenu.addEventListener('open', this._onMenuOpen);
@@ -90,11 +58,11 @@ export class Screens extends Component {
     }
 
     disableScroll() {
-        $.fn.fullpage.setAllowScrolling(false);
+        this.scrollEnabled = false;
     }
 
     enableScroll() {
-        $.fn.fullpage.setAllowScrolling(true);
+        this.scrollEnabled = true;
     }
 
     _onMenuOpen(e) {
@@ -106,33 +74,47 @@ export class Screens extends Component {
     }
 
     _onWheel(e) {
-        let slideScrolled = e.target.closest('.screens__horizontal');
+        if (!this.scrollEnabled) return;
 
-        if (!slideScrolled) return;
+        this.scrollEnabled = false;
 
-        let parent = slideScrolled.closest('.screens__vertical'),
-            direction = parent.getAttribute('data-direction'),
-            allSlides = parent.querySelectorAll('.screens__horizontal'),
-            curSlideInd = indexOf(slideScrolled, allSlides);
+        setTimeout(() => this.scrollEnabled = true, 50);
 
-        function moveLeft() {
-            if (curSlideInd === 0) return;
-            $.fn.fullpage.moveSlideLeft();
-        }
+        this._checkDirection(e.deltaY);
 
-        function moveRight() {
-            if (curSlideInd === allSlides.length - 1) return;
-            $.fn.fullpage.moveSlideRight();
-        }
+        smothScroll({
+            direction: this.getDirectionName(Screens.scrollDir),
+            distance: this.calcMaxScroll(e.deltaY)
+        })
+    }
 
-        if (e.deltaY > 0) {
-            if (direction === 'right') moveRight();
-            else if (direction === 'left') moveLeft();
-
+    _checkDirection(deltaY) {
+        if (deltaY > 0) {
+            Screens.direction = Screens.scrollDir;
         } else {
+            Screens.direction = -Screens.scrollDir;
+        }
+    }
 
-            if (direction === 'right') moveLeft();
-            else if (direction === 'left') moveRight();
+    getDirectionName(dir) {
+        return this.dirMap[Screens.orientation][dir];
+    }
+
+    calcMaxScroll(dist) {
+        let coords = this.screens[Screens.active].block.getBoundingClientRect(),
+            dir = this.getDirectionName(Screens.direction);
+
+        if (dir === 'down') {
+            return Math.min(dist, coords.top);
+        } else if (dir === 'top') {
+            return Math.max(dist, coords.top);
+        } else {
+            return dist;
         }
     }
 }
+
+Screens.orientation = 'horizontal';
+Screens.direction = 1;
+Screens.scrollDir = 1;
+Screens.active = 0;
