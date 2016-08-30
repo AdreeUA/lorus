@@ -2,6 +2,7 @@ import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
 import { Screen } from 'components/screens/screen';
+import { Line } from 'components/line/line';
 
 export class ScreenHome extends Screen {
     constructor(block) {
@@ -13,7 +14,20 @@ export class ScreenHome extends Screen {
             this.scene
                 .setTween(tweenNav)
                 .triggerHook(0);
+
+            this._addLinesAnimation();
         });
+    }
+
+    _addLinesAnimation() {
+        let line = new Line(this.block.querySelector('.screen-home__line'));
+
+        this.sceneLines = new ScrollMagic.Scene({
+                duration: '25%',
+                triggerHook: .25
+            })
+            .setTween(line.makeTween())
+            .addTo(this.controller);
     }
 
     _onEnter(e) {

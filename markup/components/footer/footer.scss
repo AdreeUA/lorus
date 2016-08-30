@@ -8,8 +8,8 @@
 
     &__wrapper {
         @include align-justify();
-        
-        padding-left: calc(50% - #{$content-width} / 2);
+
+        padding-left: rem-2(200);
         padding-right: rem-2(200);
     }
 

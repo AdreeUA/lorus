@@ -58,11 +58,9 @@
         }
 
         &_2 {
-            left: 0;
+            left: rem-2(70);
             top: rem-2(996);
             right: calc(#{percentage(170/1225)} + #{rem-2(1030 - 250)});
-
-            height: rem-2(18);
 
             overflow: hidden;
         }

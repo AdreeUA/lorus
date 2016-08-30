@@ -4,6 +4,7 @@ import TweenMax from 'gsap';
 import { isInViewport } from 'helpers-js';
 
 import { Screen } from 'components/screens/screen';
+import { Line } from 'components/line/line';
 import { ClipImg } from 'components/clip-img/clip-img';
 
 export class ScreenAbout extends Screen {
@@ -16,7 +17,28 @@ export class ScreenAbout extends Screen {
             this.scene.setTween(tweenNav);
 
             this._addPhotoParallax();
+            this._addLinesAnimation();
         });
+    }
+
+    _addLinesAnimation() {
+        let line1 = new Line(this.block.querySelector('.screen-about__line_1')),
+            line2 = new Line(this.block.querySelector('.screen-about__line_2')),
+            line3 = new Line(this.block.querySelector('.screen-about__line_3')),
+            tween = new TimelineMax();
+
+        tween
+            .add(line1.makeTween(.25))
+            .add(line2.makeTween(.5))
+            .add(line3.makeTween(.25));
+
+        this.sceneLines = new ScrollMagic.Scene({
+                triggerElement: this.sceneTrigger,
+                duration: '100%',
+                triggerHook: .75
+            })
+            .setTween(tween)
+            .addTo(this.controller);
     }
 
     _addPhotoParallax() {

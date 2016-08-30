@@ -19,12 +19,31 @@
 
     &__line {
         position: absolute;
-        top: 0;
-        right: percentage(500/1225);
         z-index: 2;
 
-        width: rem-2(1722);
-        margin-right: rem-2(-880);
+        &_1 {
+            top: rem-2(-20);
+            right: percentage(500/1225);
+
+            width: rem-2(800);
+            height: rem-2(966);
+            margin-right: rem-2(204);
+        }
+
+        &_2 {
+            top: rem-2(922);
+            left: calc(#{percentage(725/1225)} - #{rem-2(750)});
+            right: rem-2(810);
+            z-index: 1;
+        }
+
+        &_3 {
+            bottom: 0;
+            right: rem-2(160);
+
+            width: rem-2(900);
+            height: rem-2(1150);
+        }
     }
 
     &__photo-wrapper {
@@ -33,7 +52,8 @@
         right: 0;
         z-index: 1;
 
-        width: rem-2(1736);
+        width: percentage(833/1225);
+        height: rem(364);
         padding-left: rem-2(70);
 
         line-height: 0;
@@ -61,7 +81,7 @@
         position: relative;
         z-index: 2;
 
-        padding: 0 calc(50% - #{$content-width} / 2);
+        padding-left: rem-2(200);
         padding-bottom: rem-2(70);
     }
 

@@ -24,18 +24,9 @@ export class Screen extends Component {
                 callback.bind(this)();
             }
 
-            window.addEventListener('resize', () => {
-                this.scene.duration(this.calcDuration());
-            });
-
             this.scene.on('enter', this._onEnter.bind(this));
             this.scene.on('leave', this._onLeave.bind(this));
         });
-    }
-
-    calcDuration() {
-        console.log(this.sceneTrigger.offsetHeight);
-        return this.sceneTrigger.offsetHeight;
     }
 
     _onLeave(e) {}
