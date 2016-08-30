@@ -6,6 +6,22 @@
 
     background: url('%=static=%assets/screens/screen-mission/bg-mission.svg') no-repeat right 100% / auto 100%;
 
+    &::before {
+        position: absolute;
+        top: 21.5vh;
+        right: 73.1vh;
+        z-index: 3;
+
+        width: calc(.78 * (calc(27.1875rem - 40px)));
+        height: calc(27.1875rem - 40px);
+
+        content: '';
+
+        background: url('%=static=%assets/screens/screen-mission/shadow.svg') no-repeat;
+
+        pointer-events: none;
+    }
+
     &__nav-btn {
         transform: rotate(90deg);
     }
