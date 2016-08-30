@@ -2,21 +2,21 @@ var data = {nav: {
     header: {
         screenreader: 'Навигация по странице',
         items: [
-            { text: 'О компании', href: '#first/about' },
-            { text: 'Миссия', href: '#second/mission' },
-            { text: 'Преимущества', href: '#second/advantages' },
-            { text: 'Команда', href: '#third' }
+            { text: 'О компании', href: '#about' },
+            { text: 'Миссия', href: '#mission' },
+            { text: 'Преимущества', href: '#advantages' },
+            { text: 'Команда', href: '#team' }
         ]
     },
     menu: {
         screenreader: 'Навигация по странице',
         title: 'Навигация',
         items: [
-            { text: 'Главная страница', href: '#first/home' },
-            { text: 'О компании', href: '#first/about' },
-            { text: 'Миссия', href: '#second/mission' },
-            { text: 'Преимущества', href: '#second/advantages' },
-            { text: 'Команда', href: '#third' }
+            { text: 'Главная страница', href: '#home' },
+            { text: 'О компании', href: '#about' },
+            { text: 'Миссия', href: '#mission' },
+            { text: 'Преимущества', href: '#advantages' },
+            { text: 'Команда', href: '#team' }
         ]
     },
     service: {
