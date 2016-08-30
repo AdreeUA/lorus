@@ -8,7 +8,7 @@ export class Line extends Component {
             this.active = this.block.querySelector('.line__icon_active');
 
             if (this.type === 'svg') {
-                this._pathPrepare(this.active);
+                // this._pathPrepare(this.active);
             } else {
                 this.active.style.width = 0;
             }
