@@ -1,9 +1,9 @@
 import { Component } from 'helpers-js';
 
-export class  extends Component {
+export class Line extends Component {
     constructor(block) {
-        super(block, 'line');
-        if (this._ready) return this;
-        this._ready = true;
+        super(block, 'line', function() {
+
+        });
     }
 }
