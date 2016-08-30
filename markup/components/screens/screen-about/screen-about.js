@@ -25,8 +25,8 @@ export class ScreenAbout extends Screen {
 
         this.scenePhoto = new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
-                duration: '100%',
-                triggerHook: 1
+                duration: '35%',
+                triggerHook: .35
             })
             .setTween(tweenPhoto)
             .addTo(this.controller);

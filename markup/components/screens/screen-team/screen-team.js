@@ -18,8 +18,8 @@ export class ScreenTeam extends Screen {
 
         this.sceneContent = new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
-                duration: '100%',
-                triggerHook: 1
+                duration: '60%',
+                triggerHook: .6
             })
             .setTween(tweenContent)
             .addTo(this.controller);

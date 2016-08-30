@@ -22,7 +22,7 @@ export class ScreenAdvantages extends Screen {
 
         this.scenePlane = new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
-                duration: '100%',
+                duration: '75%',
                 triggerHook: 1
             })
             .setTween(tweenPlane)
