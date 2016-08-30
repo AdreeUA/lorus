@@ -7,7 +7,20 @@
 .screens {
     position: relative;
 
-    width: 200%;
+    width: 100%;
+
+    &__scene {
+        height: 100vh;
+    }
+
+    &__inner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        width: 200%;
+    }
 
     &__row {
         @include clearfix();
@@ -18,17 +31,6 @@
                 float: right;
             }
         }
-    }
-
-    &__header {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-
-        background: transparent;
-        opacity: 0;
-        visibility: hidden;
     }
 
     &__item {

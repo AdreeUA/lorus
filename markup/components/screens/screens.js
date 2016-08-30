@@ -9,8 +9,7 @@ import { ScreenAdvantages } from './screen-advantages/screen-advantages';
 import { ScreenTeam } from './screen-team/screen-team';
 import { Hamburger } from 'components/hamburger/hamburger';
 
-export const controller_v = new ScrollMagic.Controller();
-export const controller_h = new ScrollMagic.Controller({ vertical: false });
+export const controller = new ScrollMagic.Controller();
 
 export class Screens extends Component {
     constructor(block) {
@@ -47,8 +46,8 @@ export class Screens extends Component {
             }
         };
 
-        this.block.addEventListener('wheel', this._onWheel.bind(this));
-        document.addEventListener('scroll', this._onScroll.bind(this));
+        // this.block.addEventListener('wheel', this._onWheel.bind(this));
+        // document.addEventListener('scroll', this._onScroll.bind(this));
         this.mainMenu.addEventListener('open', this._onMenuOpen.bind(this));
         this.mainMenu.addEventListener('close', this._onMenuClose.bind(this));
     }

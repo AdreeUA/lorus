@@ -6,12 +6,20 @@ include screen-team/screen-team
 
 mixin screens(data)
     +b.screens()&attributes(attributes)
-        +e.row
-            +screen-home.screens__item.screens__horizontal(data-anchor='home')
-            +screen-about.screens__item.screens__horizontal(data-anchor='about')
-        +e.row_dir_left
-            +screen-mission.screens__item.screens__horizontal.active(data-anchor='mission')
-            +screen-advantages.screens__item.screens__horizontal(data-anchor='advantages')
-        +e.row
-            +screen-team.screens__item
-            
+        +e.scroll
+            +e.scene#home
+            +e.scene#about
+            +e.scene#mission
+            +e.scene#advantages
+            +e.scene#team
+        
+        +e.inner
+            +e.row(data-direction='right')
+                +screen-home.screens__item.screens__horizontal(data-anchor='home')
+                +screen-about.screens__item.screens__horizontal(data-anchor='about')
+            +e.row_dir_left(data-direction='left')
+                +screen-mission.screens__item.screens__horizontal.active(data-anchor='mission')
+                +screen-advantages.screens__item.screens__horizontal(data-anchor='advantages')
+            +e.row
+                +screen-team.screens__item
+        

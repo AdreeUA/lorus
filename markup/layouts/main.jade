@@ -1,6 +1,7 @@
 include ../../node_modules/bemto.jade/bemto
 
 include ../components/page/page
+include ../components/header/header
 
 -var pageSettings = {};
 -pageSettings.title = 'Главная';
@@ -12,6 +13,7 @@ html(lang='ru').page-index
     include ../components/head/head
 
     body
+        +header(header.screen)
         +page
             block content
 

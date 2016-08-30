@@ -1,4 +1,5 @@
 import ScrollMagic from 'scrollmagic';
+import TweenMax from 'gsap';
 
 import { isInViewport } from 'helpers-js';
 
@@ -8,34 +9,32 @@ import { ClipImg } from 'components/clip-img/clip-img';
 export class ScreenAbout extends Screen {
     constructor(block) {
         super(block, 'screen-about', function() {
+            this.sceneNum = 1;
 
-            // this.photo = new ClipImg(this.block.querySelector('.screen-about__photo'));
+            let tweenNav = TweenMax.to(this.parent, 5, { y: '-=33.33%' });
+
+            this.scene.setTween(tweenNav);
+
+            this._addPhotoParallax();
         });
     }
 
-    _onEnd_h(e) {
-        if (this.getDirection() === 'right') {
-            this.setActive(2);
-            this.setScrollDir('down');
-        }
-    }
+    _addPhotoParallax() {
+        let photo = this.block.querySelector('.screen-about__photo'),
+            tweenPhoto = TweenMax.from(photo, 1, { x: '35%' });
 
-    _onEnd_v(e) {
-        console.log(e);
-        // if (this.getDirection() === 'up') {
-        //     this.setActive(0);
-        //     this.setScrollDir('right');
-        // }
-    }
-
-    _onShow(e) {
-        // this.photo.move(e.detail.direction);
-        // this.header.toggleNavClasses('left');
-        // this.header.changeNavHref('#first/home');
+        this.scenePhoto = new ScrollMagic.Scene({
+                triggerElement: this.sceneTrigger,
+                duration: '100%',
+                triggerHook: 1
+            })
+            .setTween(tweenPhoto)
+            .addTo(this.controller);
     }
 
     _onEnter(e) {
-        
+        this.header.toggleNavClasses('left');
+        this.header.changeNavHref('#home');
     }
 
     _onLeave(e) {

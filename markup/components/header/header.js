@@ -5,7 +5,6 @@ import { Hamburger } from 'components/hamburger/hamburger';
 
 let page = document.querySelector('.page');
 
-
 export class Header extends Component {
     constructor(block) {
         super(block, 'header', function() {
@@ -41,6 +40,7 @@ export class Header extends Component {
         }
 
         this.menu.open();
+        document.documentElement.classList.add('hide-scroll');
         page.classList.add('page_overlay');
         this.block.classList.add('header_overlay');
 
@@ -49,6 +49,7 @@ export class Header extends Component {
 
     _onHamburgerClose(e) {
         this.menu.close();
+        document.documentElement.classList.remove('hide-scroll');
         page.classList.remove('page_overlay');
         this.block.classList.remove('header_overlay');
     }

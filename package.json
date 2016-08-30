@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "babel-polyfill": "^6.13.0",
-    "gulp": "3.9.1"
+    "gulp": "3.9.1",
+    "imports-loader": "^0.6.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,4 +1,5 @@
 import polyfills from './libraries/polyfills';
+import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
 
 import { Screens } from 'components/screens/screens';

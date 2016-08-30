@@ -10,21 +10,14 @@
 
     &__plane {
         position: absolute;
-        top: rem-2(1286);
-        right: 100%;
+        top: rem-2(90);
+        right: calc(50% - #{$content-width} / 2 + #{rem-2(436)});
         z-index: 5;
 
         width: rem-2(764);
         height: rem-2(604);
 
         background: url('%=static=%assets/screens/screen-advantages/plane.png') no-repeat center center / contain;
-
-        transition: top ($anim-time * 2), right ($anim-time * 2);
-
-        &_trigger {
-            top: rem-2(90);
-            right: calc(50% - #{$content-width} / 2 + #{rem-2(436)});
-        }
     }
 
     &__line {
