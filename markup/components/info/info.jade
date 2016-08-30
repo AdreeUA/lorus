@@ -4,12 +4,11 @@ include ../decor-title/decor-title
 
 mixin info(data)
     +b.ARTICLE.info()&attributes(attributes)
-        +e.main
-            +decor-title(data.title).info__title
-            +content.info__content!= data.content
+        +decor-title(data.title).info__title
+        +content.info__content!= data.content
 
-            +btn.info__btn
-                | Подробнее
+        +btn.info__btn
+            | Подробнее
 
         +e.img-wrapper(href=jv0)
             +e.IMG.img(src=`${data.img.src}.${data.img.format}`

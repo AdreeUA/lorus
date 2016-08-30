@@ -2,7 +2,7 @@
     $template-width: 2170;
     $img-width: 1510;
     $content-width: 2170 - $img-width;
-    $shadow-size: 60px;
+    $shadow-size: 80px;
 
     position: relative;
 
@@ -60,20 +60,6 @@
         overflow: hidden;
         border-radius: 0 rem-2(10) rem-2(10) 0;
         box-shadow: 0 #{$shadow-size} #{$shadow-size} -#{$shadow-size} rgba(0, 0, 0, .6);
-
-        &::after {
-            position: absolute;
-            right: 0;
-            top: 0;
-
-            width: 100%;
-            height: 100%;
-
-            content: '';
-
-            background: url('%=static=%assets/info/shadow.svg') right 6% center no-repeat;
-            background-size: auto 100%;
-        }
 
         &::before {
             content: '';

@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 809.47"><defs><style>.cls-1,.cls-2{fill:none;stroke-miterlimit:10;stroke-width:20px;}.cls-1{stroke:none;}.cls-2{stroke:none;}</style></defs><title>line-team</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path vector-effect="non-scaling-stroke" class="cls-1" d="M103,472.61H21a16,16,0,0,1-16-16V214a15.55,15.55,0,0,1,15.55-15.55h136.9A15.55,15.55,0,0,0,173,182.92V50.47L194.44,2"/><path vector-effect="non-scaling-stroke" class="cls-2" d="M628,809.47V714a15.57,15.57,0,0,0-15.57-15.57H554.91c-8.59,0-15.91-6.91-15.91-15.5v0a15.86,15.86,0,0,1,15.91-15.55H801.45A15.55,15.55,0,0,0,817,651.92V587.16a15.74,15.74,0,0,0-15.69-15.69H706.55A15.55,15.55,0,0,0,691,587v4.9a15.55,15.55,0,0,0,15.55,15.55h38.77a15.55,15.55,0,0,0,15.55-15.54l.07-188.38A15.55,15.55,0,0,0,745.39,388H658.55A15.55,15.55,0,0,0,643,403.54V415a15.55,15.55,0,0,1-15.57,15.55l-60-.06A15.48,15.48,0,0,1,552,415V315.4A15.41,15.41,0,0,1,567.41,300h31C607,300,614,307,614,310.72V452.1c0,13.45-7.06,20.51-15.69,20.51H103"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 822 809.5" style="enable-background:new 0 0 822 809.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+</style>
+<title>line-team</title>
+<path id="Layer_2" vector-effect="non-scaling-stroke" class="st0" d="M103,472.6H21c-8.8,0-16-7.2-16-16V214c0-8.6,7-15.6,15.5-15.6h0h136.9c8.6,0,15.5-6.9,15.6-15.5
+	V50.5L194.4,2 M628,809.5V714c0-8.6-7-15.6-15.6-15.6l0,0h-57.5c-8.6,0-15.9-6.9-15.9-15.5l0,0c0.2-8.7,7.3-15.6,15.9-15.5h246.5
+	c8.6,0,15.5-6.9,15.5-15.5v-64.8c0-8.7-7-15.7-15.7-15.7h-94.8c-8.6,0-15.5,6.9-15.5,15.5v4.9c0,8.6,7,15.5,15.5,15.5h38.8
+	c8.6,0,15.5-7,15.5-15.5l0.1-188.4c0-8.6-7-15.5-15.5-15.5h-86.8c-8.6,0-15.5,7-15.5,15.5V415c0,8.6-7,15.5-15.5,15.5c0,0,0,0,0,0
+	l-60-0.1c-8.5,0-15.4-7-15.4-15.5v-99.6c0-8.5,6.9-15.4,15.4-15.4h31c8.6,0,15.6,7,15.6,10.7v141.4c0,13.5-7.1,20.5-15.7,20.5H103"
+	/>
+</svg>
