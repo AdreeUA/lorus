@@ -34,6 +34,10 @@ export class ScreenAbout extends Screen {
         // this.header.changeNavHref('#first/home');
     }
 
+    _onEnter(e) {
+        
+    }
+
     _onLeave(e) {
 
     }

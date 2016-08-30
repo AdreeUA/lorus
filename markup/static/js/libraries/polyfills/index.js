@@ -1,4 +1,5 @@
 import svg4everybody from 'svg4everybody';
+import 'babel-polyfill';
 import './customEvent';
 import './classList';
 import './matches';

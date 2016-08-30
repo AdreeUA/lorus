@@ -1,7 +1,7 @@
 import { animate, stopAnimation } from './animate';
 import { timing } from './timing-functions';
 
-let maxStek = 3,
+let maxStek = 2,
     curStek = 0;
 
 /**
@@ -10,10 +10,16 @@ let maxStek = 3,
 export const smothScroll = (options) => {
     if (curStek >= maxStek) return;
 
+    options = Object.assign({
+        maxX: false,
+        maxY: false
+    }, options);
+
     let x = 0,
         y = 0,
         startX = pageXOffset,
-        startY = pageYOffset;
+        startY = pageYOffset,
+        maxY = options.maxY;
 
     curStek++;
 
@@ -27,7 +33,8 @@ export const smothScroll = (options) => {
             break;
 
         case 'down':
-            y = options.distance;
+            maxY = options.distance > 0 ? Math.min(options.distance, options.maxY) : Math.max(options.distance, options.maxY);
+            y = options.maxY ? maxY : options.distance;
             break;
 
         case 'up':
@@ -35,30 +42,13 @@ export const smothScroll = (options) => {
             break;
     }
 
-    let drawFunc = (() => {
-        let scrollBy = (progress) => {
-            window.scrollTo(startX + x * progress, startY + y * progress);
-        }
-
-        if (typeof options.inProgress === 'function') {
-            return (progress) => {
-                options.inProgress();
-                scrollBy(progress);
-            }
-        } else {
-            return scrollBy;
-        }
-    })();
-
-    if (typeof options.onBeforeStart === 'function') {
-        options.onBeforeStart();
-    }
-
     animate({
         duration: 150,
         name: 'smoth-scroll',
         timing: timing.linear,
-        draw: drawFunc,
+        draw: (progress) => {
+            window.scrollTo(startX + x * progress, startY + y * progress);
+        },
         onAnimationEnd() {
             curStek--;
             if (typeof options.onEnd === 'function') {
