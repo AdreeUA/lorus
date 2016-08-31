@@ -27,22 +27,22 @@
 
             width: rem-2(800);
             height: rem-2(966);
-            margin-right: rem-2(204);
+            margin-right: rem-2(200);
         }
 
         &_2 {
             top: rem-2(922);
             left: calc(#{percentage(725/1225)} - #{rem-2(750)});
-            right: rem-2(810);
+            right: rem-2(830);
             z-index: 1;
         }
 
         &_3 {
-            bottom: 0;
+            bottom: rem-2(-20);
             right: rem-2(160);
 
-            width: rem-2(900);
-            height: rem-2(1150);
+            width: rem-2(834);
+            height: rem-2(1180);
         }
     }
 

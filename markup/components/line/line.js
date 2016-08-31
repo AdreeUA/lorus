@@ -29,7 +29,7 @@ export class Line extends Component {
     _pathPrepare(elem) {
         let lineLength = elem.getTotalLength();
 
-        elem.style.strokeDasharray = lineLength / 15 + 'rem';
-        elem.style.strokeDashoffset =  lineLength / 15 + 'rem';
+        elem.style.strokeDasharray = lineLength / 14 + 'rem';
+        elem.style.strokeDashoffset =  lineLength / 14 + 'rem';
     }
 }
