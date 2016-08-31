@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important;" class="root-svg-symbols-element">
+    <symbol id="arrow" viewBox="0 0 9.87 15.5">
+      <title>arrow</title><g id="Layer_2" data-name="Layer 2"><path class="cls-1" d="M8.81 14.44L2.12 7.75l6.69-6.69" id="Layer_1-2" data-name="Layer 1"/></g>
+    </symbol>
+    <symbol id="calendar" viewBox="0 0 92.24 47.98">
+      <title>calendar</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g class="cls-1"><path class="cls-2" d="M6.13 3.27v6.92m36.2-6.93v6.91m-18.07-6.9v6.91M8.94 32.76h6.74v4.77H8.94zm11.95 0h6.74v4.77h-6.74zm11.95-.01h6.74v4.77h-6.74zm-23.9-7.77h6.74v4.77H8.94zm11.95 0h6.74v4.77h-6.74zm11.94-.01h6.74v4.77h-6.74zM8.94 17.2h6.74v4.77H8.94zm11.94 0h6.74v4.77h-6.74zm11.95-.01h6.74v4.77h-6.74z"/><rect class="cls-2" x=".51" y="7.1" width="47" height="37" rx="2" ry="2"/></g><g class="cls-1"><circle class="cls-2" cx="68.25" cy="23.99" r="13.08" transform="rotate(-4.54 68.278 24.057)"/><path class="cls-2" d="M66.91 11.2l1.02 12.82 4.67-13.24"/></g><path class="cls-1 cls-3" d="M55.66 4.16A23.49 23.49 0 1 1 53.11 42"/></g></g>
+    </symbol>
+    <symbol id="chart" viewBox="0 0 30.36 43.56">
+      <title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g class="cls-1" id="Layer_1-2" data-name="Layer 1"><path class="cls-2" d="M8.84 2.19H2.13A1.68 1.68 0 0 0 .5 3.92v37.41a1.68 1.68 0 0 0 1.63 1.73h26.1a1.68 1.68 0 0 0 1.63-1.73V3.92a1.68 1.68 0 0 0-1.63-1.73h-6.71"/><path class="cls-2" d="M8.84.5h12.68v3.45H8.84zM4.51 37.72h21.34"/><path class="cls-3" d="M4.51 19.28h14.11"/><path class="cls-2" d="M25.85 29.08H4.51V13.75m0 20.48h10.67"/><path class="cls-2" d="M21.1 16.3L14.72 24a1.28 1.28 0 0 1-2 0l-1.27-1.52a1.28 1.28 0 0 0-2 0l-2.84 3.29"/><path class="cls-3" d="M18.62 29.08v-9.8"/></g></g>
+    </symbol>
+    <symbol id="figure-arrow" viewBox="0 0 11.66 17.71">
+      <title>figure-arrow</title><g id="Layer_2" data-name="Layer 2"><path class="cls-1" d="M5.83 0v16.08m5.47-4.55L5.83 17 .35 11.53" id="Layer_1-2" data-name="Layer 1"/></g>
+    </symbol>
+    <symbol id="flag" viewBox="0 0 48.39 111.59">
+      <title>flag</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" stroke="#d3d3d3" stroke-width="2" d="M3.64 111.59V5.77"/><path fill="#d3d3d3" stroke-width="0" class="cls-2" d="M5.1 9.77h22.95v11.25H5.1z"/><path fill="#d3d3d3" stroke-width="0" class="cls-2" d="M48.39 17.27h-17.8v6h-15v5h32.8l-3.45-5.74 3.45-5.26z"/><circle fill="#d3d3d3" stroke-width="0" class="cls-2" cx="3.64" cy="3.64" r="3.64"/></g></g>
+    </symbol>
+    <symbol id="loader" viewBox="0 0 59.91 54.53">
+      <title>loader</title><g id="Layer_2" data-name="Layer 2"><g class="cls-1" id="Layer_1-2" data-name="Layer 1"><path class="cls-2" d="M26.67 47.17h-8.16m-17.45 0H.5V32.55h15.23a1 1 0 0 1 1 1v4.35a1 1 0 0 0 1 1h3.81a1 1 0 0 1 1 1 1 1 0 0 0 1.62.69L30 34.81a1 1 0 0 1 .66-.26h4.76v6.3"/><circle class="cls-2" cx="9.79" cy="47.53" r="6.49"/><circle class="cls-2" cx="9.79" cy="47.53" r="3.23"/><circle class="cls-2" cx="35.04" cy="47.53" r="6.49"/><circle class="cls-2" cx="35.04" cy="47.53" r="3.23"/><path class="cls-2" d="M45.85 47.17h-3.74V0M7.82 32.67l.11-19.5a3 3 0 0 1 3-3h10.95a10 10 0 0 1 9.16 6c1.59 3.69 3 9.4 3 18"/><path class="cls-2" d="M7.91 21.17h1.5a3 3 0 0 1 3 2.46l1.55 8.54m18.95-8h-.55a6 6 0 0 0-6 5.42l-.81 9.49m2.12-12.41l-2.26-.92m1-3.58l-2.83 6.16m21.83-9.66v31.5h14.5M45.85 24.6h-3.74"/><path class="cls-2" d="M45.41 32.17h10.67v18H45.41zm0-10h8.11v10h-8.11z"/></g></g>
+    </symbol>
+    <symbol id="money" viewBox="0 0 97.19 41.13">
+      <title>money</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1 cls-2" d="M77.36 36.51V7.07m0 0h11.52a7.81 7.81 0 0 1 7.81 7.81 7.81 7.81 0 0 1-7.81 7.81h-17m13.54 5.47H71.9"/><g class="cls-1"><path class="cls-2" d="M28.55 38.17H9.84V12.93h15.35m10.49 0h29.38v25.24H40.14"/><path class="cls-2" d="M26.13 33.5H5.17V8.26h20.1m10.41 0h24.71V33.5H37.73"/><path class="cls-2" d="M25.13 28.83H.5V3.59h24.77m10.41 0h20.04v25.24H35.79"/><path class="cls-2" d="M32.95 30.54V.5h-4.77v30.04l5.28 10.09h4.75l-5.26-10.09z"/></g></g></g>
+    </symbol>
+    <symbol id="mouse" viewBox="0 0 26.5 42.75">
+      <title>mouse</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x=".5" y=".5" width="25.5" height="41.75" rx="12.75" ry="12.75"/><rect class="cls-1" x="11.25" y="7.21" width="4" height="10.63" rx="2" ry="2"/></g></g>
+    </symbol>
+    <symbol id="pl" viewBox="0 0 66.68 37.06">
+      <title>pl</title><g id="Layer_2" data-name="Layer 2"><g class="cls-1" id="Layer_1-2" data-name="Layer 1"><circle class="cls-2" cx="45.05" cy="18.57" r="17.99"/><path class="cls-2" d="M32.65 31.27h6.37m-9.49-4.32h13.03m-15.31-4.33H44.7M27.06 18.3H44.8m-16.82-4.33H43.8M29.6 9.64h12.99m-9.73-4.32h6.01"/><path class="cls-3" d="M26.73 18.81a18.3 18.3 0 0 0 9.09 15.81A18.3 18.3 0 0 0 35.83 3a18.3 18.3 0 0 0-9.1 15.81z"/><path class="cls-2" d="M0 18.17h16.08m-4.55-5.47L17 18.17l-5.47 5.47"/><path class="cls-2" d="M11.41 27.32c3.13 6 8.89 9.07 15.5 9.07A17.94 17.94 0 1 0 26.92.5a18.6 18.6 0 0 0-15.5 8.82"/><circle class="cls-2" cx="63.04" cy="18.62" r="3.14"/></g></g>
+    </symbol>
+    <symbol id="search" viewBox="0 0 24.66 24.66">
+      <title>&#x41F;&#x43E;&#x438;&#x441;&#x43A;</title><title>search</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle class="cls-1" cx="10.11" cy="10.11" r="8.61"/><path class="cls-1" d="M16.2 16.2l7.4 7.4"/></g></g>
+    </symbol>
+    <symbol id="ship" viewBox="0 0 83.55 56.92">
+      <title>ship</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M61.8 56.42H12.68a7.34 7.34 0 0 1-7-5.11l-5-15.69h81.8l-15 18.14a7.34 7.34 0 0 1-5.68 2.66zM10.35 41h68.31m-9.6-6.02l-6.63-14.64H6.64v14.64m48.48-15.52v-9.15H12.37v9.15m14.95-9.81V.5h-8.99v9.15m24.71 0V.5h-8.99v9.15M6.64 27.66h58.44M18.33 15.55h1"/><path class="cls-2" d="M22.43 15.55h24.29"/><path class="cls-1" d="M48.27 15.55h1"/></g></g>
+    </symbol></svg>
