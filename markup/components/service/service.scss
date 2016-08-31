@@ -1,4 +1,8 @@
 .service {
+    &__container {
+        position: relative;
+    }
+
     &__photo-wrapper {
         position: relative;
 

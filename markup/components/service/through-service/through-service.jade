@@ -1,4 +1,5 @@
 include ../service
+include ../../line/line
 include ./block-1/block-1
 include ./block-2/block-2
 include ./block-3/block-3
@@ -7,7 +8,8 @@ include ./block-4/block-4
 mixin through-service(data)
     +service
         +b.through-service()&attributes(attributes)
-            +container
+            +container.service__container
+                +line(line.throughService).through-service__line
                 +block-1
                 +block-2
                 +block-3

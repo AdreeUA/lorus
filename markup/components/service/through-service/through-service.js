@@ -3,6 +3,8 @@ import TweenMax from 'gsap';
 
 import { Component, forEach } from 'helpers-js';
 
+import { Line } from 'components/line/line';
+
 export class ThroughService extends Component {
     constructor(block) {
         super(block, 'through-service', function() {
@@ -10,6 +12,16 @@ export class ThroughService extends Component {
 
             this._addPhotoParallax();
         });
+    }
+
+    _addLineParallax() {
+        let line = new Line(this.block.querySelector('.through-service__line'));
+
+        this.sceneLines = new ScrollMagic.Scene({
+                duration: '400%'
+            })
+            .setTween(line.makeTween())
+            .addTo(this.controller);
     }
 
     _addPhotoParallax() {

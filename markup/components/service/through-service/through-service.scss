@@ -5,4 +5,12 @@
     @import './block-2/block-2';
     @import './block-3/block-3';
     @import './block-4/block-4';
+
+    &__line {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 100%;
+    }
 }
