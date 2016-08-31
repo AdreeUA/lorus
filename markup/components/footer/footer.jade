@@ -1,21 +1,21 @@
 include ../made-by/made-by
 include ../link/link
 
-mixin footer(data) 
+mixin footer(data)
     +b.footer()&attributes(attributes)
         +e.wrapper
             +e.col
                 +e.item_copyright
                     | 2016 © Lorus SCM<br>
                     | Все права защищены
-            
+
             +e.col
                 +e.item_phone
                     +e.phone(href='tel:+74957775457') 8 495 777 54 57
-                
+
                 +e.item_mail
                     +link({ href: 'mailto:test@test.ru' })._theme_fill.footer__mail
                         | Написать нам
-            
+
             +e.col
                 +made-by
