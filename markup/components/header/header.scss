@@ -1,9 +1,12 @@
 .header {
+    $menu-width: 420/806*100+vh;
+
     position:fixed;
     z-index: 100;
 
     display: flex;
     align-items: flex-start;
+    width: 100%;
 
     &::after {
         content: '';
@@ -90,6 +93,8 @@
         left: 0;
         top: 0;
         z-index: 2;
+
+        width: $menu-width;
     }
 
     &_theme_default {
@@ -137,7 +142,7 @@
     &_overlay {
 
         &::after {
-            left: rem-2(882);
+            left: $menu-width;
 
             height: 100vh;
 

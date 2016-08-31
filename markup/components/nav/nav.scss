@@ -13,10 +13,11 @@
     }
 
     &__title {
-        font-size: rem-2(50);
-        color: black;
-        padding: rem-2(38) rem-2(138);
         margin: 0;
+        margin-bottom: rem-2(38);
+
+        font-size: rem-2(48);
+        color: black;
     }
 
     &__describe {
@@ -24,10 +25,23 @@
         margin-top: rem-2(20);
     }
 
-    &__link_mod {
+    &_theme_menu {
+
+        .nav__title {
+            margin-bottom: em(20, 25);
+
+            font-size: em(25);
+        }
+
         .nav__link {
             color: #000;
+            font-size: em(18);
             font-weight: 400;
+        }
+
+        .nav__describe {
+            width: em(478/2);
+            margin-top: em(10);
         }
     }
 }
