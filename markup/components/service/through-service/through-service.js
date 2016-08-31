@@ -10,7 +10,8 @@ export class ThroughService extends Component {
         super(block, 'through-service', function() {
             this.controller = new ScrollMagic.Controller();
 
-            this._addPhotoParallax();
+            // this._addLineParallax();
+            // this._addPhotoParallax();
         });
     }
 
