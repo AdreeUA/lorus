@@ -29,8 +29,8 @@ mixin header(data, classList)
                 +link.header__lang
                     | in English
                     
-        //- ==================== хедер на остальных экранах ======================
-        if data.type === 'screen'
+        //- ========== хедер на остальных экранах и внутренних страницах =======
+        if data.type === 'screen' || data.type === 'inner'
         
             +e.left
                 +hamburger.header__hamburger
@@ -38,11 +38,5 @@ mixin header(data, classList)
             
             +e.right
                 +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn])
-                
-        //- =================== Хедер на внутренних страницах =================
-        if data.type === 'inner'
-            +hamburger.header__hamburger
-            +menu.header__slide-menu
-            +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn])
 
         block

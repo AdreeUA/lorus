@@ -1,7 +1,9 @@
 .header {
+    position:fixed;
+    z-index: 100;
+
     display: flex;
     align-items: flex-start;
-    position:fixed;
 
     &::after {
         content: '';
@@ -147,5 +149,9 @@
         .header__right {
             filter: blur(5px);
         }
+    }
+
+    &_theme_inner {
+        display: block;
     }
 }

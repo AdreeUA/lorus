@@ -21,15 +21,13 @@
 
     &__describe {
         width: rem-2(478);
-        position: relative;
-        left: rem-2(168);
+        margin-top: rem-2(20);
     }
 
     &__link_mod {
-        .link {
+        .nav__link {
             color: #000;
             font-weight: 400;
         }
     }
 }
-

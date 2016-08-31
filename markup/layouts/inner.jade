@@ -16,8 +16,9 @@ html(lang='ru' class=pageSettings.pageClass)
     include ../components/head/head
 
     body
+        +header(header.inner)
+        
         +page
-            +header(header.inner)
             
             block content
             

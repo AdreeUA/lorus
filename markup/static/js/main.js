@@ -2,6 +2,7 @@ import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
 
+import { Header } from 'components/header/header';
 import { Screens } from 'components/screens/screens';
 import { Slider } from 'components/slider/slider';
 import { Line } from 'components/line/line';
@@ -15,6 +16,7 @@ $(() => {
     // ================ Здесь инициализируем модули =====================
 
     Component.init('.line', Line);
+    Component.init('.header', Header);
     Component.init('.screens', Screens);
     Component.init('.slider', Slider);
     Component.init('.search-mini', SearchMini);

@@ -16,6 +16,6 @@ mixin nav(data, classList)
                 +e.item(class=[(item.active ? '_active' : ''), classList.itemClass])
                     +link({ href: item.href }).nav__link
                         | #{item.text}
-        if data.describe
-            +e.describe= data.describe
+                    if item.describe
+                        +e.describe= item.describe
         block

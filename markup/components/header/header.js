@@ -22,10 +22,13 @@ export class Header extends Component {
             menu = this.block.querySelector('.header__slide-menu');
 
         if (menu) this.menu = new Menu(menu);
-        if (hamburger) this.hamburger = new Hamburger(hamburger);
+        
+        if (hamburger) {
+            this.hamburger = new Hamburger(hamburger);
 
-        this.hamburger.block.addEventListener('open', this._onHamburgerOpen);
-        this.hamburger.block.addEventListener('close', this._onHamburgerClose);
+            this.hamburger.block.addEventListener('open', this._onHamburgerOpen);
+            this.hamburger.block.addEventListener('close', this._onHamburgerClose);
+        }
     }
 
     _onHamburgerOpen(e) {
