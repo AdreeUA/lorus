@@ -1,0 +1,20 @@
+include ../link/link
+
+mixin footer-inner(data)
+    +b.footer-inner()&attributes(attributes)
+        +e.wrapper
+            +e.col
+                +e.item_logo
+
+            +e.col
+                +e.item_phone
+                    +e.phone(href='tel:+74957775457') 8 495 777 54 57
+
+                +e.item_mail
+                    +link({href: 'mailto:test@test.ru'})._theme_fill.footer__mail
+                        | Написать нам
+
+            +e.col
+                +e.item_copyright
+                    | 2016 © Lorus SCM<br>
+                    | Все права защищены
