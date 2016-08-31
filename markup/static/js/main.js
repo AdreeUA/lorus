@@ -2,6 +2,7 @@ import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
 
+import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
 import { Screens } from 'components/screens/screens';
 import { Slider } from 'components/slider/slider';
@@ -21,4 +22,5 @@ $(() => {
     Component.init('.slider', Slider);
     Component.init('.search-mini', SearchMini);
     Component.init('.info-list', InfoList);
+    Service.initCurrentService();
 });

@@ -1,9 +1,13 @@
 import { Component } from 'helpers-js';
 
-export class  extends Component {
+import { ThroughService } from './through-service/through-service';
+
+export class Service extends Component {
     constructor(block) {
-        super(block, 'service');
-        if (this._ready) return this;
-        this._ready = true;
+        super(block, 'service', function() {});
     }
+}
+
+Service.initCurrentService = () => {
+    Component.init(document.querySelector('.through-service'), ThroughService);
 }
