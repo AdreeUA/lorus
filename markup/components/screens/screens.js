@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 
-import { Component } from 'helpers-js';
+import { Component, setupScrollMagicAnchors } from 'helpers-js';
 
 import { ScreenAbout } from './screen-about/screen-about';
 import { ScreenHome } from './screen-home/screen-home';
@@ -34,6 +34,8 @@ export class Screens extends Component {
             new ScreenAdvantages(this.block.querySelector('.screen-advantages')),
             new ScreenTeam(this.block.querySelector('.screen-team'))
         ];
+
+        setupScrollMagicAnchors(controller);
 
     }
 }

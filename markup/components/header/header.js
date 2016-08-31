@@ -30,9 +30,10 @@ export class Header extends Component {
 
     _onHamburgerOpen(e) {
         let closeMenuExternalClick = (e) => {
-            let menuClicked = e.target.closest('.header__slide-menu');
+            let menuClicked = e.target.closest('.header__slide-menu'),
+                navLinkClicked = e.target.closest('.nav__link');
 
-            if (!menuClicked) {
+            if (!menuClicked || navLinkClicked) {
                 this.hamburger.close();
 
                 document.removeEventListener('click', closeMenuExternalClick);
