@@ -19,20 +19,19 @@
         z-index: 2;
 
         &_1 {
-            top: rem-2(326);
-            left: rem-2(-30);
+            top: rem(149);
+            left: rem(-10);
             z-index: 3;
 
-            height: rem-2(860);
-            width: rem-2(494);
+            height: rem(397);
         }
 
         &_2 {
-            left: rem-2(350);
-            right: calc(#{percentage(170/1255)} + #{rem-2(766)});
-            top: rem-2(1014);
+            left: rem(175);
+            right: calc(#{percentage(170/1255)} + #{rem(390)});
+            top: rem(466);
 
-            border-top-right-radius: 10px;
+            border-top-right-radius: 5px;
             overflow: hidden;
         }
 
@@ -40,8 +39,7 @@
             bottom: 0;
             right: percentage(170/1225);
 
-            width: rem-2(848);
-            height: rem-2(670);
+            height: rem(344);
         }
     }
 

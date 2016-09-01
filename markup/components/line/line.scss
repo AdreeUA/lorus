@@ -5,7 +5,7 @@
     transform: translate3d(0, 0, 0);
 
     &__icon {
-        width: 100%;
+        width: auto;
         height: 100%;
 
         path {
@@ -33,6 +33,7 @@
 
         .line__icon {
             height: 10px;
+            width: 100%;
 
             &_static {
                 background: #d3d3d3;

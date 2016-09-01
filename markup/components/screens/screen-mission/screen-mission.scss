@@ -49,17 +49,16 @@
         z-index: 1;
 
         &_1 {
-            top: rem-2(-10);
+            top: rem(-2);
             right: percentage(170/1225);
 
-            width: rem-2(1040);
-            height: rem-2(1130);
-            margin-right: rem-2(-256);
+            height: rem(567);
+            margin-right: rem(-128);
         }
 
         &_2 {
-            left: rem-2(68);
-            top: rem-2(988);
+            left: rem(34);
+            top: rem(494);
             right: calc(#{percentage(170/1225)} + #{rem-2(1030 - 250)});
 
             overflow: hidden;
