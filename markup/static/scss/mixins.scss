@@ -146,7 +146,7 @@
 // =============================================================================
 
 @function rem-2($px) {
-    @return $px / 32 + rem;
+    @return $px / 33.5 + rem;
 }
 
 @mixin object-fit($fit: cover, $position: null){

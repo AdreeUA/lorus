@@ -59,7 +59,7 @@
         &_2 {
             left: rem(34);
             top: rem(494);
-            right: calc(#{percentage(170/1225)} + #{rem-2(1030 - 250)});
+            right: calc(#{percentage(170/1225)} + #{rem(388)});
 
             overflow: hidden;
         }

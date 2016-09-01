@@ -19,18 +19,18 @@
     }
 
     &_loader {
-        width: em(125/2);
-        height: em(114/2);
+        width: rem-2(125);
+        height: rem-2(114);
     }
 
     &_pl {
-        width: em(140/2);
-        height: em(84/2);
+        width: rem-2(140);
+        height: rem-2(84);
     }
 
     &_chart {
-        width: em(64/2);
-        height: em(91/2);
+        width: rem-2(64);
+        height: rem-2(91);
     }
 
     &_arrow {
