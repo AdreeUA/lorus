@@ -12,61 +12,61 @@
     }
 
     &_search {
-        width: rem-2(52);
-        height: rem-2(52);
+        width: em(52/2);
+        height: em(52/2);
 
         stroke-width: 3px;
     }
 
     &_loader {
-        width: rem-2(125);
-        height: rem-2(114);
+        width: em(125/2);
+        height: em(114/2);
     }
 
     &_pl {
-        width: rem-2(140);
-        height: rem-2(84);
+        width: em(140/2);
+        height: em(84/2);
     }
 
     &_chart {
-        width: rem-2(64);
-        height: rem-2(91);
+        width: em(64/2);
+        height: em(91/2);
     }
 
     &_arrow {
-        width: rem-2(26);
-        height: rem-2(34);
+        width: em(26/2);
+        height: em(34/2);
 
         stroke-width: 3px;
     }
 
     &_mouse {
-        width: rem-2(56);
-        height: rem-2(90);
+        width: em(56/2);
+        height: em(90/2);
     }
 
     &_figure-arrow {
-        width: rem-2(26);
-        height: rem-2(40);
+        width: em(26/2);
+        height: em(40/2);
     }
 
     &_flag {
-        width: rem-2(100);
-        height: rem-2(232);
+        width: em(100/2);
+        height: em(232/2);
     }
 
     &_ship {
-        width: rem-2(174);
-        height: rem-2(120);
+        width: em(174/2);
+        height: em(120/2);
     }
 
     &_calendar {
-        width: rem(92);
-        height: rem(48);
+        width: em(92);
+        height: em(48);
     }
 
     &_money {
-        width: rem(97);
-        height: rem(41);
+        width: em(97);
+        height: em(41);
     }
 }

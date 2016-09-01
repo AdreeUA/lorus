@@ -10,8 +10,8 @@
     }
 
     &__line {
-        width: rem-2(42);
-        height: rem-2(6);
+        width: em(42/2);
+        height: em(6/2);
 
         background: currentColor;
 
