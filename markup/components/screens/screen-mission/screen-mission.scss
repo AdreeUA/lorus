@@ -58,17 +58,25 @@
 
         &_2 {
             left: rem(34);
-            top: rem(494);
+            bottom: rem(301);
             right: calc(#{percentage(170/1225)} + #{rem(388)});
 
             overflow: hidden;
+
+            @media screen and ('max-height: 800px') {
+                bottom: rem(300);
+            }
+
+            @media screen and ('max-height: 650px') {
+                bottom: rem(298);
+            }
         }
     }
 
     &__flag {
         position: absolute;
-        top: rem-2(340);
-        left: rem-2(326);
+        top: rem(170);
+        left: rem(163);
     }
 
     &__content {

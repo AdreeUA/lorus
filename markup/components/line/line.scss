@@ -2,6 +2,7 @@
     position: relative;
 
     pointer-events: none;
+    transform-style: preserve-3d;
     transform: translate3d(0, 0, 0);
 
     &__icon {
