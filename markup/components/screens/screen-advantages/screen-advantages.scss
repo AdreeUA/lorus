@@ -24,19 +24,19 @@
         position: absolute;
 
         &_1 {
-            bottom: rem(296);
-            right: rem(-35);
+            bottom: rem(292);
+            right: rem(-60);
 
-            height: rem(92);
-            width: rem(308);
+            width: em(346);
+            height: em(103);
         }
 
         &_2 {
             bottom: 0;
             right: percentage(500/1225);
 
-            height: rem(400);
-            width: rem(184);
+            width: em(184);
+            height: em(402);
         }
     }
 
