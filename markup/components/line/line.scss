@@ -60,3 +60,10 @@
         }
     }
 }
+
+.explorer,
+.edge {
+    .line_css .line__icon_active{
+        transform: none;
+    }
+}
