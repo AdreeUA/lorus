@@ -23,31 +23,35 @@
             left: rem(-10);
             z-index: 3;
 
-            height: rem(397);
+            width: em(220);
+            height: em(397);
+
+            font-size: rem(16.6);
         }
 
         &_2 {
             left: rem(175);
             right: calc(#{percentage(170/1255)} + #{rem(390)});
-            bottom: rem(329.5);
+            bottom: rem(317);
 
             border-top-right-radius: 5px;
             overflow: hidden;
 
-            @media screen and ('max-height: 800px') {
-                bottom: rem(328);
-            }
-
-            @media screen and ('max-height: 650px') {
-                bottom: rem(326);
-            }
+            // @media screen and ('max-height: 800px') {
+            //     bottom: rem(315);
+            // }
+            //
+            // @media screen and ('max-height: 650px') {
+            //     bottom: rem(313);
+            // }
         }
 
         &_3 {
             bottom: 0;
             right: percentage(170/1225);
 
-            height: rem(344);
+            width: em(415);
+            height: em(332);
         }
     }
 

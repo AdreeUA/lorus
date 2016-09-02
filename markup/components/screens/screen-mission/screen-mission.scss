@@ -4,7 +4,7 @@
     padding-bottom: rem-2(70);
     padding-top: rem-2(124);
 
-    background: url('%=static=%assets/screens/screen-mission/bg-mission.svg') no-repeat right 100% / auto 100%;
+    background: url('%=static=%assets/screens/screen-mission/bg-mission.svg') no-repeat right 100% / 133vh 100vh;
 
     &::before {
         position: absolute;
@@ -52,24 +52,25 @@
             top: rem(-2);
             right: percentage(170/1225);
 
-            height: rem(567);
+            width: em(527);
+            height: em(571);
             margin-right: rem(-128);
         }
 
         &_2 {
             left: rem(34);
-            bottom: rem(301);
-            right: calc(#{percentage(170/1225)} + #{rem(388)});
+            bottom: rem(297);
+            right: calc(#{percentage(170/1225)} + #{rem(395)});
 
             overflow: hidden;
 
-            @media screen and ('max-height: 800px') {
-                bottom: rem(300);
-            }
-
-            @media screen and ('max-height: 650px') {
-                bottom: rem(298);
-            }
+            // @media screen and ('max-height: 800px') {
+            //     bottom: rem(300);
+            // }
+            //
+            // @media screen and ('max-height: 650px') {
+            //     bottom: rem(298);
+            // }
         }
     }
 

@@ -9,13 +9,19 @@ export class Line extends Component {
             this.active = this.block.querySelector('.line__icon_active');
 
             if (this.type === 'svg') {
-                this._pathPrepare(this.active.querySelector('path'));
+                let browser = document.documentElement.classList;
+                if (!browser.contains('explorer') && !browser.contains('edge')) {
+                    this._pathPrepare(this.active.querySelector('path'));
+                }
             }
         })
     }
 
     makeTween(duration = 1) {
-        let tween;
+        let tween,
+            browser = document.documentElement.classList;
+
+        if (browser.contains('explorer') || browser.contains('edge')) return '';
 
         if (this.type === 'svg') {
             tween = TweenMax.to(this.active.querySelector('path'), 1, { strokeDashoffset: 0 });
@@ -29,7 +35,7 @@ export class Line extends Component {
     _pathPrepare(elem) {
         let lineLength = elem.getTotalLength();
 
-        elem.style.strokeDasharray = lineLength / 14 + 'rem';
-        elem.style.strokeDashoffset =  lineLength / 14 + 'rem';
+        elem.style.strokeDasharray = lineLength;
+        elem.style.strokeDashoffset =  lineLength - 1;
     }
 }

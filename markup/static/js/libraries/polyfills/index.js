@@ -1,4 +1,5 @@
 import svg4everybody from 'svg4everybody';
+import bowser from 'bowser';
 import 'babel-polyfill';
 import './customEvent';
 import './classList';
@@ -9,5 +10,7 @@ import './requestAnimationFrame';
 export default {
     init() {
         svg4everybody();
+
+        document.documentElement.classList.add(bowser.name.split(' ').pop().toLowerCase());
     }
 };
