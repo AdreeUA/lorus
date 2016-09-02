@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
-import { Component, forEach } from 'helpers-js';
+import { Component, forEach, getCoords } from 'helpers-js';
 
 import { Line } from 'components/line/line';
 
@@ -11,7 +11,7 @@ export class ThroughService extends Component {
             this.controller = new ScrollMagic.Controller();
 
             // this._addLineParallax();
-            // this._addPhotoParallax();
+            this._addPhotoParallax();
         });
     }
 
@@ -29,19 +29,30 @@ export class ThroughService extends Component {
         let photos = this.block.querySelectorAll('.service__photo-wrapper');
 
         forEach(photos, (photo, ind) => {
-            let tween = TweenMax.from(photo, 1, { y: '30%' }),
+            let tween,
+                offset = 0,
                 triggerHook = 1,
-                duration = '150%';
+                duration = '200%';
 
-            if (ind === photos.length - 1) {
-                triggerHook = 1;
-            } else if (ind === 0) {
+            if (ind === 0) {
                 triggerHook = 0;
-                tween = TweenMax.to(photo, 1, { y: '-=30%' });
+                offset = -parseInt(window.getComputedStyle(photo.closest('.service__block')).paddingTop);
+                tween = TweenMax.to(photo, 1, { y: '-30%' });
+
+            } else if (ind === photos.length - 1) {
+
+                let coords = getCoords(photo);
+
+                tween = TweenMax.from(photo, 1, { y: '30%' });
+                duration = document.body.scrollHeight - coords.top;
+
+            } else {
+                tween = TweenMax.fromTo(photo, 1, { y: '30%' }, { y: '-30%' });
             }
 
             new ScrollMagic.Scene({
-                    triggerElement: photo.closest('.service__block'),
+                    offset: offset,
+                    triggerElement: photo,
                     duration: duration,
                     triggerHook: triggerHook
                 })
