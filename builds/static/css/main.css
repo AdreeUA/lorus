@@ -2493,8 +2493,8 @@ html.fp-enabled,
 }
 
 .screen-mission__line_2 {
-  left: 2.125rem;
-  bottom: 18.5625rem;
+  left: 4.125rem;
+  bottom: 18.5rem;
   right: calc(13.87755% + 24.6875rem);
   overflow: hidden;
   -webkit-transform: scaleX(-1);
@@ -2574,8 +2574,8 @@ html.fp-enabled,
 }
 
 .screen-advantages__line_1 {
-  bottom: 18.25rem;
-  right: -3.75rem;
+  bottom: 18.1875rem;
+  right: -4.375rem;
   width: 21.625em;
   height: 6.4375em;
 }
@@ -2602,8 +2602,8 @@ html.fp-enabled,
   height: 0.6875rem;
   margin-left: 0.75rem;
   background: url("../img/assets/screens/screen-advantages/wave.svg") repeat-x 0 center/2.0625rem auto;
-  -webkit-animation: wave 2.5s both linear infinite;
-          animation: wave 2.5s both linear infinite;
+  -webkit-animation: wave 2s both linear infinite;
+          animation: wave 2s both linear infinite;
 }
 
 .screen-advantages__wrapper {
@@ -2711,7 +2711,7 @@ html.fp-enabled,
   right: 40.81633%;
   width: 12.4375em;
   height: 29.875em;
-  margin-right: 10.625rem;
+  margin-right: 10.8125rem;
 }
 
 .screen-team__line_2 {
