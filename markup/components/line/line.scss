@@ -15,7 +15,6 @@
             fill: none;
         }
 
-
         &_static {
             stroke: #d3d3d3;
         }
@@ -25,7 +24,7 @@
             top: 0;
             left: 0;
 
-            stroke: #e0e718;
+            stroke: $color-2;
         }
     }
 
@@ -40,23 +39,25 @@
             }
 
             &_active {
-                background: #e0e718;
+                background: $color-2;
 
-                transform: scaleX(0);
+                width: 0;
             }
 
         }
     }
 
-    &_dir_right {
-        .line__icon_active {
-            transform-origin: left center;
-        }
-    }
+    &_dashed {
 
-    &_dir_left {
-        .line__icon_active {
-            transform-origin: right center;
+        .line__icon {
+
+            &_static {
+                background: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 rem(12), transparent 0, transparent rem(24));
+            }
+
+            &_active {
+                background: repeating-linear-gradient(to right, $color-2, $color-2 rem(12), transparent 0, transparent rem(24));
+            }
         }
     }
 }
@@ -64,6 +65,6 @@
 .explorer,
 .edge {
     .line_css .line__icon_active{
-        transform: none;
+        width: 100%;
     }
 }

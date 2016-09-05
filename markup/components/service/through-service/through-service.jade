@@ -8,9 +8,13 @@ include ./block-4/block-4
 mixin through-service(data)
     +service
         +b.through-service()&attributes(attributes)
-            +container.service__container
-                img.through-service__line(src='%=static=%img/assets/service/through-service/through-service-line.svg' alt='')
-                +block-1
-                +block-2
-                +block-3
-                +block-4
+            +e.wrapper
+                +e.lines
+                    +line(line.throughService1).through-service__line_1
+                    +line(line.throughService2)._dashed.through-service__line_2
+                    +line(line.throughService3).through-service__line_3
+                +e.content
+                    +block-1
+                    +block-2
+                    +block-3
+                    +block-4

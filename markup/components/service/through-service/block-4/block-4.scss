@@ -1,16 +1,18 @@
 .block-4 {
-    padding-bottom: rem(40);
 
     &__left {
-        width: rem(450);
+        width: rem(475);
     }
 
     &__right {
-        width: rem(550);
+        width: rem(605);
+        padding-right: rem(90);
     }
 
     &__photo {
-        margin-top: rem(70);
+        width: 100%;
+        height: rem(315);
+        margin-top: rem(60);
     }
 
     &__decorh {

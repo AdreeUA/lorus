@@ -10,18 +10,27 @@ export class ThroughService extends Component {
         super(block, 'through-service', function() {
             this.controller = new ScrollMagic.Controller();
 
-            // this._addLineParallax();
+            this._addLineParallax();
             this._addPhotoParallax();
         });
     }
 
     _addLineParallax() {
-        let line = new Line(this.block.querySelector('.through-service__line'));
+        let line1 = new Line(this.block.querySelector('.through-service__line_1')),
+            line2 = new Line(this.block.querySelector('.through-service__line_2')),
+            line3 = new Line(this.block.querySelector('.through-service__line_3')),
+            duration = document.body.scrollHeight - document.documentElement.clientHeight / 2,
+            tween = new TimelineMax();
+
+        tween
+            .add(line1.makeTween(.6))
+            .add(line2.makeTween(.25))
+            .add(line3.makeTween(.15));
 
         this.sceneLines = new ScrollMagic.Scene({
-                duration: '400%'
+                duration: duration
             })
-            .setTween(line.makeTween())
+            .setTween(tween)
             .addTo(this.controller);
     }
 
@@ -43,7 +52,7 @@ export class ThroughService extends Component {
 
                 let coords = getCoords(photo);
 
-                tween = TweenMax.from(photo, 1, { y: '30%' });
+                tween = TweenMax.from(photo, 1, { y: '25%' });
                 duration = document.body.scrollHeight - coords.top;
 
             } else {

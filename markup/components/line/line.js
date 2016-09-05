@@ -26,7 +26,7 @@ export class Line extends Component {
         if (this.type === 'svg') {
             tween = TweenMax.to(this.active.querySelector('path'), 1, { strokeDashoffset: 0 });
         } else {
-            tween = TweenMax.to(this.active, duration, { scaleX: 1 });
+            tween = TweenMax.to(this.active, duration, { width: '100%' });
         }
 
         return tween;

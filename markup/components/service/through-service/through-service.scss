@@ -1,4 +1,6 @@
 .through-service {
+    padding: 0 rem(40);
+
     background: url('%=static=%assets/service/through-service/bg.svg') -10% 0 / cover;
 
     @import './block-1/block-1';
@@ -6,11 +8,47 @@
     @import './block-3/block-3';
     @import './block-4/block-4';
 
-    &__line {
+    &__wrapper {
+        position: relative;
+    }
+
+    &__lines {
         position: absolute;
         top: 0;
+        left: 0;
         right: 0;
+        z-index: 1;
 
         width: 100%;
+        height: 100%;
+        padding-left: rem(30);
+    }
+
+    &__line {
+        font-size: rem(15.4);
+
+        &_1 {
+            width: em(1124);
+            height: em(1162);
+        }
+
+        &_2 {
+            width: em(24 * 16 - 12);
+            height: em(24 * 16 - 12);
+            margin: em(12) 0;
+
+            transform: rotate(-90deg) scaleX(-1);
+        }
+
+        &_3 {
+            width: em(272);
+            height: em(263);
+            margin-left: em(-5);
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
     }
 }
