@@ -6,11 +6,42 @@
     @import './block-3/block-3';
     @import './block-4/block-4';
 
-    &__line {
+    &__lines {
         position: absolute;
         top: 0;
+        left: 0;
         right: 0;
+        z-index: 1;
 
         width: 100%;
+        height: 100%;
+    }
+
+    &__line {
+
+        &_1 {
+            width: rem(1124);
+            height: rem(1162);
+        }
+
+        &_2 {
+            width: rem(416);
+            height: rem(416);
+            margin: rem(12) 0;
+
+            transform: rotate(-90deg) scaleX(-1);
+        }
+
+        &_3 {
+            width: rem(272);
+            height: rem(263);
+
+            margin-left: rem(-5);
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
     }
 }

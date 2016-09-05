@@ -25,7 +25,7 @@
             top: 0;
             left: 0;
 
-            stroke: #e0e718;
+            stroke: $color-2;
         }
     }
 
@@ -40,23 +40,25 @@
             }
 
             &_active {
-                background: #e0e718;
+                background: $color-2;
 
-                transform: scaleX(0);
+                width: 0;
             }
 
         }
     }
 
-    &_dir_right {
-        .line__icon_active {
-            transform-origin: left center;
-        }
-    }
+    &_dashed {
 
-    &_dir_left {
-        .line__icon_active {
-            transform-origin: right center;
+        .line__icon {
+
+            &_static {
+                background: linear-gradient(to right, #d3d3d3 50%, transparent 0) repeat-x top left / rem(24) 100%;
+            }
+
+            &_active {
+                background: linear-gradient(to right, $color-2 50%, transparent 0) repeat-x top left / rem(24) 100%;
+            }
         }
     }
 }
@@ -64,6 +66,6 @@
 .explorer,
 .edge {
     .line_css .line__icon_active{
-        transform: none;
+        width: 100%;
     }
 }

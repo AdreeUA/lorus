@@ -63,6 +63,7 @@
             right: calc(#{percentage(170/1225)} + #{rem(395)});
 
             overflow: hidden;
+            transform: scaleX(-1);
 
             // @media screen and ('max-height: 800px') {
             //     bottom: rem(300);
