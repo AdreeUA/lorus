@@ -17,6 +17,13 @@ export class ScreenHome extends Screen {
 
             this._addLinesAnimation();
             this._addSliderParallax();
+
+            // this.block.querySelector('.slider').addEventListener('afterChangeSlide', () => {
+            //     this.sliderScene1.destroy(true);
+            //     this.sliderScene2.destroy(true);
+            //
+            //     this._addSliderParallax();
+            // });
         });
     }
 
@@ -25,18 +32,18 @@ export class ScreenHome extends Screen {
             title = activeSlide.querySelector('.info__title'),
             photo = activeSlide.querySelector('.info__img-wrapper');
 
-        new ScrollMagic.Scene({
+        this.sliderScene1 = new ScrollMagic.Scene({
                 duration: '50%',
                 triggerHook: 1
             })
             .setTween(TweenMax.to(title, 1, { x: '-30%' }))
             .addTo(this.controller);
 
-        new ScrollMagic.Scene({
+        this.sliderScene2 = new ScrollMagic.Scene({
                 duration: '100%',
                 triggerHook: .8
             })
-            .setTween(TweenMax.to(photo, 1, { x: '-80%' }))
+            .setTween(TweenMax.to(photo, 1, { x: '-60%' }))
             .addTo(this.controller);
     }
 
@@ -51,8 +58,18 @@ export class ScreenHome extends Screen {
             .addTo(this.controller);
     }
 
+    _onProgress(e) {
+        if (e.progress >= .6) {
+            this.header.show();
+        } else {
+            this.header.hide();
+        }
+    }
+
     _onEnter(e) {
         this.header.hide();
+        this.header.toggleNavClasses('left');
+        this.header.changeNavHref('#home');
     }
 
     _onLeave(e) {

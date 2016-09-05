@@ -62,7 +62,6 @@ export class ScreenTeam extends Screen {
     }
 
     _onEnter(e) {
-        this.header.toggleNavClasses('top');
-        this.header.changeNavHref('#advantages');
+        
     }
 }

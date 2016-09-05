@@ -26,9 +26,11 @@ export class Screen extends Component {
 
             this.scene.on('enter', this._onEnter.bind(this));
             this.scene.on('leave', this._onLeave.bind(this));
+            this.scene.on('progress', this._onProgress.bind(this));
         });
     }
 
     _onLeave(e) {}
     _onEnter(e) {}
+    _onProgress(e) {}
 }

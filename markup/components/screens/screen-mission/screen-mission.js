@@ -56,8 +56,8 @@ export class ScreenMission extends Screen {
     }
 
     _onEnter(e) {
-        this.header.toggleNavClasses('top');
-        this.header.changeNavHref('#about');
+        this.header.toggleNavClasses('right');
+        this.header.changeNavHref('#mission');
     }
 
     _onLeave(e) {

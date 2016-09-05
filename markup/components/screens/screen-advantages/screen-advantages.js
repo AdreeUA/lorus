@@ -50,7 +50,7 @@ export class ScreenAdvantages extends Screen {
     }
 
     _onEnter(e) {
-        this.header.toggleNavClasses('right');
-        this.header.changeNavHref('#mission');
+        this.header.toggleNavClasses('top');
+        this.header.changeNavHref('#advantages');
     }
 }

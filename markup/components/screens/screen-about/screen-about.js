@@ -59,11 +59,10 @@ export class ScreenAbout extends Screen {
     }
 
     _onEnter(e) {
-        this.header.toggleNavClasses('left');
-        this.header.changeNavHref('#home');
+        this.header.toggleNavClasses('top');
+        this.header.changeNavHref('#about');
     }
 
     _onLeave(e) {
-
     }
 }
