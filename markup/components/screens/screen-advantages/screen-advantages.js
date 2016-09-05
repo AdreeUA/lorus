@@ -27,7 +27,7 @@ export class ScreenAdvantages extends Screen {
             .add(line1.makeTween(.5))
             .add(line2.makeTween(.5));
 
-        this.sceneLines = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
                 duration: '100%',
                 triggerHook: 1
@@ -40,7 +40,7 @@ export class ScreenAdvantages extends Screen {
         let plane = this.block.querySelector('.screen-advantages__plane'),
             tweenPlane = TweenMax.from(plane, 1, { x: '-500%', y: '300%' });
 
-        this.scenePlane = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
                 duration: '75%',
                 triggerHook: 1
@@ -50,7 +50,7 @@ export class ScreenAdvantages extends Screen {
     }
 
     _onEnter(e) {
-        this.header.toggleNavClasses('right');
-        this.header.changeNavHref('#mission');
+        this.header.toggleNavClasses('top');
+        this.header.changeNavHref('#advantages');
     }
 }

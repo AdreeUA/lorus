@@ -18,8 +18,8 @@ $(() => {
 
     Component.init('.line', Line);
     Component.init('.header', Header);
-    Component.init('.screens', Screens);
     Component.init('.slider', Slider);
+    Component.init('.screens', Screens);
     Component.init('.search-mini', SearchMini);
     Component.init('.info-list', InfoList);
     Service.initCurrentService();

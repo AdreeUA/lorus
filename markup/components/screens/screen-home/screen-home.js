@@ -16,13 +16,41 @@ export class ScreenHome extends Screen {
                 .triggerHook(0);
 
             this._addLinesAnimation();
+            this._addSliderParallax();
+
+            // this.block.querySelector('.slider').addEventListener('afterChangeSlide', () => {
+            //     this.sliderScene1.destroy(true);
+            //     this.sliderScene2.destroy(true);
+            //
+            //     this._addSliderParallax();
+            // });
         });
+    }
+
+    _addSliderParallax() {
+        let activeSlide = this.block.querySelector('.slick-active'),
+            title = activeSlide.querySelector('.info__title'),
+            photo = activeSlide.querySelector('.info__img-wrapper');
+
+        this.sliderScene1 = new ScrollMagic.Scene({
+                duration: '50%',
+                triggerHook: 1
+            })
+            .setTween(TweenMax.to(title, 1, { x: '-30%' }))
+            .addTo(this.controller);
+
+        this.sliderScene2 = new ScrollMagic.Scene({
+                duration: '100%',
+                triggerHook: .8
+            })
+            .setTween(TweenMax.to(photo, 1, { x: '-60%' }))
+            .addTo(this.controller);
     }
 
     _addLinesAnimation() {
         let line = new Line(this.block.querySelector('.screen-home__line'));
 
-        this.sceneLines = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
                 duration: '25%',
                 triggerHook: .25
             })
@@ -30,8 +58,18 @@ export class ScreenHome extends Screen {
             .addTo(this.controller);
     }
 
+    _onProgress(e) {
+        if (e.progress >= .6) {
+            this.header.show();
+        } else {
+            this.header.hide();
+        }
+    }
+
     _onEnter(e) {
         this.header.hide();
+        this.header.toggleNavClasses('left');
+        this.header.changeNavHref('#home');
     }
 
     _onLeave(e) {
