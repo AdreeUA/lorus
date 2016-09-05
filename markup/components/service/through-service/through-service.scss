@@ -1,10 +1,16 @@
 .through-service {
+    padding: 0 rem(40);
+
     background: url('%=static=%assets/service/through-service/bg.svg') -10% 0 / cover;
 
     @import './block-1/block-1';
     @import './block-2/block-2';
     @import './block-3/block-3';
     @import './block-4/block-4';
+
+    &__wrapper {
+        position: relative;
+    }
 
     &__lines {
         position: absolute;
@@ -15,28 +21,30 @@
 
         width: 100%;
         height: 100%;
+        padding-left: rem(30);
     }
 
     &__line {
+        font-size: rem(15.4);
 
         &_1 {
-            width: rem(1124);
-            height: rem(1162);
+            width: em(1124);
+            height: em(1162);
         }
 
         &_2 {
-            width: rem(416);
-            height: rem(416);
-            margin: rem(12) 0;
+            width: em(24 * 16 - 12);
+            height: em(24 * 16 - 12);
+            margin: em(12) 0;
 
             transform: rotate(-90deg) scaleX(-1);
         }
 
         &_3 {
-            width: rem(272);
-            height: rem(263);
+            width: em(272);
+            height: em(263);
 
-            margin-left: rem(-5);
+            margin-left: em(-5);
         }
     }
 

@@ -1,23 +1,27 @@
 .block-1 {
     padding-top: rem(120);
-    padding-bottom: rem(60);
-    padding-left: rem(20);
+    margin-bottom: rem(95);
 
     &__left {
         width: rem(380);
+        padding-top: rem(120);
+        padding-left: rem(20);
     }
 
     &__right {
-        width: rem(540);
+        width: rem(520);
     }
 
     &__photo {
-        margin-bottom: rem(140);
+        width: 100%;
+        height: rem(260);
+        margin-bottom: rem(160);
     }
 
     &__title {
-        padding-top: rem(110);
-        padding-bottom: rem(40);
+        margin-bottom: rem(30);
+
+        font-size: rem(43);
     }
 
     &__decor {
@@ -38,9 +42,5 @@
             background-color: #76736B;
             opacity: .6;
         }
-    }
-
-    &__title {
-        font-weight: 400;
     }
 }

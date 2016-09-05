@@ -53,11 +53,11 @@
         .line__icon {
 
             &_static {
-                background: linear-gradient(to right, #d3d3d3 50%, transparent 0) repeat-x top left / rem(24) 100%;
+                background: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 rem(12), transparent 0, transparent rem(24));
             }
 
             &_active {
-                background: linear-gradient(to right, $color-2 50%, transparent 0) repeat-x top left / rem(24) 100%;
+                background: repeating-linear-gradient(to right, $color-2, $color-2 rem(12), transparent 0, transparent rem(24));
             }
         }
     }

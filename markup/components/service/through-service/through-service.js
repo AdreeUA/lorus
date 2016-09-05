@@ -19,7 +19,7 @@ export class ThroughService extends Component {
         let line1 = new Line(this.block.querySelector('.through-service__line_1')),
             line2 = new Line(this.block.querySelector('.through-service__line_2')),
             line3 = new Line(this.block.querySelector('.through-service__line_3')),
-            documentHeight = document.body.scrollHeight,
+            duration = document.body.scrollHeight - document.documentElement.clientHeight / 2,
             tween = new TimelineMax();
 
         tween
@@ -28,7 +28,7 @@ export class ThroughService extends Component {
             .add(line3.makeTween(.15));
 
         this.sceneLines = new ScrollMagic.Scene({
-                duration: documentHeight
+                duration: duration
             })
             .setTween(tween)
             .addTo(this.controller);
