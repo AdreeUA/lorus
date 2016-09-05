@@ -16,13 +16,34 @@ export class ScreenHome extends Screen {
                 .triggerHook(0);
 
             this._addLinesAnimation();
+            this._addSliderParallax();
         });
+    }
+
+    _addSliderParallax() {
+        let activeSlide = this.block.querySelector('.slick-active'),
+            title = activeSlide.querySelector('.info__title'),
+            photo = activeSlide.querySelector('.info__img-wrapper');
+
+        new ScrollMagic.Scene({
+                duration: '50%',
+                triggerHook: 1
+            })
+            .setTween(TweenMax.to(title, 1, { x: '-30%' }))
+            .addTo(this.controller);
+
+        new ScrollMagic.Scene({
+                duration: '100%',
+                triggerHook: .8
+            })
+            .setTween(TweenMax.to(photo, 1, { x: '-80%' }))
+            .addTo(this.controller);
     }
 
     _addLinesAnimation() {
         let line = new Line(this.block.querySelector('.screen-home__line'));
 
-        this.sceneLines = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
                 duration: '25%',
                 triggerHook: .25
             })

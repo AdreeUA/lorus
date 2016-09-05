@@ -11,6 +11,7 @@ export class ScreenTeam extends Screen {
 
             this._addLinesAnimation();
             this._addContentParallax();
+            this._addPhotoParallax();
         });
     }
 
@@ -25,7 +26,7 @@ export class ScreenTeam extends Screen {
             .add(line2.makeTween(.2))
             .add(line3.makeTween(.5));
 
-        this.sceneLines = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
                 duration: '80%',
                 triggerHook: .8
@@ -36,14 +37,27 @@ export class ScreenTeam extends Screen {
 
     _addContentParallax() {
         let content = this.block.querySelector('.screen-team__content'),
-            tweenContent = TweenMax.from(content, 1, { y: '75%', x: '-10%' });
+            tweenContent = TweenMax.from(content, 1, { y: '350%' });
 
-        this.sceneContent = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
-                duration: '60%',
-                triggerHook: .6
+                duration: '100%',
+                triggerHook: 1
             })
             .setTween(tweenContent)
+            .addTo(this.controller);
+    }
+
+    _addPhotoParallax() {
+        let photo = this.block.querySelector('.screen-team__photo-wrapper'),
+            tween = TweenMax.from(photo, 1, { y: '50%' });
+
+        new ScrollMagic.Scene({
+                triggerElement: this.sceneTrigger,
+                duration: '100%',
+                triggerHook: 1
+            })
+            .setTween(tween)
             .addTo(this.controller);
     }
 

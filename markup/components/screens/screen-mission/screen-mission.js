@@ -29,7 +29,7 @@ export class ScreenMission extends Screen {
             .add(line1.makeTween(.7))
             .add(line2.makeTween(.3));
 
-        this.sceneLines = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
                 duration: '80%',
                 triggerHook: .8
@@ -40,14 +40,18 @@ export class ScreenMission extends Screen {
 
     _addPhotoParallax() {
         let photo = this.block.querySelector('.screen-mission__photo'),
-            tweenPhoto = TweenMax.from(photo, 1, { x: '-15%', y: '15%' });
+            tween = new TimelineMax();
 
-        this.scenePhoto = new ScrollMagic.Scene({
+        tween
+            .add(TweenMax.from(photo, 1, { y: '85%' }))
+            .add(TweenMax.to(photo, 1, { x: '70%' }));
+
+        new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
-                duration: '75%',
-                triggerHook: .75
+                duration: '200%',
+                triggerHook: 1
             })
-            .setTween(tweenPhoto)
+            .setTween(tween)
             .addTo(this.controller);
     }
 
