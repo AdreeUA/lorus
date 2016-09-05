@@ -50,6 +50,11 @@
         padding-left: rem(80);
     }
 
+    &__title {
+        font-size: rem(34);
+        margin-bottom: rem(30);
+    }
+
 }
 
 @import './through-service/through-service';

@@ -52,7 +52,7 @@ export class ThroughService extends Component {
 
                 let coords = getCoords(photo);
 
-                tween = TweenMax.from(photo, 1, { y: '30%' });
+                tween = TweenMax.from(photo, 1, { y: '25%' });
                 duration = document.body.scrollHeight - coords.top;
 
             } else {
