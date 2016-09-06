@@ -101,16 +101,16 @@
         }
 
         .info__content {
-            animation-delay: .2s;
+            animation-delay: .1s;
         }
 
         .info__img-wrapper {
-            animation-delay: .4s;
+            animation-delay: .2s;
         }
 
         .info__btn {
             opacity: 0;
-            transition: opacity 0s .8s;
+            transition: opacity 0s .4s;
         }
     }
 
@@ -118,15 +118,15 @@
         .info__title,
         .info__content,
         .info__img-wrapper {
-            animation: fadeInRight 1s .8s both;
+            animation: fadeInRight 1s .4s both;
         }
 
         .info__content {
-            animation-delay: 1s;
+            animation-delay: .7s;
         }
 
         .info__img-wrapper {
-            animation-delay: 1.2s;
+            animation-delay: .8s;
         }
     }
 }
