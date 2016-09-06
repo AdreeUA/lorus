@@ -36,7 +36,7 @@ export class ScreenTeam extends Screen {
     }
 
     _addContentParallax() {
-        let content = this.block.querySelector('.screen-team__content'),
+        let content = this.block.querySelector('.screen-team__content-wrapper'),
             tweenContent = TweenMax.from(content, 1, { y: '350%' });
 
         new ScrollMagic.Scene({
@@ -62,6 +62,6 @@ export class ScreenTeam extends Screen {
     }
 
     _onEnter(e) {
-        
+
     }
 }

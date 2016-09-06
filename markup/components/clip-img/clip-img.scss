@@ -1,4 +1,6 @@
 .clip-img {
+    position: relative;
+
     box-sizing: content-box;
 
     font-size: rem-2(10);
@@ -28,13 +30,17 @@
         &::after {
             content: '';
             position: absolute;
-            right: 0;
-            bottom: rem(25);
+            left: percentage(-235 / 695);
+            bottom: percentage(-100 / 485);
             z-index: -1;
 
-            width: calc(100% - 2.5rem);
+            width: percentage(1225 / 695);
+            height: percentage(345 / 485);
 
-            box-shadow: -1.5rem -1.5rem 9rem 1.45rem rgba(0, 0, 0, 0.7);
+            background: url('%=static=%assets/clip-img/shadow-trapeze.png') center center / 100% 100%;
+            pointer-events: none;
+
+            transition: transform 0s .2s;
         }
 
         .clip-img__wrapper {
@@ -61,16 +67,16 @@
         &::after {
             content: '';
             position: absolute;
-            bottom: rem(60);
-            right: 7.5rem;
+            bottom: percentage(-190 / 415);
+            right: percentage(-68 / 630);
             z-index: -1;
 
-            width: 1rem;
-            height: 50%;
+            width: percentage(460 / 630);
+            height: percentage(758 / 415);
 
-            box-shadow: 0.5rem 0 7rem 2.65rem rgba(0, 0, 0, 0.5);
-
-            transform: skew(-25deg);
+            background: url('%=static=%assets/clip-img/shadow-hexagon.png') center center / 100% 100%;
+            pointer-events: none;
+            transform: rotate(19deg);
         }
 
         .clip-img__wrapper {

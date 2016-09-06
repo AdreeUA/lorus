@@ -100,18 +100,39 @@
         margin-bottom: rem(80);
     }
 
-    &__content {
+    &__content-wrapper {
         position: relative;
         z-index: 3;
 
         width: rem-2(1326);
-        padding: rem-2(60) rem-2(92) rem-2(78) rem-2(76);
         margin-left: rem-2(70);
         margin-bottom: rem(75);
 
-        background: #fff;
-        box-shadow: 0 0.5rem 5rem .1rem rgba(0, 0, 0, 0.3);
         transform: translate3d(0, 0, 0);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+
+            width: percentage(1200 / 635);
+            height: percentage(495 / 175);
+
+            background: url('%=static=%assets/screens/screen-team/shadow-team.png') no-repeat center center / 100% 100%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        padding: rem-2(60) rem-2(92) rem-2(78) rem-2(76);
+
+        background: #fff;
     }
 
     &__partners {
