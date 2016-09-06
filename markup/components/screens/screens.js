@@ -39,3 +39,5 @@ export class Screens extends Component {
 
     }
 }
+
+Screens.active = 0;

@@ -59,20 +59,16 @@ export class ScreenHome extends Screen {
     }
 
     _onProgress(e) {
-        if (e.progress >= .6) {
+        if (e.progress >= 0.6) {
             this.header.show();
         } else {
             this.header.hide();
         }
-    }
 
-    _onEnter(e) {
-        this.header.hide();
-        this.header.toggleNavClasses('left');
-        this.header.changeNavHref('#home');
-    }
-
-    _onLeave(e) {
-        this.header.show()
+        if (e.progress >= 0.05 && this._getActive() !== this.sceneNum) {
+            this._changeActive(this.sceneNum);
+            this.header.toggleNavClasses('left');
+            this.header.changeNavHref('#home');
+        }
     }
 }

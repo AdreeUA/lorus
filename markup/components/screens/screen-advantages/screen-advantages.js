@@ -49,8 +49,11 @@ export class ScreenAdvantages extends Screen {
             .addTo(this.controller);
     }
 
-    _onEnter(e) {
-        this.header.toggleNavClasses('top');
-        this.header.changeNavHref('#advantages');
+    _onProgress(e) {
+        if (e.progress >= 0.05 && this._getActive() !== this.sceneNum) {
+            this._changeActive(this.sceneNum);
+            this.header.toggleNavClasses('top');
+            this.header.changeNavHref('#advantages');
+        }
     }
 }

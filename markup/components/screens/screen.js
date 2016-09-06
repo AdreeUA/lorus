@@ -33,4 +33,12 @@ export class Screen extends Component {
     _onLeave(e) {}
     _onEnter(e) {}
     _onProgress(e) {}
+
+    _getActive() {
+        return Screens.active;
+    }
+
+    _changeActive(num) {
+        Screens.active = num;
+    }
 }

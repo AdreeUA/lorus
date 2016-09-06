@@ -58,11 +58,11 @@ export class ScreenAbout extends Screen {
             .addTo(this.controller);
     }
 
-    _onEnter(e) {
-        this.header.toggleNavClasses('top');
-        this.header.changeNavHref('#about');
-    }
-
-    _onLeave(e) {
+    _onProgress(e) {
+        if (e.progress >= 0.05 && this._getActive() !== this.sceneNum) {
+            this._changeActive(this.sceneNum);
+            this.header.toggleNavClasses('top');
+            this.header.changeNavHref('#about');
+        }
     }
 }
