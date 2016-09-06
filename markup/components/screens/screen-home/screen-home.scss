@@ -23,6 +23,8 @@
     &__labels {
         margin-bottom: rem-2(130);
         padding-left: rem-2(130);
+
+        white-space: nowrap;
     }
 
     &__label {
@@ -32,7 +34,7 @@
         vertical-align: middle;
 
         &:not(:last-child) {
-            margin-right: rem-2(200);
+            margin-right: percentage(100 / 1225);
         }
     }
 

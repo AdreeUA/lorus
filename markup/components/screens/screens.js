@@ -7,26 +7,17 @@ import { ScreenHome } from './screen-home/screen-home';
 import { ScreenMission } from './screen-mission/screen-mission';
 import { ScreenAdvantages } from './screen-advantages/screen-advantages';
 import { ScreenTeam } from './screen-team/screen-team';
-import { Hamburger } from 'components/hamburger/hamburger';
 
 export const controller = new ScrollMagic.Controller();
 
 export class Screens extends Component {
     constructor(block) {
         super(block, 'screens', function() {
-            this.headerHamburger = new Hamburger(document.querySelector('.header__hamburger'));
-            this.mainMenu = document.querySelector('.header__slide-menu');
-
-            this.scrollEnabled = true;
-
             this._init();
         });
     }
 
     _init() {
-
-        let that = this;
-
         this.screens = [
             new ScreenHome(this.block.querySelector('.screen-home')),
             new ScreenAbout(this.block.querySelector('.screen-about')),
@@ -36,7 +27,6 @@ export class Screens extends Component {
         ];
 
         setupScrollMagicAnchors(controller);
-
     }
 }
 
