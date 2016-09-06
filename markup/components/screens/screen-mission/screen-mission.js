@@ -64,6 +64,10 @@ export class ScreenMission extends Screen {
             this._changeActive(this.sceneNum);
             this.header.toggleNavClasses('right');
             this.header.changeNavHref('#mission');
+        } else if (e.progress < 0.05 && this._getActive() !== this.sceneNum - 1) {
+            this._changeActive(this.sceneNum - 1);
+            this.header.toggleNavClasses('top');
+            this.header.changeNavHref('#about');
         }
     }
 }

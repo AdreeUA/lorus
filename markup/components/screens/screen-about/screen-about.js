@@ -63,6 +63,10 @@ export class ScreenAbout extends Screen {
             this._changeActive(this.sceneNum);
             this.header.toggleNavClasses('top');
             this.header.changeNavHref('#about');
+        } else if (e.progress < 0.05 && this._getActive() !== this.sceneNum - 1) {
+            this._changeActive(this.sceneNum - 1);
+            this.header.toggleNavClasses('left');
+            this.header.changeNavHref('#home');
         }
     }
 }
