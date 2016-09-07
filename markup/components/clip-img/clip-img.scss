@@ -27,8 +27,7 @@
 
         // overflow: hidden;
 
-        &::after {
-            content: '';
+        .clip-img__shadow {
             position: absolute;
             left: percentage(-235 / 695);
             bottom: percentage(-100 / 485);
@@ -39,8 +38,6 @@
 
             background: url('%=static=%assets/clip-img/shadow-trapeze.png') center center / 100% 100%;
             pointer-events: none;
-
-            transition: transform 0s .2s;
         }
 
         .clip-img__wrapper {
@@ -64,8 +61,7 @@
 
         // overflow: hidden;
 
-        &::after {
-            content: '';
+        .clip-img__shadow {
             position: absolute;
             bottom: percentage(-190 / 415);
             right: percentage(-68 / 630);

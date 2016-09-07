@@ -110,20 +110,20 @@
 
         transform: translate3d(0, 0, 0);
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: -1;
+    }
 
-            width: percentage(1200 / 635);
-            height: percentage(495 / 175);
+    &__content-shadow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
 
-            background: url('%=static=%assets/screens/screen-team/shadow-team.png') no-repeat center center / 100% 100%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-        }
+        width: percentage(1200 / 635);
+        height: percentage(495 / 175);
+
+        background: url('%=static=%assets/screens/screen-team/shadow-team.png') no-repeat center center / 100% 100%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
     }
 
     &__content {

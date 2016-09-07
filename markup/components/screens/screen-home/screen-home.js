@@ -30,20 +30,23 @@ export class ScreenHome extends Screen {
     _addSliderParallax() {
         let activeSlide = this.block.querySelector('.slick-active'),
             title = activeSlide.querySelector('.info__title'),
+            shadow = activeSlide.querySelector('.info__img-shadow'),
             photo = activeSlide.querySelector('.info__img-wrapper');
 
         this.sliderScene1 = new ScrollMagic.Scene({
+                triggerElement: this.sceneTrigger,
                 duration: '50%',
-                triggerHook: 1
+                triggerHook: 0
             })
             .setTween(TweenMax.to(title, 1, { x: '-30%' }))
             .addTo(this.controller);
 
         this.sliderScene2 = new ScrollMagic.Scene({
+                triggerElement: this.sceneTrigger,
                 duration: '100%',
-                triggerHook: .8
+                triggerHook: 0
             })
-            .setTween(TweenMax.to(photo, 1, { x: '-60%' }))
+            .setTween(TweenMax.staggerTo([photo, shadow], 1, { x: '-60%' }, .2))
             .addTo(this.controller);
     }
 
@@ -51,6 +54,7 @@ export class ScreenHome extends Screen {
         let line = new Line(this.block.querySelector('.screen-home__line'));
 
         new ScrollMagic.Scene({
+                triggerElement: this.sceneTrigger,
                 duration: '25%',
                 triggerHook: .25
             })

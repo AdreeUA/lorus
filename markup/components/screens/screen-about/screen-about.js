@@ -42,12 +42,13 @@ export class ScreenAbout extends Screen {
     }
 
     _addPhotoParallax() {
-        let photo = this.block.querySelector('.screen-about__photo'),
+        let photo = this.block.querySelector('.screen-about__photo .clip-img__wrapper'),
+            shadow = this.block.querySelector('.screen-about__photo .clip-img__shadow'),
             tween = new TimelineMax();
 
         tween
-            .add(TweenMax.from(photo, 1, { x: '125%' }))
-            .add(TweenMax.to(photo, 1, { y: '-125%' }));
+            .add(TweenMax.staggerFrom([photo, shadow], 1, { x: '125%' }, .1))
+            .add(TweenMax.staggerTo([photo, shadow], 1, { y: '-125%' }, .1));
 
         new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,

@@ -65,18 +65,18 @@
 
             background: $color-2;
         }
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: percentage(-105 / 399);
-            left: percentage(-148 / 724);
+    &__img-shadow {
+        position: absolute;
+        bottom: percentage(-105 / 399);
+        left: percentage(-148 / 724);
 
-            width: percentage(1087 / 724);
-            height: percentage(223 / 399);
+        width: percentage(1087 / 724);
+        height: percentage(223 / 399);
 
-            background: url('%=static=%assets/info/shadow-info.png') no-repeat center center / 100% 100%;
-        }
+        background: url('%=static=%assets/info/shadow-info.png') no-repeat center center / 100% 100%;
+        pointer-events: none;
     }
 
     &__img-wrapper {
