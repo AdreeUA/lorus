@@ -54,20 +54,4 @@ export class ScreenMission extends Screen {
             .setTween(tween)
             .addTo(this.controller);
     }
-
-    _onEnter(e) {
-
-    }
-
-    _onProgress(e) {
-        if (e.progress >= 0.05 && this._getActive() !== this.sceneNum) {
-            this._changeActive(this.sceneNum);
-            this.header.toggleNavClasses('right');
-            this.header.changeNavHref('#mission');
-        } else if (e.progress < 0.05 && this._getActive() !== this.sceneNum - 1) {
-            this._changeActive(this.sceneNum - 1);
-            this.header.toggleNavClasses('top');
-            this.header.changeNavHref('#about');
-        }
-    }
 }

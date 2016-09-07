@@ -60,8 +60,4 @@ export class ScreenTeam extends Screen {
             .setTween(tween)
             .addTo(this.controller);
     }
-
-    _onEnter(e) {
-
-    }
 }
