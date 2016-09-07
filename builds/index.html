@@ -102,7 +102,7 @@
                 </div>
                 <div class="screens__inner">
                     <div data-direction="right" class="screens__row">
-                        <div class="screen-home screens__item screens__horizontal" data-anchor="home">
+                        <div class="screen-home screens__item">
                             <header class="header header_theme_default screen-home__header">
                                 <div class="header__left">
                                     <div class="logo header__logo">
@@ -177,9 +177,13 @@
                                                 <div class="content info__content">
                                                     <p>Доставка контейнеров из стран АТР с точным графиком, конкурентными ставками и выгодными условиями хранения.</p>
                                                 </div><a href="javascript:void(0)" class="btn info__btn">Подробнее</a>
-                                                <a href="javascript:void(0)" class="info__img-wrapper">
-                                                    <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
-                                                </a>
+                                                <div class="info__img-set">
+                                                    <div class="info__img-shadow">
+                                                    </div>
+                                                    <a href="javascript:void(0)" class="info__img-wrapper">
+                                                        <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
+                                                    </a>
+                                                </div>
                                             </article>
                                         </div>
                                         <div class="slider__item">
@@ -189,9 +193,13 @@
                                                 <div class="content info__content">
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste officiis asperiores.</p>
                                                 </div><a href="javascript:void(0)" class="btn info__btn">Подробнее</a>
-                                                <a href="javascript:void(0)" class="info__img-wrapper">
-                                                    <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
-                                                </a>
+                                                <div class="info__img-set">
+                                                    <div class="info__img-shadow">
+                                                    </div>
+                                                    <a href="javascript:void(0)" class="info__img-wrapper">
+                                                        <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
+                                                    </a>
+                                                </div>
                                             </article>
                                         </div>
                                         <div class="slider__item">
@@ -201,9 +209,13 @@
                                                 <div class="content info__content">
                                                     <p>nam veniam magnam vel doloribus possimus hic, odit voluptatem, magni quis, repellat accusantium ullam. Quibusdam ipsam assumenda totam.</p>
                                                 </div><a href="javascript:void(0)" class="btn info__btn">Подробнее</a>
-                                                <a href="javascript:void(0)" class="info__img-wrapper">
-                                                    <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
-                                                </a>
+                                                <div class="info__img-set">
+                                                    <div class="info__img-shadow">
+                                                    </div>
+                                                    <a href="javascript:void(0)" class="info__img-wrapper">
+                                                        <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
+                                                    </a>
+                                                </div>
                                             </article>
                                         </div>
                                     </div>
@@ -218,7 +230,11 @@
         </a>
                             </div>
                         </div>
-                        <section class="screen-about screens__item screens__horizontal" data-anchor="about">
+                        <section class="screen-about screens__item">
+                            <svg class="icon icon_line-about screen-about__bg-line" width="948.4px" height="184.24px">
+                                <use xlink:href="svg-symbols.svg#line-about"></use>
+                            </svg>
+
                             <div class="screen-about__top">
                                 <h2 class="title screen-about__title">О компании
                 </h2>
@@ -228,9 +244,13 @@
                                         предприятия, отраслевой экспертизой и собственной инфраструктурой.
                                     </p>
                                 </div>
-                                <div class="clip-img clip-img_shape_trapeze screen-about__photo">
-                                    <div class="clip-img__wrapper">
-                                        <img src="static/img/assets/screens/screen-about/about-photo.jpg" alt="" class="clip-img__img" role="presentation" />
+                                <div class="clip-img clip-img_shape_trapeze clip-img_pos_right screen-about__photo">
+                                    <div class="clip-img__shadow">
+                                    </div>
+                                    <div class="clip-img__clip">
+                                        <div class="clip-img__wrapper">
+                                            <img src="static/img/assets/screens/screen-about/about-photo.jpg" alt="" class="clip-img__img" role="presentation" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -273,14 +293,18 @@
                         </section>
                     </div>
                     <div data-direction="left" class="screens__row screens__row_dir_left">
-                        <section class="screen-mission screens__item screens__horizontal active" data-anchor="mission">
+                        <section class="screen-mission screens__item">
                             <h2 class="title screen-mission__title">Миссия компании
               </h2>
                             <div class="decor-title screen-mission__subtitle"><span class="decor-title__row">Поднять Ваш бизнес </span><span class="decor-title__row">на новую высоту</span>
                             </div>
-                            <div class="clip-img clip-img_shape_hexagon screen-mission__photo">
-                                <div class="clip-img__wrapper">
-                                    <img src="static/img/assets/screens/screen-mission/mission-photo.jpg" alt="" class="clip-img__img" role="presentation" />
+                            <div class="clip-img clip-img_shape_hexagon clip-img_pos_bottom clip-img_pos_right screen-mission__photo">
+                                <div class="clip-img__shadow">
+                                </div>
+                                <div class="clip-img__clip">
+                                    <div class="clip-img__wrapper">
+                                        <img src="static/img/assets/screens/screen-mission/mission-photo.jpg" alt="" class="clip-img__img" role="presentation" />
+                                    </div>
                                 </div>
                             </div>
                             <div class="line screen-mission__line screen-mission__line_1">
@@ -319,7 +343,11 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="screen-advantages screens__item screens__horizontal" data-anchor="advantages">
+                        <section class="screen-advantages screens__item">
+                            <svg class="icon icon_line-advantages screen-advantages__bg-line" width="292.61px" height="187.27px">
+                                <use xlink:href="svg-symbols.svg#line-advantages"></use>
+                            </svg>
+
                             <div class="screen-advantages__wrapper">
                                 <h2 class="title title_underline screen-advantages__title">Преимущества компании
                 </h2>
@@ -407,11 +435,15 @@
                             <div class="screen-team__main">
                                 <h2 class="title screen-team__title">Команда
                 </h2>
-                                <div class="content screen-team__content">
-                                    <p>
-                                        С Лорус Эс Си Эм вы получаете помощь профессиональной команды с многолетним опытом работы в логистике. В компании работают иностранные специалисты, тесно знакомые с мировой практикой организации поставок и таможенного оформления. Нас связывает стремление
-                                        к постоянному совершенствованию, растущая экспертиза и неизменное стремление к лидерству и инновациям.
-                                    </p>
+                                <div class="screen-team__content-wrapper">
+                                    <div class="screen-team__content-shadow">
+                                    </div>
+                                    <div class="content screen-team__content">
+                                        <p>
+                                            С Лорус Эс Си Эм вы получаете помощь профессиональной команды с многолетним опытом работы в логистике. В компании работают иностранные специалисты, тесно знакомые с мировой практикой организации поставок и таможенного оформления. Нас связывает стремление
+                                            к постоянному совершенствованию, растущая экспертиза и неизменное стремление к лидерству и инновациям.
+                                        </p>
+                                    </div>
                                 </div>
                                 <div class="partners screen-team__partners">
                                     <h3 class="partners__title">Наши партнёры
@@ -433,7 +465,7 @@
                                 </div>
                             </div>
                             <div class="screen-team__photo-wrapper">
-                                <img src="static/img/assets/screens/screen-team/team-photo.jpg" srcset="static/img/assets/screens/screen-team/team-photo@2x.jpg 2x" alt="" class="screen-team__photo" role="presentation" />
+                                <img src="static/img/assets/screens/screen-team/team-photo.jpg" alt="" class="screen-team__photo" role="presentation" />
                             </div>
                             <div class="footer">
                                 <div class="footer__wrapper">
