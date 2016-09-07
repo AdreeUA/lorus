@@ -2,11 +2,21 @@
     $content-width: rem-2(2134);
 
     position: relative;
+    z-index: 1;
 
     padding-bottom: rem-2(112);
     padding-top: rem-2(124);
 
     background: url('%=static=%assets/screens/screen-advantages/bg-advantages.svg') no-repeat left 0 / 151vh 101vh;
+
+    &__bg-line {
+        position: absolute;
+        bottom: rem(-50);
+        left: rem(-5);
+
+        width: rem(288);
+        height: rem(177);
+    }
 
     &__plane {
         position: absolute;

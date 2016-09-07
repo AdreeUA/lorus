@@ -1,11 +1,13 @@
 include ../../title/title
 include ../../content/content
 include ../../line/line
+include ../../icon/icon
 include ../../stats/stats
 include ../../clip-img/clip-img
 
 mixin screen-about(data)
-    +b.SECTION.screen-about()&attributes(attributes) 
+    +b.SECTION.screen-about()&attributes(attributes)
+        +icon({ 'icon': 'line-about', 'class': 'screen-about__bg-line' })
         +e.top
             +title.screen-about__title
                 | О компании
