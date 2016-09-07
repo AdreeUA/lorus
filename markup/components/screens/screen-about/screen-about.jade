@@ -1,11 +1,13 @@
 include ../../title/title
 include ../../content/content
 include ../../line/line
+include ../../icon/icon
 include ../../stats/stats
 include ../../clip-img/clip-img
 
 mixin screen-about(data)
-    +b.SECTION.screen-about()&attributes(attributes) 
+    +b.SECTION.screen-about()&attributes(attributes)
+        +icon({ 'icon': 'line-about', 'class': 'screen-about__bg-line' })
         +e.top
             +title.screen-about__title
                 | О компании
@@ -20,7 +22,7 @@ mixin screen-about(data)
                     
             +clip-img({ 
                 src: '%=static=%img/assets/screens/screen-about/about-photo.jpg' 
-                })._shape_trapeze.screen-about__photo
+                })._shape_trapeze._pos_right.screen-about__photo
                 
         +line(line.about1).screen-about__line_1
         +line(line.about2).screen-about__line_2

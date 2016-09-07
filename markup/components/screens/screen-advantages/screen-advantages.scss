@@ -2,11 +2,21 @@
     $content-width: rem-2(2134);
 
     position: relative;
+    z-index: 1;
 
     padding-bottom: rem-2(112);
     padding-top: rem-2(124);
 
     background: url('%=static=%assets/screens/screen-advantages/bg-advantages.svg') no-repeat left 0 / 151vh 101vh;
+
+    &__bg-line {
+        position: absolute;
+        bottom: rem(-50);
+        left: rem(-5);
+
+        width: rem(288);
+        height: rem(177);
+    }
 
     &__plane {
         position: absolute;
@@ -57,13 +67,14 @@
         height: rem(11);
         margin-left: rem(12);
 
-        background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem(33) auto;
+        background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem(33) rem(11);
 
         animation: wave 2s both linear infinite;
     }
 
     &__wrapper {
         padding-left: rem-2(200);
+        padding-right: rem-2(120);
     }
 
     &__title {
@@ -81,18 +92,11 @@
             margin-bottom: rem-2(140);
         }
 
-        &:first-child {
-
-            .screen-advantages__text-block:last-child {
-                transform: translateX(rem-2(214));
-            }
-        }
-
         &:last-child {
             .screen-advantages__text-block:last-child {
-                padding-top: rem-2(80);
+                padding-top: rem-2(110);
 
-                transform: translateX(rem-2(60));
+                transform: translateX(rem-2(-210));
             }
         }
     }
@@ -100,10 +104,9 @@
     &__text-block {
         float: left;
         width: rem-2(820);
-        max-width: percentage(410/1255);
 
-        &:not(:last-child) {
-            margin-right: percentage(380 / 1255);
+        &:last-child {
+            float: right;
         }
 
         h2 {

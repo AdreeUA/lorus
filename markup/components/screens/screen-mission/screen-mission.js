@@ -39,12 +39,15 @@ export class ScreenMission extends Screen {
     }
 
     _addPhotoParallax() {
-        let photo = this.block.querySelector('.screen-mission__photo'),
+        let photo = this.block.querySelector('.screen-mission__photo .clip-img__clip'),
+            img = this.block.querySelector('.screen-mission__photo .clip-img__img'),
+            shadow = this.block.querySelector('.screen-mission__photo .clip-img__shadow'),
             tween = new TimelineMax();
 
         tween
-            .add(TweenMax.from(photo, 1, { y: '85%' }))
-            .add(TweenMax.to(photo, 1, { x: '70%' }));
+            .add(TweenMax.staggerFrom([photo, shadow], .5, { y: '85%' }, .1))
+            .add(TweenMax.from(img, .5, {y: '10%'}))
+            .add(TweenMax.staggerTo([photo, shadow], 1, { x: '70%' }, .1));
 
         new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,
@@ -53,13 +56,5 @@ export class ScreenMission extends Screen {
             })
             .setTween(tween)
             .addTo(this.controller);
-    }
-
-    _onEnter(e) {
-        this.header.toggleNavClasses('right');
-        this.header.changeNavHref('#mission');
-    }
-
-    _onLeave(e) {
     }
 }

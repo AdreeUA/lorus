@@ -5,10 +5,8 @@
 
         .slick-dots {
             position: absolute;
-            right: rem-2(44);
-            bottom: rem-2(22);
-
-            margin-bottom: 80px;
+            right: rem(22);
+            bottom: rem(101);
         }
 
         .slick-slide {
@@ -16,7 +14,7 @@
         }
 
         .slick-active {
-            transition: opacity 0s .8s;
+            transition: opacity 0s .4s;
         }
 
         .slick-arrow {

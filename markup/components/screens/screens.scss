@@ -11,6 +11,10 @@
 
     &__scene {
         height: 100vh;
+
+        &:not(:last-child) {
+            margin-bottom: 25vh;
+        }
     }
 
     &__inner {
@@ -20,6 +24,9 @@
         z-index: 2;
 
         width: 200%;
+
+        transition: filter .4s;
+        will-change: transform, filter;
     }
 
     &__row {

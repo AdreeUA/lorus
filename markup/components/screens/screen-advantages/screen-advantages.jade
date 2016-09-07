@@ -1,9 +1,11 @@
 include ../../title/title
 include ../../content/content
 include ../../line/line
+include ../../icon/icon
 
 mixin screen-advantages(data)
     +b.SECTION.screen-advantages()&attributes(attributes)
+        +icon({ 'icon': 'line-advantages', 'class': 'screen-advantages__bg-line' })
         +e.wrapper
             +title._underline.screen-advantages__title
                 | Преимущества компании

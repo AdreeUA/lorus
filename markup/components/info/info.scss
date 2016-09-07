@@ -2,11 +2,10 @@
     $template-width: 2170;
     $img-width: 1510;
     $content-width: 2170 - $img-width;
-    $shadow-size: 80px;
 
     position: relative;
 
-    padding-bottom: $shadow-size;
+    padding-bottom: rem(90);
 
     &__title {
         position: relative;
@@ -44,23 +43,15 @@
         }
     }
 
-    &__img-wrapper {
+    &__img-set {
         position: absolute;
         z-index: 1;
         right: 0;
         top: 0;
-        bottom: $shadow-size;
+        bottom: rem(90);
 
         width: percentage($img-width / $template-width);
         padding-left: rem-2(70);
-
-        text-align: right;
-        text-decoration: none;
-        color: inherit;
-
-        overflow: hidden;
-        border-radius: 0 rem-2(10) rem-2(10) 0;
-        box-shadow: 0 #{$shadow-size} #{$shadow-size} -#{$shadow-size} rgba(0, 0, 0, .6);
 
         &::before {
             content: '';
@@ -74,6 +65,34 @@
 
             background: $color-2;
         }
+    }
+
+    &__img-shadow {
+        position: absolute;
+        bottom: percentage(-105 / 399);
+        left: percentage(-148 / 724);
+
+        width: percentage(1087 / 724);
+        height: percentage(223 / 399);
+
+        background: url('%=static=%assets/info/shadow-info.png') no-repeat center center / 100% 100%;
+        pointer-events: none;
+    }
+
+    &__img-wrapper {
+        position: relative;
+        z-index: 2;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        text-align: right;
+        text-decoration: none;
+        color: inherit;
+
+        overflow: hidden;
+        border-radius: 0 rem-2(10) rem-2(10) 0;
 
         &:hover {
 
@@ -101,16 +120,16 @@
         }
 
         .info__content {
-            animation-delay: .2s;
+            animation-delay: .1s;
         }
 
         .info__img-wrapper {
-            animation-delay: .4s;
+            animation-delay: .2s;
         }
 
         .info__btn {
             opacity: 0;
-            transition: opacity 0s .8s;
+            transition: opacity 0s .4s;
         }
     }
 
@@ -118,15 +137,15 @@
         .info__title,
         .info__content,
         .info__img-wrapper {
-            animation: fadeInRight 1s .8s both;
+            animation: fadeInRight 1s .4s both;
         }
 
         .info__content {
-            animation-delay: 1s;
+            animation-delay: .7s;
         }
 
         .info__img-wrapper {
-            animation-delay: 1.2s;
+            animation-delay: .8s;
         }
     }
 }

@@ -48,9 +48,4 @@ export class ScreenAdvantages extends Screen {
             .setTween(tweenPlane)
             .addTo(this.controller);
     }
-
-    _onEnter(e) {
-        this.header.toggleNavClasses('top');
-        this.header.changeNavHref('#advantages');
-    }
 }

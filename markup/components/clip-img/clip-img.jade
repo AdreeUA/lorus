@@ -1,5 +1,7 @@
 mixin clip-img(data)
     +b.clip-img()&attributes(attributes)
-        +e.wrapper
-            +e.IMG.img(src=data.src alt='')
+        +e.shadow
+        +e.clip
+            +e.wrapper
+                +e.IMG.img(src=data.src alt='')
      

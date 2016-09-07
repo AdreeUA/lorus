@@ -1,7 +1,16 @@
 .clip-img {
+    position: relative;
+
     box-sizing: content-box;
 
     font-size: rem-2(10);
+
+    &__clip {
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+    }
 
     &__wrapper {
         width: 100%;
@@ -11,8 +20,8 @@
     }
 
     &__img {
-        width: 100%;
-        height: 100%;
+        width: 125%;
+        height: 125%;
 
         @include object-fit(cover);
     }
@@ -25,27 +34,30 @@
 
         // overflow: hidden;
 
-        &::after {
-            content: '';
+        .clip-img__shadow {
             position: absolute;
-            right: 0;
-            bottom: rem(25);
+            left: percentage(-235 / 695);
+            bottom: percentage(-100 / 485);
             z-index: -1;
 
-            width: calc(100% - 2.5rem);
+            width: percentage(1225 / 695);
+            height: percentage(345 / 485);
 
-            box-shadow: -1.5rem -1.5rem 9rem 1.45rem rgba(0, 0, 0, 0.7);
+            background: url('%=static=%assets/clip-img/shadow-trapeze.png') center center / 100% 100%;
+            pointer-events: none;
         }
 
         .clip-img__wrapper {
             position: relative;
+            left: 35em;
 
-            transform: translateX(35em) skew(-30deg);
-            // box-shadow: 0 50px 50px -50px rgba(0, 0, 0, .6);
+            text-align: right;
+
+            transform: skew(-30deg);
         }
 
         .clip-img__img {
-            transform: translateX(-35em) skew(30deg);
+            transform: skew(30deg);
         }
     }
 
@@ -58,19 +70,18 @@
 
         // overflow: hidden;
 
-        &::after {
-            content: '';
+        .clip-img__shadow {
             position: absolute;
-            bottom: rem(60);
-            right: 7.5rem;
+            bottom: percentage(-190 / 415);
+            right: percentage(-68 / 630);
             z-index: -1;
 
-            width: 1rem;
-            height: 50%;
+            width: percentage(460 / 630);
+            height: percentage(758 / 415);
 
-            box-shadow: 0.5rem 0 7rem 2.65rem rgba(0, 0, 0, 0.5);
-
-            transform: skew(-25deg);
+            background: url('%=static=%assets/clip-img/shadow-hexagon.png') center center / 100% 100%;
+            pointer-events: none;
+            transform: rotate(19deg);
         }
 
         .clip-img__wrapper {
@@ -95,6 +106,38 @@
 
         .clip-img__img {
             transform: skew(40deg);
+        }
+    }
+
+    &_pos_left {
+
+        .clip-img__img {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &_pos_right {
+
+        .clip-img__img {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &_pos_bottom {
+
+        .clip-img__img {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    &_pos_top {
+
+        .clip-img__img {
+            position: absolute;
+            top: 0;
         }
     }
 }
