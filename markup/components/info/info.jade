@@ -9,7 +9,8 @@ mixin info(data)
 
         +btn.info__btn
             | Подробнее
-
-        +e.img-wrapper(href=jv0)
-            +e.IMG.img(src=`${data.img.src}.${data.img.format}`
-                       alt=data.img.alt)
+        
+        +e.img-set
+            +e.img-wrapper(href=jv0)
+                +e.IMG.img(src=`${data.img.src}.${data.img.format}`
+                           alt=data.img.alt)
