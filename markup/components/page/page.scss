@@ -1,7 +1,3 @@
 .page {
     transition: filter .4s;
-
-    &_overlay {
-        filter: blur(5px);
-    }
 }

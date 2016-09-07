@@ -3,7 +3,8 @@ import { Component } from 'helpers-js';
 import { Menu } from 'components/menu/menu';
 import { Hamburger } from 'components/hamburger/hamburger';
 
-let page = document.querySelector('.page');
+// Если оверлэй повесить на page на главной странице, то в ФФ лаги
+let overlay = document.querySelector('.screens__inner') || document.querySelector('.page');
 
 export class Header extends Component {
     constructor(block) {
@@ -22,7 +23,7 @@ export class Header extends Component {
             menu = this.block.querySelector('.header__slide-menu');
 
         if (menu) this.menu = new Menu(menu);
-        
+
         if (hamburger) {
             this.hamburger = new Hamburger(hamburger);
 
@@ -45,7 +46,7 @@ export class Header extends Component {
 
         this.menu.open();
         document.documentElement.classList.add('hide-scroll');
-        page.classList.add('page_overlay');
+        overlay.classList.add('overlay');
         this.block.classList.add('header_overlay');
 
         document.addEventListener('click', closeMenuExternalClick);
@@ -54,7 +55,7 @@ export class Header extends Component {
     _onHamburgerClose(e) {
         this.menu.close();
         document.documentElement.classList.remove('hide-scroll');
-        page.classList.remove('page_overlay');
+        overlay.classList.remove('overlay');
         this.block.classList.remove('header_overlay');
     }
 

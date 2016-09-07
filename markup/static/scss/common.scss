@@ -17,3 +17,7 @@ html {
 .hide-scroll {
     overflow: hidden;
 }
+
+.overlay {
+    filter: blur(5px);
+}

@@ -69,8 +69,23 @@
     }
 
     &__content {
+        position: relative;
+
         width: rem-2(800);
+        padding-top: rem(30);
         margin-bottom: rem-2(240);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: rem(5);
+            top: 0;
+
+            width: rem(80);
+            height: 1px;
+
+            background: #4d4a45;
+        }
     }
 
     &__photo {
