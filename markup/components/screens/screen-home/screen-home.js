@@ -54,7 +54,6 @@ export class ScreenHome extends Screen {
         let line = new Line(this.block.querySelector('.screen-home__line'));
 
         new ScrollMagic.Scene({
-                triggerElement: this.sceneTrigger,
                 duration: '25%',
                 triggerHook: .25
             })

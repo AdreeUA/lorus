@@ -11,6 +11,10 @@
 
     &__scene {
         height: 100vh;
+
+        &:not(:last-child) {
+            margin-bottom: 20vh;
+        }
     }
 
     &__inner {

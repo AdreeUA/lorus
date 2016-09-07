@@ -32,9 +32,32 @@ export class Screen extends Component {
                 callback.bind(this)();
             }
 
+            // this.scene.on('start', e => {
+            //
+            //     if (e.scrollDirection === 'FORWARD') {
+            //         let id = `#${className.split('-').pop()}`,
+            //             wheelNum = 0;
+            //
+            //         let disableWheel = (e) => {
+            //             e.preventDefault();
+            //
+            //             if (++wheelNum > 1) {
+            //                 document.body.removeEventListener('wheel', disableWheel);
+            //             }
+            //
+            //             controller.scrollTo(id);
+            //         };
+            //
+            //         document.body.addEventListener('wheel', disableWheel);
+            //
+            //         setTimeout(() => controller.scrollTo(id), 10);
+            //     }
+            //
+            // });
+
             this.scene.on('enter', this._onEnter.bind(this));
             this.scene.on('leave', this._onLeave.bind(this));
-            
+
             this.scene.on('progress', e => {
                 if (e.progress >= 0.05 && Screens.active !== this.sceneNum) {
                     this._changeActive(this.sceneNum);
