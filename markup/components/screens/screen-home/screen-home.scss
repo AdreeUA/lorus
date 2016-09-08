@@ -6,6 +6,17 @@
 
     background: $color-3;
 
+    @include below($tablet) {
+        padding-top: rem(95);
+    }
+
+    &__header {
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
     &__line {
         position: absolute;
         top: rem-2(-12);

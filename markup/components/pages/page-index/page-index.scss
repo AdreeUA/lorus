@@ -3,7 +3,11 @@
 
     font-size: 16 / 806 * 100 + vh;
 
-    @include below('1000px') {
+    @include below($tablet) {
+        font-size: 24px;
+    }
+
+    @include below($mobile) {
         font-size: 16 / 420 * 100 + vw;
     }
 }

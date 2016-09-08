@@ -45,6 +45,10 @@
 
             background: url('%=static=%assets/clip-img/shadow-trapeze.png') center center / 100% 100%;
             pointer-events: none;
+
+            @include below($tablet) {
+                display: none;
+            }
         }
 
         .clip-img__wrapper {
@@ -84,7 +88,7 @@
             transform: rotate(19deg);
 
             @include below($tablet) {
-                @include hidden();
+                display: none;
             }
         }
 
