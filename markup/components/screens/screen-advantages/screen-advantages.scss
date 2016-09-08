@@ -87,6 +87,10 @@
         background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem(33) rem(11);
 
         animation: wave 2s both linear infinite;
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__wrapper {
