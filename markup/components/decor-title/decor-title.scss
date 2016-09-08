@@ -6,6 +6,10 @@
     font-size: rem-2($base-font);
     line-height: 0;
 
+    @include below($tablet) {
+        font-size: rem(26);
+    }
+
     &__row {
         display: table;
         padding: em(10, $base-font) em(100, $base-font);

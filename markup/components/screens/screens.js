@@ -22,7 +22,7 @@ export class Screens extends Component {
             if (matchMedia(media.tablet).matches) {
                 if (!controller.enabled()) return;
 
-                [...document.querySelectorAll('.js-tween')].forEach(elem => elem.style = '');
+                TweenMax.set('.js-tween', { clearProps: 'all' });
                 controller.enabled(false);
                 controller.update();
 
@@ -33,9 +33,6 @@ export class Screens extends Component {
             }
         };
 
-        toggleController();
-        window.addEventListener('resize', toggleController);
-
         this.screens = [
             new ScreenHome(this.block.querySelector('.screen-home')),
             new ScreenAbout(this.block.querySelector('.screen-about')),
@@ -45,6 +42,8 @@ export class Screens extends Component {
         ];
 
         setupScrollMagicAnchors(controller);
+        toggleController();
+        window.addEventListener('resize', toggleController);
     }
 }
 

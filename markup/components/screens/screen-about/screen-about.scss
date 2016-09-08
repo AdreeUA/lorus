@@ -111,7 +111,7 @@
         width: percentage(1500 / 2555);
 
         @include below($tablet) {
-            display: none;
+            @include hidden();
         }
     }
 

@@ -135,6 +135,19 @@
             background: $color-2;
         }
 
+        &::after {
+            content: '';
+            position: absolute;
+            right: rem(25);
+            top: 0;
+            z-index: 1;
+
+            width: rem(307);
+            height: rem(414);
+
+            background: url('%=static=%general/sunlight.svg') no-repeat 0 0 / contain;
+        }
+
         &:hover {
 
             .info__img {
@@ -147,7 +160,8 @@
 
             border-radius: 10px;
 
-            &::before {
+            &::before,
+            &::after {
                 display: none;
             }
         }
