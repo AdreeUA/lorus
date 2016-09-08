@@ -1,5 +1,6 @@
 import svg4everybody from 'svg4everybody';
 import bowser from 'bowser';
+import 'matchmedia-polyfill';
 import 'babel-polyfill';
 import './customEvent';
 import './classList';

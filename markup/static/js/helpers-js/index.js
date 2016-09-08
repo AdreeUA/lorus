@@ -8,3 +8,4 @@ export { transitionEnd } from './transitionEnd';
 export { Component } from './Component';
 export { setupScrollMagicAnchors } from './setupScrollMagicAnchors';
 export * from './animations';
+export * from './variables';

@@ -21,7 +21,8 @@ mixin screen-about(data)
                     | предприятия, отраслевой экспертизой и собственной инфраструктурой.
                     
             +clip-img({ 
-                src: '%=static=%img/assets/screens/screen-about/about-photo.jpg' 
+                src: '%=static=%img/assets/screens/screen-about/about-photo.jpg',
+                tween: true
                 })._shape_trapeze._pos_right.screen-about__photo
                 
         +line(line.about1).screen-about__line_1
