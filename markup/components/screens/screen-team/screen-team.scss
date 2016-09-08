@@ -8,18 +8,17 @@
     background: $color-3;
     background-repeat: no-repeat;
 
-    &__header {
-        position: relative;
-        z-index: 2;
-    }
-
-    &__nav-btn {
-        transform: rotate(90deg);
+    @include below($tablet) {
+        padding-top: 0;
     }
 
     &__line {
         position: absolute;
         z-index: 2;
+
+        @include below($tablet) {
+            display: none;
+        }
 
         &_1 {
             top: rem-2(-20);
@@ -35,14 +34,6 @@
             left: calc(#{percentage(725/1225)} - #{rem(350)});
             right: rem(420);
             z-index: 1;
-
-            // @media screen and ('max-height: 800px') {
-            //     top: rem(480);
-            // }
-            //
-            // @media screen and ('max-height: 650px') {
-            //     top: rem(479);
-            // }
         }
 
         &_3 {
@@ -81,6 +72,20 @@
 
             background: #4c4c4c;
         }
+
+        @include below($tablet) {
+            position: relative;
+
+            width: 100%;
+            height: rem(200);
+            padding-left: 0;
+
+            border-radius: 10px;
+
+            &::before {
+                display: none;
+            }
+        }
     }
 
     &__photo {
@@ -93,11 +98,33 @@
 
         padding-left: rem-2(200);
         padding-bottom: rem(30);
+
+        @include below($tablet) {
+            position: static;
+
+            padding-left: 0;
+            padding-bottom: 0;
+        }
     }
 
     &__title {
         margin-top: rem(45);
         margin-bottom: rem(80);
+
+        @include below($tablet) {
+            position: absolute;
+            top: 0;
+            left: rem(60);
+            z-index: 2;
+
+            margin: 0;
+            padding: rem(15) rem(25);
+            padding-top: 0;
+
+            line-height: 1;
+
+            background: #fff;
+        }
     }
 
     &__content-wrapper {
@@ -109,6 +136,12 @@
         margin-bottom: rem(75);
 
         transform: translate3d(0, 0, 0);
+
+        @include below($tablet) {
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: rem(30);
+        }
 
     }
 
@@ -124,6 +157,10 @@
         background: url('%=static=%assets/screens/screen-team/shadow-team.png') no-repeat center center / 100% 100%;
         pointer-events: none;
         transform: translate(-50%, -50%);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__content {
@@ -133,9 +170,37 @@
         padding: rem-2(60) rem-2(92) rem-2(78) rem-2(76);
 
         background: #fff;
+
+        @include below($tablet) {
+            padding: 0;
+            padding-right: rem(30);
+
+            background: transparent;
+        }
     }
 
     &__partners {
         width: rem-2(1606);
+
+        @include below($tablet) {
+            width: auto;
+            margin: 0 rem(-25);
+            padding: rem(40) rem(25);
+
+            background: #fff;
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @include below($tablet) {
+            position: relative;
+
+            margin: 0 rem(-25);
+        }
     }
 }
