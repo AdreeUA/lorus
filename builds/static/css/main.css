@@ -2217,7 +2217,7 @@ html.fp-enabled,
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  min-height: 4.1194rem;
+  height: 4.1194rem;
   vertical-align: top;
   color: #78736c;
 }
@@ -2510,6 +2510,11 @@ html.fp-enabled,
   background: #fff;
 }
 
+.explorer .screen-about__line_1,
+.edge .screen-about__line_1 {
+  font-size: 1.04062rem;
+}
+
 .screen-mission {
   position: relative;
   padding-bottom: 2.08955rem;
@@ -2794,7 +2799,6 @@ html.fp-enabled,
   bottom: 21.1875rem;
   left: calc(59.18367% - 21.875rem);
   right: 26.25rem;
-  z-index: 1;
 }
 
 .screen-team__line_3 {
