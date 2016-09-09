@@ -108,3 +108,17 @@
         background: #fff;
     }
 }
+
+.explorer,
+.edge {
+
+    .screen-about {
+
+        &__line {
+
+            &_1 {
+                font-size: rem(16.65);
+            }
+        }
+    }
+}
