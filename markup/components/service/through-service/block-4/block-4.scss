@@ -2,6 +2,7 @@
 
     @include below($tablet) {
         padding-top: rem(40);
+        padding-bottom: rem(130);
     }
 
     &__left {

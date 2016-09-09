@@ -139,6 +139,7 @@
         font-size: rem-2(32);
 
         @include below($tablet) {
+            display: inline-block;
             padding: rem(7) rem(25);
             border: 1px solid #000;
 
