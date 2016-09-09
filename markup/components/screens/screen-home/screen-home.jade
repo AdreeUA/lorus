@@ -1,5 +1,6 @@
 include ../../header/header
 include ../../line/line
+include ../../icon/icon
 include ../../icon-link/icon-link
 include ../../scroll-btn/scroll-btn
 include ../../info/info-list/info-list
@@ -7,6 +8,8 @@ include ../../info/info-list/info-list
 mixin screen-home(data)
     +b.screen-home()&attributes(attributes)
         +header(header.default).screen-home__header
+        
+        +icon({ icon: 'mobile-line-main', class: 'screen-home__mobile-line' }) 
 
         +e.content
             +line(line.home).screen-home__line

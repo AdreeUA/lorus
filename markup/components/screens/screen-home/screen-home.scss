@@ -3,6 +3,7 @@
     $pl: 84;
 
     position: relative;
+    z-index: 1;
 
     background: $color-3;
 
@@ -14,6 +15,19 @@
 
         @include below($tablet) {
             display: none;
+        }
+    }
+
+    &__mobile-line {
+        display: none;
+
+        @include below($tablet) {
+            position: absolute;
+            left: 0;
+
+            display: block;
+            width: 100vw;
+            height: 563 / 420 * 100 + vw;
         }
     }
 

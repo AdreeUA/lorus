@@ -13,6 +13,20 @@
         background: $color-3;
     }
 
+    &__mobile-line {
+        display: none;
+
+        @include below($tablet) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            display: block;
+            width: rem(110);
+            height: rem(322);
+        }
+    }
+
     &__wrapper {
         @include align-justify();
 
