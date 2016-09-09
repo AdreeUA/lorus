@@ -70,8 +70,8 @@
             padding-right: rem-2($pr + 14);
 
             @include below($tablet) {
-                margin: 0;
-                padding: 0;
+                margin: rem(-25);
+                padding: rem(25);
             }
         }
     }
