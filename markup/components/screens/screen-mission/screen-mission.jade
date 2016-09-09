@@ -3,6 +3,7 @@ include ../../line/line
 include ../../icon/icon
 include ../../content/content
 include ../../clip-img/clip-img
+include ../../mobile-photo/mobile-photo
 include ../../decor-title/decor-title
 
 mixin screen-mission(data)
@@ -14,9 +15,12 @@ mixin screen-mission(data)
             'Поднять Ваш бизнес ', 'на новую высоту'
         ]}).screen-mission__subtitle
         
+        +mobile-photo({ 
+            src: '%=static=%img/assets/screens/screen-mission/mission-photo.jpg' 
+            }).screen-mission__mobile-photo
+        
         +clip-img({
-            src: '%=static=%img/assets/screens/screen-mission/mission-photo.jpg',
-            tween: true
+            src: '%=static=%img/assets/screens/screen-mission/mission-photo.jpg'
         })._shape_hexagon._pos_bottom._pos_right._sunlight.screen-mission__photo
         
         +line(line.mission1).screen-mission__line_1

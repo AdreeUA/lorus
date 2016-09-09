@@ -1,6 +1,7 @@
 include ../../title/title
 include ../../content/content
 include ../../partners/partners
+include ../../mobile-photo/mobile-photo
 include ../../line/line
 include ../../footer/footer
 
@@ -11,7 +12,11 @@ mixin screen-team(data)
         +line(line.team2).screen-team__line_2
         +line(line.team3).screen-team__line_3
         
-        +e.photo-wrapper.js-tween
+        +mobile-photo({
+            src: '%=static=%img/assets/screens/screen-team/team-photo.jpg'
+            }).screen-team__mobile-photo
+        
+        +e.photo-wrapper
             +e.IMG.photo(
                 src='%=static=%img/assets/screens/screen-team/team-photo.jpg'
                 alt='')

@@ -176,25 +176,25 @@
         }
     }
 
-    @include below($tablet) {
-
-        .clip-img__clip {
-            border-radius: 10px;
-        }
-
-        .clip-img__wrapper {
-            transform: none;
-
-            &::before {
-                display: none;
-            }
-        }
-
-        .clip-img__img {
-            width: 100%;
-            height: 100%;
-
-            transform: none;
-        }
-    }
+    // @include below($tablet) {
+    //
+    //     .clip-img__clip {
+    //         border-radius: 10px;
+    //     }
+    //
+    //     .clip-img__wrapper {
+    //         transform: none;
+    //
+    //         &::before {
+    //             display: none;
+    //         }
+    //     }
+    //
+    //     .clip-img__img {
+    //         width: 100%;
+    //         height: 100%;
+    //
+    //         transform: none;
+    //     }
+    // }
 }

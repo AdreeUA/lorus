@@ -73,18 +73,7 @@
         }
 
         @include below($tablet) {
-            position: relative;
-
-            width: 100%;
-            height: rem(200);
-            padding-left: 0;
-            margin-bottom: rem(50);
-
-            border-radius: 10px;
-
-            &::before {
-                display: none;
-            }
+            @include hidden();
         }
     }
 

@@ -70,7 +70,7 @@
 
         @include below($tablet) {
             display: block;
-            min-height: 0;
+            height: auto;
 
             &::before {
                 display: none;
