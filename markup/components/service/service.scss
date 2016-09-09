@@ -25,6 +25,14 @@
 
             background: url('%=static=%assets/service/service-photo-shadow.svg') no-repeat right top / auto 100%;
         }
+
+        @include below($tablet) {
+            width: auto;
+            margin-left: rem(-25);
+            margin-right: rem(-25);
+            
+            border-radius: 0;
+        }
     }
 
     &__photo {
@@ -36,14 +44,36 @@
 
     &__block {
         @include clearfix();
+
+        @include below($tablet) {
+            padding: 0 rem(25);
+
+            &:nth-child(odd) {
+                background: $color-3;
+            }
+
+            &:nth-child(even) {
+                background: #fff;
+            }
+        }
     }
 
     &__left {
         float: left;
+
+        @include below($tablet) {
+            float: none;
+            width: 100% !important;
+        }
     }
 
     &__right {
         float: right;
+
+        @include below($tablet) {
+            float: none;
+            width: 100% !important;
+        }
     }
 
     &__text-decor {

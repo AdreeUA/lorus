@@ -144,7 +144,7 @@
 
             @include below($tablet) {
                 z-index: 2;
-                
+
                 display: flex;
                 align-items: flex-end;
                 justify-content: space-between;
@@ -189,7 +189,7 @@
             transition: background .4s .4s;
 
             @include below($tablet) {
-                left: 0;
+                left: 0 !important;
 
                 transition: background .4s;
             }
@@ -206,11 +206,41 @@
 
         font-size: 16/806 * 100 + vh;
 
+        @include below($tablet) {
+            width: 100%;
+            padding-bottom: rem(30);
+
+            background: #fff;
+        }
+
         .header__logo {
             display: none;
 
             @include below($tablet) {
                 display: block;
+                width: rem(170);
+            }
+        }
+
+        .header__left {
+
+            @include below($tablet) {
+                z-index: 2;
+
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                width: 100%;
+                padding-left: rem(25);
+
+                transform: none;
+            }
+        }
+
+        .header__right {
+
+            @include below($tablet) {
+                display: none;
             }
         }
     }

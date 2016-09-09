@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 
-import { Component, setupScrollMagicAnchors, media } from 'helpers-js';
+import { Component, setupScrollMagicAnchors, toggleController } from 'helpers-js';
 
 import { ScreenAbout } from './screen-about/screen-about';
 import { ScreenHome } from './screen-home/screen-home';
@@ -18,21 +18,6 @@ export class Screens extends Component {
     }
 
     _init() {
-        const toggleController = () => {
-            if (matchMedia(media.tablet).matches) {
-                if (!controller.enabled()) return;
-
-                TweenMax.set('.js-tween', { clearProps: 'all' });
-                controller.enabled(false);
-                controller.update();
-
-            } else if (!controller.enabled()) {
-
-                controller.enabled(true);
-                controller.update(true);
-            }
-        };
-
         this.screens = [
             new ScreenHome(this.block.querySelector('.screen-home')),
             new ScreenAbout(this.block.querySelector('.screen-about')),
@@ -42,8 +27,8 @@ export class Screens extends Component {
         ];
 
         setupScrollMagicAnchors(controller);
-        toggleController();
-        window.addEventListener('resize', toggleController);
+        toggleController(controller);
+        window.addEventListener('resize', () => toggleController(controller));
     }
 }
 
