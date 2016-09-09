@@ -1,4 +1,5 @@
 import svg4everybody from 'svg4everybody';
+import viewportUnitsBuggyfill from 'viewport-units-buggyfill';
 import bowser from 'bowser';
 import 'matchmedia-polyfill';
 import 'babel-polyfill';
@@ -11,6 +12,7 @@ import './requestAnimationFrame';
 export default {
     init() {
         svg4everybody();
+        viewportUnitsBuggyfill.init();
 
         document.documentElement.classList.add(bowser.name.split(' ').pop().toLowerCase());
     }
