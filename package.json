@@ -14,7 +14,8 @@
     "scrollmagic": "^2.0.5",
     "shortid": "^2.2.6",
     "slick-carousel": "^1.6.0",
-    "svg4everybody": "^2.1.0"
+    "svg4everybody": "^2.1.0",
+    "viewport-units-buggyfill": "^0.6.0"
   },
   "devDependencies": {
     "babel-polyfill": "^6.13.0",
