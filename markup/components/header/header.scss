@@ -95,6 +95,10 @@
         z-index: 2;
 
         width: $menu-width;
+
+        @include below($tablet) {
+            width: 100% !important;
+        }
     }
 
     &_theme_default {
@@ -115,16 +119,50 @@
 
         transition: visibility 0s .4s;
 
+        @include below($tablet) {
+            padding-bottom: rem(30);
+
+            background: #fff;
+            visibility: visible;
+
+            transition: none;
+        }
+
+        .header__logo {
+            display: none;
+
+            @include below($tablet) {
+                display: block;
+                width: rem(170);
+            }
+        }
+
         .header__left {
             transform: translateX(-100%);
 
             transition: transform .4s;
+
+            @include below($tablet) {
+                z-index: 2;
+
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                width: 100%;
+                padding-left: rem(25);
+
+                transform: none;
+            }
         }
 
         .header__right {
             transform: translateX(100%);
 
             transition: filter .4s, transform .4s;
+
+            @include below($tablet) {
+                display: none;
+            }
         }
 
         &.header_show {
@@ -149,6 +187,12 @@
             background: rgba(0, 0, 0, .5);
 
             transition: background .4s .4s;
+
+            @include below($tablet) {
+                left: 0 !important;
+
+                transition: background .4s;
+            }
         }
 
         .header__right {
@@ -161,5 +205,43 @@
         width: auto;
 
         font-size: 16/806 * 100 + vh;
+
+        @include below($tablet) {
+            width: 100%;
+            padding-bottom: rem(30);
+
+            background: #fff;
+        }
+
+        .header__logo {
+            display: none;
+
+            @include below($tablet) {
+                display: block;
+                width: rem(170);
+            }
+        }
+
+        .header__left {
+
+            @include below($tablet) {
+                z-index: 2;
+
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                width: 100%;
+                padding-left: rem(25);
+
+                transform: none;
+            }
+        }
+
+        .header__right {
+
+            @include below($tablet) {
+                display: none;
+            }
+        }
     }
 }

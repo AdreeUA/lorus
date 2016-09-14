@@ -14,9 +14,18 @@
 
         font-size: 0;
         @include align-justify();
+
+        @include below($tablet) {
+            margin: rem(-10);
+        }
     }
 
     &__logo {
         font-size: 1rem;
+
+        @include below($tablet) {
+            padding: rem(10);
+            max-width: 50%;
+        }
     }
 }

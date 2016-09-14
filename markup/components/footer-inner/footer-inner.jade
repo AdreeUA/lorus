@@ -1,7 +1,9 @@
 include ../link/link
+include ../icon/icon
 
 mixin footer-inner(data)
     +b.footer-inner()&attributes(attributes)
+        +icon({ icon: 'mobile-line-footer', class: 'footer__mobile-line' })
         +e.wrapper
             +e.col
                 +e.item_logo

@@ -66,5 +66,9 @@
         position: absolute;
         top: em(20);
         right: em(20);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 }

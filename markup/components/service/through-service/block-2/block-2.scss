@@ -1,6 +1,13 @@
 .block-2 {
     margin-bottom: rem(98);
 
+    @include below($tablet) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: rem(50);
+        margin-bottom: 0;
+    }
+
     &__left {
         width: rem(560);
     }
@@ -9,12 +16,26 @@
         width: rem(560);
         padding-top: rem(265);
         padding-right: rem(55);
+
+        @include below($tablet) {
+            padding-top: rem(40);
+            order: -1;
+
+            h4 {
+                padding-left: rem(22);
+                border-left: 4px solid $color-2;
+            }
+        }
     }
 
     &__photo {
         width: rem(475);
         height: rem(258);
         margin-top: rem(-40);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__subtitle {
@@ -25,6 +46,10 @@
         .decor-title__row:first-child {
             border-top : 4px solid #E5EE3C;
         }
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__icon {
@@ -34,11 +59,19 @@
 
         fill: none;
         stroke: currentColor;
+
+        @include below($tablet) {
+            opacity: .6;
+        }
     }
 
     &__icons {
         margin-left: rem(92);
         margin-top: rem(30);
+
+        @include below($tablet) {
+            margin-left: 0;
+        }
     }
 
     &__desc {
@@ -58,16 +91,35 @@
 
             background-color: #E1EA38;
         }
+
+        @include below($tablet) {
+            padding-left: rem(5);
+
+            font-size: rem(15);
+
+            &::before {
+                background: $color-3;
+            }
+        }
     }
 
     &__calendar {
         display: inline-block;
         width: rem(160);
         margin-right: rem(60);
+
+        @include below($tablet) {
+            width: rem(150);
+            margin-right: rem(45);
+        }
     }
 
     &__money {
-         display: inline-block;
-         width: rem(160);
+        display: inline-block;
+        width: rem(160);
+
+        @include below($tablet) {
+            width: rem(150);
+        }
     }
 }

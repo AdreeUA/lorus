@@ -1,0 +1,5 @@
+mixin mobile-photo(data)
+    +b.mobile-photo()&attributes(attributes)
+        +e.wrapper
+            +e.IMG.img(src=data.src alt=(data.alt || ''))
+        block

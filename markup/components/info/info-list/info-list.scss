@@ -32,5 +32,17 @@
         .slick-next {
             top: rem-2(220);
         }
+
+        @include below($tablet) {
+
+            .slick-arrow {
+                display: none !important;
+            }
+
+            .slick-dots {
+                top: rem(225);
+                bottom: auto;
+            }
+        }
     }
 }

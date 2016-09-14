@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
-import { Component, forEach, getCoords } from 'helpers-js';
+import { Component, forEach, getCoords, toggleController } from 'helpers-js';
 
 import { Line } from 'components/line/line';
 
@@ -12,6 +12,9 @@ export class ThroughService extends Component {
 
             this._addLineParallax();
             this._addPhotoParallax();
+
+            toggleController(this.controller);
+            window.addEventListener('resize', () => toggleController(this.controller));
         });
     }
 

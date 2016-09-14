@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 
-import { Component, setupScrollMagicAnchors } from 'helpers-js';
+import { Component, setupScrollMagicAnchors, toggleController } from 'helpers-js';
 
 import { ScreenAbout } from './screen-about/screen-about';
 import { ScreenHome } from './screen-home/screen-home';
@@ -27,6 +27,8 @@ export class Screens extends Component {
         ];
 
         setupScrollMagicAnchors(controller);
+        toggleController(controller);
+        window.addEventListener('resize', () => toggleController(controller));
     }
 }
 

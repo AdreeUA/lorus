@@ -4,13 +4,19 @@
     margin: 0;
 
     font-size: rem-2($base-font);
+    line-height: 0;
+
+    @include below($tablet) {
+        font-size: rem(26);
+    }
 
     &__row {
         display: table;
-        padding: 0 em(100, $base-font);
+        padding: em(10, $base-font) em(100, $base-font);
         padding-left: em(44, $base-font);
 
         white-space: nowrap;
+        line-height: 1.2;
 
         background: #fff;
 
@@ -20,6 +26,10 @@
 
         &:last-child {
             padding-bottom: rem-2(16);
+        }
+
+        @include below($tablet) {
+            padding-right: em(70, $base-font);
         }
     }
 }
