@@ -30,6 +30,11 @@
     <body>
         <header class="header header_theme_screen">
             <div class="header__left">
+                <div class="logo header__logo">
+                    <img src="static/img/assets/logo/logo.svg" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img" />
+                    <h2 class="screenreader">Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.
+          </h2>
+                </div>
                 <div class="hamburger header__hamburger"><a href="javascript:void(0)" class="icon-btn icon-btn_theme_inverse hamburger__inner"><span class="icon-btn__icon hamburger__line"></span>Открыть меню</a>
                 </div>
                 <div class="menu header__slide-menu">
@@ -100,7 +105,7 @@
                     <div id="team" class="screens__scene">
                     </div>
                 </div>
-                <div class="screens__inner">
+                <div class="screens__inner js-tween">
                     <div data-direction="right" class="screens__row">
                         <div class="screen-home screens__item">
                             <header class="header header_theme_default screen-home__header">
@@ -139,6 +144,10 @@
                                     </label><a href="javascript:void(0)" class="link header__lang">in English</a>
                                 </div>
                             </header>
+                            <svg class="icon icon_mobile-line-main screen-home__mobile-line" width="419.79px" height="569.98px">
+                                <use xlink:href="svg-symbols.svg#mobile-line-main"></use>
+                            </svg>
+
                             <div class="screen-home__content">
                                 <div class="line screen-home__line">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.19 168" class="line__icon line__icon_static">
@@ -172,15 +181,15 @@
                                     <div data-slick='{"fade":true,"dots":true,"speed":false}' class="slider slider_theme_basic info-list__slider">
                                         <div class="slider__item">
                                             <article class="info info-list__item">
-                                                <h2 class="decor-title info__title"><span class="decor-title__row">Сквозной сервис </span><span class="decor-title__row">из Китая, Кореи и Японии</span>
+                                                <h2 class="decor-title info__title js-tween"><span class="decor-title__row">Сквозной сервис </span><span class="decor-title__row">из Китая, Кореи и Японии</span>
                         </h2>
                                                 <div class="content info__content">
                                                     <p>Доставка контейнеров из стран АТР с точным графиком, конкурентными ставками и выгодными условиями хранения.</p>
                                                 </div><a href="javascript:void(0)" class="btn info__btn">Подробнее</a>
                                                 <div class="info__img-set">
-                                                    <div class="info__img-shadow">
+                                                    <div class="info__img-shadow js-tween">
                                                     </div>
-                                                    <a href="javascript:void(0)" class="info__img-wrapper">
+                                                    <a href="javascript:void(0)" class="info__img-wrapper js-tween">
                                                         <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
                                                     </a>
                                                 </div>
@@ -188,15 +197,15 @@
                                         </div>
                                         <div class="slider__item">
                                             <article class="info info-list__item">
-                                                <h2 class="decor-title info__title"><span class="decor-title__row">Товары из Бангладеша </span><span class="decor-title__row">Индии и Туркменистана</span>
+                                                <h2 class="decor-title info__title js-tween"><span class="decor-title__row">Товары из Бангладеша </span><span class="decor-title__row">Индии и Туркменистана</span>
                         </h2>
                                                 <div class="content info__content">
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste officiis asperiores.</p>
                                                 </div><a href="javascript:void(0)" class="btn info__btn">Подробнее</a>
                                                 <div class="info__img-set">
-                                                    <div class="info__img-shadow">
+                                                    <div class="info__img-shadow js-tween">
                                                     </div>
-                                                    <a href="javascript:void(0)" class="info__img-wrapper">
+                                                    <a href="javascript:void(0)" class="info__img-wrapper js-tween">
                                                         <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
                                                     </a>
                                                 </div>
@@ -204,15 +213,15 @@
                                         </div>
                                         <div class="slider__item">
                                             <article class="info info-list__item">
-                                                <h2 class="decor-title info__title"><span class="decor-title__row">Отвызная доставка </span><span class="decor-title__row">с полуострова Ява</span>
+                                                <h2 class="decor-title info__title js-tween"><span class="decor-title__row">Отвызная доставка </span><span class="decor-title__row">с полуострова Ява</span>
                         </h2>
                                                 <div class="content info__content">
                                                     <p>nam veniam magnam vel doloribus possimus hic, odit voluptatem, magni quis, repellat accusantium ullam. Quibusdam ipsam assumenda totam.</p>
                                                 </div><a href="javascript:void(0)" class="btn info__btn">Подробнее</a>
                                                 <div class="info__img-set">
-                                                    <div class="info__img-shadow">
+                                                    <div class="info__img-shadow js-tween">
                                                     </div>
-                                                    <a href="javascript:void(0)" class="info__img-wrapper">
+                                                    <a href="javascript:void(0)" class="info__img-wrapper js-tween">
                                                         <img src="static/img/assets/info/info-1.jpg" alt="Фотография склада" class="info__img" title="" />
                                                     </a>
                                                 </div>
@@ -298,7 +307,12 @@
               </h2>
                             <div class="decor-title screen-mission__subtitle"><span class="decor-title__row">Поднять Ваш бизнес </span><span class="decor-title__row">на новую высоту</span>
                             </div>
-                            <div class="clip-img clip-img_shape_hexagon clip-img_pos_bottom clip-img_pos_right screen-mission__photo">
+                            <div class="mobile-photo screen-mission__mobile-photo">
+                                <div class="mobile-photo__wrapper">
+                                    <img src="static/img/assets/screens/screen-mission/mission-photo.jpg" alt="" class="mobile-photo__img" role="presentation" />
+                                </div>
+                            </div>
+                            <div class="clip-img clip-img_shape_hexagon clip-img_pos_bottom clip-img_pos_right clip-img_sunlight screen-mission__photo">
                                 <div class="clip-img__shadow">
                                 </div>
                                 <div class="clip-img__clip">
@@ -432,13 +446,21 @@
                                     <path d="M0 182.14c26.31-.14 51.31.86 77.31-.14 9-1 12-10 13-18q1.5-72 0-144c-1-6-7-10-13-10-12 0-24-2-36 0-6 1-12 6-13 12-1 35 0 69 0 104 0 6 4 11 9 12 23 5 45 2 67 2 7-1 15-6 15-14 0-10-1-23 9-27 53-3 107-1 160-1a14 14 0 0 1 12 14c0 65 2 129-1 194 0 5-4 9-9 10-15 3-30 2-45 0-4 0-9-1-12-5-6-10-4-22 6-29 31-2 62-3 93 1 1 0 3 1 5 2 1 1 1 3 3 5 2 3 1 6 1 9 2 21 1 42 1 63 0 8-7 14-14 15-100 1-200-1-300 1-9 0-17 11-12 21 3 5 9 8 15 9 20 1 39-1 59 0 7 1 14 6 14 14v97"></path>
                                 </svg>
                             </div>
+                            <div class="mobile-photo screen-team__mobile-photo">
+                                <div class="mobile-photo__wrapper">
+                                    <img src="static/img/assets/screens/screen-team/team-photo.jpg" alt="" class="mobile-photo__img" role="presentation" />
+                                </div>
+                            </div>
+                            <div class="screen-team__photo-wrapper">
+                                <img src="static/img/assets/screens/screen-team/team-photo.jpg" alt="" class="screen-team__photo" role="presentation" />
+                            </div>
                             <div class="screen-team__main">
                                 <h2 class="title screen-team__title">Команда
                 </h2>
                                 <div class="screen-team__content-wrapper">
-                                    <div class="screen-team__content-shadow">
+                                    <div class="screen-team__content-shadow js-tween">
                                     </div>
-                                    <div class="content screen-team__content">
+                                    <div class="content screen-team__content js-tween">
                                         <p>
                                             С Лорус Эс Си Эм вы получаете помощь профессиональной команды с многолетним опытом работы в логистике. В компании работают иностранные специалисты, тесно знакомые с мировой практикой организации поставок и таможенного оформления. Нас связывает стремление
                                             к постоянному совершенствованию, растущая экспертиза и неизменное стремление к лидерству и инновациям.
@@ -464,10 +486,11 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="screen-team__photo-wrapper">
-                                <img src="static/img/assets/screens/screen-team/team-photo.jpg" alt="" class="screen-team__photo" role="presentation" />
-                            </div>
                             <div class="footer">
+                                <svg class="icon icon_mobile-line-footer footer__mobile-line" width="112.56px" height="324.78px">
+                                    <use xlink:href="svg-symbols.svg#mobile-line-footer"></use>
+                                </svg>
+
                                 <div class="footer__wrapper">
                                     <div class="footer__col">
                                         <div class="footer__item footer__item_copyright">
