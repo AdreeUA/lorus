@@ -3823,13 +3823,6 @@ html.fp-enabled,
   }
 }
 
-.screen-team .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .screens {
   position: relative;
   width: 100%;
