@@ -3837,7 +3837,8 @@ html.fp-enabled,
 
 @media screen and (max-width: 1024px) {
   .screens__scroll {
-    display: none;
+    position: absolute;
+    width: 100%;
   }
 }
 
