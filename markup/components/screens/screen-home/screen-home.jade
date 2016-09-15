@@ -9,7 +9,8 @@ mixin screen-home(data)
     +b.screen-home()&attributes(attributes)
         +header(header.default).screen-home__header
 
-        +line(line.homeMobile).screen-home__mobile-line
+        +icon({ icon: 'mobile-line-main', class: 'screen-home__mobile-line' })
+        //+line(line.homeMobile).screen-home__mobile-line
 
         +e.content
             +line(line.home).screen-home__line 
