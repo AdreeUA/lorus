@@ -2,17 +2,41 @@ import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
 import { isInViewport } from 'helpers-js';
+import { media } from 'helpers-js';
 
 import { Screen } from 'components/screens/screen';
 import { Line } from 'components/line/line';
 import { ClipImg } from 'components/clip-img/clip-img';
 
+const aboutPos = {
+    'desk': {
+        'parent': '-=33.33',
+        'photoX': '125',
+        'img': '5',
+        'photoY': '-125'
+    },
+    'tablet': {
+        'parent': '-=33.33',
+        'photoX': '125',
+        'img': '5',
+        'photoY': '-125'
+    }
+}
+
+
+if (matchMedia(media.tablet).matches) {
+    var device = 'tablet';
+} else {
+    var device = 'desk';
+}
+
 export class ScreenAbout extends Screen {
+
     constructor(block) {
         super(block, 'screen-about', function() {
             this.sceneNum = 1;
 
-            let tweenNav = TweenMax.to(this.parent, 5, { y: '-=33.33%' });
+            let tweenNav = TweenMax.to(this.parent, 5, { y: aboutPos[device].parent + '%' });
 
             this.scene.setTween(tweenNav);
 
@@ -48,9 +72,9 @@ export class ScreenAbout extends Screen {
             tween = new TimelineMax();
 
         tween
-            .add(TweenMax.staggerFrom([photo, shadow], .5, { x: '125%' }, .1))
-            .add(TweenMax.from(img, .5, { x: '5%' }))
-            .add(TweenMax.staggerTo([photo, shadow], 1, { y: '-125%' }, .1));
+            .add(TweenMax.staggerFrom([photo, shadow], .5, { x: aboutPos[device].photoX + '%' }, .1))
+            .add(TweenMax.from(img, .5, { x: aboutPos[device].img + '%' }))
+            .add(TweenMax.staggerTo([photo, shadow], 1, { y: aboutPos[device].photoY + '%' }, .1));
 
         new ScrollMagic.Scene({
                 triggerElement: this.sceneTrigger,

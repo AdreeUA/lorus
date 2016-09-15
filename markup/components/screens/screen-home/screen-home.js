@@ -51,13 +51,19 @@ export class ScreenHome extends Screen {
     }
 
     _addLinesAnimation() {
-        let line = new Line(this.block.querySelector('.screen-home__line'));
+        let line0 = new Line(this.block.querySelector('.screen-home__line')),
+            line0m = new Line(this.block.querySelector('.screen-home__mobile-line')),
+            tween = new TimelineMax();
+
+        tween
+            .add(line0.makeTween(.25))
+            .add(line0m.makeTween(.5));
 
         new ScrollMagic.Scene({
                 duration: '25%',
                 triggerHook: .25
             })
-            .setTween(line.makeTween())
+            .setTween(tween)
             .addTo(this.controller);
     }
 
