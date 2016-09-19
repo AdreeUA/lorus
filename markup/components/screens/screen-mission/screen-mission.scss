@@ -17,6 +17,9 @@
         margin-bottom: rem-2(188);
 
         @include below($tablet) {
+            position: relative;
+            z-index: 1;
+
             margin: 0;
             margin-bottom: rem(45);
         }
@@ -140,10 +143,5 @@
         @include below($tablet) {
             @include hidden();
         }
-    }
-
-    &__mobile-photo {
-        position: relative;
-        z-index: 1;
     }
 }
