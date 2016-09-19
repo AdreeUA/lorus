@@ -17,6 +17,8 @@
 
         @include below($tablet) {
             margin: rem(-10);
+
+            text-align: left;
         }
     }
 
