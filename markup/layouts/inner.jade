@@ -2,7 +2,7 @@ include ../../node_modules/bemto.jade/bemto
 
 include ../components/page/page
 include ../components/header/header
-include ../components/footer-inner/footer-inner
+include ../components/footer/footer
 
 -var pageSettings = {};
 -pageSettings.title = '';
@@ -17,11 +17,11 @@ html(lang='ru' class=pageSettings.pageClass)
 
     body
         +header(header.inner)
-        
+
         +page
-            
+
             block content
 
-            +footer-inner
+            +footer({ inner: true })
 
         script(src='%=static=%js/main%=hash=%%=min=%.js')

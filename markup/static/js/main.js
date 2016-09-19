@@ -4,6 +4,7 @@ import { Component } from 'helpers-js';
 
 import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
+import { Footer } from 'components/footer/footer';
 import { Screens } from 'components/screens/screens';
 import { Slider } from 'components/slider/slider';
 import { Line } from 'components/line/line';
@@ -18,6 +19,7 @@ $(() => {
 
     Component.init('.line', Line);
     Component.init('.header', Header);
+    Component.init('.footer', Footer);
     Component.init('.slider', Slider);
     Component.init('.screens', Screens);
     Component.init('.search-mini', SearchMini);

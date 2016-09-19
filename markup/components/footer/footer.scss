@@ -13,20 +13,6 @@
         background: $color-3;
     }
 
-    &__mobile-line {
-        display: none;
-
-        @include below($tablet) {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-
-            display: block;
-            width: rem(110);
-            height: rem(322);
-        }
-    }
-
     &__wrapper {
         @include align-justify();
 
@@ -154,6 +140,92 @@
 
             &:hover {
                 border-color: #000;
+            }
+        }
+    }
+
+    &__line-m {
+        position: absolute;
+        right: 0;
+        bottom: rem(-8);
+
+        display: none;
+
+        @include below($tablet) {
+            display: block;
+            width: rem(113);
+            height: rem(325);
+        }
+    }
+
+    &_inner {
+        position: relative;
+        z-index: 2;
+
+        padding-top: rem(40);
+        padding-bottom: rem(40);
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+
+            height: rem(70);
+
+            background: linear-gradient(177deg, transparent 50%, #fff 50.5%);
+            -webkit-backface-visibility: hidden;
+        }
+
+        @include below($tablet) {
+            padding-top: 0;
+            padding-bottom: rem(30);
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .footer__wrapper {
+            padding-left: rem(59);
+            padding-right: rem(80);
+
+            @include below($tablet) {
+                padding: 0 rem(25);
+            }
+        }
+
+        .footer__col {
+            &:last-child {
+                margin-left: 24.5%;
+            }
+
+            @include below($tablet) {
+                display: block;
+
+                &:first-child {
+                    display: none;
+                }
+
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .footer__item {
+            height: rem(55);
+
+            @include below($tablet) {
+                height: auto;
+            }
+
+            &_logo {
+                width: rem(217);
+                height: rem(57);
+
+                background: url('%=static=%assets/footer-inner/footer-logo.svg') center no-repeat;
             }
         }
     }

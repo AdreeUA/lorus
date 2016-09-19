@@ -7,13 +7,6 @@
 
     background: #fff;
 
-    @include below($tablet) {
-        padding-top: rem(30);
-        padding-bottom: rem(10);
-
-        background: $color-3;
-    }
-
     &::before {
         content: '';
         position: absolute;
@@ -25,6 +18,17 @@
 
         background: linear-gradient(177deg, transparent 50%, #fff 50.5%);
         -webkit-backface-visibility: hidden;
+    }
+
+    @include below($tablet) {
+        padding-top: rem(30);
+        padding-bottom: rem(10);
+
+        background: $color-3;
+
+        &::before {
+            display: none;
+        }
     }
 
     &__mobile-line {
