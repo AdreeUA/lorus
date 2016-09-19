@@ -40,6 +40,11 @@
         @include below($tablet) {
             width: auto;
             margin-bottom: rem(25);
+            height: rem(400);
+        }
+
+        @include below($mobile) {
+            height: rem(200);
         }
     }
 

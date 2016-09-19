@@ -37,9 +37,13 @@
 
         @include below($tablet) {
             width: auto;
-            height: rem(200);
+            height: rem(400);
             border-bottom: rem(9) solid rgba($color-2, .8);
             margin-bottom: rem(40);
+        }
+
+        @include below($mobile) {
+            height: rem(200);
         }
     }
 

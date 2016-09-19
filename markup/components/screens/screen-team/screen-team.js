@@ -51,6 +51,8 @@ export class ScreenTeam extends Screen {
 
     _addPhotoParallax() {
         let photo = this.block.querySelector('.screen-team__photo-wrapper'),
+            photo_m = this.block.querySelector('.screen-team__mobile-photo .mobile-photo__wrapper'),
+            shadow_m = this.block.querySelector('.screen-team__mobile-photo .mobile-photo__shadow'),
             tween = TweenMax.from(photo, 1, { y: '50%' });
 
         new ScrollMagic.Scene({
@@ -60,5 +62,13 @@ export class ScreenTeam extends Screen {
             })
             .setTween(tween)
             .addTo(this.controller);
+
+        new ScrollMagic.Scene({
+                triggerElement: this.block,
+                triggerHook: 1,
+                duration: '100%',
+            })
+            .setTween(TweenMax.staggerFrom([photo_m, shadow_m], 1, { y: 100 }, .1))
+            .addTo(this.controller_m);
     }
 }

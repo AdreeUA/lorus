@@ -9,6 +9,7 @@ export class ThroughService extends Component {
     constructor(block) {
         super(block, 'through-service', function() {
             this.controller = new ScrollMagic.Controller();
+            this.controller_m = new ScrollMagic.Controller();
 
             this._addLineParallax();
             this._addPhotoParallax();
@@ -42,6 +43,7 @@ export class ThroughService extends Component {
 
         forEach(photos, (photo, ind) => {
             let tween,
+                tween_m,
                 offset = 0,
                 triggerHook = 1,
                 duration = '200%';
@@ -70,6 +72,21 @@ export class ThroughService extends Component {
                 })
                 .setTween(tween)
                 .addTo(this.controller);
+
+            if (photo.classList.contains('service__photo-wrapper_m')) {
+                if (ind === 0) {
+                    offset = 0;
+                }
+
+                new ScrollMagic.Scene({
+                        offset,
+                        triggerElement: photo,
+                        duration,
+                        triggerHook
+                    })
+                    .setTween(tween)
+                    .addTo(this.controller_m);
+            }
         });
     }
 }
