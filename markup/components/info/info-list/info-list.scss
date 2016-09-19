@@ -40,8 +40,15 @@
             }
 
             .slick-dots {
-                top: rem(225);
+                top: rem(325);
                 bottom: auto;
+            }
+        }
+
+        @include below($mobile) {
+
+            .slick-dots {
+                top: rem(225);
             }
         }
     }

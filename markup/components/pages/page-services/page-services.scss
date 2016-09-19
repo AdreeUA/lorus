@@ -2,10 +2,10 @@
     font-size: 16 / 1225 * 100 + vw;
 
     @include below($tablet) {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 
     @include below($mobile) {
-        font-size: 16 / 420 * 100 + vw;
+        font-size: 16 / 420 * 100 + vw !important;
     }
 }

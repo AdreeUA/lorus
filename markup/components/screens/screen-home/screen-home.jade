@@ -9,11 +9,11 @@ mixin screen-home(data)
     +b.screen-home()&attributes(attributes)
         +header(header.default).screen-home__header
 
-        +line(line.homeMobile1).screen-home__mobile-line_1
-        +line(line.homeMobile2).screen-home__mobile-line_2 
+        +line(line.homeMobile1)._filled.screen-home__mobile-line_1
+        +line(line.homeMobile2).screen-home__mobile-line_2
 
         +e.content
-            +line(line.home).screen-home__line 
+            +line(line.home).screen-home__line
 
             +e.labels
                 -var labels = ['logistics', 'pl', 'engineering'];

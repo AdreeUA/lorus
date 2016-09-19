@@ -88,9 +88,13 @@
             position: relative;
 
             width: 100%;
-            height: rem(208);
+            height: rem(300);
             order: -1;
             margin-bottom: rem(45);
+        }
+
+        @include below($mobile) {
+            height: rem(208);
         }
     }
 

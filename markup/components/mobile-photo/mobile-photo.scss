@@ -3,8 +3,12 @@
 
     display: none;
     width: 100%;
-    height: rem(235);
+    height: rem(325);
     padding-bottom: rem(35);
+
+    @include below($mobile) {
+        height: rem(235);
+    }
 
     &__shadow {
         position: absolute;
