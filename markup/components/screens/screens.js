@@ -9,6 +9,7 @@ import { ScreenAdvantages } from './screen-advantages/screen-advantages';
 import { ScreenTeam } from './screen-team/screen-team';
 
 export const controller = new ScrollMagic.Controller();
+export const controller_m = new ScrollMagic.Controller();
 
 export class Screens extends Component {
     constructor(block) {
@@ -27,8 +28,8 @@ export class Screens extends Component {
         ];
 
         setupScrollMagicAnchors(controller);
-        toggleController(controller);
-        window.addEventListener('resize', () => toggleController(controller));
+        toggleController(controller, controller_m);
+        window.addEventListener('resize', () => toggleController(controller, controller_m));
     }
 }
 

@@ -6,16 +6,14 @@
     height: rem(235);
     padding-bottom: rem(35);
 
-    &::after {
-        content: '';
+    &__shadow {
         position: absolute;
         bottom: rem(-20);
-        left: 50%;
+        left: rem(-104);
+        right: rem(-104);
 
-        width: rem(562);
         height: rem(82);
 
-        transform: translateX(-50%);
         background: url('%=static=%general/shadow.png') no-repeat 0 0 / 100% 100%;
         pointer-events: none;
     }

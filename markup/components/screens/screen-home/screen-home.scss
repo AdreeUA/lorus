@@ -23,11 +23,22 @@
 
         @include below($tablet) {
             position: absolute;
-            left: 0;
+            top: rem(95);
 
             display: block;
-            width: 100vw;
-            height: 563 / 420 * 100 + vw;
+
+            &_1 {
+                left: rem(-5);
+                right: rem(52);
+
+            }
+
+            &_2 {
+                right: rem(-5);
+
+                width: rem(125);
+                height: rem(570);
+            }
         }
     }
 

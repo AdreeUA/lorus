@@ -1,16 +1,27 @@
 import { media } from './variables';
 
-export const toggleController = (controller) => {
+export const toggleController = (controller1, controller2) => {
     if (matchMedia(media.tablet).matches) {
-        if (!controller.enabled()) return;
+        if (!controller1.enabled()) return;
 
         TweenMax.set('.js-tween', { clearProps: 'all' });
-        controller.enabled(false);
-        controller.update();
+        controller1.enabled(false);
+        controller1.update();
 
-    } else if (!controller.enabled()) {
+        if (controller2) {
+            controller2.enabled(true);
+            controller2.update(true);
+        }
 
-        controller.enabled(true);
-        controller.update(true);
+    } else if (!controller1.enabled()) {
+
+        TweenMax.set('.js-tween', { clearProps: 'all' });
+        controller1.enabled(true);
+        controller1.update(true);
+
+        if (controller2) {
+            controller2.enabled(false);
+            controller2.update();
+        }
     }
 };
