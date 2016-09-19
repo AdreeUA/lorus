@@ -6,6 +6,8 @@
         flex-direction: column;
         padding-bottom: rem(50);
         margin-bottom: 0;
+
+        background: url(%=static=%assets/service/through-service/block-2/bg-map.svg) no-repeat right rem(-120) top rem(-100) / rem(290) rem(426);
     }
 
     &__left {
@@ -54,6 +56,7 @@
 
     &__icon {
         display: block;
+        margin-bottom: rem(20);
 
         vertical-align: middle;
 
@@ -70,6 +73,7 @@
         margin-top: rem(30);
 
         @include below($tablet) {
+            display: flex;
             margin-left: 0;
         }
     }
@@ -77,7 +81,6 @@
     &__desc {
         position: relative;
 
-        margin-top: rem(20);
         padding-left: rem(10);
 
         &::before {
@@ -93,6 +96,7 @@
         }
 
         @include below($tablet) {
+            margin-top: auto;
             padding-left: rem(5);
 
             font-size: rem(15);
@@ -108,7 +112,11 @@
         width: rem(160);
         margin-right: rem(60);
 
+        vertical-align: top;
+
         @include below($tablet) {
+            display: flex;
+            flex-direction: column;
             width: rem(150);
             margin-right: rem(45);
         }
@@ -118,7 +126,11 @@
         display: inline-block;
         width: rem(160);
 
+        vertical-align: top;
+
         @include below($tablet) {
+            display: flex;
+            flex-direction: column;
             width: rem(150);
         }
     }
