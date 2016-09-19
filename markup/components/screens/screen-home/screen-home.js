@@ -48,10 +48,23 @@ export class ScreenHome extends Screen {
             })
             .setTween(TweenMax.staggerTo([photo, shadow], 1, { x: '-60%' }, .2))
             .addTo(this.controller);
+
+        new ScrollMagic.Scene({
+                duration: 300,
+            })
+            .setTween(TweenMax.staggerTo([photo, shadow], 1, { y: -100 }, .2))
+            .addTo(this.controller_m);
     }
 
     _addLinesAnimation() {
-        let line = new Line(this.block.querySelector('.screen-home__line'));
+        let line = new Line(this.block.querySelector('.screen-home__line')),
+            line1_m = new Line(this.block.querySelector('.screen-home__mobile-line_1')),
+            line2_m = new Line(this.block.querySelector('.screen-home__mobile-line_2')),
+            tween_m = new TimelineMax();
+
+        tween_m
+            .add(line1_m.makeTween(.25))
+            .add(line2_m.makeTween(.75));
 
         new ScrollMagic.Scene({
                 duration: '25%',
@@ -59,6 +72,12 @@ export class ScreenHome extends Screen {
             })
             .setTween(line.makeTween())
             .addTo(this.controller);
+
+        new ScrollMagic.Scene({
+                duration: '75%'
+            })
+            .setTween(tween_m)
+            .addTo(this.controller_m);
     }
 
     _onProgress(e) {

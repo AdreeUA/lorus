@@ -45,6 +45,10 @@
 
             background: url('%=static=%assets/clip-img/shadow-trapeze.png') center center / 100% 100%;
             pointer-events: none;
+
+            @include below($tablet) {
+                display: none;
+            }
         }
 
         .clip-img__wrapper {
@@ -82,6 +86,10 @@
             background: url('%=static=%assets/clip-img/shadow-hexagon.png') center center / 100% 100%;
             pointer-events: none;
             transform: rotate(19deg);
+
+            @include below($tablet) {
+                display: none;
+            }
         }
 
         .clip-img__wrapper {
@@ -140,4 +148,53 @@
             top: 0;
         }
     }
+
+    &_sunlight {
+
+        .clip-img__clip {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: rem(75);
+                top: 0;
+                z-index: 1;
+
+                width: rem(307);
+                height: rem(414);
+
+                background: url('%=static=%general/sunlight.svg') no-repeat 0 0 / contain;
+            }
+
+            @include below($tablet) {
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // @include below($tablet) {
+    //
+    //     .clip-img__clip {
+    //         border-radius: 10px;
+    //     }
+    //
+    //     .clip-img__wrapper {
+    //         transform: none;
+    //
+    //         &::before {
+    //             display: none;
+    //         }
+    //     }
+    //
+    //     .clip-img__img {
+    //         width: 100%;
+    //         height: 100%;
+    //
+    //         transform: none;
+    //     }
+    // }
 }

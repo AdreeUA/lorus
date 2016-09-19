@@ -33,6 +33,7 @@ mixin header(data, classList)
         if data.type === 'screen' || data.type === 'inner'
         
             +e.left
+                +logo(logo.main).header__logo
                 +hamburger.header__hamburger
                 +menu.header__slide-menu
             

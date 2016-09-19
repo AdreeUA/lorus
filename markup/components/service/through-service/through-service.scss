@@ -3,6 +3,13 @@
 
     background: url('%=static=%assets/service/through-service/bg.svg') 0 0 / cover;
 
+    @include below($tablet) {
+        padding: 0;
+        padding-top: rem(95);
+
+        background: none;
+    }
+
     @import './block-1/block-1';
     @import './block-2/block-2';
     @import './block-3/block-3';
@@ -22,6 +29,10 @@
         width: 100%;
         height: 100%;
         padding-left: rem(30);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__line {

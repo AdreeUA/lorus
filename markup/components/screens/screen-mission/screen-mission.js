@@ -40,6 +40,8 @@ export class ScreenMission extends Screen {
 
     _addPhotoParallax() {
         let photo = this.block.querySelector('.screen-mission__photo .clip-img__clip'),
+            photo_m = this.block.querySelector('.screen-mission__mobile-photo .mobile-photo__wrapper'),
+            shadow_m = this.block.querySelector('.screen-mission__mobile-photo .mobile-photo__shadow'),
             img = this.block.querySelector('.screen-mission__photo .clip-img__img'),
             shadow = this.block.querySelector('.screen-mission__photo .clip-img__shadow'),
             tween = new TimelineMax();
@@ -56,5 +58,15 @@ export class ScreenMission extends Screen {
             })
             .setTween(tween)
             .addTo(this.controller);
+
+        new ScrollMagic.Scene({
+                triggerElement: this.block,
+                triggerHook: 1,
+                duration: '150%',
+            })
+            .setTween(new TimelineMax()
+                .staggerFrom([photo_m, shadow_m], .5, { y: 100 }, .1)
+                .staggerTo([photo_m, shadow_m], .5, { y: -100 }, .1, '-=.1'))
+            .addTo(this.controller_m);
     }
 }

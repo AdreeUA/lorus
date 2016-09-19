@@ -1,5 +1,10 @@
 .block-4 {
 
+    @include below($tablet) {
+        padding-top: rem(40);
+        padding-bottom: rem(130);
+    }
+
     &__left {
         width: rem(475);
     }
@@ -7,31 +12,59 @@
     &__right {
         width: rem(605);
         padding-right: rem(90);
+
+        @include below($tablet) {
+            padding-right: 0;
+
+            h4 {
+                padding-left: rem(22);
+                border-left: 4px solid $color-2;
+            }
+        }
     }
 
     &__photo {
         width: 100%;
         height: rem(315);
         margin-top: rem(60);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__decorh {
         padding-bottom: rem(20);
+
+        @include below($tablet) {
+            padding-bottom: 0;
+        }
     }
 
     &__decorp {
+        position: relative;
 
         padding-left: rem(30);
-        position: relative;
+
         &::before {
+            content: '';
             position: absolute;
             top: 0;
             left: rem(4);
-            content: '';
-            background-color: #E3EC3A;
+
             height: 100%;
             width: 3px;
 
+            background-color: #E3EC3A;
+        }
+
+        @include below($tablet) {
+            padding-left: 0;
+            padding-right: rem(25);
+
+            &::before {
+                display: none;
+            }
         }
     }
 

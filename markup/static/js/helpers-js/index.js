@@ -7,4 +7,6 @@ export { mapValuesToArray } from './mapValuesToArray';
 export { transitionEnd } from './transitionEnd';
 export { Component } from './Component';
 export { setupScrollMagicAnchors } from './setupScrollMagicAnchors';
+export { toggleController } from './toggle-controller';
 export * from './animations';
+export * from './variables';

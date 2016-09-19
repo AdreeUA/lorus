@@ -2,20 +2,50 @@
     padding-top: rem(120);
     margin-bottom: rem(100);
 
+    @include below($tablet) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        padding-bottom: rem(25);
+        margin-bottom: 0;
+    }
+
     &__left {
         width: rem(380);
         padding-top: rem(120);
         padding-left: rem(20);
+
+        @include below($tablet) {
+            padding: 0;
+        }
     }
 
     &__right {
         width: rem(520);
+
+        @include below($tablet) {
+            order: -1;
+
+            .content {
+                display: none;
+            }
+        }
     }
 
     &__photo {
         width: 100%;
         height: rem(260);
         margin-bottom: rem(160);
+
+        @include below($tablet) {
+            width: auto;
+            margin-bottom: rem(25);
+            height: rem(400);
+        }
+
+        @include below($mobile) {
+            height: rem(200);
+        }
     }
 
     &__title {

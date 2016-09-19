@@ -10,6 +10,7 @@
     "bowser": "^1.4.5",
     "fullpage.js": "^2.8.4",
     "jquery": "^3.1.0",
+    "matchmedia-polyfill": "^0.3.0",
     "object-fit-images": "^2.5.6",
     "scrollmagic": "^2.0.5",
     "shortid": "^2.2.6",

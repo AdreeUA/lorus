@@ -1,8 +1,11 @@
 include ../made-by/made-by
 include ../link/link
+include ../icon/icon
 
 mixin footer(data)
     +b.footer()&attributes(attributes)
+        +icon({ icon: 'mobile-line-footer', class: 'footer__mobile-line' })
+    
         +e.wrapper
             +e.col
                 +e.item_copyright
