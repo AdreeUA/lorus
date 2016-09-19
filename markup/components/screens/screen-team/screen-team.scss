@@ -172,10 +172,8 @@
     }
 
     &__partners {
-        width: rem-2(1606);
 
         @include below($tablet) {
-            width: auto;
             margin: 0 rem(-25);
             padding: rem(40) rem(25);
 
