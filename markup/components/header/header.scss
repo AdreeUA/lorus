@@ -115,12 +115,14 @@
         right: 0;
         z-index: 100;
 
+        font-size: 16/806 * 100 + vh;
+
         visibility: hidden;
 
         transition: visibility 0s .4s;
 
         @include below($tablet) {
-            padding-bottom: rem(30);
+            padding-bottom: em(30);
 
             background: #fff;
             visibility: visible;
@@ -133,7 +135,7 @@
 
             @include below($tablet) {
                 display: block;
-                width: rem(170);
+                width: em(170);
             }
         }
 
