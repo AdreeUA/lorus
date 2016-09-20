@@ -12,6 +12,26 @@ html, body {
 
 html {
     font-family: $font-1;
+
+    @include below($tablet) {
+        font-size: 22px !important;
+    }
+
+    @include below(900px) {
+        font-size: 20px !important;
+    }
+
+    @include below(800px) {
+        font-size: 18px !important;
+    }
+
+    @include below(700px) {
+        font-size: 16px !important;
+    }
+
+    @include below($mobile) {
+        font-size: 16 / 420 * 100 + vw !important;
+    }
 }
 
 .hide-scroll {
