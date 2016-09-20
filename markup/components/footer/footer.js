@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 
-import { Component } from 'helpers-js';
+import { Component, toggleController } from 'helpers-js';
 
 import { Line } from 'components/line/line';
 
@@ -10,12 +10,16 @@ export class Footer extends Component {
             this.controller = new ScrollMagic.Controller();
 
             this._addLinesAnimation();
+            toggleController(this.controller);
+            window.addEventListener('resize', () => toggleController(this.controller));
         });
     }
 
     _addLinesAnimation() {
         let line = new Line(this.block.querySelector('.footer__line-m')),
             duration = line.block.offsetHeight - 100;
+
+        duration = duration < 0 ? 200 : duration;
 
         new ScrollMagic.Scene({
                 offset: 100,

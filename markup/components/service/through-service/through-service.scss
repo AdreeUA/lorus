@@ -5,7 +5,7 @@
 
     @include below($tablet) {
         padding: 0;
-        padding-top: rem(95);
+        padding-top: 95 / 806 * 100 + vh;
 
         background: none;
     }

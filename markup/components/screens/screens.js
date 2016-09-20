@@ -27,9 +27,9 @@ export class Screens extends Component {
             new ScreenTeam(this.block.querySelector('.screen-team'))
         ];
 
-        setupScrollMagicAnchors(controller);
         toggleController(controller, controller_m);
         window.addEventListener('resize', () => toggleController(controller, controller_m));
+        setupScrollMagicAnchors(controller);
     }
 }
 
