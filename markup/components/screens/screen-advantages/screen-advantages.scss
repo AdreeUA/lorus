@@ -81,10 +81,10 @@
         left: percentage(725/1225);
         right: rem(293);
 
-        height: rem(11);
+        height: rem(13);
         margin-left: rem(12);
 
-        background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem(33) rem(11);
+        background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem(31) rem(11);
 
         animation: wave 2s both linear infinite;
 
@@ -155,6 +155,7 @@
     &__text-block {
         float: left;
         width: rem-2(820);
+        min-height: rem-2(450);
 
         &:last-child {
             float: right;
@@ -206,6 +207,6 @@
 
 @keyframes wave {
     100% {
-        background-position: rem-2(-66) center;
+        background-position: rem-2(-62) center;
     }
 }
