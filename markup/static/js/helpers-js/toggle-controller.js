@@ -2,7 +2,7 @@ import { media } from './variables';
 
 export const toggleController = (controller1, controller2) => {
     if (matchMedia(media.tablet).matches) {
-        if (controller1.enabled()) {
+        if (controller1 && controller1.enabled()) {
             TweenMax.set('.js-tween', { clearProps: 'all' });
             controller1.enabled(false);
             controller1.update();
@@ -15,7 +15,7 @@ export const toggleController = (controller1, controller2) => {
 
     } else {
 
-        if (!controller1.enabled()) {
+        if (controller1 && !controller1.enabled()) {
             TweenMax.set('.js-tween', { clearProps: 'all' });
             controller1.enabled(true);
             controller1.update(true);
