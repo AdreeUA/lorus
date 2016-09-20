@@ -37,7 +37,7 @@
 
         @include below($tablet) {
             width: auto;
-            height: rem(400);
+            height: rem(300);
             border-bottom: rem(9) solid rgba($color-2, .8);
             margin-bottom: rem(40);
         }
