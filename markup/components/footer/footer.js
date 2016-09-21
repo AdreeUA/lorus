@@ -10,8 +10,8 @@ export class Footer extends Component {
             this.controller = new ScrollMagic.Controller();
 
             this._addLinesAnimation();
-            toggleController(this.controller);
-            window.addEventListener('resize', () => toggleController(this.controller));
+            toggleController(null, this.controller);
+            window.addEventListener('resize', () => toggleController(null, this.controller));
         });
     }
 
@@ -19,6 +19,7 @@ export class Footer extends Component {
         let line = new Line(this.block.querySelector('.footer__line-m')),
             duration = line.block.offsetHeight - 100;
 
+        console.log(duration)
         duration = duration < 0 ? 200 : duration;
 
         new ScrollMagic.Scene({

@@ -165,19 +165,6 @@
         padding-top: rem(40);
         padding-bottom: rem(40);
 
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            right: 0;
-
-            height: rem(70);
-
-            background: linear-gradient(177deg, transparent 50%, #fff 50.5%);
-            -webkit-backface-visibility: hidden;
-        }
-
         @include below($tablet) {
             padding-top: 0;
             padding-bottom: rem(30);

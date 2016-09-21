@@ -1,6 +1,6 @@
 .block-1 {
+    min-height: rem(720);
     padding-top: rem(120);
-    margin-bottom: rem(100);
 
     @include below($tablet) {
         display: flex;
@@ -8,6 +8,7 @@
         padding-top: 0;
         padding-bottom: rem(25);
         margin-bottom: 0;
+        min-height: 0;
     }
 
     &__left {
