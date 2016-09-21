@@ -2,6 +2,7 @@ include ../../node_modules/bemto.jade/bemto
 
 include ../components/page/page
 include ../components/header/header
+include ../components/link/link
 include ../components/footer/footer
 
 -var pageSettings = {};
@@ -19,6 +20,8 @@ html(lang='ru' class=pageSettings.pageClass)
         +header(header.inner)
 
         +page
+            +link.page__lang
+                | In English
 
             block content
 
