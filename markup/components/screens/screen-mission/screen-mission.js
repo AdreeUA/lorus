@@ -65,8 +65,8 @@ export class ScreenMission extends Screen {
                 duration: '150%',
             })
             .setTween(new TimelineMax()
-                .staggerFrom([photo_m, shadow_m], .5, { y: 100 }, .1)
-                .staggerTo([photo_m, shadow_m], .5, { y: -100 }, .1, '-=.1'))
+                .staggerFrom([photo_m, shadow_m], .6, { y: 100 }, .1)
+                .staggerTo([photo_m, shadow_m], .4, { y: -75 }, .1))
             .addTo(this.controller_m);
     }
 }

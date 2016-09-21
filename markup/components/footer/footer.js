@@ -19,7 +19,6 @@ export class Footer extends Component {
         let line = new Line(this.block.querySelector('.footer__line-m')),
             duration = line.block.offsetHeight - 100;
 
-        console.log(duration)
         duration = duration < 0 ? 200 : duration;
 
         new ScrollMagic.Scene({

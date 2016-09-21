@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 
-import { Component, setupScrollMagicAnchors, toggleController } from 'helpers-js';
+import { Component, setupScrollMagicAnchors, toggleController, forEach, media } from 'helpers-js';
 
 import { ScreenAbout } from './screen-about/screen-about';
 import { ScreenHome } from './screen-home/screen-home';
@@ -28,8 +28,29 @@ export class Screens extends Component {
         ];
 
         toggleController(controller, controller_m);
-        window.addEventListener('resize', () => toggleController(controller, controller_m));
+        this._calcScreensHeight();
+
+        window.addEventListener('resize', () => {
+            this._calcScreensHeight();
+            toggleController(controller, controller_m);
+        });
+
         setupScrollMagicAnchors(controller);
+    }
+
+    _calcScreensHeight() {
+        if (matchMedia(media.tablet).matches) {
+            let screens = this.block.querySelectorAll('.screens__item'),
+                scenes = this.block.querySelectorAll('.screens__scene');
+
+            forEach(screens, (screen, ind) => {
+                scenes[ind].style.height = `${screen.offsetHeight}px`;
+            });
+        } else {
+            forEach(this.block.querySelectorAll('.screens__scene'), scene => {
+                scene.style.height = '';
+            });
+        }
     }
 }
 

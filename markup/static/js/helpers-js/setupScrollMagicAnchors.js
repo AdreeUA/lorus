@@ -1,4 +1,6 @@
 import '../plugins/gsap/ScrollToPlugin';
+import { media } from './variables';
+import { animateScroll } from './animations/animate-scroll';
 
 export const setupScrollMagicAnchors = (controller) => {
     controller.scrollTo(function(newpos) {
@@ -11,8 +13,14 @@ export const setupScrollMagicAnchors = (controller) => {
         if ($(id).length > 0) {
             e.preventDefault();
 
-            // trigger scroll
-            controller.scrollTo(id);
+            if (matchMedia(media.tablet).matches) {
+                animateScroll({
+                    element: document.querySelector(id),
+                    offset: -document.querySelector('.header').offsetHeight
+                });
+            } else {
+                controller.scrollTo(id);
+            }
 
             // if supported by the browser we can even update the URL.
             if (window.history && window.history.pushState) {
