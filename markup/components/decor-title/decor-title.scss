@@ -6,6 +6,10 @@
     font-size: rem-2($base-font);
     line-height: 0;
 
+    br {
+        display: none;
+    }
+
     @include below($tablet) {
         font-size: rem(26);
     }
@@ -30,6 +34,8 @@
 
         @include below($tablet) {
             padding-right: em(70, $base-font);
+
+            white-space: normal;
         }
     }
 }

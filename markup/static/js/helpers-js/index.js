@@ -6,6 +6,7 @@ export { isInViewport } from './isInViewport';
 export { mapValuesToArray } from './mapValuesToArray';
 export { transitionEnd } from './transitionEnd';
 export { Component } from './Component';
+export { wrapLines } from './wrapLines';
 export { setupScrollMagicAnchors } from './setupScrollMagicAnchors';
 export { toggleController } from './toggle-controller';
 export * from './animations';
