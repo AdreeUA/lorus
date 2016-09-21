@@ -1,11 +1,12 @@
 .block-2 {
-    margin-bottom: rem(98);
+    min-height: rem(580);
 
     @include below($tablet) {
         display: flex;
         flex-direction: column;
         padding-bottom: rem(50);
         margin-bottom: 0;
+        min-height: 0;
 
         background: url(%=static=%assets/service/through-service/block-2/bg-map.svg) no-repeat right rem(-120) top rem(-100) / rem(290) rem(426);
     }
