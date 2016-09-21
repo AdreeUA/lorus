@@ -6,21 +6,34 @@
 
     &__img {
         max-width: 100%;
+    }
 
-        &_sollers {
-            height: rem-2(156);
+    &_gray {
+        position: relative;
+
+        .logo__img {
+            position: relative;
+
+            opacity: 0;
+
+            transition: opacity .4s;
+            will-change: opacity;
+
+            &_gray {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1 ;
+
+                opacity: 1;
+            }
         }
 
-        &_optima {
-            height: rem-2(192);
-        }
+        &:hover {
 
-        &_prof-it {
-            height: rem-2(156);
-        }
-
-        &_pl {
-            height: rem-2(168);
+            .logo__img {
+                opacity: 1;
+            }
         }
     }
 }

@@ -2,7 +2,7 @@ include ../screenreader/screenreader
 
 mixin logo(data)
 
-    +b.logo(href=data.href)&attributes(attributes)
+    +b.logo(class={'_gray': data.gray} href=data.href)&attributes(attributes)
         if data.picture
             -var picture = data.picture
             +e.PICTURE.img-wrapper
@@ -11,11 +11,20 @@ mixin logo(data)
                 +e.IMG.img(src="#", alt=data.alt  title=data.title)
         else
             +e.IMG.img(
-                class=(data.mod ? `_${data.mod}` : '') 
-                src=`${data.src}.${data.ext}` 
-                srcset=(data.srcset ? `${data.src}@2x.${data.ext} 2x` : false) 
-                alt=data.alt  
+                class=(data.mod ? `_${data.mod}` : '')
+                src=`${data.src}.${data.ext}`
+                srcset=`${data.src}@2x.${data.ext} 2x`
+                alt=data.alt
                 title=data.title)
+
+            if (data.gray)
+                +e.IMG.img_gray(
+                    class=(data.mod ? `_${data.mod}` : '')
+                    src=`${data.src}_gray.${data.ext}`
+                    srcset=`${data.src}_gray@2x.${data.ext} 2x`
+                    alt=data.alt
+                    title=data.title)
+
 
         if data.screenreader
             +screenreader()= data.screenreader

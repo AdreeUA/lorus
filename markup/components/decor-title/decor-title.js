@@ -30,7 +30,6 @@ export class DecorTitle extends Component {
             if (mobileRows.length === 1) return;
 
             mobileRows.forEach(row => mobileHtml += `<span class="decor-title__row">${row}</span>`);
-            console.log(mobileHtml);
             this.block.innerHTML = mobileHtml;
 
         } else {
