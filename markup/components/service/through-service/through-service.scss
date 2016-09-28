@@ -3,6 +3,10 @@
 
     background: url('%=static=%assets/service/through-service/bg.svg') 0 0 / cover;
 
+    &_en {
+        background: url('%=static=%assets/service/through-service/bg_en.svg') -10% 0 / cover;
+    }
+
     @include below($tablet) {
         padding: 0;
         padding-top: 95 / 806 * 100 + vh;
