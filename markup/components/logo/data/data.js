@@ -16,35 +16,53 @@ var data = {logo: {
 
     partners: {
         sollers: {
+            gray: true,
             src: '%=static=%img/assets/logo/partner1',
-            ext: 'jpg',
+            ext: 'png',
             srcset: true,
             mod: 'sollers',
+            href: 'javascript:void(0)',
             alt: 'Логотип компании Sollers'
         },
 
         optima: {
-            src: '%=static=%img/assets/logo/partner2',
-            ext: 'jpg',
+            gray: true,
+            src: '%=static=%img/assets/logo/partner4',
+            ext: 'png',
             srcset: true,
             mod: 'optima',
+            href: 'javascript:void(0)',
             alt: 'Логотип компании Optima'
         },
 
         profIt: {
+            gray: true,
             src: '%=static=%img/assets/logo/partner3',
-            ext: 'jpg',
+            ext: 'png',
             srcset: true,
             mod: 'prof-it',
+            href: 'javascript:void(0)',
             alt: 'Логотип компании Prof-IT'
         },
 
         pl: {
-            src: '%=static=%img/assets/logo/partner4',
-            ext: 'jpg',
+            gray: true,
+            src: '%=static=%img/assets/logo/partner2',
+            ext: 'png',
             srcset: true,
             mod: 'pl',
+            href: 'javascript:void(0)',
             alt: 'Логотип компании PL'
+        },
+
+        ptp: {
+            gray: true,
+            src: '%=static=%img/assets/logo/partner5',
+            ext: 'png',
+            srcset: true,
+            mod: 'ptp',
+            href: 'javascript:void(0)',
+            alt: 'Логотип компании ПТП'
         }
     }
 }}

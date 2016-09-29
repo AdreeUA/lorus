@@ -9,7 +9,8 @@ var data = {info: {
             src: '%=static=%img/assets/info/info-1',
             format: 'jpg',
             alt: 'Фотография склада'
-        }
+        },
+        tween: true
     },
 
     two: {
@@ -21,7 +22,8 @@ var data = {info: {
             src: '%=static=%img/assets/info/info-1',
             format: 'jpg',
             alt: 'Фотография склада'
-        }
+        },
+        tween: true
     },
 
     three: {
@@ -33,6 +35,7 @@ var data = {info: {
             src: '%=static=%img/assets/info/info-1',
             format: 'jpg',
             alt: 'Фотография склада'
-        }
+        },
+        tween: true
     }
 }}

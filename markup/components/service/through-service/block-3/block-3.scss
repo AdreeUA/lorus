@@ -1,18 +1,51 @@
 .block-3 {
-    margin-bottom: rem(70);
+    min-height: rem(360);
+
+    @include below($tablet) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: rem(45);
+        margin-bottom: 0;
+        min-height: 0;
+    }
 
     &__left {
         width: rem(535);
         padding-left: rem(92);
+
+        @include below($tablet) {
+            padding-left: 0;
+            padding-right: rem(25);
+
+            h4 {
+                padding-left: rem(22);
+                border-left: 4px solid #fff;
+            }
+        }
     }
 
     &__right {
         width: rem(540);
+
+        @include below($tablet) {
+            order: -1;
+        }
     }
 
     &__photo {
         width: 100%;
         height: rem(282);
+
+        @include below($tablet) {
+            width: auto;
+            height: rem(300);
+            border-bottom: rem(9) solid rgba($color-2, .8);
+            margin-bottom: rem(40);
+        }
+
+        @include below($mobile) {
+            height: rem(200);
+        }
     }
 
     &__title {

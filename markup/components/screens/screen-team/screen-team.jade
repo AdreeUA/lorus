@@ -1,6 +1,7 @@
 include ../../title/title
 include ../../content/content
 include ../../partners/partners
+include ../../mobile-photo/mobile-photo
 include ../../line/line
 include ../../footer/footer
 
@@ -11,14 +12,23 @@ mixin screen-team(data)
         +line(line.team2).screen-team__line_2
         +line(line.team3).screen-team__line_3
 
+        +mobile-photo({
+            src: '%=static=%img/assets/screens/screen-team/team-photo.jpg'
+            }).screen-team__mobile-photo
+
+        +e.photo-wrapper
+            +e.IMG.photo(
+                src='%=static=%img/assets/screens/screen-team/team-photo.jpg'
+                alt='')
+
         +e.main
 
             +title.screen-team__title
                 | Команда
-            
+
             +e.content-wrapper
-                +e.content-shadow
-                +content.screen-team__content
+                +e.content-shadow.js-tween
+                +content.screen-team__content.js-tween
                     p
                         | С Лорус Эс Си Эм вы получаете помощь профессиональной команды
                         | с многолетним опытом работы в логистике. В компании работают
@@ -29,9 +39,4 @@ mixin screen-team(data)
 
             +partners(partners.default).screen-team__partners
 
-        +e.photo-wrapper
-            +e.IMG.photo(
-                src='%=static=%img/assets/screens/screen-team/team-photo.jpg'
-                alt='')
-
-        +footer
+        +footer({})

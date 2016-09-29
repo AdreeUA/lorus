@@ -3,7 +3,7 @@ import ScrollMagic from 'scrollmagic';
 import { Component } from 'helpers-js';
 
 import { Header } from 'components/header/header';
-import { controller, Screens } from './screens.js';
+import { controller, controller_m, Screens } from './screens.js';
 
 const screensMap = [
     [ 'home', 'left' ],
@@ -19,6 +19,7 @@ export class Screen extends Component {
             this.header = new Header(document.querySelector('.header_theme_screen'));
             this.parent = this.block.closest('.screens__inner');
             this.controller = controller;
+            this.controller_m = controller_m;
             this.sceneTrigger = document.querySelector(`#${className.split('-').pop()}`);
 
             this.scene = new ScrollMagic.Scene({
@@ -31,29 +32,6 @@ export class Screen extends Component {
             if (typeof callback === 'function') {
                 callback.bind(this)();
             }
-
-            // this.scene.on('start', e => {
-            //
-            //     if (e.scrollDirection === 'FORWARD') {
-            //         let id = `#${className.split('-').pop()}`,
-            //             wheelNum = 0;
-            //
-            //         let disableWheel = (e) => {
-            //             e.preventDefault();
-            //
-            //             if (++wheelNum > 1) {
-            //                 document.body.removeEventListener('wheel', disableWheel);
-            //             }
-            //
-            //             controller.scrollTo(id);
-            //         };
-            //
-            //         document.body.addEventListener('wheel', disableWheel);
-            //
-            //         setTimeout(() => controller.scrollTo(id), 10);
-            //     }
-            //
-            // });
 
             this.scene.on('enter', this._onEnter.bind(this));
             this.scene.on('leave', this._onLeave.bind(this));

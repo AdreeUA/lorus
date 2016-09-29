@@ -6,11 +6,25 @@
 
     background: #fff;
 
+    @include below($tablet) {
+        padding-top: 0;
+        padding-bottom: rem(20);
+
+        background: $color-3;
+    }
+
     &__wrapper {
         @include align-justify();
 
         padding-left: rem-2(200);
         padding-right: rem-2(200);
+
+        @include below($tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 rem(25);
+        }
     }
 
     &__col {
@@ -20,6 +34,16 @@
 
         &:last-child {
             margin-left: percentage(100 / 1225);
+        }
+
+        @include below($tablet) {
+            &:first-child {
+                order: 1;
+            }
+
+            &:last-child {
+                display: none;
+            }
         }
     }
 
@@ -44,6 +68,15 @@
             background: currentColor;
         }
 
+        @include below($tablet) {
+            display: block;
+            height: auto;
+
+            &::before {
+                display: none;
+            }
+        }
+
         &_copyright {
             font-size: rem-2(29);
             line-height: 1.4;
@@ -59,12 +92,25 @@
             &::before {
                 width: rem-2(126);
             }
+
+            @include below($tablet) {
+                padding-top: rem(30);
+                margin-bottom: rem(30);
+
+                &::before {
+                    display: block;
+                }
+            }
         }
 
         &_mail {
 
             &::before {
                 width: rem-2(60);
+            }
+
+            @include below($tablet) {
+                margin-bottom: rem(40);
             }
         }
     }
@@ -77,5 +123,97 @@
 
     &__mail {
         font-size: rem-2(32);
+
+        @include below($tablet) {
+            display: inline-block;
+            padding: rem(7) rem(25);
+            border: 1px solid #000;
+
+            color: #000;
+            font-size: rem(24);
+
+            border-radius: 5px;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                border-color: #000;
+            }
+        }
+    }
+
+    &__line-m {
+        position: absolute;
+        right: 0;
+        bottom: rem(-8);
+
+        display: none;
+
+        @include below($tablet) {
+            display: block;
+            width: rem(113);
+            height: rem(325);
+        }
+    }
+
+    &_inner {
+        position: relative;
+        z-index: 2;
+
+        padding-top: rem(40);
+        padding-bottom: rem(40);
+
+        @include below($tablet) {
+            padding-top: 0;
+            padding-bottom: rem(30);
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .footer__wrapper {
+            padding-left: rem(59);
+            padding-right: rem(80);
+
+            @include below($tablet) {
+                padding: 0 rem(25);
+            }
+        }
+
+        .footer__col {
+            &:last-child {
+                margin-left: 24.5%;
+            }
+
+            @include below($tablet) {
+                display: block;
+
+                &:first-child {
+                    display: none;
+                }
+
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .footer__item {
+            height: rem(55);
+
+            @include below($tablet) {
+                height: auto;
+            }
+
+            &_logo {
+                width: rem(217);
+                height: rem(57);
+
+                background: url('%=static=%assets/footer-inner/footer-logo.svg') center no-repeat;
+            }
+        }
     }
 }

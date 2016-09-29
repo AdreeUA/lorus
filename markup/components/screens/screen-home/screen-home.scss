@@ -3,8 +3,44 @@
     $pl: 84;
 
     position: relative;
+    z-index: 1;
 
     background: $color-3;
+
+    @include below($tablet) {
+        padding-top: rem(95);
+    }
+
+    &__header {
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__mobile-line {
+        display: none;
+
+        @include below($tablet) {
+            position: absolute;
+            top: rem(95);
+
+            display: block;
+
+            &_1 {
+                left: rem(-5);
+                right: rem(52);
+
+            }
+
+            &_2 {
+                right: rem(-5);
+
+                width: rem(125);
+                height: rem(570);
+            }
+        }
+    }
 
     &__line {
         position: absolute;
@@ -13,11 +49,19 @@
 
         width: em(588);
         height: em(168);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__content {
         padding: rem-2(160) rem-2($pl);
         padding-right: rem-2($pr);
+
+        @include below($tablet) {
+            padding: rem(20) 0;
+        }
     }
 
     &__labels {
@@ -25,6 +69,10 @@
         padding-left: rem-2(130);
 
         white-space: nowrap;
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__label {
@@ -45,6 +93,11 @@
             margin-right: rem-2(-$pr);
             padding-left: rem-2($pl + 70);
             padding-right: rem-2($pr + 14);
+
+            @include below($tablet) {
+                margin: rem(-25);
+                padding: rem(25);
+            }
         }
     }
 
@@ -52,5 +105,9 @@
         position: absolute;
         right: rem-2(130);
         bottom: rem-2(86);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 }

@@ -9,6 +9,11 @@
 
     background: url('%=static=%assets/screens/screen-advantages/bg-advantages.svg') no-repeat left 0 / 151vh 101vh;
 
+    @include below($tablet) {
+        padding-top: rem(45);
+        padding-bottom: rem(45);
+    }
+
     &__bg-line {
         position: absolute;
         bottom: rem(-50);
@@ -16,6 +21,10 @@
 
         width: rem(288);
         height: rem(177);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__plane {
@@ -28,10 +37,18 @@
         height: rem-2(604);
 
         background: url('%=static=%assets/screens/screen-advantages/plane.png') no-repeat center center / contain;
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__line {
         position: absolute;
+
+        @include below($tablet) {
+            display: none;
+        }
 
         &_1 {
             bottom: rem(291);
@@ -64,21 +81,38 @@
         left: percentage(725/1225);
         right: rem(293);
 
-        height: rem(11);
+        height: rem(13);
         margin-left: rem(12);
 
-        background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem(33) rem(11);
+        background: url('%=static=%assets/screens/screen-advantages/wave.svg') repeat-x 0 center / rem(31) rem(11);
 
         animation: wave 2s both linear infinite;
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__wrapper {
         padding-left: rem-2(200);
         padding-right: rem-2(120);
+
+        @include below($tablet) {
+            padding: 0;
+        }
     }
 
     &__title {
+        padding-bottom: 0;
         margin-bottom: rem-2(120);
+
+        &::before {
+            display: none;
+        }
+
+        @include below($tablet) {
+            margin-bottom: rem(25);
+        }
     }
 
     &__nav-btn {
@@ -93,10 +127,27 @@
         }
 
         &:last-child {
+
             .screen-advantages__text-block:last-child {
                 padding-top: rem-2(110);
 
                 transform: translateX(rem-2(-210));
+            }
+        }
+
+        @include below($tablet) {
+
+            &:not(:last-child) {
+                margin-bottom: rem(35);
+            }
+
+            &:last-child {
+
+                .screen-advantages__text-block:last-child {
+                    padding-top: 0;
+
+                    transform: none;
+                }
             }
         }
     }
@@ -104,9 +155,20 @@
     &__text-block {
         float: left;
         width: rem-2(820);
+        min-height: rem-2(450);
 
         &:last-child {
             float: right;
+        }
+
+        @include below($tablet) {
+            width: 100%;
+            float: none;
+            min-height: 0;
+
+            &:not(:last-child) {
+                margin-bottom: rem(35);
+            }
         }
 
         h2 {
@@ -129,12 +191,23 @@
 
                 background: currentColor;
             }
+
+            @include below($tablet) {
+
+                &::before {
+                    height: 100%;
+
+                    width: 4px;
+
+                    background: $color-2;
+                }
+            }
         }
     }
 }
 
 @keyframes wave {
     100% {
-        background-position: rem-2(-66) center;
+        background-position: rem-2(-62) center;
     }
 }

@@ -4,14 +4,14 @@ include ../decor-title/decor-title
 
 mixin info(data)
     +b.ARTICLE.info()&attributes(attributes)
-        +decor-title(data.title).info__title
+        +decor-title(data.title)(class={'info__title': true, 'js-tween': data.tween})
         +content.info__content!= data.content
 
         +btn.info__btn
             | Подробнее
         
         +e.img-set
-            +e.img-shadow
-            +e.img-wrapper(href=jv0)
+            +e.img-shadow(class={'js-tween': data.tween}) 
+            +e.img-wrapper(class={'js-tween': data.tween} href=jv0) 
                 +e.IMG.img(src=`${data.img.src}.${data.img.format}`
                            alt=data.img.alt)

@@ -9,11 +9,26 @@
 
     width: 100%;
 
+    &__scroll {
+        @include below($tablet) {
+            //display: none;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
     &__scene {
         height: 100vh;
 
         &:not(:last-child) {
             margin-bottom: 25vh;
+        }
+
+        @include below($tablet) {
+
+            &:not(:last-child) {
+                margin-bottom: 0 !important;
+            }
         }
     }
 
@@ -27,6 +42,14 @@
 
         transition: filter .4s;
         will-change: transform, filter;
+
+        @include below($tablet) {
+            position: relative;
+
+            width: 100%;
+
+            transition: none;
+        }
     }
 
     &__row {
@@ -37,6 +60,13 @@
             .screens__item {
                 float: right;
             }
+
+            @include below($tablet) {
+
+                .screens__item {
+                    float: none;
+                }
+            }
         }
     }
 
@@ -44,5 +74,21 @@
         height: 100vh;
         width: 50%;
         float: left;
+
+        @include below($tablet) {
+            float: none;
+            width: 100%;
+            height: auto !important;
+            padding-left: rem(25);
+            padding-right: rem(25);
+
+            &:nth-child(odd) {
+                background: $color-3;
+            }
+
+            &:nth-child(even) {
+                background: #fff;
+            }
+        }
     }
 }
