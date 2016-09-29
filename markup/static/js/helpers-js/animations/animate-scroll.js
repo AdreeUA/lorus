@@ -20,13 +20,16 @@ export const animateScroll = (options) => {
 
     let elemTop = getCoords(options.element).top,
         startPos = window.pageYOffset,
-        distance = (elemTop + options.offsetTop) - startPos;
+        distance = (elemTop + options.offset) - startPos;
+
+    console.log(elemTop, startPos, distance);
 
     animate({
         duration: options.duration,
         timing: options.timing,
         draw: (progress) => {
             window.scrollTo(0, startPos + distance * progress);
+
         },
         onAnimationEnd: options.onAnimationEnd
     });

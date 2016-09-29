@@ -1,7 +1,7 @@
 mixin clip-img(data)
     +b.clip-img()&attributes(attributes)
-        +e.shadow
-        +e.clip
+        +e.shadow(class={ 'js-tween': data.tween })
+        +e.clip(class={ 'js-tween': data.tween })
             +e.wrapper
-                +e.IMG.img(src=data.src alt='')
+                +e.IMG.img(class={ 'js-tween': data.tween } src=data.src alt='')
      

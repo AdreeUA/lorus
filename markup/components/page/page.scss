@@ -1,3 +1,24 @@
 .page {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
     transition: filter .4s;
+
+    @include below($tablet) {
+        transition: none;
+    }
+
+    &__lang {
+        position: absolute;
+        right: rem(40);
+        top: rem(40);
+        z-index: 10;
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
 }

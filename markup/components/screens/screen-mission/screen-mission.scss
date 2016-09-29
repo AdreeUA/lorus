@@ -6,30 +6,23 @@
 
     background: url('%=static=%assets/screens/screen-mission/bg-mission.svg') no-repeat right 100% / 133vh 100vh;
 
-    &::before {
-        position: absolute;
-        top: 21.5vh;
-        right: 73.1vh;
-        z-index: 3;
-
-        width: calc(.78 * (calc(27.1875rem - 40px)));
-        height: calc(27.1875rem - 40px);
-
-        content: '';
-
-        background: url('%=static=%assets/screens/screen-mission/shadow.svg') no-repeat;
-
-        pointer-events: none;
-    }
-
-    &__nav-btn {
-        transform: rotate(90deg);
+    @include below($tablet) {
+        padding-top: rem(25);
+        padding-bottom: rem(25);
     }
 
     &__title {
         margin-top: rem-2(-50);
         margin-left: rem-2(234);
         margin-bottom: rem-2(188);
+
+        @include below($tablet) {
+            position: relative;
+            z-index: 1;
+
+            margin: 0;
+            margin-bottom: rem(45);
+        }
     }
 
     &__subtitle {
@@ -41,6 +34,12 @@
 
         filter: drop-shadow(0 10px 40px rgba(0, 0, 0, .2));
         transform: translate3d(0, 0, 0); // костыль для хрома, чтобы картинка не перекрывала заголовок при анимации
+
+        @include below($tablet) {
+            top: auto;
+
+            margin-top: rem(-20);
+        }
     }
 
     &__line {
@@ -54,7 +53,7 @@
 
             width: em(527);
             height: em(571);
-            margin-right: rem(-128);
+            margin-right: rem(-129);
         }
 
         &_2 {
@@ -64,14 +63,10 @@
 
             overflow: hidden;
             transform: scaleX(-1);
+        }
 
-            // @media screen and ('max-height: 800px') {
-            //     bottom: rem(300);
-            // }
-            //
-            // @media screen and ('max-height: 650px') {
-            //     bottom: rem(298);
-            // }
+        @include below($tablet) {
+            display: none;
         }
     }
 
@@ -86,6 +81,11 @@
         justify-content: flex-end;
         align-items: flex-start;
         padding: 0 rem-2(132);
+
+        @include below($tablet) {
+            padding: 0;
+            flex-wrap: wrap;
+        }
     }
 
     &__text-col {
@@ -105,11 +105,28 @@
             background: currentColor;
         }
 
+        @include below($tablet) {
+            width: 100%;
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+
         &_theme_plate {
             border: 1px solid;
 
             &::before {
                 display: none;
+            }
+
+            @include below($tablet) {
+                border: none;
             }
         }
     }
@@ -122,5 +139,9 @@
         margin-left: rem-2(144);
 
         transform: translate3d(0, 0, 0);
+
+        @include below($tablet) {
+            @include hidden();
+        }
     }
 }

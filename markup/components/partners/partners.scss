@@ -11,12 +11,43 @@
 
     &__list {
         @include list-reset();
+        margin: rem(-20);
 
         font-size: 0;
-        @include align-justify();
+
+        @include below($tablet) {
+            margin: rem(-10);
+
+            text-align: left;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        max-width: 20%;
+        padding: rem(20);
+
+        font-size: 1rem;
+        vertical-align: middle;
+
+        @include below($tablet) {
+            max-width: 50%;
+            padding: rem(10);
+        }
+
+        @include below($mobile) {
+            width: 50%;
+        }
     }
 
     &__logo {
-        font-size: 1rem;
+        display: block;
+
+        transition: transform .4s;
+        will-change: transform;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

@@ -4,6 +4,10 @@
     font-size: rem-2(90);
     font-weight: 300;
 
+    @include below($tablet) {
+        font-size: rem(43);
+    }
+
     &_underline {
         position: relative;
 
