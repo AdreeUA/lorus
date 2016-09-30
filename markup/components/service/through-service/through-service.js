@@ -23,7 +23,7 @@ export class ThroughService extends Component {
         let line1 = new Line(this.block.querySelector('.through-service__line_1')),
             line2 = new Line(this.block.querySelector('.through-service__line_2')),
             line3 = new Line(this.block.querySelector('.through-service__line_3')),
-            duration = document.body.scrollHeight - document.documentElement.clientHeight / 2,
+            duration = document.body.scrollHeight - document.documentElement.clientHeight / 1.5,
             tween = new TimelineMax();
 
         tween
