@@ -1,0 +1,10 @@
+mixin list-inner(data)
+    +b(data.tag == 'ol' ? 'ol' : 'ul').list-inner()&attributes(attributes)
+    
+        each item in data.list
+            if data.tag == 'ol'
+                +e.LI.item
+                    +e.content= item.text 
+
+            else
+                +e.LI.item= item.text 

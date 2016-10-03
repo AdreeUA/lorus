@@ -1,0 +1,19 @@
+include ../../../title/title
+include ../../../inner-page/list-inner/list-inner
+
+mixin block-4(data)
+    +b.block-4.service__block
+
+        +title({'tag': 'h3'})._inner.academy__rules-title Хорошо подготовленная команда — залог успеха!
+
+        +list-inner(listInner.academyRules)._horiz-num._col-3.academy__rules-list
+
+        +par-inner()._brackets.academy__cite
+            +e.content
+                Мы уверены, что самый ценный ресурс любой компании – это люди.
+
+            +e.content
+                И инвестиции в людей – одно из самых выгодных вложений.
+
+            +e.content
+                Только люди решают задачи и продвигают компанию к ее целям.

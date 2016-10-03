@@ -8,6 +8,10 @@
         font-size: rem(43);
     }
 
+    &__bold {
+        font-weight: 600;
+    }
+
     &_underline {
         position: relative;
 
@@ -24,5 +28,17 @@
 
             background: currentColor;
         }
+    }
+
+    &_inner {
+        font-size: rem(34);
+        font-weight: 300;
+    }
+
+    &_top-yellow {
+        display: inline-block;
+        margin-left: rem(-17);
+        padding: rem(17) rem(34) rem(17) rem(17);
+        border-top: rem(6) solid $color-2;
     }
 }

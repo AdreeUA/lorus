@@ -1,0 +1,25 @@
+.photo-inner {
+    &__photo {
+        width: 100%;
+
+        &_left-yellow {
+            border-left: rem(15) solid $color-2;
+        }
+    }
+    
+    &__photo-cont {
+        position: relative;
+
+        &_shadow {
+            &::before {
+                position: absolute;
+                bottom: 0;
+                width: 70%;
+                left: 15%;
+                height: 100%;
+                box-shadow: 0 rem(10) rem(100) rgba(0,0,0,0.4);
+                content: '';
+            }
+        }
+    }
+}

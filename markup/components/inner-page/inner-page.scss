@@ -1,3 +1,16 @@
 .inner-page {
+    &_gray-top {
+        background-image: url('%=static=%assets/inner-page/bg-gray.png');
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
+    &__logo {
+        margin-left: rem(-14);
+    }
 }
+
+@import './par-inner/par-inner';
+@import './photo-inner/photo-inner';
+@import './list-inner/list-inner';

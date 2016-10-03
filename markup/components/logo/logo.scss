@@ -6,6 +6,10 @@
 
     &__img {
         max-width: 100%;
+
+        &_inner {
+            width: rem(227);
+        }
     }
 
     &_gray {

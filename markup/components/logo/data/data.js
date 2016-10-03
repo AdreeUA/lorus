@@ -6,6 +6,15 @@ var data = {logo: {
         screenreader: 'Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.'
     },
 
+    mainGray: {
+        src: '%=static=%img/assets/logo/logo-gray',
+        ext: 'svg',
+        mod: 'inner',
+        alt: 'Логотип компании: LORUS SCM, we think - we move',
+        screenreader: 'Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.',
+        href: 'javascript:void(0)'
+    },
+
     qb: {
         src: '%=static=%img/assets/logo/qb',
         ext: 'png',
