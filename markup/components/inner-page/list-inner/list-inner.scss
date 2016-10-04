@@ -112,4 +112,30 @@
             }
         }
     }
+
+    &_check {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-size: rem(21);
+        font-weight: 300;
+
+        .list-inner__item {
+            @include clearfix();
+
+            & + .list-inner__item {
+                margin-top: rem(52);
+            }
+        }
+
+        .list-inner__content {
+            margin-left: rem(53);
+        }
+    }
+
+    &__check {
+        width: rem(33);
+        height: rem(27);
+        float: left;
+    }
 }

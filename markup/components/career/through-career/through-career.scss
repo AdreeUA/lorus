@@ -46,8 +46,8 @@
 
             .line__icon {
                 float: right;
-                //width: em(31 * 16 - 12);
-                width: rem(466);
+                width: rem(1140);
+                margin-top: rem(190);
             }
         }
 
@@ -60,17 +60,10 @@
         }
 
         &_3 {
-            width: em(210, 15.4);
+            width: rem(80);
             height: auto;
             margin-left: em(-94, 15.4);
             margin-top: em(-13, 15.4);
-        }
-
-        &_4 {
-            position: absolute;
-            width: rem(115);
-            right: rem(-61);
-            margin-top: rem(258);
         }
     }
 

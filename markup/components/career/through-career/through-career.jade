@@ -10,9 +10,11 @@ mixin through-career(data)
         +b.through-career()&attributes(attributes)
             +e.wrapper
                 +e.lines
-                    +line(line.throughAcademy1).through-career__line_1
-                    +line(line.throughAcademy2)._dashed.through-career__line_2
-                    +line(line.throughAcademy3).through-career__line_3
+                    +line(line.throughCareer1).through-career__line_1
+                +e.lines
+                    +line(line.throughAcademy2)._dashed.through-academy__line_2
+                +e.lines
+                    +line(line.throughCareer3).through-career__line_3
                 +e.content
                     +block-1
                     +block-2

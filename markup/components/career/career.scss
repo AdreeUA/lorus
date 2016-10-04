@@ -16,7 +16,7 @@
 
     &__title {
         font-size: rem(43);
-        margin-top: rem(87);
+        margin-top: rem(115);
         margin-bottom: 0;
     }
 
@@ -70,6 +70,10 @@
         height: 100%;
 
         @include object-fit(cover);
+    }
+
+    &__vacancies {
+        width: rem(975);
     }
 
     &__block {

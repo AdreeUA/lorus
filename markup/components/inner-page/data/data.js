@@ -24,7 +24,7 @@ var data = {
         },
 
         academyRules: {
-            tag: 'ol',
+            tag: "ol",
             list: [
                 {
                     text: "Карты компетенций – определение и периодическое обновление набора компетенций (как личностных, так и профессиональных) необходимых для достижения целей компании по подразделениям и должностям"
@@ -39,7 +39,7 @@ var data = {
         },
 
         academyTeam: {
-            type: 'img',
+            type: "img",
             list: [
                 {
                     src: "%=static=%img/assets/academy/team-1.jpg"
@@ -52,6 +52,39 @@ var data = {
                 },
                 {
                     src: "%=static=%img/assets/academy/team-4.jpg"
+                }
+            ]
+        },
+
+        careerOffers_1: {
+            type: "check",
+            list: [
+                {
+                    text: "Трудоустройство по ТК РФ"
+                },
+                {
+                    text: "Официальную заработную плату, оплачиваемые больничные и отпуска"
+                }
+            ]
+        },
+
+        careerOffers_2: {
+            type: "check",
+            list: [
+                {
+                    text: "Интересные проекты"
+                },
+                {
+                    text: "Бесплатное обучение на рабочем месте"
+                }
+            ]
+        },
+
+        careerOffers_3: {
+            type: "check",
+            list: [
+                {
+                    text: "Бонусы и соц. пакет"
                 }
             ]
         }

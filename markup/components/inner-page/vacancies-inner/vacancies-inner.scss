@@ -1,0 +1,24 @@
+.vacancies-inner {
+    &__item {
+        @include clearfix();
+    }
+
+    &__text {
+        margin-right: rem(205);
+    }
+
+    &__link {
+        width: rem(185);
+        float: right;
+    }
+
+    &__title {
+        font-size: rem(21);
+        font-weight: 300;
+    }
+
+    &__descr {
+        font-size: rem(16);
+        font-weight: 400;
+    }
+}

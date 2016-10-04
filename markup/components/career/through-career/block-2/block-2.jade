@@ -1,11 +1,24 @@
 include ../../../title/title
 include ../../../inner-page/list-inner/list-inner
-//include ../../../inner-page/inner-page
 
 mixin block-2(data)
-    +b.block-2.academy__block
+    +b.block-2.career__block
 
-        +title({'tag': 'h3'})._inner._top-yellow Цели Академии
+        +title({'tag': 'h3'})._inner._top-yellow Мы предлагаем соискателям
 
-        +list-inner(listInner.academyTargets)._roll.academy__targets
+        +e.offers-wrap
+
+            +e.offers
+
+                +e.offers-col
+
+                    +list-inner(listInner.careerOffers_1)._check.career__offers
+
+                +e.offers-col 
+
+                    +list-inner(listInner.careerOffers_2)._check.career__offers
+
+                +e.offers-col
+
+                    +list-inner(listInner.careerOffers_3)._check.career__offers
         

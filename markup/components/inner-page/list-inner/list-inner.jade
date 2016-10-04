@@ -16,6 +16,12 @@ mixin list-inner(data)
                         +e.LI.item= item.text
 
                 else
-                    if item.text
-                        +e.LI.item= item.text
-                    
+                    if data.type == 'check'
+                        +e.LI.item
+                            +icon({ icon: 'check', class: 'list-inner__check' })
+                            +e.content= item.text 
+
+                    else
+                        if item.text
+                            +e.LI.item= item.text
+
