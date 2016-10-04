@@ -1,15 +1,21 @@
 .vacancies-inner {
     &__item {
+        padding-top: rem(30);
+        padding-bottom: rem(40);
+        border-bottom: 1px solid #efefef;
+
         @include clearfix();
     }
 
     &__text {
-        margin-right: rem(205);
+        display: inline-block;
+        width: calc(100% - #{rem(205)});
     }
 
     &__link {
-        width: rem(185);
-        float: right;
+        padding-left: rem(27);
+        padding-right: rem(27);
+        margin-top: rem(27);
     }
 
     &__title {
@@ -18,6 +24,8 @@
     }
 
     &__descr {
+        margin-top: rem(21);
+        max-width: rem(530);
         font-size: rem(16);
         font-weight: 400;
     }

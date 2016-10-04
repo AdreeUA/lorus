@@ -52,18 +52,25 @@
         }
 
         &_2 {
-            position: absolute;
+            /* position: absolute;
             width: em(536, 15.4);
             height: em(10, 15.4);
             right: em(478, 15.4);
-            margin-top: em(-12, 15.4);
+            margin-top: em(-12, 15.4); */
+
+            position: absolute;
+            width: rem(410);
+            height: 0.64935em;
+            left: rem(-170);
+            margin-top: rem(211);
+            transform: rotate(90deg);
         }
 
         &_3 {
             width: rem(80);
             height: auto;
-            margin-left: em(-94, 15.4);
-            margin-top: em(-13, 15.4);
+            margin-left: rem(-70);
+            margin-top: rem(420);
         }
     }
 
