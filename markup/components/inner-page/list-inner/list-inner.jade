@@ -7,4 +7,15 @@ mixin list-inner(data)
                     +e.content= item.text 
 
             else
-                +e.LI.item= item.text 
+                if data.type == 'img'
+
+                    +e.item
+                        +e.img(src=item.src)
+
+                    if item.text
+                        +e.LI.item= item.text
+
+                else
+                    if item.text
+                        +e.LI.item= item.text
+                    

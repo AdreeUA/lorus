@@ -1,3 +1,10 @@
+.page-inner {
+    .page__lang {
+        font-size: rem(17);
+        top: rem(25);
+    }
+}
+
 .inner-page {
     &_gray-top {
         background-image: url('%=static=%assets/inner-page/bg-gray.png');
@@ -14,3 +21,7 @@
 @import './par-inner/par-inner';
 @import './photo-inner/photo-inner';
 @import './list-inner/list-inner';
+@import './share-inner/share-inner';
+@import './form-inner/form-inner';
+@import './form-inner/input-inner/input-inner';
+@import './form-inner/btn-inner/btn-inner';

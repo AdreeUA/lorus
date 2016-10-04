@@ -1,15 +1,5 @@
 .block-1 {
-    //min-height: rem(720);
     padding-top: rem(66);
-
-    @include below($tablet) {
-        display: flex;
-        flex-direction: column;
-        padding-top: 0;
-        padding-bottom: rem(25);
-        margin-bottom: 0;
-        min-height: 0;
-    }
 
     &__left {
         //width: rem(380);
@@ -30,46 +20,6 @@
             .content {
                 display: none;
             }
-        }
-    }
-
-    &__photo {
-        width: 100%;
-        height: rem(260);
-        margin-bottom: rem(160);
-
-        @include below($tablet) {
-            width: auto;
-            margin-bottom: rem(25);
-            height: rem(300);
-        }
-
-        @include below($mobile) {
-            height: rem(200);
-        }
-    }
-
-    &__title {
-        font-size: rem(43);
-    }
-
-    &__decor {
-        position: relative;
-
-        padding-left: rem(60);
-        padding-right: rem(30);
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: rem(40);
-
-            height: 100%;
-            width: 1px;
-
-            background-color: #76736B;
-            opacity: .6;
         }
     }
 }

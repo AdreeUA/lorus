@@ -1,1 +1,1 @@
-var data = {through-service: {}}
+var data = {throughAcademy: {}}

@@ -97,4 +97,19 @@
             width: (100/3) + %;
         }
     }
+
+    &_horiz-photo {
+        list-style-type: none;
+        overflow: hidden;        
+        margin: 0;
+        padding: 0;
+        
+        .list-inner__item {
+            float: left;
+
+            & + .list-inner__item {
+                margin-left: rem(27);
+            }
+        }
+    }
 }

@@ -1,0 +1,48 @@
+.form-inner {
+    @include clearfix();
+
+    &__row {
+        @include clearfix();
+
+        & + .form-inner__row {
+            margin-top: rem(34);
+        }
+
+        &_col {            
+            margin-left: rem(-44);
+        }
+
+        &_2 {
+            .form-inner__col {
+                width: 50%;
+            }
+        }
+    }
+
+    &__col {
+        float: left;
+        padding-left: rem(44);
+
+        & + .form-inner__col {
+            margin-left: 0;
+        }
+    }
+
+    &__fields {
+        display: inline-block;
+        vertical-align: bottom;
+        width: rem(668);
+
+        &_left {
+            //float: left;
+        }
+    }
+
+    &__submit {
+        display: inline-block;
+        vertical-align: bottom;
+        &_left {
+            margin-left: rem(43);
+        }
+    }
+}

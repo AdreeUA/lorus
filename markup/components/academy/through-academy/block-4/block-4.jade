@@ -1,19 +1,14 @@
 include ../../../title/title
 include ../../../inner-page/list-inner/list-inner
+include ../../../inner-page/share-inner/share-inner
 
 mixin block-4(data)
-    +b.block-4.service__block
+    +b.block-4.academy__block
 
-        +title({'tag': 'h3'})._inner.academy__rules-title Хорошо подготовленная команда — залог успеха!
+        +title({'tag': 'h3'})._inner.academy__team-title
+            | Хорошо подготовленная команда — залог успеха!
 
-        +list-inner(listInner.academyRules)._horiz-num._col-3.academy__rules-list
+        +list-inner(listInner.academyTeam)._horiz-photo.academy__team-list
 
-        +par-inner()._brackets.academy__cite
-            +e.content
-                Мы уверены, что самый ценный ресурс любой компании – это люди.
-
-            +e.content
-                И инвестиции в людей – одно из самых выгодных вложений.
-
-            +e.content
-                Только люди решают задачи и продвигают компанию к ее целям.
+        +share-inner().academy__share
+            +e.img(src='%=static=%img/assets/inner-page/share-inner/dummy.jpg')

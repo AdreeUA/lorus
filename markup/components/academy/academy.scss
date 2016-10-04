@@ -14,13 +14,6 @@
         -webkit-backface-visibility: hidden;
     }
 
-    @include below($tablet) {
-
-        &::before {
-            display: none;
-        }
-    }
-
     &__title {
         font-size: rem(43);
         margin-top: rem(87);
@@ -121,7 +114,23 @@
     }
 
     &__rules-title {
-        width: rem(800);
+        max-width: rem(800);
+    }
+
+    &__team-title {
+        max-width: rem(585);
+    }
+
+    &__team-list {
+        margin: rem(70) 0 0 rem(-50);
+
+        .list-inner__img {
+            height: rem(158);
+        }
+    }
+
+    &__share {
+        margin: rem(57) 0 0 rem(-9);
     }
 
     &__block {
@@ -130,17 +139,15 @@
 
         @include clearfix();
 
-        @include below($tablet) {
-            padding: 0 rem(25);
-
-            &:nth-child(odd) {
-                background: $color-3;
-            }
-
-            &:nth-child(even) {
-                background: #fff;
-            }
+        &_gray {
+            background-image: url('%=static=%assets/inner-page/bg-gray-bottom.png');
+            background-repeat: no-repeat;
+            background-size: contain;
         }
+    }
+
+    &__form {
+        margin-top: rem(48);
     }
 
     &__left {
@@ -159,10 +166,6 @@
             float: none;
             width: 100% !important;
         }
-    }
-
-    &__text-decor {
-        padding-left: rem(80);
     }
 
 }

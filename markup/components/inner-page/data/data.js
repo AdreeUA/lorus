@@ -36,6 +36,24 @@ var data = {
                     text: "Программы развития – тренинги, курсы (внутренние и внешние), программы подготовки."
                 }
             ]
+        },
+
+        academyTeam: {
+            type: 'img',
+            list: [
+                {
+                    src: "%=static=%img/assets/academy/team-1.jpg"
+                },
+                {
+                    src: "%=static=%img/assets/academy/team-2.jpg"
+                },
+                {
+                    src: "%=static=%img/assets/academy/team-3.jpg"
+                },
+                {
+                    src: "%=static=%img/assets/academy/team-4.jpg"
+                }
+            ]
         }
     } 
 }
