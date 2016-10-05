@@ -10,7 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="telephone=no" name="format-detection">
         <meta name="HandheldFriendly" content="true">
-
+        <!--[if IE 8 ]><link href="static/css/main_ie8.min.css" rel="stylesheet" type="text/css"><![endif]-->
+        <!--[if IE 9 ]><link href="static/css/main_ie9.min.css" rel="stylesheet" type="text/css"><![endif]-->
         <!--[if (gt IE 9)|!(IE)]><!-->
         <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
@@ -25,6 +26,7 @@
         <script>
             (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
         </script>
+        <!--[if lt IE 9 ]><script src="static/js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script><meta content="no" http-equiv="imagetoolbar"><![endif]-->
     </head>
 
     <body>
@@ -41,7 +43,7 @@
                     <label class="search-mini menu__search">
                         <form>
                             <input type="search" name="search" placeholder="Поиск" class="search-mini__field" />
-                            <svg class="icon icon_search search-mini__icon" width="24.66px" height="24.66px">
+                            <svg class="icon icon_search search-mini__icon" width="100%" height="100%">
                                 <use xlink:href="svg-symbols.svg#search"></use>
                             </svg>
 
@@ -85,7 +87,7 @@
             </div>
             <div class="header__right">
                 <a href="javascript:void(0)" class="icon-btn header__nav-btn">
-                    <svg class="icon icon_arrow icon-btn__icon" width="9.87px" height="15.5px">
+                    <svg class="icon icon_arrow icon-btn__icon" width="100%" height="100%">
                         <use xlink:href="svg-symbols.svg#arrow"></use>
                     </svg>
                 </a>
@@ -153,7 +155,7 @@
                                     </div>
                                     <div class="block-2__icons">
                                         <div class="block-2__calendar">
-                                            <svg class="block-2__icon" width="92.24px" height="47.98px">
+                                            <svg class="block-2__icon" width="100%" height="100%">
                                                 <use xlink:href="svg-symbols.svg#calendar"></use>
                                             </svg>
 
@@ -161,7 +163,7 @@
                                             </div>
                                         </div>
                                         <div class="block-2__money">
-                                            <svg class="block-2__icon" width="97.19px" height="41.13px">
+                                            <svg class="block-2__icon" width="100%" height="100%">
                                                 <use xlink:href="svg-symbols.svg#money"></use>
                                             </svg>
 

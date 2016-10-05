@@ -172,12 +172,19 @@
     }
 
     &__partners {
+        width: rem(920);
 
         @include below($tablet) {
+            width: auto;
             margin: 0 rem(-25);
             padding: rem(40) rem(25);
+            padding-right: rem(125);
 
             background: #fff;
+        }
+
+        @include below(670px) {
+            padding-right: rem(25);
         }
     }
 
