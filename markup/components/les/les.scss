@@ -16,10 +16,26 @@
 
     &__title {
         font-size: rem(43);
-        margin-top: rem(115);
+        margin-top: rem(87);
         margin-bottom: 0;
-    }
 
+        &_row {
+            display: block;
+        }
+
+        &::after {
+            display: inline-block;
+            vertical-align: middle;
+            width: rem(98);
+            height: rem(102);
+            margin-top: rem(-15);
+            background-image: url('%=static=%assets/title/les.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left top;
+            content: '';
+        }
+    }
     &__descr {
         width: rem(528);
         margin-top: rem(45);
@@ -105,4 +121,4 @@
 
 }
 
-@import './through-career/through-career';
+@import './through-les/through-les';

@@ -3,23 +3,25 @@ include ../../../inner-page/par-inner/par-inner
 include ../../../title/title
 
 mixin block-1(data)
-    +b.block-1.career__block
-        +e.left.career__left
+    +b.block-1.les__block
+        +e.left.les__left
             +logo(logo.mainGray).inner-page__logo
 
-            +title().career__title Карьера
+            +title().les__title LES — Путь 
 
-            +par-inner()._border-left.career__descr
+                +e.__row долговременного роста
+
+            +par-inner()._border-left.les__descr
                 | Команда LORUS SCM стремится к совершенству и постоянно развивается. Став частью нашей команды вы получите возможность реализовать свои профессиональные навыки в рамках амбициозных проектов, вместе развивать новые  направления и достигать поставленные цели. Компания заинтересована в привлечении экспертов и специалистов  различного уровня. Мы всегда рады рассматривать целеустремленных и инициативных кандидатов на текущие и будущие вакансии компании. 
 
 
 
-        +e.right.career__right
-            +photo-inner().career__photo-top.photo-inner__photo-cont_shadow
+        +e.right.les__right
+            +photo-inner().les__photo-top.photo-inner__photo-cont_shadow
 
-                +e.photo.career__photo-wrapper.js-tween
+                +e.photo.les__photo-wrapper.js-tween
 
                     +e.IMG.__photo_left-yellow(
-                        src='%=static=%img/assets/inner-page/photo-inner/career-1.jpg'
+                        src='%=static=%img/assets/inner-page/photo-inner/les-1.jpg'
                         alt='')
 
