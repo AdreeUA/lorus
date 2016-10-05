@@ -1,0 +1,27 @@
+mixin list-inner(data)
+    +b(data.tag == 'ol' ? 'ol' : 'ul').list-inner()&attributes(attributes)
+    
+        each item in data.list
+            if data.tag == 'ol'
+                +e.LI.item
+                    +e.content= item.text 
+
+            else
+                if data.type == 'img'
+
+                    +e.item
+                        +e.img(src=item.src)
+
+                    if item.text
+                        +e.LI.item= item.text
+
+                else
+                    if data.type == 'check'
+                        +e.LI.item
+                            +icon({ icon: 'check', class: 'list-inner__check' })
+                            +e.content= item.text 
+
+                    else
+                        if item.text
+                            +e.LI.item= item.text
+

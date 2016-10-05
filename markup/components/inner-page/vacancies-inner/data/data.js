@@ -1,0 +1,1 @@
+var data = {vacancies-inner: {}}

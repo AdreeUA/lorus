@@ -1,0 +1,25 @@
+include ../../../title/title
+include ../../../btn/btn
+include ../../../inner-page/list-inner/list-inner
+include ../../../inner-page/par-inner/par-inner
+
+mixin block-3(data)
+    +b.block-3.service__block
+
+        +title({'tag': 'h3'})._inner.career__vacancy-title Вакансии
+
+        - var n = 0;
+
+        +b.vacancies-inner.career__vacancies
+
+            while n < 7
+                -n++
+
+                +e.item
+
+                    +e.text
+                        +e.title Стажер в отдел кадров
+
+                        +e.descr Мы приглашаем начинающих специалистов преобрести новые навыки и узнать больше об hr-менеджменте
+
+                    +btn().vacancies-inner__link Подробнее на hh.ru

@@ -115,8 +115,6 @@
         right: 0;
         z-index: 100;
 
-        font-size: 16/806 * 100 + vh;
-
         visibility: hidden;
 
         transition: visibility 0s .4s;
@@ -128,6 +126,10 @@
             visibility: visible;
 
             transition: none;
+        }
+
+        @include above($tablet) {
+            font-size: 16/806 * 100 + vh;
         }
 
         .header__logo {

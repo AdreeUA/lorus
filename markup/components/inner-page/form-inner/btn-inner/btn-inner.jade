@@ -1,0 +1,6 @@
+mixin btn-inner(data)
+
+    -data = data || {}
+
+    +b.btn-inner(type=(data.type || 'button'))&attributes(attributes)=data.text
+        

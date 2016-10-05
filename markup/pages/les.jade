@@ -1,0 +1,10 @@
+extends ../layouts/inner
+
+include ../components/les/through-les/through-les
+
+block vars
+    -pageSettings.title = 'LES';
+    -pageSettings.pageClass = 'page-les page-inner' ;
+
+block content
+    +through-les

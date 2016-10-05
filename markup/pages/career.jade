@@ -1,0 +1,10 @@
+extends ../layouts/inner
+
+include ../components/career/through-career/through-career
+
+block vars
+    -pageSettings.title = 'Карьера';
+    -pageSettings.pageClass = 'page-career page-inner' ;
+
+block content
+    +through-career

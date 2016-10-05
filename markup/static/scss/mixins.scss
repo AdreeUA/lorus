@@ -158,3 +158,20 @@
         font-family: 'object-fit: #{$fit}';
     }
 }
+
+// спрайт в rem
+
+@mixin bgrem($sprite, $repeat: no-repeat) {
+    @include sprite-image($sprite);
+    //@include sprite-position-rem($sprite);
+    $sprite-total-width: rem(nth($sprite, 7)/ 1px);
+    $sprite-total-height: rem(nth($sprite, 8)/ 1px);
+    width: rem(nth($sprite, 5)/ 1px);
+    height: rem(nth($sprite, 6)/ 1px);
+    background-size: $sprite-total-width, $sprite-total-height;
+    background-repeat: $repeat;
+    background-position: rem(nth($sprite, 3)/ 1px) rem(nth($sprite, 4)/ 1px);
+    //background-position: rem(nth($sprite, 3)/ 1px) rem(nth($sprite, 4)/ 1px);
+    padding: rem(2);
+    //background-size: em(nth($sprite, 7)/ 1px) em(nth($sprite, 8)/ 1px);
+}
