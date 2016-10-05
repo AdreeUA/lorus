@@ -128,7 +128,7 @@
             transition: none;
         }
 
-        @include below($tablet) {
+        @include above($tablet) {
             font-size: 16/806 * 100 + vh;
         }
 
