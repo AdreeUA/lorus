@@ -27,7 +27,8 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: -1 ;
+                transition: opacity .8s;
+                //z-index: -1 ;
 
                 opacity: 1;
             }
@@ -37,6 +38,10 @@
 
             .logo__img {
                 opacity: 1;
+
+                &_gray {
+                    opacity: 0;
+                }
             }
         }
     }
