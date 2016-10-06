@@ -1061,6 +1061,10 @@ html {
   font-weight: 600;
 }
 
+.title__row {
+  display: block;
+}
+
 .title_underline {
   position: relative;
   padding-bottom: 2.08955rem;
@@ -4508,6 +4512,10 @@ html {
   font-size: 1.29241vw;
 }
 
+.page-les {
+  font-size: 1.29241vw;
+}
+
 .page-inner .page__lang {
   font-size: 1.0625rem;
   top: 1.5625rem;
@@ -4572,6 +4580,10 @@ html {
 
 .par-inner_brackets .par-inner__content {
   display: block;
+}
+
+.par-inner_brackets-s::before, .par-inner_brackets-s::after {
+  width: 0.6875rem;
 }
 
 .photo-inner__photo {
@@ -4700,9 +4712,17 @@ html {
 
 .list-inner_horiz-photo {
   list-style-type: none;
-  overflow: hidden;
   margin: 0;
   padding: 0;
+}
+
+.list-inner_horiz-photo:after {
+  display: table;
+  content: "";
+}
+
+.list-inner_horiz-photo:after {
+  clear: both;
 }
 
 .list-inner_horiz-photo .list-inner__item {
@@ -4711,6 +4731,25 @@ html {
 
 .list-inner_horiz-photo .list-inner__item + .list-inner__item {
   margin-left: 1.6875rem;
+}
+
+.list-inner_margin-l .list-inner__item + .list-inner__item {
+  margin-left: 3.9375rem;
+}
+
+.list-inner_shadow .list-inner__item {
+  position: relative;
+}
+
+.list-inner_shadow .list-inner__item::after {
+  position: absolute;
+  bottom: 0.625rem;
+  z-index: -1;
+  width: 70%;
+  left: 15%;
+  height: 90%;
+  box-shadow: 0 0.625rem 6.25rem rgba(0, 0, 0, 0.4);
+  content: '';
 }
 
 .list-inner_check {
@@ -4887,6 +4926,105 @@ html {
   font-weight: 400;
 }
 
+.house-inner {
+  position: relative;
+}
+
+.house-inner__bg {
+  position: absolute;
+  z-index: -1;
+  width: 45.125rem;
+  height: 26.9375rem;
+}
+
+.house-inner__main {
+  width: 45.125rem;
+  text-align: center;
+}
+
+.house-inner__row {
+  margin: auto;
+  font-size: 0;
+}
+
+.house-inner__row::after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+
+.house-inner__row_2 .house-inner__item {
+  width: 50%;
+}
+
+.house-inner__row_3 .house-inner__item {
+  width: 33.33333%;
+}
+
+.house-inner__row_noborder .house-inner__item + .house-inner__item {
+  border-left: 0;
+}
+
+.house-inner__item {
+  display: inline-block;
+  vertical-align: middle;
+  height: 75%;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25;
+  white-space: nowrap;
+  padding: 0.25rem 0.9375rem 0;
+}
+
+.house-inner__item::after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+
+.house-inner__item + .house-inner__item {
+  border-left: 1px solid #E2E63E;
+}
+
+.house-inner__item_big {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.house-inner__text {
+  display: inline-block;
+  white-space: normal;
+}
+
+.house-inner__levels {
+  position: absolute;
+  right: 0;
+  top: 0.1875rem;
+  width: 0.625rem;
+  text-align: right;
+}
+
+.house-inner__level {
+  float: right;
+  border-top: 1px solid #d8d8d8;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.house-inner__level::after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+
+.house-inner__title {
+  display: inline-block;
+  white-space: normal;
+}
+
 .academy {
   position: relative;
 }
@@ -5035,7 +5173,7 @@ html {
 .academy__block_gray {
   background-image: url("../img/assets/inner-page/bg-gray-bottom.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .academy__form {
@@ -5165,6 +5303,13 @@ html {
 .through-academy__line_1 .line__icon {
   float: right;
   width: 29.125rem;
+}
+
+.through-academy__line_1 .line__icon_active {
+  position: absolute;
+  float: none;
+  right: 0;
+  left: auto;
 }
 
 .through-academy__line_2 {
@@ -5478,15 +5623,15 @@ html {
   margin-bottom: 0;
 }
 
-.les__title_row {
-  display: block;
+.les__row-logo {
+  position: relative;
 }
 
-.les__title::after {
+.les__row-logo::after {
   display: inline-block;
-  vertical-align: middle;
-  width: 6.125rem;
-  height: 6.375rem;
+  vertical-align: bottom;
+  width: 7.125rem;
+  height: 5rem;
   margin-top: -0.9375rem;
   background-image: url("../img/assets/title/les.png");
   background-repeat: no-repeat;
@@ -5495,9 +5640,67 @@ html {
   content: '';
 }
 
+.les__house {
+  width: 58.9375rem;
+}
+
+.les__roof_1 {
+  height: 5.5rem;
+  padding-top: 1.4375rem;
+}
+
+.les__roof_2 {
+  width: 23.75rem;
+  height: 3rem;
+}
+
+.les__roof_3 {
+  width: 33.125rem;
+  height: 2.875rem;
+}
+
+.les__stage_1 {
+  width: 36.875rem;
+  height: 8.5rem;
+}
+
+.les__stage_2 {
+  height: 4rem;
+  width: 34.4375rem;
+}
+
+.les__floor_1 {
+  width: 44.75rem;
+  height: 3.0625rem;
+}
+
+.les__level_1 {
+  width: 34.75rem;
+  height: 11.1875rem;
+}
+
+.les__level_2 {
+  width: 14.375rem;
+  height: 8.5rem;
+}
+
+.les__level_3 {
+  width: 16.625rem;
+  height: 4.0625rem;
+}
+
+.les__level_4 {
+  width: 13.0625rem;
+  height: 3rem;
+}
+
 .les__descr {
   width: 33rem;
   margin-top: 2.8125rem;
+}
+
+.les__photos-before {
+  width: 56.875rem;
 }
 
 .les__container {
@@ -5508,6 +5711,24 @@ html {
 
 .les__photo-top {
   max-height: 21.875rem;
+}
+
+.les__photos-list {
+  margin-left: -4.625rem;
+  margin-top: 5.8125rem;
+}
+
+.les__photos-descr {
+  position: absolute;
+  width: 18.75rem;
+  margin-top: 2.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.les__photos-after {
+  width: 53.75rem;
+  margin-top: 5.25rem;
 }
 
 .les__photo-wrapper {
@@ -5536,12 +5757,44 @@ html {
   }
 }
 
+.les__photos_1 {
+  height: 16.25rem;
+}
+
+.les__photos_2 {
+  height: 11.3125rem;
+}
+
+.les__photos_3 {
+  height: 9.3125rem;
+}
+
+.les__cite {
+  width: 58.875rem;
+  padding-right: 0;
+  margin-left: -2.625rem;
+  font-size: 2.125rem;
+  font-weight: 300;
+}
+
+.les__after-cite {
+  margin-top: 3.6875rem;
+}
+
+.les__share {
+  margin-top: 2.375rem;
+}
+
 .les__photo {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   font-family: "object-fit: cover";
+}
+
+.les__form {
+  margin-top: 3.0625rem;
 }
 
 .les__block {
@@ -5561,7 +5814,7 @@ html {
 .les__block_gray {
   background-image: url("../img/assets/inner-page/bg-gray-bottom.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .les__left {
@@ -5588,6 +5841,11 @@ html {
 
 .through-les {
   padding: 0 1.6875rem;
+  background: -webkit-linear-gradient(top, #f6f7c6 0%, rgba(246, 247, 198, 0) 100%);
+  background: linear-gradient(to bottom, #f6f7c6 0%, rgba(246, 247, 198, 0) 100%);
+  background-size: 100% 18.75rem;
+  background-repeat: no-repeat;
+  background-position: 0 58.75rem;
 }
 
 .through-les_en {
@@ -5634,35 +5892,23 @@ html {
 }
 
 .through-les .block-2 {
-  margin-top: 4.25rem;
-  margin-left: 6.25rem;
-}
-
-.through-les .block-2__offers-wrap {
-  margin-top: 2.75rem;
-  margin-left: -4rem;
-}
-
-.through-les .block-2__offers {
-  display: table-row;
-  vertical-align: middle;
-  font-size: 0;
-}
-
-.through-les .block-2__offers-col {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 2.5rem;
-  width: 33.33333%;
-}
-
-.through-les .block-2__offers-col:last-child {
-  vertical-align: middle;
+  margin-top: 3.0625rem;
+  margin-left: 2.0625rem;
+  border-bottom: 1px solid #ebee76;
 }
 
 .through-les .block-3 {
-  margin-top: 10.9375rem;
-  margin-left: 6.375rem;
+  margin: 0 -1.6875rem;
+  padding: 7.9375rem 8.5rem 0;
+}
+
+.through-les .block-4 {
+  margin: 3.75rem 1.25rem 0 6.8125rem;
+}
+
+.through-les .block-5 {
+  margin: 1.4375rem -1.6875rem auto;
+  padding: 4.0625rem 8.0625rem 3.8125rem;
 }
 
 .through-les__wrapper {
@@ -5698,8 +5944,14 @@ html {
 
 .through-les__line_1 .line__icon {
   float: right;
-  width: 71.25rem;
-  margin-top: 11.875rem;
+  width: 48.625rem;
+}
+
+.through-les__line_1 .line__icon_active {
+  position: absolute;
+  float: none;
+  right: 0;
+  left: auto;
 }
 
 .through-les__line_2 {
@@ -5709,20 +5961,17 @@ html {
             right: em(478, 15.4);
             margin-top: em(-12, 15.4); */
   position: absolute;
-  width: 25.625rem;
-  height: 0.64935em;
-  left: -10.625rem;
-  margin-top: 13.1875rem;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  width: 10.75rem;
+  height: 6.125rem;
+  margin-top: -14.5625rem;
+  margin-left: -5.125rem;
 }
 
 .through-les__line_3 {
-  width: 5rem;
-  height: auto;
-  margin-left: -4.375rem;
-  margin-top: 26.25rem;
+  position: absolute;
+  width: 7.1875rem;
+  right: -3.8125rem;
+  margin-top: 20rem;
 }
 
 .through-les__content {
