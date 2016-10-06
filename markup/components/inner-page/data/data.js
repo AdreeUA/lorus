@@ -87,6 +87,26 @@ var data = {
                     text: "Бонусы и соц. пакет"
                 }
             ]
-        }
+        },
+
+        lesPhotos: {
+            type: "img",
+            list: [
+                {
+                    src: "%=static=%img/assets/les/les-1.jpg",
+                    class: "les__photos_1"
+                },
+                {
+                    src: "%=static=%img/assets/les/les-2.jpg",
+                    text: "Маленькое описание того, что на фотографиях давайте сделаем?",
+                    textClass: "par-inner_border-left les__photos-descr",
+                    class: "les__photos_2"
+                },
+                {
+                    src: "%=static=%img/assets/les/les-3.jpg",
+                    class: "les__photos_3"
+                }
+            ]
+        },
     } 
 }

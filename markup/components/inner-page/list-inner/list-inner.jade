@@ -10,10 +10,11 @@ mixin list-inner(data)
                 if data.type == 'img'
 
                     +e.item
-                        +e.img(src=item.src)
+                        +e(src=item.src class=(item.class ? '__img ' + item.class : '__img'))
 
-                    if item.text
-                        +e.LI.item= item.text
+                        if item.text
+
+                            +e(class=(item.textClass ? '__content ' + item.textClass : '__content'))= item.text
 
                 else
                     if data.type == 'check'

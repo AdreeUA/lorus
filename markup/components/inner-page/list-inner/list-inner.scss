@@ -100,15 +100,41 @@
 
     &_horiz-photo {
         list-style-type: none;
-        overflow: hidden;        
         margin: 0;
         padding: 0;
+
+        @include clearfix();
         
         .list-inner__item {
             float: left;
 
             & + .list-inner__item {
                 margin-left: rem(27);
+            }
+        }
+    }
+
+    &_margin-l {        
+        .list-inner__item {
+            & + .list-inner__item {
+                margin-left: rem(63);
+            }
+        }
+    }
+
+    &_shadow {        
+        .list-inner__item {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                bottom: rem(10);
+                z-index: -1;
+                width: 70%;
+                left: 15%;
+                height: 90%;
+                box-shadow: 0 rem(10) rem(100) rgba(0,0,0,0.4);
+                content: '';
             }
         }
     }
