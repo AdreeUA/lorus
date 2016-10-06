@@ -1,8 +1,8 @@
 import { Component } from 'helpers-js';
 
-export class InnerPage extends Component {
+export class  extends Component {
     constructor(block) {
-        super(block, 'inner-page');
+        super(block, 'block-4');
         if (this._ready) return this;
         this._ready = true;
     }

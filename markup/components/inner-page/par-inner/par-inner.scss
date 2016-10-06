@@ -47,4 +47,11 @@
             display: block;
         }
     }
+
+    &_brackets-s {
+        &::before,
+        &::after {
+            width: rem(11);
+        }
+    }
 }

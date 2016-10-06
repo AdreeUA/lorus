@@ -50,6 +50,13 @@
                 float: right;
                 //width: em(31 * 16 - 12);
                 width: rem(466);
+
+                &_active {
+                    position: absolute;
+                    float: none;
+                    right: 0;
+                    left: auto;
+                }
             }
         }
 
