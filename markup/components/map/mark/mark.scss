@@ -1,15 +1,15 @@
 .mark {
     position: absolute;
-    top: 50px;
-    left: 50px;
-
-    max-width: rem(370);
+    top: 0;
+    left: 0;
 
     background-color: #fff;
+    box-shadow: 0 rem(130) rem(100) rem(-90) rgba(#000, .5);
 
     &__inner {
         position: relative;
 
+        width: rem(440);
         padding: rem(50) rem(70) rem(50) rem(50);
 
         &:before {
@@ -60,6 +60,7 @@
         margin-bottom: rem(15);
 
         line-height: 1.2;
+        white-space: normal;
     }
 
     &__phone {

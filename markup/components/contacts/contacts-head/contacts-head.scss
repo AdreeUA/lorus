@@ -5,19 +5,46 @@
     padding-left: rem(100);
     margin-bottom: rem(85);
 
+    @include below($tablet) {
+        padding: 0 0 rem(40);
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+
+        background-color: #fafaf9;
+    }
+
     &__logo {
         margin-right: rem(44);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__title {
         display: inline-block;
         vertical-align: middle;
+
+        @include below($tablet) {
+            padding: 0 rem(33);
+        }
     }
 
     &__right {
         position: absolute;
         top: rem(115);
         right: rem(-35);
+        z-index: 2;
+
+        box-shadow: 0 rem(130) rem(100) rem(-90) rgba(#000, .5);
+
+        @include below($tablet) {
+            position: static;
+            margin-bottom: rem(50);
+
+            box-shadow: 0 rem(90) rem(70) rem(-90) rgba(#000, .5);
+        }
     }
 
     &__photo-wrapper {
@@ -28,7 +55,6 @@
 
         border-radius: rem(10);
         overflow: hidden;
-        box-shadow: 0 rem(130) rem(100) rem(-90) rgba(#000, .5);
 
         &::after {
             content: '';
@@ -42,6 +68,17 @@
             margin-right: -40%;
 
             background: url('%=static=%assets/academy/academy-photo-shadow.svg') no-repeat right top / auto 100%;
+        }
+
+        @include below($tablet) {
+            width: 100%;
+            padding-top: 45%;
+
+            border-radius: 0;
+
+            &:after {
+                display: none;
+            }
         }
     }
 

@@ -4,6 +4,10 @@
     padding: rem(73) rem(80) rem(73) rem(50);
     border-bottom: 1px solid #f8f8f8;
 
+    @include below($tablet) {
+        padding: rem(100) 0 0;
+    }
+
     &__line {
         position: absolute;
         z-index: 2;
@@ -15,11 +19,19 @@
         path {
             transform: translate(-10199.97px, -4898.91px);
         }
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__logo {
         margin-bottom: rem(118);
         margin-left: rem(60);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__text {
@@ -29,10 +41,21 @@
 
         font-size: rem(43);
         font-weight: 500;
+
+        @include below($tablet) {
+            padding: rem(50) rem(30) rem(45);
+            margin: 0 0 rem(60);
+
+            background-color: #fafaf9;
+        }
     }
 
     &__contact {
         padding-top: rem(15);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__contact-item {

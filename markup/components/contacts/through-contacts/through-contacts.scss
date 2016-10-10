@@ -7,12 +7,26 @@
     background: url('%=static=%assets/contacts/contacts-bg.svg') -10% 0 / cover;;
     //background-size: 100% 100%;
 
+    @include below($tablet) {
+        padding: rem(100) 0 0;
+
+        background: none;
+    }
+
     &__map {
         margin-bottom: rem(115);
+
+        @include below($tablet) {
+            margin-bottom: 0;
+        }
     }
 
     &__form {
         padding-bottom: rem(60);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__line {
@@ -22,6 +36,10 @@
 
         path {
             transform: translate(-14434.64px, -4898.91px);
+        }
+
+        @include below($tablet) {
+            display: none;
         }
     }
 }
