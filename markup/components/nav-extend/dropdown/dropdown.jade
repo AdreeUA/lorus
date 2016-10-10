@@ -1,0 +1,9 @@
+include ../../link/link
+
+mixin dropdown(data)
+    +b.dropdown()&attributes(attributes)
+        +e.UL.list
+            each item in data
+                +e.item
+                    +link({href: item.href})._theme-black.dropdown__link
+                        | #{item.text}

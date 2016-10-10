@@ -1,0 +1,19 @@
+include ./dropdown/dropdown
+
+mixin nav-extend(data)
+    +b.nav-extend()&attributes(attributes)
+
+        each item in data
+            +e.col
+                +e.H3.title= item.title
+
+                if item.items
+
+                    +e.UL.menu
+                        each navItem in item.items
+                            +e.item
+                                +link({href: navItem.href})._theme-black.nav-extend__link
+                                    | #{navItem.text}
+                                if navItem.dropdown
+                                    +e.trigger
+                                    +dropdown(navItem.dropdown)
