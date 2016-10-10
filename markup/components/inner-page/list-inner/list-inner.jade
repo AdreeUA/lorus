@@ -4,7 +4,44 @@ mixin list-inner(data)
         each item in data.list
             if data.tag == 'ol'
                 +e.LI.item
-                    +e.content= item.text 
+
+                    if item.linkArr
+
+                        -var linkText = ''
+
+                        each part in item.linkArr
+
+                            if part.selected
+                                -linkText += '<span class="found">' + part.text + '</span>'
+                            else
+                                -linkText += part.text
+
+                        +e.title.link(href=jv0)
+                            +e.link-text !{linkText}
+    
+                    else if item.link
+
+                        +e.title.link(href=jv0)
+                            +e.link-text= item.link
+
+
+
+                    if item.textArr
+
+                        -var contentText = ''
+
+                        each part in item.textArr
+
+                            if part.selected
+                                -contentText += '<span class="found found_text-s">' + part.text + '</span>'
+                            else
+                                -contentText += part.text
+
+                        +e.content !{contentText}
+
+                    else if item.text
+
+                        +e.content= item.text 
 
             else
                 if data.type == 'img'
@@ -25,4 +62,4 @@ mixin list-inner(data)
                     else
                         if item.text
                             +e.LI.item= item.text
-
+ 

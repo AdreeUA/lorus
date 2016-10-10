@@ -1,0 +1,10 @@
+extends ../layouts/inner
+
+include ../components/search/through-search/through-search
+
+block vars
+    -pageSettings.title = 'Результаты поиска';
+    -pageSettings.pageClass = 'page-search page-inner' ;
+
+block content
+    +through-search
