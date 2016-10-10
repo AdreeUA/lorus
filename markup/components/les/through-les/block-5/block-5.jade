@@ -1,6 +1,6 @@
 include ../../../title/title
-include ../../../inner-page/form-inner/input-inner/input-inner
-include ../../../inner-page/form-inner/btn-inner/btn-inner
+include ../../../input/input
+include ../../../btn-inner/btn-inner
 
 mixin block-5(data)
     +b.block-5.les__block_gray
@@ -8,17 +8,17 @@ mixin block-5(data)
         +title({'tag': 'h3'})._inner.les__form-title
             | Остались вопросы?
 
-        +b.FORM.form-inner.les__form
+        +b.FORM.form.les__form
             +e.fields_left
                 +e.row_col.__row_2
                     +e.col
-                        +input-inner({'label': 'Как к вам обращаться?'})
+                        +input({'label': 'Как к вам обращаться?'})
 
                     +e.col
-                        +input-inner({'label': 'Телефон для связи'})
+                        +input({'label': 'Телефон для связи'})
 
                 +e.row
-                    +input-inner({'label': 'Комментарий', 'type': 'textarea'})
+                    +input({'label': 'Комментарий', 'type': 'textarea'})
 
             +e.submit_left
                 +btn-inner({'text': 'Отправить', 'type': 'submit'})

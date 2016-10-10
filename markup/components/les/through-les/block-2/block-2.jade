@@ -1,11 +1,11 @@
-include ../../../inner-page/list-inner/list-inner
+include ../../../list/list
 include ../../../icon/icon
 
 mixin block-2(data)
     +b.block-2.les__block
 
-        +b.house-inner.les__house
-            +icon({'icon': 'house-les', 'class': 'house-inner__bg'})
+        +b.house.les__house
+            +icon({'icon': 'house-les', 'class': 'house__bg'})
 
             +e.main
                 +e.roof
@@ -26,7 +26,7 @@ mixin block-2(data)
                             +e.text Лучшая мотивация
 
                 +e.stages
-                    +e.row_3.house-inner__row_noborder.les__stage_1
+                    +e.row_3.house__row_noborder.les__stage_1
                         +e.item
                             +e.text JIT
                         +e.item
@@ -62,4 +62,3 @@ mixin block-2(data)
 
                 +e.level.les__level_4
                     +e.title Основные принципы
-                    

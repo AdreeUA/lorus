@@ -1,5 +1,5 @@
 include ../../../title/title
-include ../../../inner-page/list-inner/list-inner
+include ../../../list/list
 
 mixin block-2(data)
     +b.block-2.career__block
@@ -12,13 +12,13 @@ mixin block-2(data)
 
                 +e.offers-col
 
-                    +list-inner(listInner.careerOffers_1)._check.career__offers
-
-                +e.offers-col 
-
-                    +list-inner(listInner.careerOffers_2)._check.career__offers
+                    +list(list.careerOffers_1)._check.career__offers
 
                 +e.offers-col
 
-                    +list-inner(listInner.careerOffers_3)._check.career__offers
-        
+                    +list(list.careerOffers_2)._check.career__offers
+
+                +e.offers-col
+
+                    +list(list.careerOffers_3)._check.career__offers
+

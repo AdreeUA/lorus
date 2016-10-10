@@ -1,7 +1,7 @@
 include ../../../title/title
 include ../../../btn/btn
-include ../../../inner-page/list-inner/list-inner
-include ../../../inner-page/par-inner/par-inner
+include ../../../list/list
+include ../../../par/par
 
 mixin block-3(data)
     +b.block-3.service__block
@@ -10,7 +10,7 @@ mixin block-3(data)
 
         - var n = 0;
 
-        +b.vacancies-inner.career__vacancies
+        +b.vacancies.career__vacancies
 
             while n < 7
                 -n++
@@ -22,4 +22,4 @@ mixin block-3(data)
 
                         +e.descr Мы приглашаем начинающих специалистов преобрести новые навыки и узнать больше об hr-менеджменте
 
-                    +btn().vacancies-inner__link Подробнее на hh.ru
+                    +btn().vacancies__link Подробнее на hh.ru

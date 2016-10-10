@@ -1,6 +1,6 @@
 include ../../../title/title
-include ../../../inner-page/list-inner/list-inner
-include ../../../inner-page/share-inner/share-inner
+include ../../../list/list
+include ../../../share/share
 
 mixin block-4(data)
     +b.block-4.academy__block
@@ -8,7 +8,7 @@ mixin block-4(data)
         +title({'tag': 'h3'})._inner.academy__team-title
             | Хорошо подготовленная команда — залог успеха!
 
-        +list-inner(listInner.academyTeam)._horiz-photo.academy__team-list
+        +list(list.academyTeam)._horiz-photo.academy__team-list
 
-        +share-inner().academy__share
-            +e.img(src='%=static=%img/assets/inner-page/share-inner/dummy.jpg')
+        +share().academy__share
+            +e.img(src='%=static=%img/assets/share/dummy.jpg')

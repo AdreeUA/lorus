@@ -1,0 +1,50 @@
+.input {
+    position: relative;
+    display: block;
+
+    &__label {
+        display: block;
+        margin-bottom: rem(16);
+        font-size: rem(21);
+        font-weight: 300;
+    }
+
+    &__field {
+        width: 100%;
+        height: rem(45);
+        padding: rem(10);
+        border: none;
+        font-size: rem(16);
+        line-height: normal;
+        border-radius: rem(5);
+        box-shadow: 0 rem(3) rem(8) rgba(0, 0, 0, 0.17);
+
+        &_textarea {
+            height: rem(110);
+            resize: none;
+        }
+    }
+
+    &__submit {
+        border: none;
+        background: transparent;
+
+        &_search {
+            position: absolute;
+            right: rem(5);
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__icon {
+        stroke: #b8b8b8;
+        width: rem(20);
+    }
+
+    &_icon {
+        .input__field {
+            padding-right: rem(43);
+        }
+    }
+}

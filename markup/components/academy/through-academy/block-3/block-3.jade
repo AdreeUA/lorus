@@ -1,15 +1,15 @@
 include ../../../title/title
-include ../../../inner-page/list-inner/list-inner
-include ../../../inner-page/par-inner/par-inner
+include ../../../list/list
+include ../../../par/par
 
 mixin block-3(data)
     +b.block-3.service__block
 
         +title({'tag': 'h3'})._inner.academy__rules-title Для достижения целей Академия ЛОРУС работает по трем основным направлениям:
 
-        +list-inner(listInner.academyRules)._horiz-num._col-3.academy__rules-list
+        +list(list.academyRules)._horiz-num._col-3.academy__rules-list
 
-        +par-inner()._brackets.academy__cite
+        +par()._brackets.academy__cite
             +e.content
                 | Мы уверены, что самый ценный ресурс любой компании – это люди.
 

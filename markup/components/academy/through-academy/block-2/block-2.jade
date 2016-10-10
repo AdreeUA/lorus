@@ -1,5 +1,5 @@
 include ../../../title/title
-include ../../../inner-page/list-inner/list-inner
+include ../../../list/list
 //include ../../../inner-page/inner-page
 
 mixin block-2(data)
@@ -7,5 +7,4 @@ mixin block-2(data)
 
         +title({'tag': 'h3'})._inner._top-yellow Цели Академии
 
-        +list-inner(listInner.academyTargets)._roll.academy__targets
-        
+        +list(list.academyTargets)._roll.academy__targets
