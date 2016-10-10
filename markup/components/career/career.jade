@@ -3,7 +3,8 @@ include ../content/content
 include ../container/container
 include ../decor-title/decor-title
 include ../icon/icon
+include ./through-career/through-career
 
 mixin career(data)
     +b.ARTICLE.career.inner-page_gray-top()&attributes(attributes)
-        block
+        +through-career

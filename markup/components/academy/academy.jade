@@ -3,7 +3,8 @@ include ../content/content
 include ../container/container
 include ../decor-title/decor-title
 include ../icon/icon
+include ./through-academy/through-academy
 
 mixin academy(data)
     +b.ARTICLE.academy.inner-page_gray-top()&attributes(attributes)
-        block
+        +through-academy

@@ -3,7 +3,8 @@ include ../content/content
 include ../container/container
 include ../decor-title/decor-title
 include ../icon/icon
+include ./through-les/through-les
 
 mixin les(data)
     +b.ARTICLE.les.inner-page_gray-top()&attributes(attributes)
-        block
+        +through-les

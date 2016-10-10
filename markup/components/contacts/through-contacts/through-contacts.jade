@@ -1,13 +1,11 @@
-include ../contacts
 include ../contacts-head/contacts-head
 include ../../map/map
 include ../../contacts-form/contacts-form
 include ../../line/line
 
 mixin through-contacts(data)
-    +contacts
-        +b.through-contacts()&attributes(attributes)
-            +line(line.contacts).__line
-            +contacts-head.__head
-            +map.__map
-            +contacts-form.__form
+    +b.through-contacts()&attributes(attributes)
+        +line(line.contacts).__line
+        +contacts-head.__head
+        +map.__map
+        +contacts-form.__form
