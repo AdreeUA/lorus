@@ -1,0 +1,27 @@
+.through-contacts {
+    position: relative;
+
+    padding-left: rem(50);
+    padding-right: rem(70);
+
+    background: url('%=static=%assets/contacts/contacts-bg.svg') -10% 0 / cover;;
+    //background-size: 100% 100%;
+
+    &__map {
+        margin-bottom: rem(115);
+    }
+
+    &__form {
+        padding-bottom: rem(60);
+    }
+
+    &__line {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        path {
+            transform: translate(-14434.64px, -4898.91px);
+        }
+    }
+}
