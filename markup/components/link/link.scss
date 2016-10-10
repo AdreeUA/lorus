@@ -44,4 +44,11 @@
             }
         }
     }
+
+    &_theme-black {
+        color: #000;
+        font-weight: 400;
+
+        border-color: $color-1;
+    }
 }

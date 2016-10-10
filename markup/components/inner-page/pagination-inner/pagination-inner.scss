@@ -1,0 +1,41 @@
+.pagination-inner {
+    padding-top: rem(75);
+    padding-bottom: rem(40);
+
+    &_gray-skew {
+        position: relative;
+        background-color: #f6f5f4;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            content: '';
+            width: 100%;
+            border-top: rem(49) solid #fff;
+            border-right: 100vw solid transparent;
+        }
+    }
+
+    &__item {
+        font-size: rem(18);
+        font-weight: 400;
+        color: #000;
+
+        & + & {
+            margin-left: rem(20);
+        }
+
+        &_not-under {
+            border-bottom: none;
+        }
+    }
+
+    &__label {
+        float: left;
+        width: rem(108);
+        color: #9c958b;
+        font-size: rem(13);
+        font-weight: 400;
+        line-height: rem(24);
+    }
+}

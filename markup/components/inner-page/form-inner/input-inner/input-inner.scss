@@ -1,4 +1,5 @@
 .input-inner {
+    position: relative;
     display: block;
 
     &__label {
@@ -20,6 +21,30 @@
 
         &_textarea {
             height: rem(110);
+            resize: none;
+        }
+    }
+
+    &__submit {
+        border: none;
+        background: transparent;
+
+        &_search {
+            position: absolute;
+            right: rem(5);
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__icon {
+        stroke: #b8b8b8;
+        width: rem(20);
+    }
+
+    &_icon {
+        .input-inner__field {
+            padding-right: rem(43);
         }
     }
 }

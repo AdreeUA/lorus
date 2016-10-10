@@ -3,7 +3,9 @@ mixin input-inner(data)
     -data = data || {}
 
     +b.LABEL.input-inner()&attributes(attributes)
-        +e.label= data.label
+
+        if data.label
+            +e.label= data.label
 
         -var tag
         -if (data.type == 'textarea') {
@@ -11,3 +13,5 @@ mixin input-inner(data)
         -}
 
         +e(tag || 'input').field(class=(data.type!='textarea' ? '_input' : '_textarea') type=(data.type!='textarea' ? data.type : ''))
+        
+        block
