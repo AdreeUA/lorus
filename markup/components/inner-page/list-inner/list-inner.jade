@@ -4,6 +4,12 @@ mixin list-inner(data)
         each item in data.list
             if data.tag == 'ol'
                 +e.LI.item
+    
+                    if item.link
+
+                        +e.title.link(href=jv0)
+                            +e.link-text= item.link
+
                     +e.content= item.text 
 
             else
@@ -25,4 +31,4 @@ mixin list-inner(data)
                     else
                         if item.text
                             +e.LI.item= item.text
-
+ 
