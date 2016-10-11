@@ -14,6 +14,7 @@ import { InfoList } from 'components/info/info-list/info-list';
 import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
 import academyInit from 'components/academy/academy';
+import lesInit from 'components/les/les';
 
 'use strict';
 
@@ -33,4 +34,5 @@ $(() => {
     Component.init('.map', Map);
     Service.initCurrentService();
     academyInit();
+    lesInit();
 });
