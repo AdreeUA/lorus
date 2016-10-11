@@ -14,7 +14,7 @@ mixin list(data)
                             if part.selected
                                 -linkText += '<span class="found">' + part.text + '</span>'
                             else
-                                -linkText += part.text
+                                -linkText += '<span class="list__text-base">' + part.text + '</span>'
 
                         +e.title.link(href=jv0)
                             +e.link-text !{linkText}
@@ -35,7 +35,7 @@ mixin list(data)
                             if part.selected
                                 -contentText += '<span class="found found_text-s">' + part.text + '</span>'
                             else
-                                -contentText += part.text
+                                -contentText += '<span class="list__text-base">' + part.text + '</span>'
 
                         +e.content !{contentText}
 

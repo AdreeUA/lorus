@@ -8,6 +8,10 @@
         padding: 0 rem(30);
     }
 
+    &_block {
+        display: block;
+    }
+
     &__col {
         padding-right: rem(75);
         margin-bottom: rem(70);
@@ -46,6 +50,10 @@
 
                 height: auto;
                 transform: scale(1);
+
+                &_pad-open {
+                    padding-top: rem(18);
+                }
             }
 
             .nav-extend__trigger {

@@ -1,7 +1,9 @@
 .search-mini {
     position: relative;
+    z-index: 1;
 
     display: inline-block;
+    width: rem(630);
 
     vertical-align: top;
 
@@ -58,5 +60,49 @@
 
     &__icon {
         cursor: pointer;
+    }
+
+    &__results {
+        @include list-reset();
+
+        position: absolute;
+        z-index: -1;
+
+        display: none;
+
+        width: 100%;
+        padding: rem(28) 0;
+        margin-top: rem(-20);
+
+        border-radius: rem(4);
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    }
+
+    &__item {
+        font-size: rem(16);
+        font-weight: 400;
+
+        & + & {
+            border-top: 1px solid #dedede;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: rem(15) rem(18);
+
+        color: #000;
+
+        text-decoration: none;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__input {
+        text-align: right;
     }
 }

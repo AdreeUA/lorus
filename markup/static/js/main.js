@@ -2,6 +2,8 @@ import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
 
+import { magnific } from 'magnific-popup';
+
 import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
 import { Footer } from 'components/footer/footer';
@@ -13,6 +15,7 @@ import { SearchMini } from 'components/search-mini/search-mini';
 import { InfoList } from 'components/info/info-list/info-list';
 import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
+import { Write } from 'components/write/write';
 
 'use strict';
 
@@ -30,5 +33,6 @@ $(() => {
     Component.init('.info-list', InfoList);
     Component.init('.nav-extend', NavExtend);
     Component.init('.map', Map);
+    Component.init('.write', Write);
     Service.initCurrentService();
 });
