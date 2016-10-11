@@ -16,6 +16,7 @@ import { Map } from 'components/map/map';
 import academyInit from 'components/academy/academy';
 import lesInit from 'components/les/les';
 import careerInit from 'components/career/career';
+import contactsInit from 'components/contacts/contacts';
 
 'use strict';
 
@@ -37,4 +38,5 @@ $(() => {
     academyInit();
     lesInit();
     careerInit();
+    contactsInit();
 });

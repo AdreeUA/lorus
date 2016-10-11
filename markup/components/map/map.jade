@@ -1,8 +1,5 @@
 include ./mark/mark
 
 mixin map(data)
-    +b.map()&attributes(attributes)#map
-        //+mark(map_mark.defaults)
-
-
+    +b.map(data-options=data.options data-balloon=data.balloon)&attributes(attributes)#map
         block

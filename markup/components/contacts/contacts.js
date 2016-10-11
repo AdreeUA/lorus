@@ -1,9 +1,7 @@
 import { Component } from 'helpers-js';
 
-export class  extends Component {
-    constructor(block) {
-        super(block, 'contacts');
-        if (this._ready) return this;
-        this._ready = true;
-    }
+import { ThroughContacts } from './through-contacts/through-contacts';
+
+export default function() {
+    Component.init(document.querySelector('.through-contacts'), ThroughContacts);
 }
