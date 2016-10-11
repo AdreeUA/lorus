@@ -41,14 +41,9 @@
 
         &_1 {
             height: auto;
-            width: 100%;
+            width: rem(1140);
+            margin-top: rem(190);
             overflow: hidden;
-
-            .line__icon {
-                float: right;
-                width: rem(1140);
-                margin-top: rem(190);
-            }
         }
 
         &_2 {
@@ -59,10 +54,12 @@
             margin-top: em(-12, 15.4); */
 
             position: absolute;
+            left: rem(-170);
+
             width: rem(410);
             height: 0.64935em;
-            left: rem(-170);
             margin-top: rem(211);
+
             transform: rotate(90deg);
         }
 

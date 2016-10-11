@@ -15,6 +15,7 @@ import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
 import academyInit from 'components/academy/academy';
 import lesInit from 'components/les/les';
+import careerInit from 'components/career/career';
 
 'use strict';
 
@@ -35,4 +36,5 @@ $(() => {
     Service.initCurrentService();
     academyInit();
     lesInit();
+    careerInit();
 });
