@@ -1,0 +1,19 @@
+include ../inner-page
+include ../../line/line
+include ./block-1/block-1
+include ./block-2/block-2
+include ./block-3/block-3
+
+mixin career-page(data)
+    +inner-page
+        +b.ARTICLE.career-page()&attributes(attributes)
+            +e.lines
+                .inner-page__lines
+                    +line(line.throughCareer1).career-page__line_1
+                    +line(line.throughCareer2)._dashed.career-page__line_2
+                    +line(line.throughCareer3).career-page__line_3
+
+            .inner-page__content
+                +block-1
+                +block-2
+                +block-3

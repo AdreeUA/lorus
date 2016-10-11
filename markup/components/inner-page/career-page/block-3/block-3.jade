@@ -1,0 +1,12 @@
+include ../../../title/title
+include ../../../btn/btn
+include ../../../list/list
+include ../../../par/par
+include ../../../vacancies/vacancies
+
+mixin block-3(data)
+    +b.SECTION.block-3.service__block
+
+        +title({'tag': 'h3'})._inner.block-3__title Вакансии
+
+        +vacancies(vacancies.default).block-3__vacancies

@@ -2,18 +2,18 @@ include ../../../title/title
 include ../../../list/list
 
 mixin block-2(data)
-    +b.block-2.career__block
+    +b.SECTION.block-2.inner-page__block
 
         +title({'tag': 'h3'})._inner._top-yellow Мы предлагаем соискателям
 
         +e.offers-wrap
             +e.offers
                 +e.offers-col
-                    +list(list.careerOffers_1)._check.career__offers
+                    +list(list.careerOffers_1)._check
 
                 +e.offers-col
-                    +list(list.careerOffers_2)._check.career__offers
+                    +list(list.careerOffers_2)._check
 
                 +e.offers-col
-                    +list(list.careerOffers_3)._check.career__offers
+                    +list(list.careerOffers_3)._check
 

@@ -15,8 +15,8 @@ export class ThroughContacts extends Component {
             this._addLineParallax();
             // this._addPhotoParallax();
 
-            // toggleController(this.controller);
-            // window.addEventListener('resize', () => toggleController(this.controller));
+            toggleController(this.controller);
+            window.addEventListener('resize', () => toggleController(this.controller));
         });
     }
 

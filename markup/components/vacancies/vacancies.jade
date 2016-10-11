@@ -1,3 +1,9 @@
 mixin vacancies(data)
     +b.vacancies()&attributes(attributes)
-        block
+        each item in data.items
+            +e.item
+                +e.text
+                    +e.title= item.title
+                    +e.descr= item.descr
+
+                +btn({ href: jv0 }).vacancies__link Подробнее на hh.ru

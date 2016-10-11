@@ -10,6 +10,7 @@ var data = {logo: {
         src: '%=static=%img/assets/logo/logo-gray',
         ext: 'svg',
         mod: 'inner',
+        href: 'javascript:void(0)',
         alt: 'Логотип компании: LORUS SCM, we think - we move',
         screenreader: 'Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.',
         href: 'javascript:void(0)'

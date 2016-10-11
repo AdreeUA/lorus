@@ -1,10 +1,10 @@
 extends ../layouts/inner
 
-include ../components/career/career
+include ../components/inner-page/career-page/career-page
 
 block vars
     -pageSettings.title = 'Карьера';
-    -pageSettings.pageClass = 'page-career page-inner' ;
+    -pageSettings.pageClass = 'page-career page-inner';
 
 block content
-    +career
+    +career-page

@@ -5,12 +5,12 @@ import { Component, forEach, getCoords, toggleController, addPhotoParallax } fro
 
 import { Line } from 'components/line/line';
 
-export class ThroughCareer extends Component {
+export class CareerPage extends Component {
     constructor(block) {
-        super(block, 'through-career', function() {
+        super(block, 'career-page', function() {
             this.controller = new ScrollMagic.Controller();
             this.controller_m = new ScrollMagic.Controller();
-            this._addPhotoParallax = addPhotoParallax.bind(null, '.career__block', this.controller);
+            this._addPhotoParallax = addPhotoParallax.bind(null, '.inner-page__block', this.controller);
 
             this._addLineParallax();
             this._addPhotoParallax();
@@ -21,9 +21,9 @@ export class ThroughCareer extends Component {
     }
 
     _addLineParallax() {
-        let line1 = new Line(this.block.querySelector('.through-career__line_1')),
-            line2 = new Line(this.block.querySelector('.through-career__line_2')),
-            line3 = new Line(this.block.querySelector('.through-career__line_3')),
+        let line1 = new Line(this.block.querySelector('.career-page__line_1')),
+            line2 = new Line(this.block.querySelector('.career-page__line_2')),
+            line3 = new Line(this.block.querySelector('.career-page__line_3')),
             duration,
             tween = new TimelineMax();
 
