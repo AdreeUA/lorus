@@ -62,10 +62,13 @@
 
         &_2 {
             position: absolute;
+            right: em(478, 15.4);
+
             width: em(536, 15.4);
             height: em(10, 15.4);
-            right: em(478, 15.4);
             margin-top: em(-12, 15.4);
+
+            transform: scaleX(-1);
         }
 
         &_3 {
@@ -77,8 +80,9 @@
 
         &_4 {
             position: absolute;
-            width: rem(115);
             right: rem(-61);
+
+            width: rem(115);
             margin-top: rem(258);
         }
     }

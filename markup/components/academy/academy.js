@@ -1,14 +1,7 @@
 import { Component } from 'helpers-js';
-/*
-import { ThroughService } from './through-service/through-service';
 
-export class Service extends Component {
-    constructor(block) {
-        super(block, 'service', function() {});
-    }
-}
+import { ThroughAcademy } from './through-academy/through-academy';
 
-Service.initCurrentService = () => {
-    Component.init(document.querySelector('.through-service'), ThroughService);
+export default function() {
+    Component.init(document.querySelector('.through-academy'), ThroughAcademy);
 }
-*/
