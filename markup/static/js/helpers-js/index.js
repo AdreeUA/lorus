@@ -9,5 +9,6 @@ export { Component } from './Component';
 export { wrapLines } from './wrapLines';
 export { setupScrollMagicAnchors } from './setupScrollMagicAnchors';
 export { toggleController } from './toggle-controller';
+export { addPhotoParallax } from './addPhotoParallax';
 export * from './animations';
 export * from './variables';

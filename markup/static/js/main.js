@@ -16,6 +16,9 @@ import { InfoList } from 'components/info/info-list/info-list';
 import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
 import { Write } from 'components/write/write';
+import academyInit from 'components/academy/academy';
+import lesInit from 'components/les/les';
+import careerInit from 'components/career/career';
 
 'use strict';
 
@@ -35,4 +38,7 @@ $(() => {
     Component.init('.map', Map);
     Component.init('.write', Write);
     Service.initCurrentService();
+    academyInit();
+    lesInit();
+    careerInit();
 });
