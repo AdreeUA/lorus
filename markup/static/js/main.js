@@ -2,6 +2,8 @@ import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
 
+import { magnific } from 'magnific-popup';
+
 import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
 import { Footer } from 'components/footer/footer';
@@ -14,6 +16,7 @@ import { InfoList } from 'components/info/info-list/info-list';
 import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
 import { InnerPage } from 'components/inner-page/inner-page';
+import { Write } from 'components/write/write';
 import academyInit from 'components/academy/academy';
 import lesInit from 'components/les/les';
 import contactsInit from 'components/contacts/contacts';
@@ -34,6 +37,7 @@ $(() => {
     Component.init('.info-list', InfoList);
     Component.init('.nav-extend', NavExtend);
     Component.init('.map', Map);
+    Component.init('.write', Write);
     Service.initCurrentService();
     InnerPage.initCurrentPage();
     academyInit();

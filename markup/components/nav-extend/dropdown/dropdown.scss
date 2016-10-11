@@ -13,6 +13,10 @@
 
     transition: transform .3s;
 
+    &_rel {
+        position: relative;
+    }
+
     &__list {
         padding: rem(10) rem(23) rem(20);
 

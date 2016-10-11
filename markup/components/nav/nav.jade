@@ -4,18 +4,30 @@ include ../link/link
 mixin nav(data, classList)
     -classList = classList || {}
 
-    +b.NAV.nav()&attributes(attributes)
+    +b.NAV.nav.nav-extend_block()&attributes(attributes)
         if !data.title
             +screenreader()
                 | #{data.screenreader || 'Навигация'}
         else
-            +e.H2.title=data.title
+            +e.H2.title
+                +e.link.link(href=data.title.href)= data.title.text
             
         +e.UL.menu
-            each item in data.items
-                +e.item(class=[(item.active ? '_active' : ''), classList.itemClass])
-                    +link({ href: item.href }).nav__link
-                        | #{item.text}
-                    if item.describe
-                        +e.describe= item.describe
+            if data.items
+                each item in data.items
+                    +e.item.nav-extend__item(class=[(item.active ? '_active' : ''), classList.itemClass])
+                        +link({ href: item.href }).nav__link
+                            | #{item.text}
+
+                        if item.subitems
+
+                            .nav-extend__trigger
+
+                            +e.UL.submenu.dropdown_rel._pad-open
+
+                                each subitem in item.subitems
+                                    +e.subitem(class=[(subitem.active ? '_active' : ''), classList.subitemClass])
+                                        +link({ href: subitem.href }).nav__sublink
+                                            | #{subitem.text}
+
         block

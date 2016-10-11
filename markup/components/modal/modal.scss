@@ -1,0 +1,50 @@
+.modal {
+    position: relative;
+
+    width: rem(813);
+
+    margin: auto;
+    padding: rem(50) rem(70) rem(60);
+
+    background-color: #fff;
+
+    &__close {
+        right: rem(70);
+        top: rem(52);
+
+        padding: 0;
+
+        width: rem(40);
+        height: rem(40);
+
+        &::before,
+        &::after {
+            position: absolute;
+
+            top: 50%;
+            left: 0;
+
+            width: rem(40);
+            height: 1px;
+
+            background-color: #000;
+            content: '';
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:active {
+            top: rem(52);
+        }
+    }
+}

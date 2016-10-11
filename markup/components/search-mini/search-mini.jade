@@ -1,12 +1,41 @@
 include ../icon/icon
 include ../screenreader/screenreader
+include ../input/input
 
 mixin search-mini(data)
     -data = data || {}
 
-    +b.LABEL.search-mini()&attributes(attributes)
-        form
-            +e.INPUT.field(type='search' name=(data.name || 'search') placeholder=(data.placeholder || 'Поиск'))
-            +icon({ icon: 'search', class: 'search-mini__icon' })
+    +b.search-mini()&attributes(attributes)
+        +e.FORM.form
+
+            +input({fieldHidden: true})._icon.search-mini__input
+
+                +e.BUTTON.submit_search(type='submit' value='')
+                    +icon({'icon': 'search', 'class': 'input__icon'})
             +e.BUTTON.submit(type='submit')
+
+        +e.UL.results
+
+            +e.LI.item
+                +e.link(href=jv0)
+                    +b.SPAN.found Си
+                    +e.SPAN.text стема совершенствования Lorus
+    
+            +e.LI.item
+                +e.link(href=jv0)
+                    +e.SPAN.text Мис
+                    +b.SPAN.found си
+                    +e.SPAN.text я
+
+            +e.LI.item
+                +e.link(href=jv0)
+                    +e.SPAN.text Вакан
+                    +b.SPAN.found си
+                    +e.SPAN.text и
+
+            +e.LI.item
+                +e.link(href=jv0)
+                    +e.SPAN.text Доставка из
+                    +b.SPAN.found Си
+                    +e.SPAN.text нгапура
         block
