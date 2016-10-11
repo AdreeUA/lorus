@@ -104,5 +104,14 @@
 
     &__input {
         text-align: right;
+
+        .icon_search {
+            stroke: #fff;
+            transition: .4s;
+        }
+
+        .input__field:focus + .input__submit .icon_search {
+            stroke: #b8b8b8;
+        }
     }
 }
