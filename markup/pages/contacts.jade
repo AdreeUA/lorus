@@ -1,10 +1,10 @@
 extends ../layouts/inner
 
-include ../components/contacts/contacts
+include ../components/inner-page/contacts-page/contacts-page
 
 block vars
     -pageSettings.title = 'Контакты';
     -pageSettings.pageClass = 'page-inner page-contacts';
 
 block content
-    +contacts
+    +contacts-page

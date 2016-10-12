@@ -2,7 +2,6 @@ include ../inner-page
 include ../../line/line
 include ./contacts-head/contacts-head
 include ../../map/map
-include ../../contacts-form/contacts-form
 include ../../line/line
 
 mixin contacts-page(data)
@@ -11,4 +10,3 @@ mixin contacts-page(data)
             +line(line.contacts).__line
             +contacts-head
             +map(map.default).__map
-            //- +contacts-form.__form
