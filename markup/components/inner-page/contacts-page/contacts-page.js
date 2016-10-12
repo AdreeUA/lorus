@@ -5,15 +5,15 @@ import { Component, forEach, getCoords, toggleController, addPhotoParallax } fro
 
 import { Line } from 'components/line/line';
 
-export class ThroughContacts extends Component {
+export class ContactsPage extends Component {
     constructor(block) {
-        super(block, 'through-contacts', function() {
+        super(block, 'contacts-page', function() {
             this.controller = new ScrollMagic.Controller();
             this.controller_m = new ScrollMagic.Controller();
-            // this._addPhotoParallax = addPhotoParallax.bind(null, '.contacts__block', this.controller);
+            this._addPhotoParallax = addPhotoParallax.bind(null, '.contacts-page', this.controller);
 
             this._addLineParallax();
-            // this._addPhotoParallax();
+            this._addPhotoParallax();
 
             toggleController(this.controller);
             window.addEventListener('resize', () => toggleController(this.controller));
@@ -21,7 +21,7 @@ export class ThroughContacts extends Component {
     }
 
     _addLineParallax() {
-        let line = new Line(this.block.querySelector('.through-contacts__line')),
+        let line = new Line(this.block.querySelector('.contacts-page__line')),
             duration;
 
         const calcDuration = () => {

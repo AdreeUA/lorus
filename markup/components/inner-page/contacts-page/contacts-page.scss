@@ -1,32 +1,16 @@
-.through-contacts {
+@import './contacts-head/contacts-head';
+
+.contacts-page {
     position: relative;
 
     padding-left: rem(50);
     padding-right: rem(70);
-
-    background: url('%=static=%assets/contacts/contacts-bg.svg') -10% 0 / cover;;
     //background-size: 100% 100%;
 
     @include below($tablet) {
         padding: rem(100) 0 0;
 
         background: none;
-    }
-
-    &__map {
-        margin-bottom: rem(115);
-
-        @include below($tablet) {
-            margin-bottom: 0;
-        }
-    }
-
-    &__form {
-        padding-bottom: rem(60);
-
-        @include below($tablet) {
-            display: none;
-        }
     }
 
     &__line {

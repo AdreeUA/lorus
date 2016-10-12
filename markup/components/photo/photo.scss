@@ -10,6 +10,7 @@
         border-left: rem(15) solid $color-2;
 
         overflow: hidden;
+        border-radius: 10px;
 
         &::before {
             content: '';
@@ -44,5 +45,12 @@
         pointer-events: none;
         background: url(%=static=%assets/photo/shadow.png);
         transform: translateX(-50%);
+    }
+
+    &_theme_simple {
+
+        .photo__wrapper {
+            border-left: none;
+        }
     }
 }

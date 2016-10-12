@@ -37,13 +37,9 @@
         right: rem(-35);
         z-index: 2;
 
-        box-shadow: 0 rem(130) rem(100) rem(-90) rgba(#000, .5);
-
         @include below($tablet) {
             position: static;
             margin-bottom: rem(50);
-
-            box-shadow: 0 rem(90) rem(70) rem(-90) rgba(#000, .5);
         }
     }
 

@@ -90,9 +90,14 @@
     &__share {
         margin: rem(57) 0 0 rem(-9);
     }
+
+    &_theme_world {
+        background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;;
+    }
 }
 
 @import './career-page/career-page';
 @import './academy-page/academy-page';
 @import './les-page/les-page';
 @import './search-page/search-page';
+@import './contacts-page/contacts-page';
