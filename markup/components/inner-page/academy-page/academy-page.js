@@ -13,11 +13,24 @@ export class AcademyPage extends Component {
             this._addPhotoParallax = addPhotoParallax.bind(null, '.inner-page__block', this.controller);
 
             this._addLineParallax();
+            this._addLineParallaxMobile();
             this._addPhotoParallax();
 
             // toggleController(this.controller);
             // window.addEventListener('resize', () => toggleController(this.controller));
         });
+    }
+
+    _addLineParallaxMobile() {
+        let line1 = new Line(this.block.querySelector('.academy-page__m-line_1'));
+
+        new ScrollMagic.Scene({
+                triggerElement: line1.block,
+                triggerHook: .9,
+                duration: '100%'
+            })
+            .setTween(line1.makeTween())
+            .addTo(this.controller);
     }
 
     _addLineParallax() {
@@ -33,6 +46,7 @@ export class AcademyPage extends Component {
                 end = getCoords(line4.block).bottom;
 
             duration = start + end - 100;
+            duration = duration < 0 ? 0 : duration;
         };
 
         calcDuration();

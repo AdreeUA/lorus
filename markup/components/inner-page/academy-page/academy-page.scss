@@ -53,6 +53,18 @@
         }
     }
 
+    &__m-line {
+        margin: 0 rem(-30);
+
+        &_1 {
+
+            path {
+                stroke-width: 8px;
+                transform: translate(-1514.49px, -4136.98px);
+            }
+        }
+    }
+
     &__title {
 
         &::after {
@@ -69,14 +81,38 @@
             background-size: contain;
             background-position: left top;
         }
+
+        @include below($tablet) {
+
+            &::after {
+                display: none;
+            }
+
+            .title__bold {
+                font-weight: 300;
+            }
+        }
     }
 
     &__building {
         position: absolute;
         right: rem(281);
         z-index: -1;
+
         width: rem(116);
         height: rem(94);
         margin-top: rem(-104);
+
+        &_mobile {
+            bottom: rem(16);
+            right: auto;
+            left: rem(45);
+
+            margin-top: 0;
+
+            @include below($mobile) {
+                bottom: rem(10);
+            }
+        }
     }
 }

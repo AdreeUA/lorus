@@ -6,17 +6,22 @@
 
         .list__item {
             position: relative;
+
             margin: 0;
             padding: 0 0 0 rem(25);
+
             font-size: rem(21);
             font-weight: 300;
             line-height: normal;
 
             &::after {
-                position: absolute;
-                left: rem(-25);
-                display: inline-block;
                 content: '';
+                position: absolute;
+                top: 50%;
+                left: rem(-25);
+
+                margin-top: rem(-11);
+
                 @include bgrem($roll);
             }
 
@@ -46,40 +51,63 @@
 
     &_horiz-num {
         margin: 0;
+        margin-left: rem(-75);
         padding: 0;
+
         counter-reset: item;
         list-style-type: none;
         overflow: hidden;
-        margin-left: rem(-75);
+
+        @include below($tablet) {
+            margin-left: 0;
+
+        }
 
         .list__item {
             position: relative;
+
             float: left;
+
             color: #272425;
             font-size: 0;
             font-weight: 400;
 
             &::before {
-                display: inline-block;
-                vertical-align: top;
-                width: rem(45);
                 content: counter(item);
                 counter-increment: item;
+                display: inline-block;
+                width: rem(45);
+
+                vertical-align: top;
                 font-size: rem(100);
                 font-weight: 100;
-                line-height: rem(69);
+                line-height: (69/100);
                 text-align: right;
                 color: #e2e63f;
             }
 
             &::after {
+                content: '';
                 position: absolute;
                 top: 0;
                 left: rem(75);
-                content: '';
-                background-color: #e2e63f;
+
                 width: rem(62);
                 height: 3px;
+
+                background-color: #e2e63f;
+            }
+
+            @include below($tablet) {
+                float: none;
+
+                &:not(:last-child) {
+                    margin-bottom: rem(35);
+                }
+
+                &::before {
+                    font-size: rem(70);
+                }
             }
         }
 
@@ -87,6 +115,7 @@
             display: inline-block;
             width: calc(100% - #{rem(45)});
             padding: rem(33) rem(40) rem(10) rem(30);
+
             font-size: rem(16);
         }
     }
@@ -140,7 +169,11 @@
     &_col-3 {
 
         .list__item {
-            width: (100/3) + %;
+            width: percentage(1/3);
+
+            @include below($tablet) {
+                width: 100%;
+            }
         }
     }
 

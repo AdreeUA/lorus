@@ -24,6 +24,16 @@
 
             background: url('%=static=%general/sunlight.svg') no-repeat 0 0 / contain;
         }
+
+        @include below($tablet) {
+            border: none;
+
+            border-radius: 0;
+
+            &::before {
+                display: none;
+            }
+        }
     }
 
     &__img {
@@ -43,7 +53,7 @@
         height: percentage(365/350);
 
         pointer-events: none;
-        background: url(%=static=%assets/photo/shadow.png);
+        background: url(%=static=%assets/photo/shadow.png) no-repeat center center / 100% 100%;
         transform: translateX(-50%);
     }
 
