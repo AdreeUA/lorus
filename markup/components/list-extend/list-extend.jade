@@ -6,4 +6,5 @@ mixin list-extend(data)
                     +e.title= item.title
                     +e.descr= item.descr
 
-                +btn({ href: jv0 }).list-extend__link Подробнее на hh.ru
+                +btn({ href: jv0 }).list-extend__link= item.linkText
+                
