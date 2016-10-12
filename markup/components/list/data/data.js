@@ -93,17 +93,17 @@ var data = {list: {
         list: [
             {
                 src: "%=static=%img/assets/les/les-1.jpg",
-                class: "les__photos_1"
+                class: "block-3__photos_1"
             },
             {
                 src: "%=static=%img/assets/les/les-2.jpg",
                 text: "Маленькое описание того, что на фотографиях давайте сделаем?",
-                textClass: "par_border-left les__photos-descr",
-                class: "les__photos_2"
+                textClass: "par_border-left block-3__photos-descr",
+                class: "block-3__photos_2"
             },
             {
                 src: "%=static=%img/assets/les/les-3.jpg",
-                class: "les__photos_3"
+                class: "block-3__photos_3"
             }
         ]
     },

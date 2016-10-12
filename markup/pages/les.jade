@@ -1,10 +1,10 @@
 extends ../layouts/inner
 
-include ../components/les/les
+include ../components/inner-page/les-page/les-page
 
 block vars
     -pageSettings.title = 'LES';
     -pageSettings.pageClass = 'page-les page-inner' ;
 
 block content
-    +les
+    +les-page

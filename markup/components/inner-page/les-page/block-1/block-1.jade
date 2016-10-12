@@ -3,25 +3,13 @@ include ../../../par/par
 include ../../../title/title
 
 mixin block-1(data)
-    +b.block-1.les__block
-        +e.left.les__left
-            +logo(logo.mainGray).inner-page__logo
+    +b.block-1.inner-page__block
+        +photo({ src: '%=static=%img/assets/photo/les-1.jpg' }).inner-page__main-photo
 
-            +title().les__title
-                +e.__row.les__row-logo LES — Путь
-
+        +e.content.inner-page__descr
+            +title().inner-page__title.les-page__title
+                +e.__row.les-page__row-logo LES — Путь
                 +e.__row долговременного роста
 
             +par()._border-left.les__descr
                 | Мы постоянно работаем над улучшением качества наших услуг, поэтому наша компания создала LES – LORUS Excellence System (Система совершенствования ЛОРУС) – философия развития нашей компании на основе приоритетов клиента, уважения к людям и непрерывном улучшении.
-
-
-        +e.right.les__right
-            +photo().les__photo-top.photo__photo-cont_shadow
-
-                +e.photo.les__photo-wrapper.js-tween
-
-                    +e.IMG.__photo_left-yellow(
-                        src='%=static=%img/assets/photo/les-1.jpg'
-                        alt='')
-

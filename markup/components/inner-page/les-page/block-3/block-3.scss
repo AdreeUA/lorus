@@ -1,0 +1,41 @@
+.block-3 {
+    min-height: rem(770);
+    margin: 0 rem(-27);
+    padding: rem(127) rem(136) 0;
+
+    &__photos-before {
+        width: rem(910);
+    }
+
+    &__photos-list {
+        margin-left: rem(-74);
+        margin-top: rem(93);
+    }
+
+    &__photos-descr {
+        position: absolute;
+
+        width: rem(300);
+        margin-top: rem(36);
+        padding-top: rem(10);
+        padding-bottom: rem(10);
+    }
+
+    &__photos-after {
+        width: rem(860);
+        margin-top: rem(84);
+    }
+
+    &__photos {
+
+        &_1 {
+            height: rem(260);
+        }
+        &_2 {
+            height: rem(181);
+        }
+        &_3 {
+            height: rem(149);
+        }
+    }
+}

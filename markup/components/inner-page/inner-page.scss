@@ -86,7 +86,12 @@
 
         margin-top: rem(20);
     }
+
+    &__share {
+        margin: rem(57) 0 0 rem(-9);
+    }
 }
 
 @import './career-page/career-page';
 @import './academy-page/academy-page';
+@import './les-page/les-page';

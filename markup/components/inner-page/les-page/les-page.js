@@ -5,12 +5,12 @@ import { Component, forEach, getCoords, toggleController, addPhotoParallax } fro
 
 import { Line } from 'components/line/line';
 
-export class ThroughLes extends Component {
+export class LesPage extends Component {
     constructor(block) {
-        super(block, 'through-les', function() {
+        super(block, 'les-page', function() {
             this.controller = new ScrollMagic.Controller();
             this.controller_m = new ScrollMagic.Controller();
-            this._addPhotoParallax = addPhotoParallax.bind(null, '.les__block', this.controller);
+            this._addPhotoParallax = addPhotoParallax.bind(null, '.inner-page__block', this.controller);
 
             this._addLineParallax();
             this._addPhotoParallax();
@@ -21,9 +21,9 @@ export class ThroughLes extends Component {
     }
 
     _addLineParallax() {
-        let line1 = new Line(this.block.querySelector('.through-les__line_1')),
-            line2 = new Line(this.block.querySelector('.through-les__line_2')),
-            line3 = new Line(this.block.querySelector('.through-les__line_3')),
+        let line1 = new Line(this.block.querySelector('.les-page__line_1')),
+            line2 = new Line(this.block.querySelector('.les-page__line_2')),
+            line3 = new Line(this.block.querySelector('.les-page__line_3')),
             duration,
             tween = new TimelineMax();
 

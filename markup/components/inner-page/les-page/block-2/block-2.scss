@@ -1,0 +1,64 @@
+.block-2 {
+    margin-left: rem(33);
+    border-bottom: 1px solid #ebee76;
+
+    &__house {
+        width: rem(943);
+    }
+
+    &__roof {
+
+        &_1 {
+            height: rem(88);
+            padding-top: rem(23);
+        }
+        &_2 {
+            width: rem(380);
+            height: rem(48);
+        }
+        &_3 {
+            width: rem(530);
+            height: rem(46);
+        }
+    }
+
+    &__stage {
+
+        &_1 {
+            width: rem(590);
+            height: rem(136);
+        }
+        &_2 {
+            height: rem(64);
+            width: rem(551);
+        }
+    }
+
+    &__floor {
+
+        &_1 {
+            width: rem(716);
+            height: rem(49);
+        }
+    }
+
+    &__level {
+
+        &_1 {
+            width: rem(556);
+            height: rem(179);
+        }
+        &_2 {
+            width: rem(230);
+            height: rem(136);
+        }
+        &_3 {
+            width: rem(266);
+            height: rem(65);
+        }
+        &_4 {
+            width: rem(209);
+            height: rem(48);
+        }
+    }
+}
