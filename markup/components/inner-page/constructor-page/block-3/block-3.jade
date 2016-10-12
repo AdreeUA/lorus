@@ -2,28 +2,13 @@ include ../../../title/title
 include ../../../list/list
 include ../../../list-extend/list-extend
 
-mixin block-2(data)
-    +b.SECTION.block-2.inner-page__block
-
-        +title({'tag': 'h3'})._inner._top-yellow Список 1
-
-        .inner-page__list-wrap
-            .inner-page__list-col
-                +list(list.careerOffers_1)._check
-
-            .inner-page__list-col
-                +list(list.careerOffers_2)._check
-
-            .inner-page__list-col
-                +list(list.careerOffers_3)._check
-
-        +par()._brackets.inner-page__cite
-            +e.content
-                | Цитата и выделение важной части текста. Цитата и выделение важной части текста. Цитата и выделение важной части текста. Цитата и выделение важной части текста.
-
-        +title({'tag': 'h3'})._inner Фотографии
-
-        +list(list.constructorTeam)._horiz-photo.block-4__team
+mixin block-3(data)
+    +b.SECTION.block-3.inner-page__block
 
         +title({'tag': 'h3'})._inner.block-3__title Ссылки, доп. материалы
 
+        +list-extend(listExtend.constructor).block-3__extend
+
+        +title({'tag': 'h3'})._inner._top-yellow.block-3__title Список Тип 2
+
+        +list(list.constructorRoll)._roll.block-2__roll
