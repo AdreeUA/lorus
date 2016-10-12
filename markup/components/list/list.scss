@@ -145,6 +145,10 @@
                 line-height: rem(24);
                 font-weight: 400;
             }
+
+            @include below($tablet) {
+                padding-left: rem(15);
+            }
         }
 
         .list__title {

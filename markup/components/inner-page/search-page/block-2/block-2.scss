@@ -3,7 +3,17 @@
     margin-top: rem(72);
     margin-left: rem(108);
 
+    @include below($tablet) {
+        width: 100%;
+        margin: 0;
+        padding-top: rem(30);
+    }
+
     &__results-list {
         margin-left: rem(-90);
+
+        @include below($tablet) {
+            margin-left: 0;
+        }
     }
 }

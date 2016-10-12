@@ -1,9 +1,12 @@
 .pagination {
-    padding-top: rem(75);
+    padding-top: rem(40);
     padding-bottom: rem(40);
 
     &_gray-skew {
         position: relative;
+
+        padding-top: rem(75);
+
         background-color: #f6f5f4;
 
         &::before {
@@ -15,6 +18,15 @@
             width: 100%;
             border-top: rem(49) solid #fff;
             border-right: 100vw solid transparent;
+        }
+
+        @include below($tablet) {
+            padding-top: rem(30);
+            padding-bottom: rem(30);
+
+            &::before {
+                display: none;
+            }
         }
     }
 
@@ -35,9 +47,14 @@
     &__label {
         float: left;
         width: rem(108);
+
         color: #9c958b;
         font-size: rem(13);
         font-weight: 400;
         line-height: rem(24);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 }
