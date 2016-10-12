@@ -5,12 +5,12 @@ import { Component, forEach, getCoords, toggleController, addPhotoParallax } fro
 
 import { Line } from 'components/line/line';
 
-export class ThroughAcademy extends Component {
+export class AcademyPage extends Component {
     constructor(block) {
-        super(block, 'through-academy', function() {
+        super(block, 'academy-page', function() {
             this.controller = new ScrollMagic.Controller();
             this.controller_m = new ScrollMagic.Controller();
-            this._addPhotoParallax = addPhotoParallax.bind(null, '.academy__block', this.controller);
+            this._addPhotoParallax = addPhotoParallax.bind(null, '.inner-page__block', this.controller);
 
             this._addLineParallax();
             this._addPhotoParallax();
@@ -21,10 +21,10 @@ export class ThroughAcademy extends Component {
     }
 
     _addLineParallax() {
-        let line1 = new Line(this.block.querySelector('.through-academy__line_1')),
-            line2 = new Line(this.block.querySelector('.through-academy__line_2')),
-            line3 = new Line(this.block.querySelector('.through-academy__line_3')),
-            line4 = new Line(this.block.querySelector('.through-academy__line_4')),
+        let line1 = new Line(this.block.querySelector('.academy-page__line_1')),
+            line2 = new Line(this.block.querySelector('.academy-page__line_2')),
+            line3 = new Line(this.block.querySelector('.academy-page__line_3')),
+            line4 = new Line(this.block.querySelector('.academy-page__line_4')),
             duration,
             tween = new TimelineMax();
 
@@ -33,7 +33,7 @@ export class ThroughAcademy extends Component {
                 end = getCoords(line4.block).bottom;
 
             duration = start + end - 100;
-        }
+        };
 
         calcDuration();
         window.addEventListener('resize', calcDuration);

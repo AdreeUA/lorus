@@ -52,18 +52,26 @@
         padding: 0 1.6875rem;
     }
 
-    &__lines {
+    &__lines-wrapper {
         position: absolute;
         top: 0;
-        left: 0;
+        left: rem(40);
+        right: rem(40);
+        bottom: 0;
         z-index: 1;
-
-        width: 100%;
-        height: 100%;
 
         @include below($tablet) {
             display: none;
         }
+    }
+
+    &__lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
     }
 
     &__title {
@@ -71,6 +79,14 @@
 
         font-size: rem(43);
     }
+
+    &__questions {
+        position: relative;
+        z-index: 2;
+
+        margin-top: rem(20);
+    }
 }
 
 @import './career-page/career-page';
+@import './academy-page/academy-page';

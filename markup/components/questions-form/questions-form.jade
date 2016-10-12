@@ -1,14 +1,14 @@
-include ../../../title/title
-include ../../../input/input
-include ../../../btn-inner/btn-inner
+include ../title/title
+include ../form/form
+include ../input/input
+include ../btn-inner/btn-inner
 
-mixin block-5(data)
-    +b.block-5.academy__block_gray
-
-        +title({'tag': 'h3'})._inner.academy__form-title
+mixin questions-form(data)
+    +b.questions-form()&attributes(attributes)
+        +title({'tag': 'h3'})._inner.questions-form__title
             | Остались вопросы?
 
-        +b.FORM.form.academy__form
+        +form.questions-form__form
             +e.fields_left
                 +e.row_col.__row_2
                     +e.col

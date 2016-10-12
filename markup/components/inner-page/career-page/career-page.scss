@@ -4,12 +4,7 @@
     @import './block-3/block-3';
 
     &__lines {
-        position: absolute;
-        top: 0;
         left: rem(70);
-        right: rem(40);
-        bottom: 0;
-        z-index: 1;
     }
 
     &__line {

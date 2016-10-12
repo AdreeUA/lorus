@@ -1,0 +1,19 @@
+.block-4 {
+    margin-left: rem(102);
+
+    &__title {
+        max-width: rem(585);
+    }
+
+    &__team {
+        margin: rem(70) 0 0 rem(-50);
+
+        .list__img {
+            height: rem(158);
+        }
+    }
+
+    &__share {
+        margin: rem(57) 0 0 rem(-9);
+    }
+}

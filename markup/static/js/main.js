@@ -1,3 +1,5 @@
+'use strict';
+
 import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
@@ -17,11 +19,8 @@ import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
 import { InnerPage } from 'components/inner-page/inner-page';
 import { Write } from 'components/write/write';
-import academyInit from 'components/academy/academy';
 import lesInit from 'components/les/les';
 import contactsInit from 'components/contacts/contacts';
-
-'use strict';
 
 $(() => {
     polyfills.init();
@@ -40,7 +39,6 @@ $(() => {
     Component.init('.write', Write);
     Service.initCurrentService();
     InnerPage.initCurrentPage();
-    academyInit();
     lesInit();
     contactsInit();
 });

@@ -3,12 +3,12 @@ include ../../../list/list
 include ../../../share/share
 
 mixin block-4(data)
-    +b.block-4.academy__block
+    +b.block-4.inner-page__block
 
-        +title({'tag': 'h3'})._inner.academy__team-title
+        +title({'tag': 'h3'})._inner.block-4__title
             | Хорошо подготовленная команда — залог успеха!
 
-        +list(list.academyTeam)._horiz-photo.academy__team-list
+        +list(list.academyTeam)._horiz-photo.block-4__team
 
-        +share().academy__share
+        +share().block-4__share
             +e.img(src='%=static=%img/assets/share/dummy.jpg')

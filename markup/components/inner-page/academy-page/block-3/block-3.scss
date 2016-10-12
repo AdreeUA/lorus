@@ -1,0 +1,17 @@
+.block-3 {
+    min-height: rem(585);
+    margin-left: rem(102);
+
+    &__title {
+        max-width: rem(800);
+    }
+
+    &__rules {
+        margin-top: rem(90);
+    }
+
+    &__cite {
+        margin-left: rem(-41);
+        margin-top: rem(60);
+    }
+}

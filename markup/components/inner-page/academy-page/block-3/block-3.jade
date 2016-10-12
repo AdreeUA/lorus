@@ -3,18 +3,16 @@ include ../../../list/list
 include ../../../par/par
 
 mixin block-3(data)
-    +b.block-3.service__block
+    +b.block-3.inner-page__block
 
-        +title({'tag': 'h3'})._inner.academy__rules-title Для достижения целей Академия ЛОРУС работает по трем основным направлениям:
+        +title({'tag': 'h3'})._inner.block-3__title Для достижения целей Академия ЛОРУС работает по трем основным направлениям:
 
-        +list(list.academyRules)._horiz-num._col-3.academy__rules-list
+        +list(list.academyRules)._horiz-num._col-3.block-3__rules
 
-        +par()._brackets.academy__cite
+        +par()._brackets.block-3__cite
             +e.content
                 | Мы уверены, что самый ценный ресурс любой компании – это люди.
-
             +e.content
                 | И инвестиции в людей – одно из самых выгодных вложений.
-
             +e.content
                 | Только люди решают задачи и продвигают компанию к ее целям.

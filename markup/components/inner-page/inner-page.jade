@@ -1,4 +1,5 @@
 include ../logo/logo
+include ../questions-form/questions-form
 
 mixin inner-page(data)
     -data = data || {}
@@ -10,17 +11,4 @@ mixin inner-page(data)
         block
 
         if (!data.noForm)
-            +b.FORM.form.inner-page__form
-                +e.fields_left
-                    +e.row_col.__row_2
-                        +e.col
-                            +input({'label': 'Как к вам обращаться?'})
-
-                        +e.col
-                            +input({'label': 'Телефон для связи'})
-
-                    +e.row
-                        +input({'label': 'Комментарий', 'type': 'textarea'})
-
-                +e.submit_left
-                    +btn-inner({'text': 'Отправить', 'type': 'submit'})
+            +questions-form.inner-page__questions

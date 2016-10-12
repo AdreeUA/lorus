@@ -1,0 +1,12 @@
+.questions-form {
+    padding: rem(65) 0;
+    padding-left: rem(125);
+
+    background-image: url('%=static=%assets/inner-page/bg-gray-bottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        margin-bottom: rem(40);
+    }
+}
