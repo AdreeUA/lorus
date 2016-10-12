@@ -2,6 +2,13 @@
     min-height: rem(425);
     margin-left: rem(100);
 
+    @include below($tablet) {
+        min-height: 0;
+        margin-left: 0;
+        padding-top: rem(15);
+        padding-bottom: rem(20);
+    }
+
     &__offers-wrap {
         margin-top: rem(44);
         margin-left: rem(-64);

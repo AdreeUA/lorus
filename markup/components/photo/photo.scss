@@ -51,10 +51,10 @@
 
         width: percentage(665/525);
         height: percentage(365/350);
+        margin-left: percentage(-333/525);
 
         pointer-events: none;
         background: url(%=static=%assets/photo/shadow.png) no-repeat center center / 100% 100%;
-        transform: translateX(-50%);
     }
 
     &_theme_simple {
