@@ -1,5 +1,6 @@
 include ../../../title/title
 include ../../../list/list
+include ../../../slider/slider
 include ../../../share/share
 
 mixin block-4(data)
@@ -8,6 +9,11 @@ mixin block-4(data)
         +title({'tag': 'h3'})._inner.block-4__title
             | Хорошо подготовленная команда — залог успеха!
 
-        +list(list.academyTeam)._horiz-photo.block-4__team
+        +slider(slider.academyTeam).block-4__team
+            -var i = 1;
+            while i <= 4
+                +e.item.block-4__photo-wrapper
+                    img.block-4__photo(src=`%=static=%img/assets/inner-page/academy-page/team-${i}.jpg` alt='')
+                -i++
 
         +share().inner-page__share

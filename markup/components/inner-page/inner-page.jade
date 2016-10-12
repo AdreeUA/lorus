@@ -4,7 +4,7 @@ include ../questions-form/questions-form
 mixin inner-page(data)
     -data = data || {}
 
-    +b.SECTION.inner-page()&attributes(attributes)
+    +b.inner-page()&attributes(attributes)
         if (!data.noHeader)
             +e.HEADER.header
                 +logo(logo.mainGray).inner-page__logo

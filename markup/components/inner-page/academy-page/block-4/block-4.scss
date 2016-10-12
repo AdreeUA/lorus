@@ -21,8 +21,29 @@
     &__team {
         margin: rem(70) 0 0 rem(-50);
 
-        .list__img {
-            height: rem(158);
+        @include below($tablet) {
+            margin-top: rem(35);
+            margin-left: 0;
+
+            .slick-list {
+                overflow: visible;
+            }
         }
+    }
+
+    &__photo-wrapper {
+        display: inline-block;
+
+        vertical-align: top;
+
+        &:not(:last-child) {
+            margin-right: rem(30);
+        }
+    }
+
+    &__photo {
+        height: rem(158);
+
+        border-radius: 10px;
     }
 }

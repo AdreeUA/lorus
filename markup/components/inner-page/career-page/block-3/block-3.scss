@@ -1,8 +1,19 @@
 .block-3 {
     margin-left: rem(102);
 
+    @include below($tablet) {
+        margin-left: 0;
+        padding-top: rem(35);
+        padding-bottom: rem(30);
+    }
+
     &__vacancies {
         width: rem(975);
         margin: rem(35) 0 rem(33) rem(27);
+
+        @include below($tablet) {
+            width: 100%;
+            margin: 0;
+        }
     }
 }

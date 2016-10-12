@@ -1,15 +1,26 @@
 .list-extend {
+
     &__item {
         padding-top: rem(30);
         padding-bottom: rem(40);
         border-bottom: 1px solid #efefef;
 
-        @include clearfix();
+        @include below($tablet) {
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
     }
 
     &__text {
         display: inline-block;
         width: calc(100% - #{rem(205)});
+
+        @include below($tablet) {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__link {
