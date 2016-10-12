@@ -19,12 +19,26 @@
 
     &__block {
         position: relative;
+
+        @include below($tablet) {
+            padding: 0 rem(30);
+
+            &:nth-child(odd) {
+                background-color: $color-3;
+            }
+        }
     }
 
     &__descr {
         width: rem(600);
         padding-top: rem(110);
         padding-left: rem(105);
+
+        @include below($tablet) {
+            width: 100%;
+            padding-top: rem(45);
+            padding-left: 0;
+        }
     }
 
     &__main-photo {
@@ -34,6 +48,16 @@
 
         width: rem(525);
         height: rem(350);
+
+        @include below($tablet) {
+            position: relative;
+            top: 0;
+
+            min-width: 100%;
+            width: auto;
+            height: rem(190);
+            margin: 0 rem(-30);
+        }
     }
 
     &__logo {
@@ -50,6 +74,11 @@
         z-index: 2;
 
         padding: 0 1.6875rem;
+
+        @include below($tablet) {
+            padding: 0;
+            padding-top: rem(95);
+        }
     }
 
     &__lines-wrapper {
@@ -78,6 +107,10 @@
         margin-bottom: rem(30);
 
         font-size: rem(43);
+
+        @include below($tablet) {
+            font-size: rem(33);
+        }
     }
 
     &__questions {
@@ -85,14 +118,30 @@
         z-index: 2;
 
         margin-top: rem(20);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__share {
         margin: rem(57) 0 0 rem(-9);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &_theme_world {
         background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;;
+    }
+
+    &__mobile {
+        display: none;
+
+        @include below($tablet) {
+            display: block;
+        }
     }
 }
 

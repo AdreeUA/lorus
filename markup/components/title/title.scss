@@ -37,6 +37,10 @@
     &_inner {
         font-size: rem(34);
         font-weight: 300;
+
+        @include below($tablet) {
+            font-size: rem(33);
+        }
     }
 
     &_top-yellow {
@@ -44,5 +48,11 @@
         margin-left: rem(-17);
         padding: rem(17) rem(34) rem(17) rem(17);
         border-top: rem(6) solid $color-2;
+
+        @include below($tablet) {
+            margin-left: 0;
+            padding: 0;
+            border-top: none;
+        }
     }
 }

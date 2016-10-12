@@ -7,6 +7,11 @@
     &_border-left {
         border-left: 2px solid #e5e4e3;
         padding-left: rem(33);
+
+        @include below($tablet) {
+            padding-left: 0;
+            border-left: none;
+        }
     }
 
     &_brackets {
@@ -45,6 +50,22 @@
 
         .par__content {
             display: block;
+        }
+
+        @include below($tablet) {
+            padding: rem(40) rem(30);
+            margin: 0 rem(-30);
+
+            background: $color-2;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            .par__content {
+                display: inline;
+            }
         }
     }
 
