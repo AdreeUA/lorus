@@ -41,16 +41,16 @@ var data = {list: {
         type: "img",
         list: [
             {
-                src: "%=static=%img/assets/academy/team-1.jpg"
+                src: "%=static=%img/assets/inner-page/academy-page/team-1.jpg"
             },
             {
-                src: "%=static=%img/assets/academy/team-2.jpg"
+                src: "%=static=%img/assets/inner-page/academy-page/team-2.jpg"
             },
             {
-                src: "%=static=%img/assets/academy/team-3.jpg"
+                src: "%=static=%img/assets/inner-page/academy-page/team-3.jpg"
             },
             {
-                src: "%=static=%img/assets/academy/team-4.jpg"
+                src: "%=static=%img/assets/inner-page/academy-page/team-4.jpg"
             }
         ]
     },
@@ -92,17 +92,17 @@ var data = {list: {
         type: "img",
         list: [
             {
-                src: "%=static=%img/assets/les/les-1.jpg",
+                src: "%=static=%img/assets/inner-page/les-page/les-1.jpg",
                 class: "block-3__photos_1"
             },
             {
-                src: "%=static=%img/assets/les/les-2.jpg",
+                src: "%=static=%img/assets/inner-page/les-page/les-2.jpg",
                 text: "Маленькое описание того, что на фотографиях давайте сделаем?",
                 textClass: "par_border-left block-3__photos-descr",
                 class: "block-3__photos_2"
             },
             {
-                src: "%=static=%img/assets/les/les-3.jpg",
+                src: "%=static=%img/assets/inner-page/les-page/les-3.jpg",
                 class: "block-3__photos_3"
             }
         ]
@@ -172,5 +172,23 @@ var data = {list: {
                 ]
             }
         ]
-    }
+    },
+
+    constructorTeam: {
+        type: "img",
+        list: [
+            {
+                src: "%=static=%img/assets/inner-page/constructor-page/team-1.jpg"
+            },
+            {
+                src: "%=static=%img/assets/inner-page/constructor-page/team-2.jpg"
+            },
+            {
+                src: "%=static=%img/assets/inner-page/constructor-page/team-3.jpg"
+            },
+            {
+                src: "%=static=%img/assets/inner-page/constructor-page/team-4.jpg"
+            }
+        ]
+    },
 }}

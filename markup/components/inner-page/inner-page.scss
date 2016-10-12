@@ -87,6 +87,19 @@
         margin-top: rem(20);
     }
 
+    &__list-wrap {
+        display: table-row;
+        vertical-align: middle;
+        font-size: 0;
+    }
+
+    &__list-col {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: rem(40);
+        width: 100/3 + %;
+    }
+
     &__share {
         margin: rem(57) 0 0 rem(-9);
     }
@@ -101,3 +114,4 @@
 @import './les-page/les-page';
 @import './search-page/search-page';
 @import './contacts-page/contacts-page';
+@import './constructor-page/constructor-page';

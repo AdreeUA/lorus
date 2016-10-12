@@ -1,4 +1,4 @@
-var data = {vacancies: {
+var data = {listExtend: {
     default: {
         items() {
             let items = [];
@@ -12,5 +12,9 @@ var data = {vacancies: {
 
             return items;
         }
+    },
+
+    constructor: {
+        
     }
 }}
