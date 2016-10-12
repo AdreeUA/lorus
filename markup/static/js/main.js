@@ -19,7 +19,6 @@ import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
 import { InnerPage } from 'components/inner-page/inner-page';
 import { Write } from 'components/write/write';
-import lesInit from 'components/les/les';
 import contactsInit from 'components/contacts/contacts';
 
 $(() => {
@@ -39,6 +38,5 @@ $(() => {
     Component.init('.write', Write);
     Service.initCurrentService();
     InnerPage.initCurrentPage();
-    lesInit();
     contactsInit();
 });

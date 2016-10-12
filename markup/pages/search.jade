@@ -1,10 +1,10 @@
 extends ../layouts/inner
 
-include ../components/search/search
+include ../components/inner-page/search-page/search-page
 
 block vars
     -pageSettings.title = 'Результаты поиска';
     -pageSettings.pageClass = 'page-search page-inner';
 
 block content
-    +search
+    +search-page

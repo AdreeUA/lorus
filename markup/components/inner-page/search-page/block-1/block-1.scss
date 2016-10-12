@@ -1,0 +1,18 @@
+.block-1 {
+
+    &__content {
+        width: rem(750);
+    }
+
+    &__form {
+        margin-top: rem(55);
+        margin-left: rem(-65);
+    }
+
+    &__results {
+        margin-top: rem(33);
+
+        font-size: rem(15);
+        font-weight: 400;
+    }
+}

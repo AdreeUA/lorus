@@ -1,23 +1,20 @@
 include ../../../title/title
 include ../../../icon/icon
 include ../../../input/input
-include ../../../btn-inner/btn-inner
 include ../../../par/par
-
+include ../../../form/form
 
 mixin block-1(data)
-    +b.block-1.search__block
-        +e.left.search__left
-            +logo(logo.mainGray).inner-page__logo
+    +b.block-1.inner-page__block
+        +e.content.inner-page__descr
+            +title().inner-page__title Результаты поиска
 
-            +title().search__title Результаты поиска
-
-            +b.FORM.form.search__form
+            +form.block-1__form
                 +e.fields
                     +input()._icon
 
                         +e.BUTTON.submit_search(type='submit' value='')
                             +icon({'icon': 'search', 'class': 'input__icon'})
 
-            +par().search__results-label
+            +par().block-1__results
                 | Найдено 252 записи (17 страниц)
