@@ -5,7 +5,7 @@ include ./block-2/block-2
 include ./block-3/block-3
 
 mixin career-page(data)
-    +inner-page
+    +inner-page({ noForm: true })
         +b.ARTICLE.career-page()&attributes(attributes)
             +e.lines
                 .inner-page__lines
