@@ -63,4 +63,16 @@
             border-left: none;
         }
     }
+
+    &_theme_text {
+        .photo__wrapper {
+            &::before {
+                right: 0;
+
+                width: 86%;
+
+                background: url('%=static=%general/sunlight_text.svg') no-repeat 0 0 / contain;
+            }
+        }
+    }
 }

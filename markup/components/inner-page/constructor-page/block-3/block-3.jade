@@ -12,3 +12,17 @@ mixin block-3(data)
         +title({'tag': 'h3'})._inner._top-yellow.block-3__title Список Тип 2
 
         +list(list.constructorRoll)._roll.block-2__roll
+
+        +b.photo-text_special
+            +e.photo-wrap
+                +e.photo-title Фотография с заголовком
+
+                +photo({ src: '%=static=%img/assets/photo-text/photo-1.jpg' })._theme_simple._theme_text.photo-text__photo
+
+            +e.text-wrap
+                +title({'tag': 'h4'})._inner.photo-text__text-title Текстовый блок
+
+                +par()._border-left.photo-text__text-content
+                    +e.content
+                        | Мы берём на себя все этапы перевозки, включая квалифицированную помощь с таможенным оформлением (средний срок оформления деклараций.
+ 

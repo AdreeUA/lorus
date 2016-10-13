@@ -5,17 +5,10 @@ include ../../../par/par
 mixin block-2(data)
     +b.SECTION.block-2.inner-page__block
 
-        +title({'tag': 'h3'})._inner._top-yellow Список 1
+        +title({'tag': 'h3'})._inner._top-yellow.inner-page__subtitle Список 1
 
         .inner-page__list-wrap
-            .inner-page__list-col
-                +list(list.careerOffers_1)._check
-
-            .inner-page__list-col
-                +list(list.careerOffers_2)._check
-
-            .inner-page__list-col
-                +list(list.careerOffers_3)._check
+            +list(list.constructorCheck)._check
 
         +par()._brackets.inner-page__cite
             +e.content

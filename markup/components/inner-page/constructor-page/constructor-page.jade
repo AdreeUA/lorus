@@ -4,9 +4,10 @@ include ./block-1/block-1
 include ./block-2/block-2
 include ./block-3/block-3
 include ./block-4/block-4
+include ./block-5/block-5
 
 mixin constructor-page(data)
-    +inner-page({ noForm: true })
+    +inner-page()
         +b.ARTICLE.constructor-page()&attributes(attributes)
             +e.lines.inner-page__lines-wrapper
                 .inner-page__lines
@@ -19,3 +20,4 @@ mixin constructor-page(data)
                 +block-2
                 +block-3
                 +block-4
+                +block-5

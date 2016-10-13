@@ -113,6 +113,10 @@
         }
     }
 
+    &__subtitle {
+        margin-left: rem(79);
+    }
+
     &__questions {
         position: relative;
         z-index: 2;
