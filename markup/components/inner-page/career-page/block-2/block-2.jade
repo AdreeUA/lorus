@@ -4,10 +4,8 @@ include ../../../list/list
 mixin block-2(data)
     +b.SECTION.block-2.inner-page__block
 
-        +title({'tag': 'h3'})._inner._top-yellow Мы предлагаем соискателям
+        +title({'tag': 'h3'})._inner._top-yellow.inner-page__subtitle Мы предлагаем соискателям
 
-        +e.offers-wrap
-            +e.offers
-                +e.offers-col
-                    +list(list.careerOffers)._check
+        .inner-page__list-wrap
+            +list(list.careerOffers)._check
                     

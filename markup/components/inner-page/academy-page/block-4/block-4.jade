@@ -6,10 +6,10 @@ include ../../../share/share
 mixin block-4(data)
     +b.block-4.inner-page__block
 
-        +title({'tag': 'h3'})._inner.block-4__title
+        +title({'tag': 'h3'})._inner.inner-page__subtitle_photos
             | Хорошо подготовленная команда — залог успеха!
 
-        +slider(slider.academyTeam).block-4__team
+        +slider(slider.academyTeam).inner-page__photos
             -var i = 1;
             while i <= 4
                 +e.item.block-4__photo-wrapper

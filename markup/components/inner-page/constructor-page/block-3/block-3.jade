@@ -5,15 +5,15 @@ include ../../../list-extend/list-extend
 mixin block-3(data)
     +b.SECTION.block-3.inner-page__block
 
-        +title({'tag': 'h3'})._inner.block-3__title Ссылки, доп. материалы
+        +title({'tag': 'h3'})._inner.block-3__title.inner-page__subtitle_list-extend Ссылки, доп. материалы
 
-        +list-extend(listExtend.constructor).block-3__extend
+        +list-extend(listExtend.constructor).inner-page__extend
 
-        +title({'tag': 'h3'})._inner._top-yellow.block-3__title Список Тип 2
+        +title({'tag': 'h3'})._inner._top-yellow.block-3__title.inner-page__subtitle_roll Список Тип 2
 
-        +list(list.constructorRoll)._roll.block-2__roll
+        +list(list.constructorRoll)._roll.inner-page__roll
 
-        +b.photo-text_special
+        +b.photo-text_special.inner-page__photo-text
             +e.photo-wrap
                 +e.photo-title Фотография с заголовком
 

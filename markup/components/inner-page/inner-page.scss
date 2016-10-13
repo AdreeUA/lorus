@@ -20,6 +20,24 @@
     &__block {
         position: relative;
 
+        &_theme_extra {            
+            position: relative;
+            padding-bottom: rem(62);
+
+            &::after {
+                position: absolute;
+                left: rem(-27);
+                right: rem(-27);
+                bottom: 0;
+
+                height: 1px;
+
+                content: '';
+
+                background-color: #d6d4d3;
+            }
+        }
+
         @include below($tablet) {
             padding: 0 rem(30);
 
@@ -114,7 +132,23 @@
     }
 
     &__subtitle {
-        margin-left: rem(79);
+        margin-left: rem(103);
+
+        &.title_top-yellow {
+            margin-left: rem(79);
+        }
+
+        &_photos {
+            margin-top: rem(63);
+        }
+
+        &_list-extend {
+            margin-top: rem(75);
+        }
+
+        &_roll {
+            margin-top: rem(89);
+        }
     }
 
     &__questions {
@@ -129,9 +163,8 @@
     }
 
     &__list-wrap {
-        display: table-row;
-        vertical-align: middle;
-        font-size: 0;
+        margin-top: rem(44);
+        margin-left: rem(48);
     }
 
     &__list-col {
@@ -142,7 +175,7 @@
     }
 
     &__share {
-        margin: rem(57) 0 0 rem(-9);
+        margin: rem(57) 0 0 rem(86);
 
         @include below($tablet) {
             display: none;
@@ -172,6 +205,42 @@
 
         font-size: rem(33);
         line-height: 2.1;
+    }
+
+    &__cite {
+        width: rem(767);
+        margin-left: rem(60);
+        margin-top: rem(10);
+
+        &_center {
+            text-align: center;
+        }
+    }
+
+    &__photos {
+        margin-top: rem(60);
+        margin-left: rem(52);
+    }
+
+    &__extend {
+        margin-top: rem(34);
+        margin-left: rem(132);
+    }
+
+    &__roll {
+        margin-top: rem(35);
+        margin-left: rem(102);
+        padding-bottom: rem(25);
+    }
+
+    &__photo-text {
+        margin-top: rem(105);
+        margin-bottom: rem(100);
+    }
+
+    &__ol {
+        margin-left: rem(22);
+        margin-top: rem(80);
     }
 }
 

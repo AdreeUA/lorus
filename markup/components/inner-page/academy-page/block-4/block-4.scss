@@ -1,5 +1,4 @@
 .block-4 {
-    margin-left: rem(102);
 
     @include below($tablet) {
         min-height: 0;

@@ -10,10 +10,15 @@ mixin block-2(data)
         .inner-page__list-wrap
             +list(list.constructorCheck)._check
 
-        +par()._brackets.inner-page__cite
+        +par()._brackets.inner-page__cite_center
             +e.content
                 | Цитата и выделение важной части текста. Цитата и выделение важной части текста. Цитата и выделение важной части текста. Цитата и выделение важной части текста.
 
-        +title({'tag': 'h3'})._inner Фотографии
+        +title({'tag': 'h3'})._inner.inner-page__subtitle_photos Фотографии
 
-        +list(list.constructorTeam)._horiz-photo.block-2__team
+        +slider(slider.academyTeam).inner-page__photos
+            -var i = 1;
+            while i <= 4
+                +e.item.block-4__photo-wrapper
+                    img.block-4__photo(src=`%=static=%img/assets/inner-page/academy-page/team-${i}.jpg` alt='')
+                -i++
