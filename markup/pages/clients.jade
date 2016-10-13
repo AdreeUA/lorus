@@ -1,0 +1,10 @@
+extends ../layouts/inner
+
+include ../components/inner-page/clients-page/clients-page
+
+block vars
+    -pageSettings.title = 'Постоянные клиенты';
+    -pageSettings.pageClass = 'page-clients page-inner';
+
+block content
+    +clients-page

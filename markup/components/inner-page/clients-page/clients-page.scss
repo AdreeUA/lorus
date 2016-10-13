@@ -1,3 +1,39 @@
 .clients-page {
+    @import './block-1/block-1';
+    @import './block-2/block-2';
 
+    border-bottom: 1px solid #f6f6f6;
+
+    &__lines {
+        left: rem(70);
+    }
+
+    &__line {
+        font-size: rem(15.4);
+
+        &_1 {
+            height: auto;
+            width: calc(100% + 70px);
+            overflow: hidden;
+            left: rem(-70);
+        }
+
+        &_2 {
+            position: absolute;
+            right: rem(-40);
+
+            width: rem(44);
+
+            margin-top: rem(220);
+
+            overflow: hidden;
+        }
+
+        &_3 {
+            width: rem(90);
+            height: auto;
+            margin-left: rem(-100);
+            margin-top: rem(560);
+        }
+    }
 }

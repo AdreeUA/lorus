@@ -160,6 +160,19 @@
             display: block;
         }
     }
+
+    &__clients-btn-wrap {
+        margin-top: rem(50);
+
+        text-align: center;
+    }
+
+    &__clients-btn {
+        padding: 0 1.6em;
+
+        font-size: rem(33);
+        line-height: 2.1;
+    }
 }
 
 @import './career-page/career-page';
@@ -168,3 +181,4 @@
 @import './search-page/search-page';
 @import './contacts-page/contacts-page';
 @import './constructor-page/constructor-page';
+@import './clients-page/clients-page';

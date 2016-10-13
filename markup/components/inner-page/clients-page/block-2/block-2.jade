@@ -1,0 +1,10 @@
+include ../../../list-img/list-img
+include ../../../btn/btn
+
+mixin block-2(data)
+    +b.block-2.inner-page__block
+        +list-img(listImg.clients).inner-page__clients
+
+        .inner-page__clients-btn-wrap
+            +btn.inner-page__clients-btn
+                | Показать еще

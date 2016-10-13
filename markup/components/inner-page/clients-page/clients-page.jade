@@ -1,3 +1,22 @@
 mixin clients-page(data)
     +b.clients-page()&attributes(attributes)
         block
+
+include ../inner-page
+include ../../line/line
+include ./block-1/block-1
+include ./block-2/block-2
+
+mixin clients-page(data)
+    +inner-page({ noForm: true })
+        +b.ARTICLE.clients-page()&attributes(attributes)
+            +e.lines.inner-page__lines-wrapper
+                .inner-page__lines
+                    +line(line.clients1).clients-page__line_1
+                    +line(line.clients2).clients-page__line_2
+                    +line(line.clients3).clients-page__line_3
+
+            .inner-page__content
+                +block-1
+                +block-2
+ 
