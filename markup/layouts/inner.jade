@@ -26,8 +26,8 @@ html(lang='ru' class=pageSettings.pageClass)
 
             block content
 
-            +footer({ inner: true })
+            +footer({ inner: true })(class=pageSettings.footerClass)
 
-        +write() 
+        +write()
 
         script(src='%=static=%js/main%=hash=%%=min=%.js')
