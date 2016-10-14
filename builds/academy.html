@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="telephone=no" name="format-detection">
         <meta name="HandheldFriendly" content="true">
-        <!--[if IE 9 ]><link href="static/css/main_ie9.min.css" rel="stylesheet" type="text/css"><![endif]-->
+
         <!--[if (gt IE 9)|!(IE)]><!-->
         <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
@@ -39,48 +39,125 @@
                 <div class="hamburger header__hamburger"><a href="javascript:void(0)" class="icon-btn icon-btn_theme_inverse hamburger__inner"><span class="icon-btn__icon hamburger__line"></span>Открыть меню</a>
                 </div>
                 <div class="menu header__slide-menu">
-                    <label class="search-mini menu__search">
-                        <form>
-                            <input type="search" name="search" placeholder="Поиск" class="search-mini__field" />
-                            <svg class="icon icon_search search-mini__icon" width="100%" height="100%">
-                                <use xlink:href="svg-symbols.svg#search"></use>
-                            </svg>
+                    <div class="search-mini menu__search">
+                        <form class="search-mini__form">
+                            <label class="input input_icon search-mini__input">
+                                <input type="text" class="input__field input__field_input input__field_hidden" />
+                                <button type="submit" value="" class="input__submit input__submit_search">
+                                    <svg class="icon icon_search input__icon" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#search"></use>
+                                    </svg>
 
+                                </button>
+                            </label>
                             <button type="submit" class="search-mini__submit">
                             </button>
                         </form>
-                    </label>
+                        <ul class="search-mini__results">
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="found">Си</span><span class="search-mini__text">стема совершенствования Lorus</span></a>
+                            </li>
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="search-mini__text">Мис</span><span class="found">си</span><span class="search-mini__text">я</span></a>
+                            </li>
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="search-mini__text">Вакан</span><span class="found">си</span><span class="search-mini__text">и</span></a>
+                            </li>
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="search-mini__text">Доставка из</span><span class="found">Си</span><span class="search-mini__text">нгапура</span></a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="menu__wrapper">
-                        <div class="menu__service">
-                            <nav class="nav nav nav_theme_menu menu__nav">
-                                <h2 class="nav__title">Услуги
-                </h2>
-                                <ul class="nav__menu">
-                                    <li class="nav__item menu__nav-item"><a href="javascript:void(0)" class="link nav__link">Сквозной сервис из стран АТР</a>
-                                        <div class="nav__describe">Доставка контейнеров из стран АТР с точным графиком, конкурентными ставками и выгодными условиями хранения.
-                                        </div>
-                                    </li>
-                                </ul>
-                            </nav>
+                        <div class="menu__row">
+                            <div class="menu__col">
+                                <div class="menu__menu">
+                                    <nav class="nav nav-extend nav-extend_block nav nav_theme_menu menu__nav">
+                                        <h2 class="nav__title"><a href="#home" class="nav__link link">О компании</a>
+                    </h2>
+                                        <ul class="nav__menu">
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="#mission" class="link nav__link">Миссия</a>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="#advantages" class="link nav__link">Преимущества</a>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="#team" class="link nav__link">Наша команда</a>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Наши партнеры</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Партнер 1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Партнер 2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Партнер 3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="menu__menu">
+                                    <nav class="nav nav-extend nav-extend_block nav nav_theme_menu menu__nav">
+                                        <h2 class="nav__title"><a href="#clients" class="nav__link link">Клиенты</a>
+                    </h2>
+                                        <ul class="nav__menu">
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="menu__col">
+                                <div class="menu__service">
+                                    <nav class="nav nav-extend nav-extend_block nav nav_theme_menu menu__nav">
+                                        <h2 class="nav__title"><a href="services.html" class="nav__link link">Услуги</a>
+                    </h2>
+                                        <ul class="nav__menu">
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Консалтинг и Инжиниринг</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Интеграция</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Логистические решения</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">e-Commerce</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Таможня</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Внутризаводская логистика</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Решения для автомобильной промышленности</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu__menu">
-                            <nav class="nav nav nav_theme_menu menu__nav">
-                                <h2 class="nav__title">Навигация
-                </h2>
-                                <ul class="nav__menu">
-                                    <li class="nav__item menu__nav-item"><a href="#home" class="link nav__link">Главная страница</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#about" class="link nav__link">О компании</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#mission" class="link nav__link">Миссия</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#advantages" class="link nav__link">Преимущества</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#team" class="link nav__link">Команда</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div><a href="javascript:void(0)" class="btn menu__btn">Написать нам</a><a href="tel:+74957775457" class="menu__phone">8 495 777 54 57</a>
+                        <div class="menu__row"><a href="#writeUs" class="btn menu__btn js-writeus">Написать нам</a><a href="tel:+74957775457" class="menu__phone">8 495 777 54 57</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,11 +170,16 @@
             </div>
         </header>
         <div class="page"><a href="javascript:void(0)" class="link page__lang">In English</a>
-            <article class="academy inner-page inner-page_gray-top">
-                <div class="through-academy">
-                    <div class="through-academy__wrapper">
-                        <div class="through-academy__lines">
-                            <div class="line through-academy__line through-academy__line_1">
+            <div class="inner-page">
+                <header class="inner-page__header">
+                    <a href="javascript:void(0)" class="logo inner-page__logo">
+                        <img src="static/img/assets/logo/logo-gray.svg" srcset="static/img/assets/logo/logo-gray@2x.svg 2x" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img logo__img_inner" />
+                    </a>
+                </header>
+                <article class="academy-page">
+                    <div class="inner-page__lines-wrapper">
+                        <div class="inner-page__lines">
+                            <div class="line academy-page__line academy-page__line_1">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.136 987.09" class="line__icon line__icon_static">
                                     <path d="M329.083,0v22.504c0,11.046-6.954,20-18,20h-11.04 c-8.511,0-15.409,6.9-15.409,15.41v216.193c0,8.543,6.921,15.471,15.464,15.479l59.97,0.064c8.594,0.009,15.566-6.955,15.566-15.55 v-72.706c0-8.588,6.962-15.55,15.55-15.55h21.369c8.591,0,15.555,6.967,15.55,15.559l-0.067,293.368 c-0.004,8.585-6.965,15.542-15.55,15.542h-38.768c-8.589,0-15.551-6.962-15.551-15.55v-4.9c0-8.588,6.962-15.55,15.551-15.55h80.199 c8.629,0,15.69,8.7,15.69,17.329V835.09c0,11.598-9.402,21-21,21h-137.54c-11.599,0-21,9.402-21,21v43.171 c0,13.575,11.005,24.58,24.58,24.58h52.84c13.574,0,24.58-11.005,24.58-24.58v-0.003c0-13.576-11.006-24.581-24.58-24.581h-0.42 c-11.047,0-20,8.955-20,20v41.11v0.494c0,12.221-9.907,22.127-22.129,22.127H0"></path>
                                 </svg>
@@ -105,17 +187,17 @@
                                     <path d="M329.083,0v22.504c0,11.046-6.954,20-18,20h-11.04 c-8.511,0-15.409,6.9-15.409,15.41v216.193c0,8.543,6.921,15.471,15.464,15.479l59.97,0.064c8.594,0.009,15.566-6.955,15.566-15.55 v-72.706c0-8.588,6.962-15.55,15.55-15.55h21.369c8.591,0,15.555,6.967,15.55,15.559l-0.067,293.368 c-0.004,8.585-6.965,15.542-15.55,15.542h-38.768c-8.589,0-15.551-6.962-15.551-15.55v-4.9c0-8.588,6.962-15.55,15.551-15.55h80.199 c8.629,0,15.69,8.7,15.69,17.329V835.09c0,11.598-9.402,21-21,21h-137.54c-11.599,0-21,9.402-21,21v43.171 c0,13.575,11.005,24.58,24.58,24.58h52.84c13.574,0,24.58-11.005,24.58-24.58v-0.003c0-13.576-11.006-24.581-24.58-24.581h-0.42 c-11.047,0-20,8.955-20,20v41.11v0.494c0,12.221-9.907,22.127-22.129,22.127H0"></path>
                                 </svg>
                             </div>
-                            <svg class="icon icon_building academy__building" width="100%" height="100%">
+                            <svg class="icon icon_building academy-page__building" width="100%" height="100%">
                                 <use xlink:href="svg-symbols.svg#building"></use>
                             </svg>
 
-                            <div class="line line_css line_dashed through-academy__line through-academy__line_2">
+                            <div class="line line_css line_dashed academy-page__line academy-page__line_2">
                                 <div class="line__icon line__icon_static">
                                 </div>
                                 <div class="line__icon line__icon_active">
                                 </div>
                             </div>
-                            <div class="line through-academy__line through-academy__line_3">
+                            <div class="line academy-page__line academy-page__line_3">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.863 140" class="line__icon line__icon_static">
                                     <path d="M217.863,6.319h-70.916 c-15.959,0-31.168,6.775-41.842,18.639L6.863,134.5"></path>
                                 </svg>
@@ -123,130 +205,177 @@
                                     <path d="M217.863,6.319h-70.916 c-15.959,0-31.168,6.775-41.842,18.639L6.863,134.5"></path>
                                 </svg>
                             </div>
-                            <div class="line through-academy__line through-academy__line_4">
+                            <div class="line academy-page__line academy-page__line_4">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 623" class="line__icon line__icon_static">
-                                    <path d="M111.97,618.934l-78.535-67.595 c-17.033-14.66-26.817-36.025-26.788-58.498L6.87,39.796C6.877,22.803,20.655,9.031,37.648,9.031h42.295"></path>
+                                    <path d="M79.9,9H37.6C20.7,9,6.9,22.8,6.9,39.8l-0.2,453c0,22.5,9.8,43.8,26.8,58.5l78.5,67.6"></path>
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 623" class="line__icon line__icon_active">
-                                    <path d="M111.97,618.934l-78.535-67.595 c-17.033-14.66-26.817-36.025-26.788-58.498L6.87,39.796C6.877,22.803,20.655,9.031,37.648,9.031h42.295"></path>
+                                    <path d="M79.9,9H37.6C20.7,9,6.9,22.8,6.9,39.8l-0.2,453c0,22.5,9.8,43.8,26.8,58.5l78.5,67.6"></path>
                                 </svg>
-                            </div>
-                        </div>
-                        <div class="through-academy__content">
-                            <div class="block-1 academy__block">
-                                <div class="block-1__left academy__left">
-                                    <a href="javascript:void(0)" class="logo inner-page__logo">
-                                        <img src="static/img/assets/logo/logo-gray.svg" srcset="static/img/assets/logo/logo-gray@2x.svg 2x" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img logo__img_inner" />
-                                        <h2 class="screenreader">Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.
-                  </h2>
-                                    </a>
-                                    <h2 class="title academy__title">Академия<span class="title__bold"> Lorus</span>
-                  </h2>
-                                    <p class="par-inner par-inner_border-left academy__descr">Непрерывное улучшение качества и процессов невозможно без хорошо подготовленной команды. Академия ЛОРУС – корпоративный институт профессионального развития персонала – ищет потенциал и развивает сотрудников, исходя
-                                        из стратегических задач компании.
-                                    </p>
-                                </div>
-                                <div class="block-1__right academy__right">
-                                    <div class="photo-inner academy__photo-top photo-inner__photo-cont photo-inner__photo-cont_shadow">
-                                        <div class="photo-inner__photo academy__photo-wrapper js-tween">
-                                            <img src="static/img/assets/inner-page/photo-inner/academy-1.jpg" alt="" class="photo-inner__photo photo-inner__photo_left-yellow" role="presentation" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-2 academy__block">
-                                <h3 class="title title_inner title_top-yellow">Цели Академии
-                </h3>
-                                <ul class="list-inner list-inner_roll academy__targets">
-                                    <li class="list-inner__item">Повышение уровня компетенций и эффективности сотрудников;
-                                    </li>
-                                    <li class="list-inner__item">Развитие эффективного лидерства и менеджмента;
-                                    </li>
-                                    <li class="list-inner__item">Выявление перспективных сотрудников для формирования кадрового резерва;
-                                    </li>
-                                    <li class="list-inner__item">Адаптация новых сотрудников;
-                                    </li>
-                                    <li class="list-inner__item">Рост вовлеченности и укрепление лояльности персонала;
-                                    </li>
-                                    <li class="list-inner__item">Укрепление и развитие корпоративной культуры.
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="block-3 service__block">
-                                <h3 class="title title_inner academy__rules-title">Для достижения целей Академия ЛОРУС работает по трем основным направлениям:
-                </h3>
-                                <ol class="list-inner list-inner_horiz-num list-inner_col-3 academy__rules-list">
-                                    <li class="list-inner__item">
-                                        <div class="list-inner__content">Карты компетенций – определение и периодическое обновление набора компетенций (как личностных, так и профессиональных) необходимых для достижения целей компании по подразделениям и должностям
-                                        </div>
-                                    </li>
-                                    <li class="list-inner__item">
-                                        <div class="list-inner__content">Оценка персонала – мероприятия по определению и приоритизации потенциальных путей развития сотрудников.
-                                        </div>
-                                    </li>
-                                    <li class="list-inner__item">
-                                        <div class="list-inner__content">Программы развития – тренинги, курсы (внутренние и внешние), программы подготовки.
-                                        </div>
-                                    </li>
-                                </ol>
-                                <p class="par-inner par-inner_brackets academy__cite"><span class="par-inner__content">Мы уверены, что самый ценный ресурс любой компании – это люди.</span><span class="par-inner__content">И инвестиции в людей – одно из самых выгодных вложений.</span><span class="par-inner__content">Только люди решают задачи и продвигают компанию к ее целям.</span>
-                                </p>
-                            </div>
-                            <div class="block-4 academy__block">
-                                <h3 class="title title_inner academy__team-title">Хорошо подготовленная команда — залог успеха!
-                </h3>
-                                <ul class="list-inner list-inner_horiz-photo academy__team-list">
-                                    <li class="list-inner__item">
-                                        <img src="static/img/assets/academy/team-1.jpg" class="list-inner__img" alt="" role="presentation" />
-                                    </li>
-                                    <li class="list-inner__item">
-                                        <img src="static/img/assets/academy/team-2.jpg" class="list-inner__img" alt="" role="presentation" />
-                                    </li>
-                                    <li class="list-inner__item">
-                                        <img src="static/img/assets/academy/team-3.jpg" class="list-inner__img" alt="" role="presentation" />
-                                    </li>
-                                    <li class="list-inner__item">
-                                        <img src="static/img/assets/academy/team-4.jpg" class="list-inner__img" alt="" role="presentation" />
-                                    </li>
-                                </ul>
-                                <div class="share-inner academy__share">
-                                    <img src="static/img/assets/inner-page/share-inner/dummy.jpg" class="share-inner__img" alt="" role="presentation" />
-                                </div>
-                            </div>
-                            <div class="block-5 academy__block academy__block_gray">
-                                <h3 class="title title_inner academy__form-title">Остались вопросы?
-                </h3>
-                                <form class="form-inner academy__form">
-                                    <div class="form-inner__fields form-inner__fields_left">
-                                        <div class="form-inner__row form-inner__row_col form-inner__row form-inner__row_2">
-                                            <div class="form-inner__col">
-                                                <label class="input-inner"><span class="input-inner__label">Как к вам обращаться?</span>
-                                                    <input type="text" class="input-inner__field input-inner__field_input" />
-                                                </label>
-                                            </div>
-                                            <div class="form-inner__col">
-                                                <label class="input-inner"><span class="input-inner__label">Телефон для связи</span>
-                                                    <input type="text" class="input-inner__field input-inner__field_input" />
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-inner__row">
-                                            <label class="input-inner"><span class="input-inner__label">Комментарий</span>
-                                                <textarea type="" class="input-inner__field input-inner__field_textarea"></textarea>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-inner__submit form-inner__submit_left">
-                                        <button type="submit" class="btn-inner">Отправить
-                                        </button>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>
+                    <div class="inner-page__content">
+                        <div class="block-1 inner-page__block">
+                            <div class="photo inner-page__main-photo">
+                                <div class="photo__wrapper">
+                                    <img src="static/img/assets/photo/academy-1.jpg" alt="" class="photo__img" role="presentation" />
+                                </div>
+                                <div class="photo__shadow">
+                                </div>
+                            </div>
+                            <div class="block-1__content inner-page__descr">
+                                <h2 class="title inner-page__title academy-page__title">Академия<span class="title__bold"> Lorus</span>
+                </h2>
+                                <p class="par par_border-left">Непрерывное улучшение качества и процессов невозможно без хорошо подготовленной команды. Академия ЛОРУС – корпоративный институт профессионального развития персонала – ищет потенциал и развивает сотрудников, исходя из стратегических
+                                    задач компании.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-2 inner-page__block">
+                            <h3 class="title title_inner title_top-yellow">Цели Академии
+              </h3>
+                            <ul class="list list_roll block-2__targets">
+                                <li class="list__item">
+                                    <svg class="icon icon_roll list__roll" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#roll"></use>
+                                    </svg>
+
+                                    <div class="list__content">Повышение уровня компетенций и эффективности сотрудников;
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <svg class="icon icon_roll list__roll" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#roll"></use>
+                                    </svg>
+
+                                    <div class="list__content">Развитие эффективного лидерства и менеджмента;
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <svg class="icon icon_roll list__roll" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#roll"></use>
+                                    </svg>
+
+                                    <div class="list__content">Выявление перспективных сотрудников для формирования кадрового резерва;
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <svg class="icon icon_roll list__roll" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#roll"></use>
+                                    </svg>
+
+                                    <div class="list__content">Адаптация новых сотрудников;
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <svg class="icon icon_roll list__roll" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#roll"></use>
+                                    </svg>
+
+                                    <div class="list__content">Рост вовлеченности и укрепление лояльности персонала;
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <svg class="icon icon_roll list__roll" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#roll"></use>
+                                    </svg>
+
+                                    <div class="list__content">Укрепление и развитие корпоративной культуры.
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="inner-page__mobile">
+                                <svg class="icon icon_building academy-page__building academy-page__building_mobile" width="100%" height="100%">
+                                    <use xlink:href="svg-symbols.svg#building"></use>
+                                </svg>
+
+                                <div class="line academy-page__m-line academy-page__m-line_1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 422.37 133.32" class="line__icon line__icon_static">
+                                        <path d="M1936.85,4142H1799.31a21,21,0,0,0-21,21v43.17a24.58,24.58,0,0,0,24.58,24.58h52.84a24.58,24.58,0,0,0,24.58-24.58h0a24.58,24.58,0,0,0-24.58-24.58h-0.42a20,20,0,0,0-20,20v41.6a22.13,22.13,0,0,1-22.13,22.13h-298.7"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 422.37 133.32" class="line__icon line__icon_active">
+                                        <path d="M1936.85,4142H1799.31a21,21,0,0,0-21,21v43.17a24.58,24.58,0,0,0,24.58,24.58h52.84a24.58,24.58,0,0,0,24.58-24.58h0a24.58,24.58,0,0,0-24.58-24.58h-0.42a20,20,0,0,0-20,20v41.6a22.13,22.13,0,0,1-22.13,22.13h-298.7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-3 inner-page__block">
+                            <h3 class="title title_inner block-3__title">Для достижения целей Академия ЛОРУС работает по трем основным направлениям:
+              </h3>
+                            <ol class="list list_horiz-num list_col-3 block-3__rules">
+                                <li class="list__item">
+                                    <div class="list__content">Карты компетенций – определение и периодическое обновление набора компетенций (как личностных, так и профессиональных) необходимых для достижения целей компании по подразделениям и должностям
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="list__content">Оценка персонала – мероприятия по определению и приоритизации потенциальных путей развития сотрудников.
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="list__content">Программы развития – тренинги, курсы (внутренние и внешние), программы подготовки.
+                                    </div>
+                                </li>
+                            </ol>
+                            <p class="par par_brackets block-3__cite"><span class="par__content">Мы уверены, что самый ценный ресурс любой компании – это люди.</span><span class="par__content">И инвестиции в людей – одно из самых выгодных вложений.</span><span class="par__content">Только люди решают задачи и продвигают компанию к ее целям.</span>
+                            </p>
+                        </div>
+                        <div class="block-4 inner-page__block">
+                            <h3 class="title title_inner inner-page__subtitle inner-page__subtitle_photos block-4__title">Хорошо подготовленная команда — залог успеха!
+              </h3>
+                            <div data-slick='{"variableWidth":true,"dots":false,"infinite":false,"arrows":false}' data-destroy="(min-width: 1024px)" class="slider inner-page__photos">
+                                <div class="slider__item block-4__photo-wrapper">
+                                    <img src="static/img/assets/inner-page/academy-page/team-1.jpg" alt="" class="block-4__photo" />
+                                </div>
+                                <div class="slider__item block-4__photo-wrapper">
+                                    <img src="static/img/assets/inner-page/academy-page/team-2.jpg" alt="" class="block-4__photo" />
+                                </div>
+                                <div class="slider__item block-4__photo-wrapper">
+                                    <img src="static/img/assets/inner-page/academy-page/team-3.jpg" alt="" class="block-4__photo" />
+                                </div>
+                                <div class="slider__item block-4__photo-wrapper">
+                                    <img src="static/img/assets/inner-page/academy-page/team-4.jpg" alt="" class="block-4__photo" />
+                                </div>
+                            </div>
+                            <div class="share likely inner-page__share">
+                                <div class="twitter">Твитнуть</div>
+                                <div class="facebook">Поделиться</div>
+                                <div class="vkontakte">Поделиться</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <div class="questions-form inner-page__questions">
+                    <h3 class="title title_inner questions-form__title">Остались вопросы?
+          </h3>
+                    <form class="form questions-form__form">
+                        <div class="form__fields form__fields_left">
+                            <div class="form__row form__row_col form__row form__row_2">
+                                <div class="form__col">
+                                    <label class="input"><span class="input__label">Как к вам обращаться?</span>
+                                        <input type="text" class="input__field input__field_input" />
+                                    </label>
+                                </div>
+                                <div class="form__col">
+                                    <label class="input"><span class="input__label">Телефон для связи</span>
+                                        <input type="text" class="input__field input__field_input" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <label class="input"><span class="input__label">Комментарий</span>
+                                    <textarea type="" class="input__field input__field_textarea"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__submit form__submit_left">
+                            <button type="submit" class="btn-inner">Отправить
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </article>
-            <div class="footer footer_inner">
+            </div>
+            <div class="footer footer_inner footer_no-line">
                 <div class="line footer__line-m">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.42 330.51" class="line__icon line__icon_static">
                         <path d="M119.42 63.5l-103.59.2a6 6 0 0 1-6-5.94v-1.82a10 10 0 0 1 10-10h36a10 10 0 0 1 10 10v13.9a10 10 0 0 1-10 10H42.49a10 10 0 0 1-10-10V18.73a10 10 0 0 1 10-10h29.74a10 10 0 0 1 10 10v311.78"></path>
@@ -273,6 +402,39 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="write">
+            <div class="modal mfp-hide white-popup" id="writeUs">
+                <div class="modal__close mfp-close">
+                </div>
+                <h3 class="title title_inner academy__form-title">Написать нам 
+        </h3>
+                <form class="form write__form">
+                    <div class="form__fields form__fields_left">
+                        <div class="form__row form__row_col form__row form__row_2">
+                            <div class="form__col">
+                                <label class="input input_border"><span class="input__label">Как к вам обращаться?</span>
+                                    <input type="text" class="input__field input__field_input" />
+                                </label>
+                            </div>
+                            <div class="form__col">
+                                <label class="input input_border"><span class="input__label">Телефон для связи</span>
+                                    <input type="text" class="input__field input__field_input" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label class="input input_border"><span class="input__label">Комментарий</span>
+                                <textarea type="" class="input__field input__field_textarea"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__submit write__submit">
+                        <button type="submit" class="btn-inner">Отправить
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         <script src="static/js/main.min.js"></script>

@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="telephone=no" name="format-detection">
         <meta name="HandheldFriendly" content="true">
-        <!--[if IE 9 ]><link href="static/css/main_ie9.min.css" rel="stylesheet" type="text/css"><![endif]-->
+
         <!--[if (gt IE 9)|!(IE)]><!-->
         <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
@@ -39,48 +39,125 @@
                 <div class="hamburger header__hamburger"><a href="javascript:void(0)" class="icon-btn icon-btn_theme_inverse hamburger__inner"><span class="icon-btn__icon hamburger__line"></span>Открыть меню</a>
                 </div>
                 <div class="menu header__slide-menu">
-                    <label class="search-mini menu__search">
-                        <form>
-                            <input type="search" name="search" placeholder="Поиск" class="search-mini__field" />
-                            <svg class="icon icon_search search-mini__icon" width="100%" height="100%">
-                                <use xlink:href="svg-symbols.svg#search"></use>
-                            </svg>
+                    <div class="search-mini menu__search">
+                        <form class="search-mini__form">
+                            <label class="input input_icon search-mini__input">
+                                <input type="text" class="input__field input__field_input input__field_hidden" />
+                                <button type="submit" value="" class="input__submit input__submit_search">
+                                    <svg class="icon icon_search input__icon" width="100%" height="100%">
+                                        <use xlink:href="svg-symbols.svg#search"></use>
+                                    </svg>
 
+                                </button>
+                            </label>
                             <button type="submit" class="search-mini__submit">
                             </button>
                         </form>
-                    </label>
+                        <ul class="search-mini__results">
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="found">Си</span><span class="search-mini__text">стема совершенствования Lorus</span></a>
+                            </li>
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="search-mini__text">Мис</span><span class="found">си</span><span class="search-mini__text">я</span></a>
+                            </li>
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="search-mini__text">Вакан</span><span class="found">си</span><span class="search-mini__text">и</span></a>
+                            </li>
+                            <li class="search-mini__item"><a href="javascript:void(0)" class="search-mini__link"><span class="search-mini__text">Доставка из</span><span class="found">Си</span><span class="search-mini__text">нгапура</span></a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="menu__wrapper">
-                        <div class="menu__service">
-                            <nav class="nav nav nav_theme_menu menu__nav">
-                                <h2 class="nav__title">Услуги
-                </h2>
-                                <ul class="nav__menu">
-                                    <li class="nav__item menu__nav-item"><a href="javascript:void(0)" class="link nav__link">Сквозной сервис из стран АТР</a>
-                                        <div class="nav__describe">Доставка контейнеров из стран АТР с точным графиком, конкурентными ставками и выгодными условиями хранения.
-                                        </div>
-                                    </li>
-                                </ul>
-                            </nav>
+                        <div class="menu__row">
+                            <div class="menu__col">
+                                <div class="menu__menu">
+                                    <nav class="nav nav-extend nav-extend_block nav nav_theme_menu menu__nav">
+                                        <h2 class="nav__title"><a href="#home" class="nav__link link">О компании</a>
+                    </h2>
+                                        <ul class="nav__menu">
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="#mission" class="link nav__link">Миссия</a>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="#advantages" class="link nav__link">Преимущества</a>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="#team" class="link nav__link">Наша команда</a>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Наши партнеры</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Партнер 1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Партнер 2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Партнер 3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="menu__menu">
+                                    <nav class="nav nav-extend nav-extend_block nav nav_theme_menu menu__nav">
+                                        <h2 class="nav__title"><a href="#clients" class="nav__link link">Клиенты</a>
+                    </h2>
+                                        <ul class="nav__menu">
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="menu__col">
+                                <div class="menu__service">
+                                    <nav class="nav nav-extend nav-extend_block nav nav_theme_menu menu__nav">
+                                        <h2 class="nav__title"><a href="services.html" class="nav__link link">Услуги</a>
+                    </h2>
+                                        <ul class="nav__menu">
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Консалтинг и Инжиниринг</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Интеграция</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">Логистические решения</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">1</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">2</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__item menu__nav-item nav-extend__item"><a href="javascript:void(0)" class="link nav__link">e-Commerce</a>
+                                                <div class="nav-extend__trigger"></div>
+                                                <ul class="nav__submenu dropdown dropdown_rel dropdown_pad-open">
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Таможня</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Внутризаводская логистика</a>
+                                                    </li>
+                                                    <li class="nav__subitem"><a href="javascript:void(0)" class="link nav__sublink">Решения для автомобильной промышленности</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu__menu">
-                            <nav class="nav nav nav_theme_menu menu__nav">
-                                <h2 class="nav__title">Навигация
-                </h2>
-                                <ul class="nav__menu">
-                                    <li class="nav__item menu__nav-item"><a href="#home" class="link nav__link">Главная страница</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#about" class="link nav__link">О компании</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#mission" class="link nav__link">Миссия</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#advantages" class="link nav__link">Преимущества</a>
-                                    </li>
-                                    <li class="nav__item menu__nav-item"><a href="#team" class="link nav__link">Команда</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div><a href="javascript:void(0)" class="btn menu__btn">Написать нам</a><a href="tel:+74957775457" class="menu__phone">8 495 777 54 57</a>
+                        <div class="menu__row"><a href="#writeUs" class="btn menu__btn js-writeus">Написать нам</a><a href="tel:+74957775457" class="menu__phone">8 495 777 54 57</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,9 +170,9 @@
             </div>
         </header>
         <div class="page"><a href="javascript:void(0)" class="link page__lang">In English</a>
-            <article class="contacts inner-page inner-page_map-bg">
-                <div class="through-contacts">
-                    <div class="line through-contacts__line">
+            <div class="inner-page inner-page_theme_world">
+                <div class="contacts-page">
+                    <div class="line contacts-page__line">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.45 515.31" class="line__icon line__icon_static">
                             <path d="M14484.09,4898.91v22.5c0,11-7,20-18,20h-11a15.41,15.41,0,0,0-15.41,15.41V5173a15.48,15.48,0,0,0,15.46,15.48l60,0.06a15.55,15.55,0,0,0,15.57-15.55v-72.71a15.55,15.55,0,0,1,15.55-15.55h21.37a15.55,15.55,0,0,1,15.55,15.56l-0.07,293.37a15.55,15.55,0,0,1-15.55,15.54h-38.77a15.55,15.55,0,0,1-15.55-15.55v-4.9a15.55,15.55,0,0,1,15.55-15.55h135.36"></path>
                         </svg>
@@ -103,56 +180,57 @@
                             <path d="M14484.09,4898.91v22.5c0,11-7,20-18,20h-11a15.41,15.41,0,0,0-15.41,15.41V5173a15.48,15.48,0,0,0,15.46,15.48l60,0.06a15.55,15.55,0,0,0,15.57-15.55v-72.71a15.55,15.55,0,0,1,15.55-15.55h21.37a15.55,15.55,0,0,1,15.55,15.56l-0.07,293.37a15.55,15.55,0,0,1-15.55,15.54h-38.77a15.55,15.55,0,0,1-15.55-15.55v-4.9a15.55,15.55,0,0,1,15.55-15.55h135.36"></path>
                         </svg>
                     </div>
-                    <header class="contacts-head through-contacts__head">
+                    <header class="contacts-head">
                         <a href="javascript:void(0)" class="logo contacts-head__logo">
                             <img src="static/img/assets/logo/logo-gray.svg" srcset="static/img/assets/logo/logo-gray@2x.svg 2x" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img logo__img_inner" />
-                            <h2 class="screenreader">Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.
-            </h2>
                         </a>
                         <h2 class="title contacts-head__title">Контакты
             </h2>
                         <div class="contacts-head__right">
-                            <div class="contacts-head__photo-wrapper">
-                                <img src="static/img/assets/contacts/contacts-1.png" alt="" class="contacts-head__img" role="presentation" />
+                            <div class="photo photo_theme_simple">
+                                <div class="photo__wrapper">
+                                    <img src="static/img/assets/photo/contacts-1.png" alt="" class="photo__img" role="presentation" />
+                                </div>
+                                <div class="photo__shadow">
+                                </div>
                             </div>
                         </div>
                     </header>
-                    <div id="map" class="map through-contacts__map">
-                        <!--+mark(map_mark.defaults)-->
-
+                    <div data-options='{"center":[55.76,37.602],"zoom":15,"controls":[]}' data-balloon='{"title":"Головной офис в Москве","items":["<div class=&apos;mark__item&apos;>Ул. Тестовская, дом 10, подъезд 2 (Северная башня)</div>","<div class=&apos;mark__item&apos;><a href=&apos;mailto:info@lorus-scm.com&apos; class=&apos;mark__email link link_theme_fill&apos;>info@lorus-scm.com</a></div>","<div class=&apos;mark__item&apos;><a href=&apos;tel:+74952128506&apos; class=&apos;mark__phone&apos;>+7 495 212-85-06</a></div>"],"placemark":[55.764286,37.581408],"open":[55.76,37.64]}'
+                    id="map" class="map contacts-page__map">
                     </div>
-                    <div class="contacts-form through-contacts__form">
-                        <h3 class="title title_inner">Остались вопросы?
-            </h3>
-                        <form class="form-inner les__form">
-                            <div class="form-inner__fields form-inner__fields_left">
-                                <div class="form-inner__row form-inner__row_col form-inner__row form-inner__row_2">
-                                    <div class="form-inner__col">
-                                        <label class="input-inner"><span class="input-inner__label">Как к вам обращаться?</span>
-                                            <input type="text" class="input-inner__field input-inner__field_input" />
-                                        </label>
-                                    </div>
-                                    <div class="form-inner__col">
-                                        <label class="input-inner"><span class="input-inner__label">Телефон для связи</span>
-                                            <input type="text" class="input-inner__field input-inner__field_input" />
-                                        </label>
-                                    </div>
+                </div>
+                <div class="questions-form inner-page__questions questions-form questions-form_theme_simple">
+                    <h3 class="title title_inner questions-form__title">Остались вопросы?
+          </h3>
+                    <form class="form questions-form__form">
+                        <div class="form__fields form__fields_left">
+                            <div class="form__row form__row_col form__row form__row_2">
+                                <div class="form__col">
+                                    <label class="input"><span class="input__label">Как к вам обращаться?</span>
+                                        <input type="text" class="input__field input__field_input" />
+                                    </label>
                                 </div>
-                                <div class="form-inner__row">
-                                    <label class="input-inner"><span class="input-inner__label">Комментарий</span>
-                                        <textarea type="" class="input-inner__field input-inner__field_textarea"></textarea>
+                                <div class="form__col">
+                                    <label class="input"><span class="input__label">Телефон для связи</span>
+                                        <input type="text" class="input__field input__field_input" />
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-inner__submit form-inner__submit_left">
-                                <button type="submit" class="btn-inner">Отправить
-                                </button>
+                            <div class="form__row">
+                                <label class="input"><span class="input__label">Комментарий</span>
+                                    <textarea type="" class="input__field input__field_textarea"></textarea>
+                                </label>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form__submit form__submit_left">
+                            <button type="submit" class="btn-inner">Отправить
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </article>
-            <div class="footer footer_inner">
+            </div>
+            <div class="footer footer_inner footer_no-line">
                 <div class="line footer__line-m">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.42 330.51" class="line__icon line__icon_static">
                         <path d="M119.42 63.5l-103.59.2a6 6 0 0 1-6-5.94v-1.82a10 10 0 0 1 10-10h36a10 10 0 0 1 10 10v13.9a10 10 0 0 1-10 10H42.49a10 10 0 0 1-10-10V18.73a10 10 0 0 1 10-10h29.74a10 10 0 0 1 10 10v311.78"></path>
@@ -179,6 +257,39 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="write">
+            <div class="modal mfp-hide white-popup" id="writeUs">
+                <div class="modal__close mfp-close">
+                </div>
+                <h3 class="title title_inner academy__form-title">Написать нам 
+        </h3>
+                <form class="form write__form">
+                    <div class="form__fields form__fields_left">
+                        <div class="form__row form__row_col form__row form__row_2">
+                            <div class="form__col">
+                                <label class="input input_border"><span class="input__label">Как к вам обращаться?</span>
+                                    <input type="text" class="input__field input__field_input" />
+                                </label>
+                            </div>
+                            <div class="form__col">
+                                <label class="input input_border"><span class="input__label">Телефон для связи</span>
+                                    <input type="text" class="input__field input__field_input" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label class="input input_border"><span class="input__label">Комментарий</span>
+                                <textarea type="" class="input__field input__field_textarea"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__submit write__submit">
+                        <button type="submit" class="btn-inner">Отправить
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         <script src="static/js/main.min.js"></script>
