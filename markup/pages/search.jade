@@ -1,10 +1,11 @@
 extends ../layouts/inner
 
-include ../components/search/through-search/through-search
+include ../components/inner-page/search-page/search-page
 
 block vars
     -pageSettings.title = 'Результаты поиска';
-    -pageSettings.pageClass = 'page-search page-inner' ;
+    -pageSettings.pageClass = 'page-search page-inner';
+    -pageSettings.footerClass = '_no-line';
 
 block content
-    +through-search
+    +search-page

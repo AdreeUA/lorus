@@ -4,6 +4,7 @@ include ../components/page/page
 include ../components/header/header
 include ../components/link/link
 include ../components/footer/footer
+include ../components/write/write
 
 -var pageSettings = {};
 -pageSettings.title = '';
@@ -25,6 +26,8 @@ html(lang='ru' class=pageSettings.pageClass)
 
             block content
 
-            +footer({ inner: true })
+            +footer({ inner: true })(class=pageSettings.footerClass)
+
+        +write()
 
         script(src='%=static=%js/main%=hash=%%=min=%.js')

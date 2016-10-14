@@ -1,0 +1,65 @@
+include ../../../list/list
+include ../../../icon/icon
+include ../../../house/house
+
+mixin block-2(data)
+    +b.block-2.inner-page__block
+
+        +house.block-2__house
+            +icon({'icon': 'house-les', 'class': 'house__bg'})
+
+            +e.main
+                +e.roof
+                    +e.row.block-2__roof_1
+                        +e.item_big
+                            +e.text Цели
+                    +e.row_2.block-2__roof_2
+                        +e.item
+                            +e.text Лучшее качество
+                        +e.item
+                            +e.text Самая низкая цена
+                    +e.row_3.block-2__roof_3
+                        +e.item
+                            +e.text Лучшая безопасность
+                        +e.item
+                            +e.text Лучшие сроки
+                        +e.item
+                            +e.text Лучшая мотивация
+
+                +e.stages
+                    +e.row_3.house__row_noborder.block-2__stage_1
+                        +e.item
+                            +e.text JIT
+                        +e.item
+                            +e.text Команда профессионалов
+                        +e.item
+                            +e.text Эффективность
+                    +e.row_3.block-2__stage_2
+                        +e.item
+                            +e.text Стандарты
+                        +e.item
+                            +e.text Визуальный менеджмент
+                        +e.item
+                            +e.text KAIZEN
+
+                +e.floor
+                    +e.row_3.block-2__floor_1
+                        +e.item
+                            +e.text Приоритеты клиента
+                        +e.item
+                            +e.text Уважение к людям
+                        +e.item
+                            +e.text Непрерывное улучшение
+
+            +e.levels
+                +e.level.block-2__level_1
+                    +e.title Цели
+
+                +e.level.block-2__level_2
+                    +e.title Опоры для развития
+
+                +e.level.block-2__level_3
+                    +e.title Рабочая основа
+
+                +e.level.block-2__level_4
+                    +e.title Основные принципы

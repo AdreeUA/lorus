@@ -1,0 +1,25 @@
+include ../inner-page
+include ../../line/line
+include ./block-1/block-1
+include ./block-2/block-2
+include ./block-3/block-3
+include ./block-4/block-4
+include ./block-5/block-5
+
+mixin constructor-page(data)
+    +inner-page()
+        +b.ARTICLE.constructor-page()&attributes(attributes)
+            +e.lines.inner-page__lines-wrapper
+                .inner-page__lines
+                    +line(line.constructor1).constructor-page__line_1
+
+            .inner-page__content
+                +block-1
+                +block-2
+                +block-3
+                +block-4
+                +block-5
+
+            +e.lines_front.inner-page__lines-wrapper
+                .inner-page__lines
+                    +line(line.constructor2).constructor-page__line_2

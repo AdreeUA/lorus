@@ -1,0 +1,12 @@
+include ../inner-page
+include ../../line/line
+include ./contacts-head/contacts-head
+include ../../map/map
+include ../../line/line
+
+mixin contacts-page(data)
+    +inner-page({ noHeader: true, questionsClass: 'questions-form_theme_simple' })._theme_world
+        +b.contacts-page
+            +line(line.contacts).__line
+            +contacts-head
+            +map(map.default).__map

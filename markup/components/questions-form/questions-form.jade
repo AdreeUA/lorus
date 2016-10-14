@@ -1,0 +1,24 @@
+include ../title/title
+include ../form/form
+include ../input/input
+include ../btn-inner/btn-inner
+
+mixin questions-form(data)
+    +b.questions-form()&attributes(attributes)
+        +title({'tag': 'h3'})._inner.questions-form__title
+            | Остались вопросы?
+
+        +form.questions-form__form
+            +e.fields_left
+                +e.row_col.__row_2
+                    +e.col
+                        +input({'label': 'Как к вам обращаться?'})
+
+                    +e.col
+                        +input({'label': 'Телефон для связи'})
+
+                +e.row
+                    +input({'label': 'Комментарий', 'type': 'textarea'})
+
+            +e.submit_left
+                +btn-inner({'text': 'Отправить', 'type': 'submit'})

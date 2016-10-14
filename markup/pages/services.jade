@@ -1,10 +1,10 @@
 extends ../layouts/inner
 
-include ../components/service/through-service/through-service
+include ../components/service/service
 
 block vars
     -pageSettings.title = 'Услуги';
-    -pageSettings.pageClass = 'page-services' ;
+    -pageSettings.pageClass = 'page-services page-inner';
 
 block content
-    +through-service
+    +service

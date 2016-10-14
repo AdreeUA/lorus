@@ -1,7 +1,8 @@
+'use strict';
+
 import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
-
 import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
 import { Footer } from 'components/footer/footer';
@@ -13,8 +14,10 @@ import { SearchMini } from 'components/search-mini/search-mini';
 import { InfoList } from 'components/info/info-list/info-list';
 import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
-
-'use strict';
+import { InnerPage } from 'components/inner-page/inner-page';
+import { Write } from 'components/write/write';
+import { Share } from 'components/share/share';
+import { Modal } from 'components/modal/modal';
 
 $(() => {
     polyfills.init();
@@ -30,5 +33,9 @@ $(() => {
     Component.init('.info-list', InfoList);
     Component.init('.nav-extend', NavExtend);
     Component.init('.map', Map);
+    Component.init('.write', Write);
+    Component.init('.share', Share);
+    Component.init('.modal', Modal);
     Service.initCurrentService();
+    InnerPage.initCurrentPage();
 });

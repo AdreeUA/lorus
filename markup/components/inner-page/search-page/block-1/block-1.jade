@@ -1,0 +1,20 @@
+include ../../../title/title
+include ../../../icon/icon
+include ../../../input/input
+include ../../../par/par
+include ../../../form/form
+
+mixin block-1(data)
+    +b.block-1.inner-page__block
+        +e.content.inner-page__descr
+            +title().inner-page__title Результаты поиска
+
+            +form.block-1__form
+                +e.fields
+                    +input()._icon
+
+                        +e.BUTTON.submit_search(type='submit' value='')
+                            +icon({'icon': 'search', 'class': 'input__icon'})
+
+            +par().block-1__results
+                | Найдено 252 записи (17 страниц)

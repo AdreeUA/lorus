@@ -1,0 +1,38 @@
+.career-page {
+    @import './block-1/block-1';
+    @import './block-2/block-2';
+    @import './block-3/block-3';
+
+    &__lines {
+        left: rem(70);
+    }
+
+    &__line {
+        font-size: rem(15.4);
+
+        &_1 {
+            height: auto;
+            width: 100%;
+            margin-top: rem(190);
+            overflow: hidden;
+        }
+
+        &_2 {
+            position: absolute;
+            left: rem(-200);
+
+            width: rem(410);
+            height: 0.64935em;
+            margin-top: rem(211);
+
+            transform: rotate(90deg);
+        }
+
+        &_3 {
+            width: rem(80);
+            height: auto;
+            margin-left: rem(-70);
+            margin-top: rem(420);
+        }
+    }
+}

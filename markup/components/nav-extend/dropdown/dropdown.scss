@@ -1,8 +1,11 @@
 .dropdown {
-    position: absolute;
+    //position: absolute;
+    position: relative;
     top: 100%;
     left: 0;
     z-index: 10;
+
+    margin-top: rem(10);
 
     clip: rect(0 0 0 0); /* for Internet Explorer */
     clip: rect(0, 0, 0, 0);
@@ -12,6 +15,10 @@
     transform-origin: top;
 
     transition: transform .3s;
+
+    &_rel {
+        position: relative;
+    }
 
     &__list {
         padding: rem(10) rem(23) rem(20);

@@ -1,0 +1,51 @@
+.constructor-page {
+    @import './block-1/block-1';
+    @import './block-2/block-2';
+    @import './block-3/block-3';
+    @import './block-4/block-4';
+    @import './block-5/block-5';
+
+    &__lines {
+        left: rem(70);
+
+        &_front {
+            z-index: 2;
+            pointer-events: none;
+        }
+    }
+
+    &__line {
+        font-size: rem(15.4);
+
+        &_1 {
+            right: rem(-40);
+
+            height: auto;
+            width: 100%;
+            margin-top: rem(190);
+            overflow: hidden;
+
+            .line__icon {
+                width: rem(160);
+                float: right;
+
+                &_active {
+                    position: absolute;
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+
+        &_2 {
+            position: absolute;
+            left: rem(-110);
+            right: rem(-40);
+            margin-top: rem(1920);
+
+            path {
+                transform: translate(-9053.24px, -2035px);
+            }
+        }
+    }
+}

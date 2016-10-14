@@ -2,29 +2,292 @@
     .page__lang {
         font-size: rem(17);
         top: rem(25);
+
+        @include below($tablet) {
+            position: fixed;
+            right: rem(115);
+            top: rem(32);
+            z-index: 100;
+
+            display: block;
+        }
     }
 }
 
 .inner-page {
-    &_gray-top {
-        background-image: url('%=static=%assets/inner-page/bg-gray.png');
-        background-position: left top;
-        background-repeat: no-repeat;
-        background-size: contain;
+    position: relative;
+
+    background-image: url('%=static=%assets/inner-page/bg-gray.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include below($tablet) {
+        background: none;
+    }
+
+    &__block {
+        position: relative;
+
+        &_theme_extra {
+            position: relative;
+            padding-bottom: rem(62);
+
+            &::after {
+                position: absolute;
+                left: rem(-27);
+                right: rem(-27);
+                bottom: 0;
+
+                height: 1px;
+
+                content: '';
+
+                background-color: #d6d4d3;
+            }
+        }
+
+        @include below($tablet) {
+            padding: 0 rem(30);
+
+            &:nth-child(odd) {
+                background-color: $color-4 ;
+            }
+        }
+    }
+
+    &__descr {
+        width: rem(600);
+        padding-top: rem(110);
+        padding-left: rem(105);
+
+        @include below($tablet) {
+            width: 100%;
+            padding-top: rem(45);
+            padding-left: 0;
+        }
+    }
+
+    &__main-photo {
+        position: absolute;
+        top: rem(-50);
+        right: 0;
+
+        width: rem(525);
+        height: rem(350);
+
+        @include below($tablet) {
+            position: relative;
+            top: 0;
+
+            min-width: 100%;
+            width: auto;
+            height: rem(190);
+            margin: 0 rem(-30);
+        }
     }
 
     &__logo {
-        margin-left: rem(-14);
+        margin-left: rem(105);
+        margin-top: rem(60);
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        padding: 0 1.6875rem;
+
+        @include below($tablet) {
+            padding: 0;
+            padding-top: rem(95);
+        }
+    }
+
+    &__lines-wrapper {
+        position: absolute;
+        top: 0;
+        left: rem(40);
+        right: rem(40);
+        bottom: 0;
+        z-index: 1;
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        margin-bottom: rem(30);
+
+        font-size: rem(43);
+
+        @include below($tablet) {
+            font-size: rem(33);
+        }
+    }
+
+    &__subtitle {
+        margin-left: rem(103);
+
+        &.title_top-yellow {
+            margin-left: rem(79);
+        }
+
+        &_photos {
+            margin-top: rem(63);
+        }
+
+        &_list-extend {
+            margin-top: rem(75);
+        }
+
+        &_roll {
+            margin-top: rem(89);
+        }
+
+        @include below($tablet) {
+
+            &.title_top-yellow {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__questions {
+        position: relative;
+        z-index: 2;
+
+        margin-top: rem(20);
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__list-wrap {
+        margin-top: rem(44);
+        margin-left: rem(48);
+
+        @include below($tablet) {
+            margin-left: 0;
+            margin-top: rem(54);
+        }
+    }
+
+    &__list-col {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: rem(40);
+        width: 100/3 + %;
+    }
+
+    &__share {
+        margin: rem(57) 0 0 rem(86);
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &_theme_world {
+        background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;;
+    }
+
+    &__mobile {
+        display: none;
+
+        @include below($tablet) {
+            display: block;
+        }
+    }
+
+    &__clients-btn-wrap {
+        margin-top: rem(50);
+
+        text-align: center;
+    }
+
+    &__clients-btn {
+        padding: 0 1.6em;
+
+        font-size: rem(33);
+        line-height: 2.1;
+    }
+
+    &__cite {
+        width: rem(767);
+        margin-left: rem(60);
+        margin-top: rem(10);
+
+        &_center {
+            text-align: center;
+        }
+    }
+
+    &__photos {
+        margin-top: rem(60);
+        margin-left: rem(52);
+
+        @include below($tablet) {
+            margin-top: rem(36);
+            margin-left: 0;
+
+            .slick-list {
+                overflow: visible;
+            }
+        }
+    }
+
+    &__extend {
+        margin-top: rem(34);
+        margin-left: rem(132);
+    }
+
+    &__roll {
+        margin-top: rem(35);
+        margin-left: rem(102);
+        padding-bottom: rem(25);
+    }
+
+    &__photo-text {
+        margin-top: rem(105);
+        margin-bottom: rem(100);
+    }
+
+    &__ol {
+        margin-left: rem(22);
+        margin-top: rem(80);
+    }
+
+    &__photo-wrapper {
+        display: inline-block;
+        vertical-align: top;
+
+        &:not(:last-child) {
+            margin-right: 1.875rem;
+        }
     }
 }
 
-@import './par-inner/par-inner';
-@import './photo-inner/photo-inner';
-@import './list-inner/list-inner';
-@import './share-inner/share-inner';
-@import './form-inner/form-inner';
-@import './form-inner/input-inner/input-inner';
-@import './form-inner/btn-inner/btn-inner';
-@import './vacancies-inner/vacancies-inner';
-@import './house-inner/house-inner';
-@import './pagination-inner/pagination-inner';
+@import './career-page/career-page';
+@import './academy-page/academy-page';
+@import './les-page/les-page';
+@import './search-page/search-page';
+@import './contacts-page/contacts-page';
+@import './constructor-page/constructor-page';
+@import './clients-page/clients-page';
+@import './not-page/not-page';

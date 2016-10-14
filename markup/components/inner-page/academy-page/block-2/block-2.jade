@@ -1,0 +1,13 @@
+include ../../../title/title
+include ../../../list/list
+include ../../../icon/icon
+include ../../../line/line
+
+mixin block-2(data)
+    +b.block-2.inner-page__block
+
+        +title({'tag': 'h3'})._inner._top-yellow Цели Академии
+        +list(list.academyTargets)._roll.block-2__targets
+        .inner-page__mobile
+            +icon({'icon': 'building', 'class': 'academy-page__building academy-page__building_mobile'})
+            +line(line.academyMobile1).academy-page__m-line_1

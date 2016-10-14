@@ -1,0 +1,51 @@
+.clients-page {
+    @import './block-1/block-1';
+    @import './block-2/block-2';
+
+    border-bottom: 1px solid #f6f6f6;
+
+    &__lines {
+        left: rem(70);
+    }
+
+    &__line {
+        font-size: rem(15.4);
+
+        &_1 {
+            height: auto;
+            width: calc(100% + 70px);
+            overflow: hidden;
+            left: rem(-70);
+
+            path {
+                transform: translate(-11991px, -7467px);
+            }
+        }
+
+        &_2 {
+            position: absolute;
+            right: rem(-40);
+
+            width: rem(44);
+
+            margin-top: rem(220);
+
+            overflow: hidden;
+
+            path {
+                transform: translate(-13184px, -8249px);
+            }
+        }
+
+        &_3 {
+            width: rem(93);
+            height: rem(618);
+            margin-left: rem(-100);
+            margin-top: rem(560);
+
+            path {
+                transform: translate(-11961.74px, -8615px);
+            }
+        }
+    }
+}

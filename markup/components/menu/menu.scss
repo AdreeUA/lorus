@@ -9,7 +9,8 @@
     transition: transform .5s;
 
     @include above($tablet) {
-        font-size: 16/806 * 100 + vh;
+        //font-size: 16/806 * 100 + vh;
+        transform: translateY(-100%);
     }
 
     &::after {
@@ -24,16 +25,19 @@
     }
 
     &__wrapper {
-        padding-left: em(70);
+        padding-left: rem(70);
+        padding-top: rem(82);
+        padding-bottom: rem(46);
     }
 
     &__nav-item {
-        padding: em(10) 0;
-        padding-left: em(15);
+        padding: em(7) 0;
+        //padding-left: em(15);
     }
 
     &__btn {
-        margin-top: em(80);
+        font-size: rem(16);
+        margin-left: rem(53);
 
         color: #5c5e1d;
 
@@ -47,21 +51,36 @@
         }
     }
 
-    &__service {
-        padding-top: em(80);
+    &__row {
+        @include clearfix();
+
+        & + & {
+            margin-top: rem(85);
+        }
+    }
+
+    &__col {
+        float: left;
     }
 
     &__menu {
-        padding-top: em(50);
+        & + & {
+            margin-top: rem(70);
+        }
+    }
+
+    &__service {
+        margin-left: rem(75);
     }
 
     &__phone {
         display: table;
-        margin-top: em(22, 25);
+        float: left;
 
         color: #5c5e1d;
         text-decoration: none;
-        font-size: em(25);
+        font-size: rem(24);
+        line-height: rem(45);
     }
 
     &__search {

@@ -1,0 +1,48 @@
+.block-4 {
+
+    @include below($tablet) {
+        min-height: 0;
+        margin-left: 0;
+        padding: rem(50) 0 rem(40) rem(30);
+    }
+
+    &__title {
+        max-width: rem(585);
+
+        @include below($tablet) {
+            max-width: none;
+            margin: 0;
+
+            font-size: rem(20);
+        }
+    }
+
+    &__team {
+        margin: rem(70) 0 0 rem(-50);
+
+        @include below($tablet) {
+            margin-top: rem(35);
+            margin-left: 0;
+
+            .slick-list {
+                overflow: visible;
+            }
+        }
+    }
+
+    &__photo-wrapper {
+        display: inline-block;
+
+        vertical-align: top;
+
+        &:not(:last-child) {
+            margin-right: rem(30);
+        }
+    }
+
+    &__photo {
+        height: rem(158);
+
+        border-radius: 10px;
+    }
+}

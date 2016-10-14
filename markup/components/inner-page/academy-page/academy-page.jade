@@ -1,0 +1,23 @@
+include ../inner-page
+include ../../line/line
+include ./block-1/block-1
+include ./block-2/block-2
+include ./block-3/block-3
+include ./block-4/block-4
+
+mixin academy-page(data)
+    +inner-page
+        +b.ARTICLE.academy-page()&attributes(attributes)
+            .inner-page__lines-wrapper
+                .inner-page__lines
+                    +line(line.throughAcademy1).academy-page__line_1
+                    +icon({'icon': 'building', 'class': 'academy-page__building'})
+                    +line(line.throughAcademy2)._dashed.academy-page__line_2
+                    +line(line.throughAcademy3).academy-page__line_3
+                    +line(line.throughAcademy4).academy-page__line_4
+
+            .inner-page__content
+                +block-1
+                +block-2
+                +block-3
+                +block-4

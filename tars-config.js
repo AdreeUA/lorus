@@ -19,7 +19,7 @@ module.exports = {
         "useBabel": true,
         "removeConsoleLog": true,
         "webpack": {
-            "useHMR": false
+            "useHMR": true
         },
         "jsPathsToConcatBeforeModulesJs": [],
         "lintJsCodeBeforeModules": false,

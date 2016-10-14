@@ -1,0 +1,21 @@
+.block-2 {
+    min-height: rem(540);
+    margin-left: rem(100);
+
+    @include below($tablet) {
+        position: relative;
+
+        min-height: 0;
+        margin-left: 0;
+        padding-top: rem(35);
+    }
+
+    &__targets {
+        margin-top: rem(25);
+        padding-left: rem(12);
+
+        @include below($tablet) {
+            margin-bottom: rem(20);
+        }
+    }
+}

@@ -1,10 +1,11 @@
 extends ../layouts/inner
 
-include ../components/academy/through-academy/through-academy
+include ../components/inner-page/academy-page/academy-page
 
 block vars
     -pageSettings.title = 'Академия';
-    -pageSettings.pageClass = 'page-academy page-inner' ;
+    -pageSettings.pageClass = 'page-academy page-inner';
+    -pageSettings.footerClass = '_no-line';
 
 block content
-    +through-academy
+    +academy-page

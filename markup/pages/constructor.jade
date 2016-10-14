@@ -1,0 +1,11 @@
+extends ../layouts/inner
+
+include ../components/inner-page/constructor-page/constructor-page
+
+block vars
+    -pageSettings.title = 'Конструктор';
+    -pageSettings.pageClass = 'page-inner page-constructor';
+
+block content
+    +constructor-page
+    

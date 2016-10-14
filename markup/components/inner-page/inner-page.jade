@@ -1,7 +1,15 @@
 include ../logo/logo
+include ../questions-form/questions-form
 
 mixin inner-page(data)
-    +b.SECTION.inner-page()&attributes(attributes)
-        +e.HEADER.header
-            +logo(logo.mainGray).inner-page__logo
+    -data = data || {}
+
+    +b.inner-page()&attributes(attributes)
+        if (!data.noHeader)
+            +e.HEADER.header
+                +logo(logo.mainGray).inner-page__logo
+
         block
+
+        if (!data.noForm)
+            +questions-form.inner-page__questions(class=data.questionsClass)

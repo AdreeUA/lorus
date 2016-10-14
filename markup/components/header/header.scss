@@ -42,6 +42,9 @@
     }
 
     &__right {
+        position: relative;
+        z-index: -1;
+        
         margin-left: auto;
     }
 
@@ -94,7 +97,11 @@
         top: 0;
         z-index: 2;
 
-        width: $menu-width;
+        //width: $menu-width;
+
+        width: 100vw;
+        height: auto;
+        box-shadow: 0 rem(17) rem(25) rgba(0, 0, 0, 0.17);
 
         @include below($tablet) {
             width: 100% !important;
@@ -184,11 +191,11 @@
     &_overlay {
 
         &::after {
-            left: $menu-width;
+            //left: $menu-width;
 
             height: 100vh;
 
-            background: rgba(0, 0, 0, .5);
+            //background: rgba(0, 0, 0, .5);
 
             transition: background .4s .4s;
 
@@ -208,7 +215,7 @@
         display: block;
         width: auto;
 
-        font-size: 16/806 * 100 + vh;
+        //font-size: 16/806 * 100 + vh;
 
         @include below($tablet) {
             width: 100%;

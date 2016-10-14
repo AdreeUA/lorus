@@ -1,0 +1,25 @@
+include ../../../title/title
+include ../../../list/list
+include ../../../share/share
+
+mixin block-5(data)
+    +b.SECTION.block-5.inner-page__block
+
+        +b.photo-text.inner-page__photo-text
+
+            +e.text-wrap
+                +title({'tag': 'h4'})._inner.photo-text__text-title Текстовый блок
+
+                +par()._border-left.photo-text__text-content
+                    +e.content
+                        | Мы берём на себя все этапы перевозки, включая квалифицированную помощь с таможенным оформлением (средний срок оформления деклараций – 24 часа) и оказанием всех видов терминальных и складских услуг.
+ 
+            +e.photo-wrap
+                +decor-title({ tag: 'div', rows: [
+                    'Фотография с заголовком'
+                ]}).photo-text__photo-title
+
+                +photo({ src: '%=static=%img/assets/photo-text/photo-1.jpg' })._theme_simple._theme_text.photo-text__photo
+
+        +share(share.default).inner-page__share
+        

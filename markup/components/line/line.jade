@@ -2,7 +2,7 @@ include ../icon/icon
 
 mixin line(data)
     +b.line(class={ '_css': data.type === 'css' })&attributes(attributes)
-    
+
         if data.type === 'css'
             +e.icon_static
             +e.icon_active

@@ -5,11 +5,18 @@ mixin menu(data)
     +b.menu()&attributes(attributes)
         +search-mini().menu__search
         +e.wrapper
-            +e.service
-                +nav(nav.service, { itemClass: 'menu__nav-item' }).nav_theme_menu.menu__nav
-            +e.menu
-                +nav(nav.menu, { itemClass: 'menu__nav-item' }).nav_theme_menu.menu__nav
-            +btn.menu__btn
-                | Написать нам
-            +e.phone(href='tel:+74957775457') 8 495 777 54 57
+            +e.row
+                +e.col
+                    +e.menu
+                        +nav(nav.menu, { itemClass: 'menu__nav-item nav-extend__item' }, true).nav_theme_menu.menu__nav
+                    +e.menu
+                        +nav({title: {text: 'Клиенты', href: '#clients'}}, { itemClass: 'menu__nav-item nav-extend__item' }, true).nav_theme_menu.menu__nav
+
+                +e.col
+                    +e.service
+                        +nav(nav.service, { itemClass: 'menu__nav-item nav-extend__item' }, true).nav_theme_menu.menu__nav
+            +e.row
+                +btn.menu__btn.js-writeus(href='#writeUs')
+                    | Написать нам
+                +e.phone(href='tel:+74957775457') 8 495 777 54 57
         block
