@@ -11,9 +11,7 @@ mixin constructor-page(data)
         +b.ARTICLE.constructor-page()&attributes(attributes)
             +e.lines.inner-page__lines-wrapper
                 .inner-page__lines
-                    +line(line.throughCareer1).career-page__line_1
-                    +line(line.throughCareer2)._dashed.career-page__line_2
-                    +line(line.throughCareer3).career-page__line_3
+                    +line(line.constructor1).constructor-page__line_1
 
             .inner-page__content
                 +block-1
@@ -21,3 +19,7 @@ mixin constructor-page(data)
                 +block-3
                 +block-4
                 +block-5
+
+            +e.lines_front.inner-page__lines-wrapper
+                .inner-page__lines
+                    +line(line.constructor2).constructor-page__line_2

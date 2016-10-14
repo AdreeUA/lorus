@@ -1,4 +1,5 @@
 mixin share(data)
-    +b.share()&attributes(attributes)
-        +e.img(src='%=static=%img/assets/share/dummy.jpg')
-        block
+    +b.share(class='likely')&attributes(attributes)
+        each item in data
+            div(class=item)
+

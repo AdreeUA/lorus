@@ -7,34 +7,41 @@
 
     &__lines {
         left: rem(70);
+
+        &_front {
+            z-index: 2;
+            pointer-events: none;
+        }
     }
 
     &__line {
         font-size: rem(15.4);
 
         &_1 {
+            right: rem(-40);
+
             height: auto;
             width: 100%;
             margin-top: rem(190);
             overflow: hidden;
+
+            .line__icon {
+                width: rem(160);
+                float: right;
+
+                &_active {
+                    position: absolute;
+                    left: auto;
+                    right: 0;
+                }
+            }
         }
 
         &_2 {
             position: absolute;
-            left: rem(-200);
-
-            width: rem(410);
-            height: 0.64935em;
-            margin-top: rem(211);
-
-            transform: rotate(90deg);
-        }
-
-        &_3 {
-            width: rem(80);
-            height: auto;
-            margin-left: rem(-70);
-            margin-top: rem(420);
+            left: rem(-110);
+            right: rem(-40);
+            margin-top: rem(1920);
         }
     }
 }

@@ -242,6 +242,15 @@
         margin-left: rem(22);
         margin-top: rem(80);
     }
+
+    &__photo-wrapper {
+        display: inline-block;
+        vertical-align: top;
+
+        &:not(:last-child) {
+            margin-right: 1.875rem;
+        }
+    }
 }
 
 @import './career-page/career-page';
