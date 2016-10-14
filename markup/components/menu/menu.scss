@@ -10,6 +10,7 @@
 
     @include above($tablet) {
         //font-size: 16/806 * 100 + vh;
+        transform: translateY(-100%);
     }
 
     &::after {
