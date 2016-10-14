@@ -3,7 +3,6 @@
 import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
-
 import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
 import { Footer } from 'components/footer/footer';
