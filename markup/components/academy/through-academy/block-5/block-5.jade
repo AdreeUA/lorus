@@ -1,0 +1,24 @@
+include ../../../title/title
+include ../../../inner-page/form-inner/input-inner/input-inner
+include ../../../inner-page/form-inner/btn-inner/btn-inner
+
+mixin block-5(data)
+    +b.block-5.academy__block_gray
+
+        +title({'tag': 'h3'})._inner.academy__form-title
+            | Остались вопросы?
+
+        +b.FORM.form-inner.academy__form
+            +e.fields_left
+                +e.row_col.__row_2
+                    +e.col
+                        +input-inner({'label': 'Как к вам обращаться?'})
+
+                    +e.col
+                        +input-inner({'label': 'Телефон для связи'})
+
+                +e.row
+                    +input-inner({'label': 'Комментарий', 'type': 'textarea'})
+
+            +e.submit_left
+                +btn-inner({'text': 'Отправить', 'type': 'submit'})

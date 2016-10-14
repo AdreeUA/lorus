@@ -1,0 +1,14 @@
+include ../../../title/title
+include ../../../inner-page/list-inner/list-inner
+include ../../../inner-page/share-inner/share-inner
+
+mixin block-4(data)
+    +b.block-4.academy__block
+
+        +title({'tag': 'h3'})._inner.academy__team-title
+            | Хорошо подготовленная команда — залог успеха!
+
+        +list-inner(listInner.academyTeam)._horiz-photo.academy__team-list
+
+        +share-inner().academy__share
+            +e.img(src='%=static=%img/assets/inner-page/share-inner/dummy.jpg')

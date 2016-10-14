@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="telephone=no" name="format-detection">
         <meta name="HandheldFriendly" content="true">
-
+        <!--[if IE 9 ]><link href="static/css/main_ie9.min.css" rel="stylesheet" type="text/css"><![endif]-->
         <!--[if (gt IE 9)|!(IE)]><!-->
         <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
@@ -22,6 +22,7 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script>
             (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
         </script>
@@ -41,7 +42,7 @@
                     <label class="search-mini menu__search">
                         <form>
                             <input type="search" name="search" placeholder="Поиск" class="search-mini__field" />
-                            <svg class="icon icon_search search-mini__icon" width="24.66px" height="24.66px">
+                            <svg class="icon icon_search search-mini__icon" width="100%" height="100%">
                                 <use xlink:href="svg-symbols.svg#search"></use>
                             </svg>
 
@@ -85,7 +86,7 @@
             </div>
             <div class="header__right">
                 <a href="javascript:void(0)" class="icon-btn header__nav-btn">
-                    <svg class="icon icon_arrow icon-btn__icon" width="9.87px" height="15.5px">
+                    <svg class="icon icon_arrow icon-btn__icon" width="100%" height="100%">
                         <use xlink:href="svg-symbols.svg#arrow"></use>
                     </svg>
                 </a>
@@ -134,7 +135,7 @@
                                     <label class="search-mini header__search">
                                         <form>
                                             <input type="search" name="search" placeholder="Поиск" class="search-mini__field" />
-                                            <svg class="icon icon_search search-mini__icon" width="24.66px" height="24.66px">
+                                            <svg class="icon icon_search search-mini__icon" width="100%" height="100%">
                                                 <use xlink:href="svg-symbols.svg#search"></use>
                                             </svg>
 
@@ -169,19 +170,19 @@
                                 </div>
                                 <div class="screen-home__labels">
                                     <a href="javascript:void(0)" class="icon-link screen-home__label">
-                                        <svg class="icon icon_loader icon-link__icon icon-link__icon_loader" width="59.91px" height="54.53px">
+                                        <svg class="icon icon_loader icon-link__icon icon-link__icon_loader" width="100%" height="100%">
                                             <use xlink:href="svg-symbols.svg#loader"></use>
                                         </svg>
                                         <span class="icon-link__link">Логистические решения</span>
                                     </a>
                                     <a href="javascript:void(0)" class="icon-link screen-home__label">
-                                        <svg class="icon icon_pl icon-link__icon icon-link__icon_pl" width="66.68px" height="37.06px">
+                                        <svg class="icon icon_pl icon-link__icon icon-link__icon_pl" width="100%" height="100%">
                                             <use xlink:href="svg-symbols.svg#pl"></use>
                                         </svg>
                                         <span class="icon-link__link">4PL управление</span>
                                     </a>
                                     <a href="javascript:void(0)" class="icon-link screen-home__label">
-                                        <svg class="icon icon_chart icon-link__icon icon-link__icon_chart" width="30.36px" height="43.56px">
+                                        <svg class="icon icon_chart icon-link__icon icon-link__icon_chart" width="100%" height="100%">
                                             <use xlink:href="svg-symbols.svg#chart"></use>
                                         </svg>
                                         <span class="icon-link__link">Инжиниринг и Консалтинг</span>
@@ -239,18 +240,18 @@
                                         </div>
                                     </div>
                                 </div><a href="#about" class="scroll-btn screen-home__scroll"><span class="screenreader">Листать на следующий экран</span>
-            <svg class="icon icon_mouse scroll-btn__mouse" width="26.5px" height="42.75px">
+            <svg class="icon icon_mouse scroll-btn__mouse" width="100%" height="100%">
                 <use xlink:href="svg-symbols.svg#mouse"></use>
             </svg>
         
-            <svg class="icon icon_figure-arrow scroll-btn__arrow" width="11.66px" height="17.71px">
+            <svg class="icon icon_figure-arrow scroll-btn__arrow" width="100%" height="100%">
                 <use xlink:href="svg-symbols.svg#figure-arrow"></use>
             </svg>
         </a>
                             </div>
                         </div>
                         <section class="screen-about screens__item">
-                            <svg class="icon icon_line-about screen-about__bg-line" width="948.4px" height="184.24px">
+                            <svg class="icon icon_line-about screen-about__bg-line" width="100%" height="100%">
                                 <use xlink:href="svg-symbols.svg#line-about"></use>
                             </svg>
 
@@ -340,7 +341,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 527 570.89" class="line__icon line__icon_active">
                                     <path d="M386.56 0v312.25a15.27 15.27 0 0 0 15.27 15.27h58.29a15.47 15.47 0 0 0 15.47-15.47v-76.7a15.88 15.88 0 0 0-15.83-15.83h-28.35a15.87 15.87 0 0 0-15.82 15.82v40.91a15.27 15.27 0 0 0 15.27 15.27h3.26a15.47 15.47 0 0 0 15.47-15.47v-81.7a15.88 15.88 0 0 1 15.83-15.83h33.44a15.72 15.72 0 0 1 15.67 15.67v350.86a15.47 15.47 0 0 1-15.47 15.47h-229a20 20 0 0 1-20-20l-.48-11.46a20 20 0 0 1 20-20h186.84a12 12 0 0 0 12-12v-3.54a12 12 0 0 0-12-12h-67a12 12 0 0 0-12 12V516c0 6.63-5.37 16.34-12 16.34h-6.89c-6.11 0-11.24-8.92-11.92-10.65l-75-137.55-59.08-31-45.67-60.64L12.5 500.24A15.55 15.55 0 0 1 0 506.52"></path>
                                 </svg>
-                                <svg class="icon icon_flag screen-mission__flag" width="48.39px" height="111.59px">
+                                <svg class="icon icon_flag screen-mission__flag" width="100%" height="100%">
                                     <use xlink:href="svg-symbols.svg#flag"></use>
                                 </svg>
 
@@ -370,7 +371,7 @@
                             </div>
                         </section>
                         <section class="screen-advantages screens__item">
-                            <svg class="icon icon_line-advantages screen-advantages__bg-line" width="292.61px" height="187.27px">
+                            <svg class="icon icon_line-advantages screen-advantages__bg-line" width="100%" height="100%">
                                 <use xlink:href="svg-symbols.svg#line-advantages"></use>
                             </svg>
 
@@ -396,7 +397,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184.13 401.69" class="line__icon line__icon_active">
                                         <path d="M184.13 44.11h-87.5a16.5 16.5 0 0 1-16.5-16.5 16.5 16.5 0 0 0-16.5-16.5h-15a16.5 16.5 0 0 0-16.5 16.5v107a16.5 16.5 0 0 0 16.5 16.5h68a16.5 16.5 0 0 0 16.5-16.5v-17a16.5 16.5 0 0 0-16.5-16.5h-25a16.5 16.5 0 0 0-16.5 16.5l-.28 87.58c0 19.26.18 38.24-8.7 55.33L4.57 399.66"></path>
                                     </svg>
-                                    <svg class="icon icon_ship screen-advantages__ship" width="83.55px" height="56.92px">
+                                    <svg class="icon icon_ship screen-advantages__ship" width="100%" height="100%">
                                         <use xlink:href="svg-symbols.svg#ship"></use>
                                     </svg>
 

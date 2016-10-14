@@ -1,0 +1,25 @@
+.block-1 {
+    padding-top: rem(66);
+
+    &__left {
+        width: rem(750);
+        padding-top: 0;
+        padding-left: rem(105);
+
+        @include below($tablet) {
+            padding: 0;
+        }
+    }
+
+    &__right {
+        width: rem(520);
+
+        @include below($tablet) {
+            order: -1;
+
+            .content {
+                display: none;
+            }
+        }
+    }
+}

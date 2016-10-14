@@ -11,6 +11,8 @@ import { DecorTitle } from 'components/decor-title/decor-title';
 import { Line } from 'components/line/line';
 import { SearchMini } from 'components/search-mini/search-mini';
 import { InfoList } from 'components/info/info-list/info-list';
+import { NavExtend } from 'components/nav-extend/nav-extend';
+import { Map } from 'components/map/map';
 
 'use strict';
 
@@ -26,5 +28,7 @@ $(() => {
     Component.init('.screens', Screens);
     Component.init('.search-mini', SearchMini);
     Component.init('.info-list', InfoList);
+    Component.init('.nav-extend', NavExtend);
+    Component.init('.map', Map);
     Service.initCurrentService();
 });

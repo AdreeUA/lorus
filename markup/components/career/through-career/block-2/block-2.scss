@@ -1,0 +1,26 @@
+.block-2 {
+    margin-top: rem(68);
+    margin-left: rem(100);
+
+    &__offers-wrap {
+        margin-top: rem(44);
+        margin-left: rem(-64);
+    }
+
+    &__offers {
+        display: table-row;
+        vertical-align: middle;
+        font-size: 0;
+    }
+
+    &__offers-col {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: rem(40);
+        width: 100/3 + %;
+
+        &:last-child {
+            vertical-align: middle;
+        }
+    }
+}

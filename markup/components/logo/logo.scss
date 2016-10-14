@@ -6,6 +6,10 @@
 
     &__img {
         max-width: 100%;
+
+        &_inner {
+            width: rem(227);
+        }
     }
 
     &_gray {
@@ -23,7 +27,8 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: -1 ;
+                transition: opacity .8s;
+                //z-index: -1 ;
 
                 opacity: 1;
             }
@@ -33,6 +38,10 @@
 
             .logo__img {
                 opacity: 1;
+
+                &_gray {
+                    opacity: 0;
+                }
             }
         }
     }

@@ -1,0 +1,96 @@
+.nav-extend {
+    display: flex;
+    flex-flow: row wrap;
+
+    font-size: rem(16);
+
+    @include below($tablet) {
+        padding: 0 rem(30);
+    }
+
+    &__col {
+        padding-right: rem(75);
+        margin-bottom: rem(70);
+
+        @include below($tablet) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(25);
+
+        font-size: em(24);
+        font-weight: 300;
+
+        @include below($tablet) {
+            display: inline-block;
+            vertical-align: top;
+            border-bottom: 1px solid #dedcdb;
+            padding-bottom: rem(3);
+        }
+    }
+
+    &__menu {
+        @include list-reset;
+    }
+
+    &__item {
+        position: relative;
+
+        padding: rem(7.5) 0;
+
+        &_open {
+            .dropdown {
+                clip: auto;
+
+                height: auto;
+                transform: scale(1);
+            }
+
+            .nav-extend__trigger {
+                &:before {
+                    margin-top: em(5);
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+
+    &__link {
+        padding-bottom: rem(3);
+    }
+
+    &__trigger {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: em(40);
+        //height: 100%;
+
+        text-align: center;
+
+        cursor: pointer;
+
+        &:before {
+            display: inline-block;
+            vertical-align: top;
+            width: em(10);
+            height: em(10);
+            border: 1px solid;
+            transform: rotate(-45deg);
+
+            border-top-color: transparent;
+            border-right-color: transparent;
+
+            opacity: .8;
+
+            transition: transform .3s;
+
+            content: '';
+        }
+
+    }
+}
+
+@import 'dropdown/dropdown';

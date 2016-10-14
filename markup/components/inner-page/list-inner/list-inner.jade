@@ -1,0 +1,65 @@
+mixin list-inner(data)
+    +b(data.tag == 'ol' ? 'ol' : 'ul').list-inner()&attributes(attributes)
+    
+        each item in data.list
+            if data.tag == 'ol'
+                +e.LI.item
+
+                    if item.linkArr
+
+                        -var linkText = ''
+
+                        each part in item.linkArr
+
+                            if part.selected
+                                -linkText += '<span class="found">' + part.text + '</span>'
+                            else
+                                -linkText += part.text
+
+                        +e.title.link(href=jv0)
+                            +e.link-text !{linkText}
+    
+                    else if item.link
+
+                        +e.title.link(href=jv0)
+                            +e.link-text= item.link
+
+
+
+                    if item.textArr
+
+                        -var contentText = ''
+
+                        each part in item.textArr
+
+                            if part.selected
+                                -contentText += '<span class="found found_text-s">' + part.text + '</span>'
+                            else
+                                -contentText += part.text
+
+                        +e.content !{contentText}
+
+                    else if item.text
+
+                        +e.content= item.text 
+
+            else
+                if data.type == 'img'
+
+                    +e.item
+                        +e(src=item.src class=(item.class ? '__img ' + item.class : '__img'))
+
+                        if item.text
+
+                            +e(class=(item.textClass ? '__content ' + item.textClass : '__content'))= item.text
+
+                else
+                    if data.type == 'check'
+                        +e.LI.item
+                            +icon({ icon: 'check', class: 'list-inner__check' })
+                            +e.content= item.text 
+
+                    else
+                        if item.text
+                            +e.LI.item= item.text
+ 
