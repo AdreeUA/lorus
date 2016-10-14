@@ -1,16 +1,16 @@
 .block-4 {
     margin-right: rem(20);
-    margin-left: rem(109);
 
     &__cite {
         width: rem(942);
         padding-right: 0;
-        margin-left: rem(-42);
+        margin-left: rem(67);
         font-size: rem(34);
         font-weight: 300;
     }
 
     &__after-cite {
         margin-top: rem(59);
+        margin-left: rem(109);
     }
 }
