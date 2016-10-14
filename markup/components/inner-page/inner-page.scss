@@ -136,6 +136,8 @@
         font-size: rem(43);
 
         @include below($tablet) {
+            margin-bottom: rem(50);
+
             font-size: rem(33);
         }
     }

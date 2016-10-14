@@ -5,6 +5,10 @@
 
     background-color: #fff;
     box-shadow: 0 rem(130) rem(100) rem(-90) rgba(#000, .5);
+    
+    @include below($tablet) {
+        background-color: $color-4;
+    }
 
     &__inner {
         position: relative;
@@ -26,6 +30,21 @@
             transform: translateY(-50%);
 
             content: '';
+        }
+
+        @include below($tablet) {
+            width: 100vw;
+            padding: rem(20) rem(60) rem(55);
+
+            &:before {
+                left: 50%;
+                top: 100%;
+
+                transform: translate(-50%, 0);
+
+                border-width: 0 rem(40) rem(170) 0;
+                border-color: transparent $color-4 transparent transparent;
+            }
         }
     }
 

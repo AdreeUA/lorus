@@ -6,21 +6,37 @@ $betweenText: 20;
 
     font-size: 0;
 
+    @include below($tablet) {
+        margin-left: 0;
+
+        text-align: center;
+    }
+
     &__wrap {
         width: rem(1020);
 
         margin: auto;
+
+        @include below($tablet) {
+            width: auto;
+        }
     }
 
     &__item {
         display: inline-block;
 
-        width: 100/3 + %;
+        width: 100%/3;
 
         margin-bottom: rem(57);
         padding-left: rem($clientShift);
 
         vertical-align: top;
+
+        @include below($tablet) {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: rem(74);
+        }
     }
 
     &__img-wrap {
@@ -79,6 +95,17 @@ $betweenText: 20;
             height: 1px;
 
             background-color: #76726c;
+        }
+
+        @include below($tablet) {
+            margin-top: rem(27);
+            padding-top: rem(27);
+
+            &:before {
+                left: 50%;
+
+                margin-left: rem(-17);
+            }
         }
     }
 }
