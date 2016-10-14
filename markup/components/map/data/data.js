@@ -3,7 +3,12 @@ var data = {map: {
         options: {
             "center": [55.76, 37.602],
             "zoom": 15,
-            "controls": []
+            "controls": [],
+            "mobile": {
+                "center": [55.76, 37.60],
+                "zoom": 15,
+                "controls": []
+            }
         },
 
         balloon: {
@@ -14,7 +19,12 @@ var data = {map: {
                 "<div class='mark__item'><a href='tel:+74952128506' class='mark__phone'>+7 495 212-85-06</a></div>"
             ],
             "placemark": [55.764286, 37.581408],
-            "open": [55.76, 37.64]
+            "open": [55.76, 37.64],
+            "mobile": {
+                "placemark": [55.767286, 37.590208],
+                "open": [55.767286, 37.585208]
+            }
         }
+
     }
 }}
