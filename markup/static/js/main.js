@@ -3,11 +3,8 @@
 import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
-
 import { magnific } from 'magnific-popup';
-
-import { likely } from 'ilyabirman-likely'; 
-
+import { likely } from 'ilyabirman-likely';
 import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
 import { Footer } from 'components/footer/footer';
