@@ -1,4 +1,5 @@
 include ../../../title/title
+include ../../../decor-title/decor-title
 include ../../../list/list
 include ../../../list-extend/list-extend
 
@@ -15,7 +16,9 @@ mixin block-3(data)
 
         +b.photo-text_special.inner-page__photo-text
             +e.photo-wrap
-                +e.photo-title Фотография с заголовком
+                +decor-title({ tag: 'div', rows: [
+                    'Фотография с заголовком'
+                ]}).photo-text__photo-title
 
                 +photo({ src: '%=static=%img/assets/photo-text/photo-1.jpg' })._theme_simple._theme_text.photo-text__photo
 
