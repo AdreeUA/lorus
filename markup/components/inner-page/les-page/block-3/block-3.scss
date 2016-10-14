@@ -4,6 +4,7 @@
     padding: rem(127) rem(136) 0;
 
     @include below($tablet) {
+        min-height: none;
         margin: 0;
         padding: rem(40) $mobile-gap rem(70);
 
