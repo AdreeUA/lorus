@@ -72,7 +72,10 @@
         }
 
         @include below($tablet) {
-            display: none;
+
+            &::after {
+                display: none;
+            }
         }
     }
 }
