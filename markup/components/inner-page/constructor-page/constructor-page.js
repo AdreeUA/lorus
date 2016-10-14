@@ -9,7 +9,6 @@ export class ConstructorPage extends Component {
     constructor(block) {
         super(block, 'constructor-page', function() {
             this.controller = new ScrollMagic.Controller();
-            this.controller_m = new ScrollMagic.Controller();
             this._addPhotoParallax = addPhotoParallax.bind(null, '.inner-page__block', this.controller);
 
             this._addLineParallax();
