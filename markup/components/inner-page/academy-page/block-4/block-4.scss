@@ -3,8 +3,7 @@
     @include below($tablet) {
         min-height: 0;
         margin-left: 0;
-        padding-top: rem(50);
-        padding-bottom: rem(40);
+        padding: rem(50) 0 rem(40) rem(30);
     }
 
     &__title {
@@ -12,6 +11,7 @@
 
         @include below($tablet) {
             max-width: none;
+            margin: 0;
 
             font-size: rem(20);
         }

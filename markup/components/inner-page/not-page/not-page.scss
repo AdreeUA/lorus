@@ -1,7 +1,5 @@
-.through-not-page {
-    position: relative;
-
-    padding: rem(73) rem(80) rem(73) rem(50);
+.not-page {
+    padding: rem(118) rem(80) rem(73) rem(50);
     border-bottom: 1px solid #f8f8f8;
 
     @include below($tablet) {
@@ -26,8 +24,7 @@
     }
 
     &__logo {
-        margin-bottom: rem(118);
-        margin-left: rem(60);
+        margin: 0 0 rem(118) rem(60) !important;
 
         @include below($tablet) {
             display: none;
@@ -71,7 +68,7 @@
         color: inherit;
         font-size: rem(24);
     }
-    
+
     &__btn {
         color: inherit;
     }

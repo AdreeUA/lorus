@@ -1,7 +1,0 @@
-.not-page {
-    @include below($tablet) {
-        background-image: none;
-    }
-}
-
-@import 'through-not-page/through-not-page';

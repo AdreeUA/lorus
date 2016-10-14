@@ -1,3 +1,9 @@
 .page-academy {
     font-size: 16 / 1238 * 100 + vw;
+
+    @include below($tablet) {
+        .footer__line-m {
+            display: none;
+        }
+    }
 }

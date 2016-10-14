@@ -32,17 +32,25 @@
             vertical-align: top;
             border-bottom: 1px solid #dedcdb;
             padding-bottom: rem(3);
+
+            font-weight: 400;
         }
     }
 
     &__menu {
-        @include list-reset;
+         @include list-reset;
     }
 
     &__item {
         position: relative;
 
         padding: rem(7.5) 0;
+
+        &:hover {
+            .link {
+                border-color: #000;
+            }
+        }
 
         &_open {
             .dropdown {
@@ -67,6 +75,8 @@
 
     &__link {
         padding-bottom: rem(3);
+
+        font-size: em(18);
     }
 
     &__trigger {
