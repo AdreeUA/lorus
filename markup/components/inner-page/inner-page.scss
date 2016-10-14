@@ -2,6 +2,15 @@
     .page__lang {
         font-size: rem(17);
         top: rem(25);
+
+        @include below($tablet) {
+            position: fixed;
+            right: rem(115);
+            top: rem(32);
+            z-index: 100;
+
+            display: block;
+        }
     }
 }
 
@@ -149,6 +158,13 @@
         &_roll {
             margin-top: rem(89);
         }
+
+        @include below($tablet) {
+
+            &.title_top-yellow {
+                margin-left: 0;
+            }
+        }
     }
 
     &__questions {
@@ -165,6 +181,11 @@
     &__list-wrap {
         margin-top: rem(44);
         margin-left: rem(48);
+
+        @include below($tablet) {
+            margin-left: 0;
+            margin-top: rem(54);
+        }
     }
 
     &__list-col {
@@ -220,6 +241,11 @@
     &__photos {
         margin-top: rem(60);
         margin-left: rem(52);
+
+        @include below($tablet) {
+            margin-top: rem(36);
+            margin-left: 0;
+        }
     }
 
     &__extend {
@@ -260,3 +286,4 @@
 @import './contacts-page/contacts-page';
 @import './constructor-page/constructor-page';
 @import './clients-page/clients-page';
+@import './not-page/not-page';

@@ -243,6 +243,15 @@
             font-size: rem(21);
             font-weight: 300;
             vertical-align: top;
+
+            @include below($tablet) {
+                width: 100%;
+                padding-left: 0;
+
+                &:last-child {
+                    margin-bottom: rem(10);
+                }
+            }
         }
 
         .list__content {

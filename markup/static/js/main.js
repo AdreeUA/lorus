@@ -3,8 +3,6 @@
 import polyfills from './libraries/polyfills';
 import './plugins/scrollmagic/animation.gsap';
 import { Component } from 'helpers-js';
-import { magnific } from 'magnific-popup';
-import { likely } from 'ilyabirman-likely';
 import { Service } from 'components/service/service';
 import { Header } from 'components/header/header';
 import { Footer } from 'components/footer/footer';
@@ -19,6 +17,7 @@ import { Map } from 'components/map/map';
 import { InnerPage } from 'components/inner-page/inner-page';
 import { Write } from 'components/write/write';
 import { Share } from 'components/share/share';
+import { Modal } from 'components/modal/modal';
 
 $(() => {
     polyfills.init();
@@ -36,6 +35,7 @@ $(() => {
     Component.init('.map', Map);
     Component.init('.write', Write);
     Component.init('.share', Share);
+    Component.init('.modal', Modal);
     Service.initCurrentService();
     InnerPage.initCurrentPage();
 });
