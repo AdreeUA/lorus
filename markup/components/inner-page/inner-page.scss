@@ -29,7 +29,7 @@
     &__block {
         position: relative;
 
-        &_theme_extra {            
+        &_theme_extra {
             position: relative;
             padding-bottom: rem(62);
 
@@ -245,6 +245,10 @@
         @include below($tablet) {
             margin-top: rem(36);
             margin-left: 0;
+
+            .slick-list {
+                overflow: visible;
+            }
         }
     }
 
