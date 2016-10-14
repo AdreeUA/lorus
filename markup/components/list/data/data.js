@@ -82,17 +82,20 @@ var data = {list: {
         list: [
             {
                 src: "%=static=%img/assets/inner-page/les-page/les-1.jpg",
-                class: "block-3__photos_1"
+                photoClass: "block-3__photo_1",
+                itemClass: "block-3__photo-item"
             },
             {
                 src: "%=static=%img/assets/inner-page/les-page/les-2.jpg",
                 text: "Маленькое описание того, что на фотографиях давайте сделаем?",
                 textClass: "par_border-left block-3__photos-descr",
-                class: "block-3__photos_2"
+                photoClass: "block-3__photo_2",
+                itemClass: "block-3__photo-item"
             },
             {
                 src: "%=static=%img/assets/inner-page/les-page/les-3.jpg",
-                class: "block-3__photos_3"
+                photoClass: "block-3__photo_3",
+                itemClass: "block-3__photo-item"
             }
         ]
     },

@@ -1,0 +1,9 @@
+include ../icon/icon
+
+mixin scale-img(data)
+    +b.scale-img(data-width=data.width)&attributes(attributes)
+        +e.wrapper
+            +icon({ icon: 'increase', class: 'scale-img__icon scale-img__icon_increase' })
+            +icon({ icon: 'decrease', class: 'scale-img__icon scale-img__icon_decrease' })
+            +e.IMG.img(src=data.src alt=(data.alt || ''))
+
