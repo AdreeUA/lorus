@@ -31,16 +31,26 @@
     }
 
     &__item {
+        display: inline-block;
+
         font-size: rem(18);
         font-weight: 400;
         color: #000;
+        vertical-align: middle;
 
-        & + & {
-            margin-left: rem(20);
+        &:not(:last-child) {
+            margin-right: rem(20);
         }
 
         &_not-under {
             border-bottom: none;
+        }
+
+        @include below($mobile) {
+
+            &:not(:last-child) {
+                margin-right: rem(10);
+            }
         }
     }
 

@@ -5,5 +5,9 @@
         margin-left: rem(-40);
         margin-right: rem(-40);
         padding-left: rem(55);
+
+        @include below($tablet) {
+            padding-right: rem(40);
+        }
     }
 }

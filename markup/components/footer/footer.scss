@@ -216,4 +216,11 @@
             }
         }
     }
+
+    &_no-line {
+
+        .footer__line-m {
+            display: none;
+        }
+    }
 }
