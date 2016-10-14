@@ -1,3 +1,5 @@
+include ../photo/photo
+
 mixin list(data)
     +b(data.tag == 'ol' ? 'ol' : 'ul').list()&attributes(attributes)
 
@@ -47,7 +49,7 @@ mixin list(data)
                 if data.type == 'img'
 
                     +e.item
-                        +e(src=item.src class=(item.class ? '__img ' + item.class : '__img'))
+                        +photo(item)._no-animate._theme_simple
 
                         if item.text
 
@@ -57,6 +59,11 @@ mixin list(data)
                     if data.type == 'check'
                         +e.LI.item
                             +icon({ icon: 'check', class: 'list__check' })
+                            +e.content= item.text
+
+                    else if data.type == 'roll'
+                        +e.LI.item
+                            +icon({ icon: 'roll', class: 'list__roll' })
                             +e.content= item.text
 
                     else

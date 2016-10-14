@@ -1,5 +1,6 @@
 var data = {list: {
     academyTargets: {
+        type: "roll",
         list: [
             {
                 text: "Повышение уровня компетенций и эффективности сотрудников;"
@@ -181,6 +182,7 @@ var data = {list: {
     },
 
     constructorRoll: {
+        type: "roll",
         list: [
             {
                 text: "Повышение уровня компетенций и эффективности сотрудников;"
