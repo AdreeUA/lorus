@@ -28,6 +28,13 @@
         padding-left: rem(70);
         padding-top: rem(82);
         padding-bottom: rem(46);
+
+        @include below($tablet) {
+            padding: rem(70) rem(20) rem(40);
+            height: 100vh;
+
+            overflow-y: auto;
+        }
     }
 
     &__nav-item {
@@ -49,6 +56,10 @@
             background: rgba(0, 0, 0, .6);
             box-shadow: 0 0 0 1px rgba(0, 0, 0, .6);
         }
+
+        @include below($tablet) {
+            margin-left: 0;
+        }
     }
 
     &__row {
@@ -57,20 +68,44 @@
         & + & {
             margin-top: rem(85);
         }
+
+        @include below($tablet) {
+            & + & {
+                margin-top: rem(85);
+                text-align: center;
+            }
+        }
     }
 
     &__col {
         float: left;
+
+        @include below($tablet) {
+            float: none;
+
+        }
     }
 
     &__menu {
         & + & {
             margin-top: rem(70);
         }
+
+        @include below($tablet) {
+            margin-bottom: rem(40);
+
+            & + & {
+                margin-top: 0;
+            }
+        }
     }
 
     &__service {
         margin-left: rem(75);
+
+        @include below($tablet) {
+            margin-left: 0;
+        }
     }
 
     &__phone {
@@ -81,6 +116,12 @@
         text-decoration: none;
         font-size: rem(24);
         line-height: rem(45);
+
+        @include below($tablet) {
+            display: block;
+            float: none;
+            margin-top: rem(20);
+        }
     }
 
     &__search {

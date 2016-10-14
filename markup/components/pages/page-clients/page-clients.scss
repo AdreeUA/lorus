@@ -1,0 +1,7 @@
+.page-clients {
+    @include below($tablet) {
+        .footer__line-m {
+            display: none;
+        }
+    }
+}

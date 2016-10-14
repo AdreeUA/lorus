@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
-import { Component, forEach, getCoords, toggleController, addPhotoParallax } from 'helpers-js';
+import { Component, forEach, getCoords, toggleController, addPhotoParallax, media } from 'helpers-js';
 
 import { Line } from 'components/line/line';
 

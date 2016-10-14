@@ -10,6 +10,7 @@ import { Screens } from 'components/screens/screens';
 import { Slider } from 'components/slider/slider';
 import { DecorTitle } from 'components/decor-title/decor-title';
 import { Line } from 'components/line/line';
+import { ScaleImg } from 'components/scale-img/scale-img';
 import { SearchMini } from 'components/search-mini/search-mini';
 import { InfoList } from 'components/info/info-list/info-list';
 import { NavExtend } from 'components/nav-extend/nav-extend';
@@ -27,6 +28,7 @@ $(() => {
     Component.init('.header', Header);
     Component.init('.footer', Footer);
     Component.init('.slider', Slider);
+    Component.init('.scale-img', ScaleImg);
     Component.init('.decor-title', DecorTitle);
     Component.init('.screens', Screens);
     Component.init('.search-mini', SearchMini);

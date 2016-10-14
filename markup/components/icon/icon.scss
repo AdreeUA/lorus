@@ -69,4 +69,10 @@
         width: em(97);
         height: em(41);
     }
+
+    &_increase,
+    &_decrease {
+        width: rem(22);
+        height: rem(22);
+    }
 }

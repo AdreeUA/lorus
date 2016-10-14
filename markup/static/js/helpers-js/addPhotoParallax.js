@@ -6,6 +6,8 @@ export const addPhotoParallax = (block, controller) => {
     let photos = document.querySelectorAll('.photo');
 
     forEach(photos, (photo, ind) => {
+        if (photo.classList.contains('photo_no-animate')) return;
+
         let photoWrapper = photo.querySelector('.photo__wrapper'),
             photoShadow = photo.querySelector('.photo__shadow'),
             tween,

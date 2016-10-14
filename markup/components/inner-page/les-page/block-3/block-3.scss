@@ -3,13 +3,47 @@
     margin: 0 rem(-27);
     padding: rem(127) rem(136) 0;
 
+    @include below($tablet) {
+        margin: 0;
+        padding: rem(40) $mobile-gap rem(70);
+
+        background: #fff;
+    }
+
     &__photos-before {
         width: rem(910);
+
+        @include below($tablet) {
+            width: 100%;
+        }
+    }
+
+    &__photo-item {
+
+        &:not(:last-child) {
+            margin-right: rem(65);
+        }
+
+        @include below($tablet) {
+
+            &:not(:last-child) {
+                margin-right: rem(25);
+            }
+        }
     }
 
     &__photos-list {
         margin-left: rem(-74);
         margin-top: rem(93);
+
+        @include below($tablet) {
+            margin: rem(60) #{ -$mobile-gap};
+            margin-bottom: 0;
+            padding-left: $mobile-gap;
+
+            white-space: nowrap;
+            overflow-y: auto;
+        }
     }
 
     &__photos-descr {
@@ -19,23 +53,42 @@
         margin-top: rem(36);
         padding-top: rem(10);
         padding-bottom: rem(10);
+
+        @include below($tablet) {
+            display: none;
+        }
     }
 
     &__photos-after {
         width: rem(860);
         margin-top: rem(84);
+
+        @include below($tablet) {
+            width: 100%;
+        }
     }
 
-    &__photos {
+    &__photo {
 
         &_1 {
             height: rem(260);
         }
+
         &_2 {
             height: rem(181);
         }
+
         &_3 {
             height: rem(149);
+        }
+
+        @include below($tablet) {
+            height: rem(110);
+            width: rem(170);
+
+            .photo__shadow {
+                display: none;
+            }
         }
     }
 }

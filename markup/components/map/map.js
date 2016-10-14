@@ -1,4 +1,4 @@
-import { Component } from 'helpers-js';
+import { Component, media } from 'helpers-js';
 
 export class Map extends Component {
     constructor(block) {
@@ -9,7 +9,14 @@ export class Map extends Component {
 
     init() {
         let options = JSON.parse(this.block.getAttribute('data-options')),
+            map;
+
+        if (matchMedia(media.tablet).matches && options.mobile) {
+            console.log('< 1024');
+            map = new ymaps.Map('map', options.mobile);
+        } else {
             map = new ymaps.Map('map', options);
+        }
 
         if (this.block.getAttribute('data-balloon')) {
             let balloon = JSON.parse(this.block.getAttribute('data-balloon')),
@@ -28,12 +35,27 @@ export class Map extends Component {
                 </div>`
             );
 
-            var myPlacemark = new ymaps.Placemark(balloon.placemark, {}, {
-                balloonLayout: MyBalloonLayout
-            });
+            if (matchMedia(media.tablet).matches && balloon.mobile) {
+                console.log('< 1024');
 
-            map.geoObjects.add(myPlacemark);
-            myPlacemark.balloon.open(balloon.open);
+                let myPlacemark = new ymaps.Placemark(balloon.mobile.placemark, {}, {
+                    balloonLayout: MyBalloonLayout,
+                    balloonPanelMaxMapArea: 0
+                });
+
+                map.geoObjects.add(myPlacemark);
+                myPlacemark.balloon.open(balloon.mobile.open);
+
+            } else {
+                console.log('> 1024');
+
+                let myPlacemark = new ymaps.Placemark(balloon.placemark, {}, {
+                    balloonLayout: MyBalloonLayout
+                });
+
+                map.geoObjects.add(myPlacemark);
+                myPlacemark.balloon.open(balloon.open);
+            }
         }
     }
 }

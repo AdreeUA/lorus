@@ -8,7 +8,6 @@ mixin list(data)
                 +e.LI.item
 
                     if item.linkArr
-
                         -var linkText = ''
 
                         each part in item.linkArr
@@ -22,14 +21,12 @@ mixin list(data)
                             +e.link-text !{linkText}
 
                     else if item.link
-
                         +e.title.link(href=jv0)
                             +e.link-text= item.link
 
 
 
                     if item.textArr
-
                         -var contentText = ''
 
                         each part in item.textArr
@@ -42,18 +39,16 @@ mixin list(data)
                         +e.content !{contentText}
 
                     else if item.text
-
                         +e.content= item.text
 
             else
                 if data.type == 'img'
 
-                    +e.item
-                        +photo(item)._no-animate._theme_simple
+                    +e.item(class=item.itemClass)
+                        +photo(item)(class=['_no-animate', '_theme_simple', item.photoClass])
 
                         if item.text
-
-                            +e(class=(item.textClass ? '__content ' + item.textClass : '__content'))= item.text
+                            +e(class=(['__content', item.textClass]))= item.text
 
                 else
                     if data.type == 'check'
