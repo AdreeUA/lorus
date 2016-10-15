@@ -184,6 +184,8 @@ module.exports = () => {
 
         if (templaterIsPugOrJade && tars.options.watch.isActive) {
             filesToCompile.push(
+                `!./markup/layouts/**/_*.${tars.templater.ext}`,
+                `./markup/layouts/**/*.${tars.templater.ext}`,
                 `!./markup/${tars.config.fs.componentsFolderName}/**/_*.${tars.templater.ext}`,
                 `./markup/${tars.config.fs.componentsFolderName}/**/*.${tars.templater.ext}`
             );

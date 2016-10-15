@@ -4,6 +4,23 @@ English description | <a href="../ru/changelog.md">Описание на рус�
 
 # Changelog
 
+## Version 1.9.2
+
+* Fix bug with helper Icon in handlebars.
+
+## Version 1.9.1
+
+* Use gulp-pug-inheritance from fork because of errors in original.
+
+## Version 1.9.0
+
+* gulp-minify-html replaced with на gulp-htmlmin.
+* Add templater Pug support.
+* You can pass any data to templater by using env var TARS_ENV.
+* Bugfix.
+* English docs fixup and full update. Thanks to [icehaunter](https://github.com/icehaunter).
+* Dependencies update.
+
 ## Version 1.8.3
 
 * Fix bug with svg2png in 2.0.0 Use 1.0.2
