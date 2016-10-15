@@ -8,23 +8,29 @@ export class Map extends Component {
     }
 
     init() {
-        let options = JSON.parse(this.block.getAttribute('data-options')),
-            map;
+        const options = JSON.parse(this.block.getAttribute('data-options'));
+        const map = new ymaps.Map('map', options);
 
-        if (matchMedia(media.tablet).matches && options.mobile) {
-            console.log('< 1024');
-            map = new ymaps.Map('map', options.mobile);
-        } else {
-            map = new ymaps.Map('map', options);
+        if (options.mobile) {
+            const setOptions = () => {
+                if (matchMedia(media.tablet).matches) {
+                    map.panTo(options.mobile.center);
+                } else {
+                    map.panTo(options.center);
+                }
+            }
+
+            setOptions();
+            window.addEventListener('resize', setOptions);
         }
 
         if (this.block.getAttribute('data-balloon')) {
-            let balloon = JSON.parse(this.block.getAttribute('data-balloon')),
-                items = '';
+            const balloon = JSON.parse(this.block.getAttribute('data-balloon'));
+            let items = '';
 
             balloon.items.forEach(item => items += item);
 
-            let MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+            const MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                 `<div class="mark">
                     <div class="mark__inner">
                         <div class="mark__title"> ${balloon.title} </div>
@@ -35,27 +41,13 @@ export class Map extends Component {
                 </div>`
             );
 
-            if (matchMedia(media.tablet).matches && balloon.mobile) {
-                console.log('< 1024');
+            const myPlacemark = new ymaps.Placemark(balloon.placemark, {}, {
+                balloonLayout: MyBalloonLayout,
+                balloonPanelMaxMapArea: 0
+            });
 
-                let myPlacemark = new ymaps.Placemark(balloon.mobile.placemark, {}, {
-                    balloonLayout: MyBalloonLayout,
-                    balloonPanelMaxMapArea: 0
-                });
-
-                map.geoObjects.add(myPlacemark);
-                myPlacemark.balloon.open(balloon.mobile.open);
-
-            } else {
-                console.log('> 1024');
-
-                let myPlacemark = new ymaps.Placemark(balloon.placemark, {}, {
-                    balloonLayout: MyBalloonLayout
-                });
-
-                map.geoObjects.add(myPlacemark);
-                myPlacemark.balloon.open(balloon.open);
-            }
+            map.geoObjects.add(myPlacemark);
+            myPlacemark.balloon.open();
         }
     }
 }

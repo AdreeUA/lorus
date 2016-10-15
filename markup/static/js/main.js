@@ -19,6 +19,7 @@ import { InnerPage } from 'components/inner-page/inner-page';
 import { Write } from 'components/write/write';
 import { Share } from 'components/share/share';
 import { Modal } from 'components/modal/modal';
+import { InfinityScroll } from 'components/infinity-scroll/infinity-scroll';
 
 $(() => {
     polyfills.init();
@@ -38,6 +39,7 @@ $(() => {
     Component.init('.write', Write);
     Component.init('.share', Share);
     Component.init('.modal', Modal);
+    Component.init('.infinity-scroll', InfinityScroll);
     Service.initCurrentService();
     InnerPage.initCurrentPage();
 });

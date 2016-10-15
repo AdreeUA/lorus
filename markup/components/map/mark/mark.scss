@@ -3,11 +3,18 @@
     top: 0;
     left: 0;
 
+    margin-left: rem(-110);
+
     background-color: #fff;
     box-shadow: 0 rem(130) rem(100) rem(-90) rgba(#000, .5);
-    
+    transform: translate(-100%, -50%);
+
     @include below($tablet) {
+        margin-left: rem(-20);
+        margin-top: rem(-170);
+
         background-color: $color-4;
+        transform: translate(-50%, -100%);
     }
 
     &__inner {
@@ -17,6 +24,7 @@
         padding: rem(50) rem(70) rem(50) rem(50);
 
         &:before {
+            content: '';
             position: absolute;
             top: 50%;
             left: 100%;
@@ -28,8 +36,6 @@
             border-color: transparent transparent transparent #fff;
 
             transform: translateY(-50%);
-
-            content: '';
         }
 
         @include below($tablet) {

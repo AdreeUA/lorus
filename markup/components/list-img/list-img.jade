@@ -1,13 +1,8 @@
+include ../figure/figure
+
 mixin list-img(data)
     +b.list-img()&attributes(attributes)
         +e.wrap
             each item in data.items
                 +e.item
-                    +e.img-wrap
-                        +e.img(src=item.src)
-
-                    +e.text
-                        +e.title= item.title
-                        +e.descr= item.descr
-
-            
+                    +figure(item)

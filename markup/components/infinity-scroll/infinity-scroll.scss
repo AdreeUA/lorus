@@ -1,0 +1,14 @@
+.infinity-scroll {
+
+    &__loader {
+        height: 0;
+
+        text-align: center;
+
+        overflow: hidden;
+
+        &_active {
+            height: auto;
+        }
+    }
+}
