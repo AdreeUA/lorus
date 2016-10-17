@@ -1,3 +1,5 @@
 mixin form(data)
-    +b.FORM.form()&attributes(attributes)
-        block
+    -data = data || {}
+    +b.form(data-ajax=data.ajax)&attributes(attributes)
+        form
+            block

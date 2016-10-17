@@ -8,10 +8,20 @@ mixin input(data)
             +e.label= data.label
 
         -var tag
-        -if (data.type == 'textarea') {
-        -    tag = 'textarea'
-        -}
+        if (data.type == 'textarea')
+            -tag = 'textarea'
 
-        +e(tag || 'input').field(class=((data.type!='textarea' ? '_input' : '_textarea') + (data.fieldHidden ? ' _hidden' : '')) type=(data.type!='textarea' ? data.type : ''))
+        +e(tag || 'input').field(
+            class={
+                '_textarea': data.type === 'textarea',
+                '_input': data.type !== 'textarea',
+                '_hidden': data.fieldHidden,
+                'js-validate': data.validate
+            }
+            name=data.name
+            data-validate!=(JSON.stringify(data.validate))
+            type=(data.type!='textarea' ? data.type : false)
+            required=data.required)
+
 
         block
