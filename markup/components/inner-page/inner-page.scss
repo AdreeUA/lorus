@@ -93,8 +93,8 @@
 
     &__logo {
         margin-left: rem(105);
-        margin-top: rem(60);
         height: rem(77);
+        margin-top: rem(80);
 
         @include below($tablet) {
             display: none;

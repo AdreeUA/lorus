@@ -12,6 +12,16 @@
         display: block;
     }
 
+    &_not-page {
+        .dropdown {
+            position: absolute;
+        }
+
+        .nav-extend__col {
+            padding-right: 0;
+        }
+    }
+
     &__col {
         padding-right: rem(75);
         margin-bottom: rem(70);
@@ -22,7 +32,11 @@
     }
 
     &__title {
+        display: inline-block;
+        vertical-align: top;
         margin-bottom: rem(25);
+        padding-bottom: rem(3);
+        border-bottom: 1px solid $color-3;
 
         font-size: em(24);
         font-weight: 300;
@@ -47,7 +61,7 @@
         padding: rem(7.5) 0;
 
         &:hover {
-            .link {
+            & > .link {
                 border-color: #000;
             }
         }

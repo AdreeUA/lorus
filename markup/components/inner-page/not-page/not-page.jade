@@ -9,9 +9,9 @@ mixin not-page(data)
             +line(line.notPage).__line
             +e.content
                 +e.P.text
-                    | Ошибка 404: <br>
+                    +e.SPAN.text-bold Ошибка 404: <br>
                     | Страница не найдена
-                +nav-extend(navExtend.default)
+                +nav-extend(navExtend.default)._not-page
                 +e.contact
                     +e.contact-item
                         +e.phone(href='tel:+74957775457') 8 495 777 54 57
