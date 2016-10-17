@@ -31,7 +31,7 @@
         <header class="header header_theme_screen">
             <div class="header__left">
                 <div class="logo header__logo">
-                    <img src="static/img/assets/logo/logo.svg" srcset="static/img/assets/logo/logo@2x.svg 2x" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img" />
+                    <img src="static/img/assets/logo/logo.svg" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img" />
                     <h2 class="screenreader">Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.
           </h2>
                 </div>
@@ -188,7 +188,7 @@
                             <header class="header header_theme_default screen-home__header">
                                 <div class="header__left">
                                     <div class="logo header__logo">
-                                        <img src="static/img/assets/logo/logo.svg" srcset="static/img/assets/logo/logo@2x.svg 2x" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img" />
+                                        <img src="static/img/assets/logo/logo.svg" alt="Логотип компании: LORUS SCM, we think - we move" title="" class="logo__img" />
                                         <h2 class="screenreader">Лорус Эс Си Эм – один из ведущих 4PL провайдеров логистических услуг, эксперт в области логистики производственных предприятий.
                     </h2>
                                     </div>
@@ -627,33 +627,35 @@
             <div class="modal mfp-hide white-popup" id="writeUs">
                 <div class="modal__close mfp-close">
                 </div>
-                <h3 class="title title_inner academy__form-title">Написать нам 
+                <h3 class="title title_inner academy__form-title">Написать нам
         </h3>
-                <form class="form write__form">
-                    <div class="form__fields form__fields_left">
-                        <div class="form__row form__row_col form__row form__row_2">
-                            <div class="form__col">
-                                <label class="input input_border"><span class="input__label">Как к вам обращаться?</span>
-                                    <input type="text" class="input__field input__field_input" />
-                                </label>
+                <div data-ajax='{"type":"GET","url":""}' class="form write__form">
+                    <form>
+                        <div class="form__fields form__fields_left">
+                            <div class="form__row form__row_col form__row form__row_2">
+                                <div class="form__col">
+                                    <label class="input input_border"><span class="input__label">Как к вам обращаться?</span>
+                                        <input name="name" type="text" required="required" class="input__field input__field_input" />
+                                    </label>
+                                </div>
+                                <div class="form__col">
+                                    <label class="input input_border"><span class="input__label">Телефон для связи</span>
+                                        <input name="phone" data-validate="{&quot;tel&quot;:true}" type="text" required="required" class="input__field input__field_input js-validate" />
+                                    </label>
+                                </div>
                             </div>
-                            <div class="form__col">
-                                <label class="input input_border"><span class="input__label">Телефон для связи</span>
-                                    <input type="text" class="input__field input__field_input" />
+                            <div class="form__row">
+                                <label class="input input_border"><span class="input__label">Комментарий</span>
+                                    <textarea name="message" required="required" class="input__field input__field_textarea"></textarea>
                                 </label>
                             </div>
                         </div>
-                        <div class="form__row">
-                            <label class="input input_border"><span class="input__label">Комментарий</span>
-                                <textarea type="" class="input__field input__field_textarea"></textarea>
-                            </label>
+                        <div class="form__submit write__submit">
+                            <button type="submit" class="btn-inner">Отправить
+                            </button>
                         </div>
-                    </div>
-                    <div class="form__submit write__submit">
-                        <button type="submit" class="btn-inner">Отправить
-                        </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
         <script src="static/js/main.min.js"></script>
