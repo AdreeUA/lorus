@@ -8,17 +8,17 @@ mixin questions-form(data)
         +title({'tag': 'h3'})._inner.questions-form__title
             | Остались вопросы?
 
-        +form.questions-form__form
+        +form(form.questions).questions-form__form
             +e.fields_left
                 +e.row_col.__row_2
                     +e.col
-                        +input({'label': 'Как к вам обращаться?'})
+                        +input(input.name)
 
                     +e.col
-                        +input({'label': 'Телефон для связи'})
+                        +input(input.phone)
 
                 +e.row
-                    +input({'label': 'Комментарий', 'type': 'textarea'})
+                    +input(input.message)
 
             +e.submit_left
                 +btn-inner({'text': 'Отправить', 'type': 'submit'})

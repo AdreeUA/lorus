@@ -2,25 +2,26 @@ include ../title/title
 include ../input/input
 include ../btn-inner/btn-inner
 include ../modal/modal
+include ../form/form
 
 mixin write(data)
     +b.write()&attributes(attributes)
         +modal().mfp-hide.white-popup#writeUs
 
             +title({'tag': 'h3'})._inner.academy__form-title
-                | Написать нам 
-            
-            +b.FORM.form.write__form
+                | Написать нам
+
+            +form(form.write).write__form
                 +e.fields_left
                     +e.row_col.__row_2
                         +e.col
-                            +input({'label': 'Как к вам обращаться?'})._border
+                            +input(input.name)._border
 
                         +e.col
-                            +input({'label': 'Телефон для связи'})._border
+                            +input(input.phone)._border
 
                     +e.row
-                        +input({'label': 'Комментарий', 'type': 'textarea'})._border
+                        +input(input.message)._border
 
                 +e.submit.write__submit
-                    +btn-inner({'text': 'Отправить', 'type': 'submit'}) 
+                    +btn-inner({'text': 'Отправить', 'type': 'submit'})

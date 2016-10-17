@@ -9,7 +9,7 @@ mixin block-4(data)
         +title({'tag': 'h3'})._inner.inner-page__subtitle_photos.block-4__title
             | Хорошо подготовленная команда — залог успеха!
 
-        +slider(slider.academyTeam).inner-page__photos
+        +slider(slider.academyTeam).inner-page__photos.block-4__team
             -var i = 1;
             while i <= 4
                 +e.item.block-4__photo-wrapper
@@ -17,4 +17,3 @@ mixin block-4(data)
                 -i++
 
         +share(share.default).inner-page__share
- 

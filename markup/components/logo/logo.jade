@@ -13,7 +13,7 @@ mixin logo(data)
             +e.IMG.img(
                 class=(data.mod ? `_${data.mod}` : '')
                 src=`${data.src}.${data.ext}`
-                srcset=`${data.src}@2x.${data.ext} 2x`
+                srcset=(data.ext === 'svg' ? false : `${data.src}@2x.${data.ext} 2x`)
                 alt=data.alt
                 title=data.title)
 

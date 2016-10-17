@@ -96,10 +96,6 @@
             @include below($tablet) {
                 padding-top: rem(30);
                 margin-bottom: rem(30);
-
-                &::before {
-                    display: block;
-                }
             }
         }
 
@@ -118,11 +114,11 @@
     &__phone {
         color: inherit;
         text-decoration: none;
-        font-size: rem-2(32);
+        font-size: rem(16);
     }
 
     &__mail {
-        font-size: rem-2(32);
+        font-size: rem(16);
 
         @include below($tablet) {
             display: inline-block;
@@ -179,7 +175,7 @@
             padding-right: rem(80);
 
             @include below($tablet) {
-                padding: 0 rem(25);
+                padding: 0 rem(40);
             }
         }
 
@@ -204,15 +200,43 @@
         .footer__item {
             height: rem(55);
 
-            @include below($tablet) {
-                height: auto;
-            }
-
             &_logo {
                 width: rem(217);
                 height: rem(57);
 
                 background: url('%=static=%assets/footer-inner/footer-logo.svg') center no-repeat;
+            }
+
+            &_copyright {
+                text-align: right;
+
+                &:before {
+                    left: auto;
+                    right: rem(0);
+                }
+            }
+
+            @include below($tablet) {
+                height: auto;
+
+                &_phone {
+                    color: #000;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &_copyright {
+                    text-align: left;
+                }
+            }
+
+            .footer__phone {
+                @include below($tablet) {
+                    color: #000;
+                    font-size: rem(23);
+                }
             }
         }
     }
