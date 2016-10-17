@@ -8,6 +8,8 @@
         min-height: 0;
         margin-left: 0;
         padding-top: rem(35);
+
+        background: url('%=static=%general/mobile-inner-bg.svg') no-repeat 100% rem(-190) / rem(210) rem(606);
     }
 
     &__targets {

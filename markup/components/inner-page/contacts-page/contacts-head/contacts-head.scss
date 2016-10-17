@@ -15,6 +15,7 @@
     }
 
     &__logo {
+        width: rem(225);
         margin-right: rem(44);
 
         @include below($tablet) {

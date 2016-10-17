@@ -31,7 +31,8 @@ export class CareerPage extends Component {
             let start = getCoords(line1.block).top,
                 end = getCoords(line3.block).bottom;
 
-            duration = start + end - 100;
+            duration = start + end - 200;
+            duration = duration < 0 ? 0 : duration;
         }
 
         calcDuration();

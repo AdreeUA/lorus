@@ -82,14 +82,19 @@
 
             min-width: 100%;
             width: auto;
-            height: rem(190);
+            height: rem(300);
             margin: 0 rem(-30);
+        }
+
+        @include below($mobile) {
+            height: rem(190);
         }
     }
 
     &__logo {
         margin-left: rem(105);
-        margin-top: rem(80);
+        height: rem(77);
+        margin-top: rem(60);
 
         @include below($tablet) {
             display: none;
@@ -116,9 +121,10 @@
         bottom: 0;
         z-index: 1;
 
+        pointer-events: none;
+
         &_front {
             z-index: 2;
-            pointer-events: none;
         }
 
         @include below($tablet) {
@@ -148,7 +154,7 @@
     }
 
     &__subtitle {
-        margin-left: rem(103);
+        margin-left: rem(100);
 
         &.title_top-yellow {
             margin-left: rem(79);
@@ -203,7 +209,8 @@
     }
 
     &__share {
-        margin: rem(57) 0 0 rem(86);
+        margin-top: rem(57);
+        margin-left: rem(100);
 
         @include below($tablet) {
             display: none;
@@ -298,7 +305,13 @@
     }
 
     &_theme_world {
-        background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+
+        background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;
+
+        @include below($tablet) {
+            border-bottom: none;
+        }
     }
 }
 

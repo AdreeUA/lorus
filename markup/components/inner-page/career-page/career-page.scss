@@ -8,31 +8,34 @@
     }
 
     &__line {
-        font-size: rem(15.4);
 
         &_1 {
-            height: auto;
-            width: 100%;
-            margin-top: rem(190);
+            height: em(961);
+            width: em(1134);
+            margin-top: rem(240);
             overflow: hidden;
+
+            font-size: rem(15.5);
         }
 
         &_2 {
             position: absolute;
-            left: rem(-200);
+            left: rem(-195);
 
-            width: rem(410);
-            height: 0.64935em;
-            margin-top: rem(211);
+            width: rem(400);
+            height: rem(10);
+            margin-top: rem(205);
 
             transform: rotate(90deg);
         }
 
         &_3 {
-            width: rem(80);
-            height: auto;
-            margin-left: rem(-70);
+            width: em(78);
+            height: em(291);
+            margin-left: rem(-71);
             margin-top: rem(420);
+
+            font-size: rem(16.5);
         }
     }
 }

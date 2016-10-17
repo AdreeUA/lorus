@@ -3,7 +3,7 @@
     @include below($tablet) {
         min-height: 0;
         margin-left: 0;
-        padding: rem(50) 0 rem(40) rem(30);
+        padding: rem(50) $mobile-gap rem(40);
     }
 
     &__title {
@@ -18,30 +18,22 @@
     }
 
     &__team {
-        margin: rem(70) 0 0 rem(-50);
-
-        @include below($tablet) {
-            margin-top: rem(35);
-            margin-left: 0;
-
-            .slick-list {
-                overflow: visible;
-            }
-        }
+        font-size: 0;
     }
 
     &__photo-wrapper {
         display: inline-block;
 
         vertical-align: top;
+        font-size: 1rem;
 
         &:not(:last-child) {
-            margin-right: rem(30);
+            margin-right: rem(25);
         }
     }
 
     &__photo {
-        height: rem(158);
+        height: rem(155);
 
         border-radius: 10px;
     }

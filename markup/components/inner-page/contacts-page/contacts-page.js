@@ -25,7 +25,8 @@ export class ContactsPage extends Component {
             duration;
 
         const calcDuration = () => {
-            duration = line.block.offsetHeight;
+            duration = line.block.offsetHeight - 100;
+            duration = duration < 0 ? 0 : duration;
         }
 
         calcDuration();

@@ -85,6 +85,10 @@
                 height: 3px;
 
                 background-color: #e2e63f;
+
+                @include below($tablet) {
+                    left: rem(90);
+                }
             }
 
             @include below($tablet) {
@@ -106,6 +110,11 @@
             padding: rem(33) rem(40) rem(10) rem(30);
 
             font-size: rem(16);
+
+            @include below($tablet) {
+                padding-left: rem(45);
+                padding-right: 0;
+            }
         }
     }
 
@@ -258,9 +267,7 @@
         top: 50%;
         left: rem(-25);
 
-        width: rem(24);
-
-        margin-top: rem(-11);
+        margin-top: rem(-12);
     }
 
     &__text-base {

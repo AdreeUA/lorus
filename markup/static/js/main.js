@@ -15,6 +15,7 @@ import { SearchMini } from 'components/search-mini/search-mini';
 import { InfoList } from 'components/info/info-list/info-list';
 import { NavExtend } from 'components/nav-extend/nav-extend';
 import { Map } from 'components/map/map';
+import { Form } from 'components/form/form';
 import { InnerPage } from 'components/inner-page/inner-page';
 import { Write } from 'components/write/write';
 import { Share } from 'components/share/share';
@@ -38,6 +39,7 @@ $(() => {
     Component.init('.map', Map);
     Component.init('.write', Write);
     Component.init('.share', Share);
+    Component.init('.form', Form);
     Component.init('.modal', Modal);
     Component.init('.infinity-scroll', InfinityScroll);
     Service.initCurrentService();
