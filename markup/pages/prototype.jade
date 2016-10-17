@@ -1,0 +1,10 @@
+extends ../layouts/inner
+include ../components/inner-page/prototype-page/prototype-page
+
+block vars
+    -pageSettings.title = 'Страница прототипа';
+    -pageSettings.pageClass = 'page-inner';
+    -pageSettings.footerClass = '_no-line';
+
+block content
+    +prototype-page

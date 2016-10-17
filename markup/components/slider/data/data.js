@@ -7,5 +7,11 @@ var data = {slider: {
             "arrows": false
         },
         destroy: '(min-width: 1024px)'
+    },
+    prototype: {
+        settings: {
+            "dots": false,
+            "slidesToShow": 3,
+        }
     }
 }}

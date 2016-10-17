@@ -27,7 +27,7 @@
             position: absolute;
             top: -1px;
             right: -.3em;
-            bottom: 0;
+            bottom: -1px;
             left: -.3em;
             z-index: -1;
 
@@ -35,6 +35,7 @@
             opacity: 0;
 
             transition: opacity .4s;
+            will-change: opacity;
         }
 
         &:hover {

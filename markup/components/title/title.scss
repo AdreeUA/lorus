@@ -55,4 +55,11 @@
             border-top: none;
         }
     }
+
+    &_left-yellow {
+        padding: rem(15) rem(23);
+        border-left: rem(8) solid $color-2;
+
+        border-radius: rem(5);
+    }
 }

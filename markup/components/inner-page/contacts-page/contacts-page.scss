@@ -17,12 +17,18 @@
         position: absolute;
         right: 0;
         top: 0;
+        z-index: 2;
 
         width: rem(230);
-        height: rem(515);
+        height: rem(517);
+
 
         @include below($tablet) {
             display: none;
         }
+    }
+
+    &__map {
+        z-index: 1;
     }
 }

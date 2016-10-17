@@ -1,15 +1,32 @@
 .block-2 {
+    position: relative;
+
     margin-left: rem(33);
-    border-bottom: 1px solid #ebee76;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: rem(-100);
+        right: rem(-40);
+        bottom: 0;
+
+        height: 1px;
+        background: $color-2;
+    }
 
     @include below($tablet) {
         margin-left: 0;
         padding-top: rem(55);
 
         background: $color-4;
+
+        &::before {
+            left: -$mobile-gap;
+            right: -$mobile-gap;
+        }
     }
 
     &__house {
-        width: rem(943);
+        width: rem(930);
     }
 }
