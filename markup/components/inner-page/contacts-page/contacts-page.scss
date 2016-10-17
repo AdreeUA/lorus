@@ -27,4 +27,8 @@
             display: none;
         }
     }
+
+    &__map {
+        z-index: 1;
+    }
 }

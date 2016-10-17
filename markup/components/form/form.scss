@@ -35,13 +35,37 @@
         max-width: 100%;
 
         &_left {
-            //float: left;
+
+            .form__row {
+
+                &:last-child {
+
+                    label.error {
+                        position: absolute;
+                    }
+                }
+
+            }
+
+            @include below($tablet) {
+
+                .form__row {
+
+                    &:last-child {
+
+                        label.error {
+                            position: static;
+                        }
+                    }
+                }
+            }
         }
     }
 
     &__submit {
         display: inline-block;
         vertical-align: bottom;
+
         &_left {
             margin-left: rem(43);
         }

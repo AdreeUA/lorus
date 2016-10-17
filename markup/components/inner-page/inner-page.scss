@@ -305,12 +305,11 @@
     }
 
     &_theme_world {
-        border-bottom: 1px solid rgba(0, 0, 0, .5);
-
-        background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;
+        box-shadow: inset 0 -1px rgba(0, 0, 0, .5);
+        background: url('%=static=%assets/inner-page/map-bg.svg') no-repeat center bottom -10px / cover;
 
         @include below($tablet) {
-            border-bottom: none;
+            box-shadow: none;
         }
     }
 }
