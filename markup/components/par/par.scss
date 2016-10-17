@@ -7,9 +7,10 @@
     &_border-left {
         border-left: 2px solid #e5e4e3;
         padding-left: rem(33);
+        padding-bottom: rem(20);
 
         @include below($tablet) {
-            padding-left: 0;
+            padding: 0;
             border-left: none;
         }
     }
