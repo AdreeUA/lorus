@@ -1,6 +1,6 @@
 var data = {scaleImg: {
     house: {
-        width: 1200,
+        width: 960,
         src: '%=static=%img/assets/scale-img/house.svg'
     }
 }}

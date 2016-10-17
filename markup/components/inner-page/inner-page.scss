@@ -58,7 +58,7 @@
 
     &__descr {
         width: rem(590);
-        padding-top: rem(110);
+        padding-top: rem(80);
         padding-left: rem(105);
 
         @include below($tablet) {
@@ -94,7 +94,7 @@
     &__logo {
         margin-left: rem(105);
         height: rem(77);
-        margin-top: rem(60);
+        margin-top: rem(70);
 
         @include below($tablet) {
             display: none;
@@ -105,7 +105,7 @@
         position: relative;
         z-index: 2;
 
-        padding: 0 rem(30) 0 rem(60);
+        padding: 0 rem(30);
 
         @include below($tablet) {
             padding: 0;
