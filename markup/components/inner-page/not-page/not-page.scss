@@ -13,10 +13,7 @@
         right: 0;
 
         width: rem(187);
-
-        path {
-            transform: translate(-10199.97px, -4898.91px);
-        }
+        height: rem(760);
 
         @include below($tablet) {
             display: none;

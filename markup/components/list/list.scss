@@ -71,7 +71,7 @@
                 font-size: rem(100);
                 font-weight: 100;
                 line-height: (69/100);
-                text-align: right;
+                //text-align: right;
                 color: #e2e63f;
             }
 
@@ -170,6 +170,25 @@
         }
     }
 
+    &_col {
+        text-align: center;
+        font-size: 0;
+
+        .list__item {
+            width: percentage(1/3);
+            margin-bottom: rem(85);
+            display: inline-block;
+            vertical-align: top;
+            float: none;
+
+            text-align: left;
+
+            @include below($tablet) {
+                width: 100%;
+            }
+        }
+    }
+
     &_horiz-photo {
         list-style-type: none;
         margin: 0;
@@ -247,5 +266,16 @@
     &__text-base {
         position: relative;
         z-index: 1;
+    }
+
+    &__subtitle {
+        display: inline-block;
+        padding: rem(20) rem(40) rem(10) rem(30);
+        vertical-align: top;
+        max-width: 80%;
+
+        color: #000;
+        font-size: rem(30);
+        font-weight: 300;
     }
 }

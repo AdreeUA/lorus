@@ -1,0 +1,18 @@
+mixin block-2(data)
+    +b.block-2()&attributes(attributes)
+        +b.photo-text_text-bg.inner-page__photo-text
+            +e.photo-wrap
+                +decor-title({
+                    tag: 'div', rows: [
+                        'Професиональный подход'
+                    ]
+                }).photo-text__photo-title
+
+                +photo({src: '%=static=%img/assets/photo-text/photo-1.jpg'})._theme_simple._theme_text.photo-text__photo
+
+            +e.text-wrap
+                +par()._border-left.photo-text__text-content
+                    +e.content
+                        | Мы берём на себя в се этапы перевозки, вклая квалифицированную помощь с таможенным оформлением(средний срок оформления деклараций. Мы берём на себя в се этапы перевозки, вкл  ая квалифицированную помощь с таможенным оформлением (средний срок оформления деклараций.
+
+        +line(line.prototype1).prototype-page__line_1

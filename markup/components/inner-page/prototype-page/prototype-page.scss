@@ -1,0 +1,25 @@
+.prototype-page {
+    &__line {
+        position: absolute;
+
+        &_1 {
+            right: 0;
+            top: rem(75);
+
+            width: rem(160);
+            height: rem(731);
+        }
+
+        &_2 {
+            right: rem(-45);
+            bottom: rem(1150);
+
+            width: rem(50);
+            height: rem(270);
+        }
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+}

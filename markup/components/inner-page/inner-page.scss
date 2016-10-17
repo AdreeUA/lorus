@@ -57,7 +57,7 @@
     }
 
     &__descr {
-        width: rem(600);
+        width: rem(590);
         padding-top: rem(110);
         padding-left: rem(105);
 
@@ -100,7 +100,7 @@
         position: relative;
         z-index: 2;
 
-        padding: 0 1.6875rem;
+        padding: 0 rem(30) 0 rem(60);
 
         @include below($tablet) {
             padding: 0;
@@ -115,6 +115,11 @@
         right: rem(40);
         bottom: 0;
         z-index: 1;
+
+        &_front {
+            z-index: 2;
+            pointer-events: none;
+        }
 
         @include below($tablet) {
             display: none;
@@ -264,11 +269,19 @@
     &__photo-text {
         margin-top: rem(105);
         margin-bottom: rem(100);
+
+        &_margin-top-small {
+            margin-top: rem(60);
+        }
     }
 
     &__ol {
         margin-left: rem(22);
         margin-top: rem(80);
+
+        &_reset-margin-left {
+            margin-left: 0;
+        }
     }
 
     &__photo-wrapper {
@@ -278,6 +291,10 @@
         &:not(:last-child) {
             margin-right: 1.875rem;
         }
+    }
+
+    &__slider {
+        margin-top: rem(100);
     }
 
     &_theme_world {
@@ -293,3 +310,4 @@
 @import './constructor-page/constructor-page';
 @import './clients-page/clients-page';
 @import './not-page/not-page';
+@import './prototype-page/prototype-page';

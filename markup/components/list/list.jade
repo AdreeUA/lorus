@@ -41,6 +41,9 @@ mixin list(data)
                     else if item.text
                         +e.content= item.text
 
+                    else if item.subtitle
+                        +e.subtitle= item.subtitle
+
             else
                 if data.type == 'img'
 
