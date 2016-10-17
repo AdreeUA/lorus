@@ -4988,11 +4988,12 @@ img.mfp-img {
 .par_border-left {
   border-left: 2px solid #e5e4e3;
   padding-left: 2.0625rem;
+  padding-bottom: 1.25rem;
 }
 
 @media screen and (max-width: 1024px) {
   .par_border-left {
-    padding-left: 0;
+    padding: 0;
     border-left: none;
   }
 }
@@ -5601,6 +5602,9 @@ img.mfp-img {
 }
 
 @media screen and (max-width: 1024px) {
+  .list-extend__item {
+    border-color: #78736c;
+  }
   .list-extend__item:last-child {
     border-bottom: none;
   }
@@ -5622,6 +5626,12 @@ img.mfp-img {
   padding-left: 1.6875rem;
   padding-right: 1.6875rem;
   margin-top: 1.6875rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .list-extend__link {
+    box-shadow: inset 0 0 0 1px #78736c;
+  }
 }
 
 .list-extend__title {
@@ -6831,7 +6841,7 @@ img.mfp-img {
 .inner-page__logo {
   margin-left: 6.5625rem;
   height: 4.8125rem;
-  margin-top: 5rem;
+  margin-top: 3.75rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -7034,7 +7044,14 @@ img.mfp-img {
 }
 
 .inner-page_theme_world {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   background: url("../img/assets/inner-page/map-bg.svg") -10% 0/cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .inner-page_theme_world {
+    border-bottom: none;
+  }
 }
 
 .career-page .block-1 {
@@ -7089,33 +7106,31 @@ img.mfp-img {
   left: 4.375rem;
 }
 
-.career-page__line {
-  font-size: 0.9625rem;
-}
-
 .career-page__line_1 {
-  height: auto;
-  width: 100%;
-  margin-top: 11.875rem;
+  height: 60.0625em;
+  width: 70.875em;
+  margin-top: 15rem;
   overflow: hidden;
+  font-size: 0.96875rem;
 }
 
 .career-page__line_2 {
   position: absolute;
-  left: -12.5rem;
-  width: 25.625rem;
-  height: 0.64935em;
-  margin-top: 13.1875rem;
+  left: -12.1875rem;
+  width: 25rem;
+  height: 0.625rem;
+  margin-top: 12.8125rem;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
 .career-page__line_3 {
-  width: 5rem;
-  height: auto;
-  margin-left: -4.375rem;
+  width: 4.875em;
+  height: 18.1875em;
+  margin-left: -4.4375rem;
   margin-top: 26.25rem;
+  font-size: 1.03125rem;
 }
 
 .academy-page .block-1 {
@@ -7683,6 +7698,7 @@ img.mfp-img {
 }
 
 .contacts-head__logo {
+  width: 14.0625rem;
   margin-right: 2.75rem;
 }
 
@@ -7779,12 +7795,8 @@ img.mfp-img {
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.contacts-page__line path {
-  -webkit-transform: translate(-14434.64px, -4898.91px);
-      -ms-transform: translate(-14434.64px, -4898.91px);
-          transform: translate(-14434.64px, -4898.91px);
+  width: 14.375rem;
+  height: 32.1875rem;
 }
 
 @media screen and (max-width: 1024px) {
