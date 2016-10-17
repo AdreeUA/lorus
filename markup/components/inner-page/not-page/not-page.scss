@@ -1,6 +1,6 @@
 .not-page {
-    padding: rem(118) rem(80) rem(73) rem(50);
-    border-bottom: 1px solid #f8f8f8;
+    padding: rem(118) rem(80) rem(73) rem(72);
+    border-bottom: 2px solid $color-3;
 
     @include below($tablet) {
         padding: rem(100) 0 0;
@@ -32,19 +32,25 @@
     }
 
     &__text {
-        margin: 0 0 rem(128);
+        margin: 0 0 rem(95) rem(10);
         padding-left: rem(56);
         border-left: 2px solid #e5e4e3;
 
         font-size: rem(43);
-        font-weight: 500;
+        font-weight: 300;
 
         @include below($tablet) {
             padding: rem(50) rem(30) rem(45);
-            margin: 0 0 rem(60);
+            margin: 0 0 rem(50);
 
-            background-color: #fafaf9;
+            font-size: rem(34);
+
+            background-color: rgba(#dedcdb, .3);
         }
+    }
+
+    &__text-bold {
+        font-weight: 500;
     }
 
     &__contact {

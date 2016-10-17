@@ -204,15 +204,42 @@
         .footer__item {
             height: rem(55);
 
-            @include below($tablet) {
-                height: auto;
-            }
-
             &_logo {
                 width: rem(217);
                 height: rem(57);
 
                 background: url('%=static=%assets/footer-inner/footer-logo.svg') center no-repeat;
+            }
+
+            &_copyright {
+                text-align: right;
+
+                &:before {
+                    left: auto;
+                    right: rem(-8);
+                }
+            }
+
+            @include below($tablet) {
+                height: auto;
+
+                &_phone {
+                    color: #000;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &_copyright {
+                    text-align: left;
+                }
+            }
+
+            .footer__phone {
+                @include below($tablet) {
+                    font-size: rem(23);
+                }
             }
         }
     }
