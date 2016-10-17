@@ -94,7 +94,7 @@
     &__logo {
         margin-left: rem(105);
         height: rem(77);
-        margin-top: rem(80);
+        margin-top: rem(60);
 
         @include below($tablet) {
             display: none;
@@ -289,7 +289,13 @@
     }
 
     &_theme_world {
-        background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+
+        background: url('%=static=%assets/inner-page/map-bg.svg') -10% 0 / cover;
+
+        @include below($tablet) {
+            border-bottom: none;
+        }
     }
 }
 
