@@ -18,7 +18,9 @@
         }
 
         .nav-extend__col {
-            padding-right: 0;
+            @include below($mobile) {
+                padding-right: 0;
+            }
         }
     }
 
