@@ -19,9 +19,9 @@
 
         &_1 {
             width: em(789);
-            height: em(1023);
+            height: em(1025);
             margin-left: auto;
-            margin-top: rem(-2);
+            margin-top: -2px;
 
             font-size: rem(16.4);
 
@@ -50,7 +50,8 @@
             position: absolute;
 
             width: rem(115);
-            right: rem(-61);
+            height: rem(619);
+            right: rem(-75);
             margin-top: rem(320);
         }
     }
