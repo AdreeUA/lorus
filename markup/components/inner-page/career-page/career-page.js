@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
-import { Component, forEach, getCoords, toggleController, addPhotoParallax } from 'helpers-js';
+import { Component, forEach, getCoords, toggleController, addPhotoParallax, calcScrollHeight } from 'helpers-js';
 
 import { Line } from 'components/line/line';
 
@@ -24,6 +24,7 @@ export class CareerPage extends Component {
         let line1 = new Line(this.block.querySelector('.career-page__line_1')),
             line2 = new Line(this.block.querySelector('.career-page__line_2')),
             line3 = new Line(this.block.querySelector('.career-page__line_3')),
+            documentHeight = calcScrollHeight(),
             duration,
             tween = new TimelineMax();
 
@@ -33,6 +34,9 @@ export class CareerPage extends Component {
 
             duration = start + end - 200;
             duration = duration < 0 ? 0 : duration;
+            duration = start + duration > documentHeight ? documentHeight - start : duration;
+
+            console.log(duration);
         }
 
         calcDuration();
