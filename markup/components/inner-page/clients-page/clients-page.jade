@@ -10,6 +10,7 @@ include ./block-2/block-2
 mixin clients-page(data)
     +inner-page({ noForm: true })
         +b.ARTICLE.clients-page()&attributes(attributes)
+
             +e.lines.inner-page__lines-wrapper
                 .inner-page__lines
                     +line(line.clients1).clients-page__line_1

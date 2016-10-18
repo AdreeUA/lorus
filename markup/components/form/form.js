@@ -22,6 +22,8 @@ export class Form extends Component {
     }
 
     _setAjaxSettings() {
+        if (!this.block.getAttribute('data-ajax')) return;
+
         this.ajaxSettings = JSON.parse(this.block.getAttribute('data-ajax'));
 
         this.ajaxSettings.success = () => {

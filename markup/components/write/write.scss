@@ -6,5 +6,10 @@
     &__submit {
         float: right;
         margin-top: rem(40);
+
+        @include below($tablet) {
+            float: none;
+            width: 100%;
+        }
     }
 }

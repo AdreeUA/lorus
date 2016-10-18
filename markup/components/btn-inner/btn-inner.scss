@@ -24,4 +24,8 @@
     &:focus {
         outline: none;
     }
+
+    @include below($tablet) {
+        width: 100%;
+    }
 }

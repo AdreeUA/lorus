@@ -9,17 +9,13 @@
     }
 
     &__line {
-        font-size: rem(15.4);
 
         &_1 {
-            height: auto;
-            width: calc(100% + 70px);
-            overflow: hidden;
-            left: rem(-70);
+            height: em(589);
+            width: em(1203);
+            margin-left: rem(-120);
 
-            path {
-                transform: translate(-11991px, -7467px);
-            }
+            font-size: rem(16.4);
         }
 
         &_2 {
@@ -29,12 +25,6 @@
             width: rem(44);
 
             margin-top: rem(220);
-
-            overflow: hidden;
-
-            path {
-                transform: translate(-13184px, -8249px);
-            }
         }
 
         &_3 {
@@ -42,10 +32,6 @@
             height: rem(618);
             margin-left: rem(-100);
             margin-top: rem(560);
-
-            path {
-                transform: translate(-11961.74px, -8615px);
-            }
         }
     }
 }
