@@ -25,8 +25,11 @@ export class InfinityScroll extends Component {
                 if (!loader.classList.contains('infinity-scroll__loader_active')) {
                     loader.classList.add('infinity-scroll__loader_active');
 
+                    const data = JSON.stringify(options.data);
+
                     $.ajax({
                         url: options.url,
+                        data
                         type: options.type,
                         success: onSuccess
                     });
