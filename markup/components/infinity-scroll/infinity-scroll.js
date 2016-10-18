@@ -29,7 +29,7 @@ export class InfinityScroll extends Component {
 
                     $.ajax({
                         url: options.url,
-                        data
+                        data,
                         type: options.type,
                         success: onSuccess
                     });
