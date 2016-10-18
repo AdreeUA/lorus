@@ -5,7 +5,8 @@ var data = {pagination: {
         "next": "Следующая",
         "list": [
             {
-                "val": "1"
+                "val": "1",
+                "active": "pagination__item_active"
             },
             {
                 "val": "2"

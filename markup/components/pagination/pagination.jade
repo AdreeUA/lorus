@@ -13,7 +13,7 @@ mixin pagination(data)
                 each i in data.list
 
                     if !i.notLink
-                        +e.item_not-under.link(href=jv0)= i.val
+                        +e.item_not-under.link(href=jv0 class=i.active || '')= i.val
 
                     else
                         +e.SPAN.item= i.val
