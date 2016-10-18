@@ -10,7 +10,7 @@
 
     @include below($tablet) {
         width: 100%;
-        padding: rem(50) rem(20);
+        padding: rem(50) rem(50) rem(73);
     }
 
     &__title {
@@ -59,11 +59,11 @@
         }
 
         @include below($tablet) {
-            top: rem(20);
-            right: rem(20);
+            top: rem(50);
+            right: rem(25);
 
             &:active {
-                top: rem(20);
+                top: rem(50);
             }
         }
     }

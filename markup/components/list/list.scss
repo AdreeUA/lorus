@@ -136,6 +136,7 @@
             &::before {
                 position: absolute;
                 left: 0;
+                margin-top: rem(3);
                 content: counter(item);
                 counter-increment: item;
                 color: #9c958b;
@@ -146,10 +147,16 @@
 
             @include below($tablet) {
                 padding-left: rem(15);
+
+                &::before {
+                    margin-top: 0;
+                }
             }
         }
 
         .list__title {
+            border-bottom: 2px solid;
+
             font-size: rem(18);
             line-height: rem(22);
             font-weight: 400;
