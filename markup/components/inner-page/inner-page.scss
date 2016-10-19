@@ -53,6 +53,15 @@
             &:nth-child(odd) {
                 background-color: rgba(#dedcdb, .3);
             }
+
+            &_first {
+                padding-bottom: rem(50);
+            }
+
+            &_inside {
+                padding-top: rem(50);
+                padding-bottom: rem(50);
+            }
         }
     }
 
@@ -166,6 +175,10 @@
 
         &_list-extend {
             margin-top: rem(75);
+
+            @include below($tablet) {
+                margin-top: rem(20);
+            }
         }
 
         &_roll {
@@ -246,6 +259,11 @@
         &_center {
             text-align: center;
         }
+
+        @include below($tablet) {
+            width: auto;
+            margin: rem(50) rem(-30) 0;
+        }
     }
 
     &__photos {
@@ -265,12 +283,20 @@
     &__extend {
         margin-top: rem(34);
         margin-left: rem(132);
+
+        @include below($tablet) {
+            margin-left: 0;
+        }
     }
 
     &__roll {
         margin-top: rem(35);
         margin-left: rem(102);
         padding-bottom: rem(25);
+
+        @include below($tablet) {
+            margin-left: rem(30);
+        }
     }
 
     &__photo-text {
@@ -279,6 +305,11 @@
 
         &_margin-top-small {
             margin-top: rem(60);
+        }
+
+        @include below($tablet) {
+            margin-top: rem(50);
+            margin-bottom: rem(50);
         }
     }
 
