@@ -1,3 +1,7 @@
 .block-4 {
     margin-top: rem(230);
+
+    @include below($tablet) {
+        margin-top: 0;
+    }
 }
