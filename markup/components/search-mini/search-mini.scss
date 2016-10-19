@@ -8,7 +8,7 @@
     vertical-align: top;
 
     @include below($tablet) {
-        width: rem(620);
+        width: 82%;
     }
 
     &__field {
