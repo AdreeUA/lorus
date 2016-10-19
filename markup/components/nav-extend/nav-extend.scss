@@ -33,6 +33,7 @@
 
         @include below($tablet) {
             width: 100%;
+            margin-bottom: rem(25);
         }
     }
 
