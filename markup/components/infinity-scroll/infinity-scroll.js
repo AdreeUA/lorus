@@ -38,6 +38,7 @@ export class InfinityScroll extends Component {
 
         const onSuccess = (data) => {
             loader.classList.remove('infinity-scroll__loader_active');
+            console.log(data);
 
             if (!data.items || data.items.length === 0) {
                 scene = scene.destroy();

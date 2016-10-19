@@ -3,6 +3,8 @@
 
     margin-left: rem(33);
 
+    line-height: 0;
+
     &::before {
         content: '';
         position: absolute;
@@ -11,6 +13,7 @@
         bottom: -1px;
 
         height: 2px;
+
         background: $color-2;
     }
 
@@ -27,6 +30,26 @@
     }
 
     &__house {
+        position: relative;
         width: rem(930);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            right: 0;
+
+            height: rem(10);
+
+            background: #fff;
+        }
+
+        @include below($tablet) {
+
+            &::after {
+                display: none;
+            }
+        }
     }
 }

@@ -111,6 +111,10 @@
     &_theme-prototype {
         min-height: rem(500);
 
+        @include below($tablet) {
+            min-height: 1px;
+        }
+
         .slider__item {
             padding: 0 rem(55);
         }
@@ -141,6 +145,10 @@
             &::before {
                 transform: translate(-25%, -50%) rotate(45deg);
             }
+
+            @include below($tablet) {
+                left: 0;
+            }
         }
 
         .slick-next {
@@ -148,6 +156,10 @@
 
             &::before {
                 transform: translate(-75%, -50%) rotate(-135deg);
+            }
+
+            @include below($tablet) {
+                right: 0;
             }
         }
     }
