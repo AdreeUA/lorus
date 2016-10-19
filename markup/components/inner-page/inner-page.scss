@@ -17,6 +17,8 @@
 .inner-page {
     position: relative;
 
+    border-bottom: 2px solid #eeeded;
+
     background-image: url('%=static=%assets/inner-page/bg-gray.png');
     background-position: left top;
     background-repeat: no-repeat;

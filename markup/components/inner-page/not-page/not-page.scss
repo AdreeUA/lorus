@@ -1,6 +1,5 @@
 .not-page {
     padding: rem(118) rem(80) rem(73) rem(72);
-    border-bottom: 2px solid $color-3;
 
     @include below($tablet) {
         padding: rem(100) 0 0;

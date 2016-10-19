@@ -4,3 +4,9 @@
         padding-right: 0;
     }
 }
+
+.mfp-wrap {
+    @include below($tablet) {
+        overflow-y: auto;
+    }
+}
