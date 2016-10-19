@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
-import { Component, forEach, getCoords, toggleController, addPhotoParallax } from 'helpers-js';
+import { Component, forEach, getCoords, toggleController, addPhotoParallax, calcScrollHeight } from 'helpers-js';
 
 import { Line } from 'components/line/line';
 
@@ -29,7 +29,11 @@ export class ClientsPage extends Component {
                 triggerHook = .4;
 
             const calcDuration = () => {
-                duration = lineElem.offsetHeight;
+                var documentHeight = calcScrollHeight(),
+                    coords = getCoords(line.block),
+                    start = coords.top + coords.top * triggerHook;
+
+                duration = start + lineElem.offsetHeight > documentHeight ? documentHeight - start : lineElem.offsetHeight;
             };
 
             if (ind === 0) {

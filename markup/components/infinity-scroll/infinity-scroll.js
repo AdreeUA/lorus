@@ -41,6 +41,7 @@ export class InfinityScroll extends Component {
 
             if (!data.items || data.items.length === 0) {
                 scene = scene.destroy();
+                return;
             }
 
             let templates = '';
