@@ -530,6 +530,8 @@ html {
 
 .hide-scroll {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .overlay {
@@ -5424,7 +5426,7 @@ img.mfp-img {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-weight: 400;
-  color: #dddcda;
+  color: #eeeded;
 }
 
 .list_vert-num .list__link-text {
@@ -6001,8 +6003,14 @@ img.mfp-img {
   display: block;
 }
 
-.nav-extend_not-page .dropdown {
-  position: absolute;
+.nav-extend_not-page .nav-extend__col {
+  max-width: 33%;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-extend_not-page .nav-extend__col {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -6063,6 +6071,7 @@ img.mfp-img {
 .nav-extend__item_open .dropdown {
   clip: auto;
   height: auto;
+  width: auto;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -6082,6 +6091,7 @@ img.mfp-img {
 .nav-extend__link {
   padding-bottom: 0.1875rem;
   font-size: 1.125em;
+  line-height: 1.4;
 }
 
 .nav-extend__trigger {
@@ -6922,6 +6932,7 @@ img.mfp-img {
 
 .inner-page {
   position: relative;
+  border-bottom: 2px solid #eeeded;
   background-image: url("../img/assets/inner-page/bg-gray.png");
   background-position: left top;
   background-repeat: no-repeat;
@@ -7831,13 +7842,15 @@ img.mfp-img {
   }
 }
 
-.search-page {
-  border-bottom: 2px solid #e7e7e7;
-}
-
 @media screen and (max-width: 1024px) {
   .search-page .block-1 {
     padding-bottom: 1.5625rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .search-page .block-1__title {
+    margin-bottom: 0;
   }
 }
 
@@ -8128,10 +8141,6 @@ img.mfp-img {
           transform: translate(-9053.24px, -2035px);
 }
 
-.clients-page {
-  border-bottom: 1px solid #f6f6f6;
-}
-
 .clients-page .block-1 {
   min-height: 32.1875rem;
 }
@@ -8173,7 +8182,6 @@ img.mfp-img {
 
 .not-page {
   padding: 7.375rem 5rem 4.5625rem 4.5rem;
-  border-bottom: 2px solid #e7e7e7;
 }
 
 @media screen and (max-width: 1024px) {
@@ -8606,5 +8614,11 @@ img.mfp-img {
   .mfp-container {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mfp-wrap {
+    overflow-y: auto;
   }
 }
