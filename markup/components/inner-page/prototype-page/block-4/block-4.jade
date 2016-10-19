@@ -2,7 +2,7 @@ include ../../../figure/figure
 include ../../../slider/slider
 
 mixin block-4(data)
-    +b.block-4()&attributes(attributes)
+    +b.block-4()&attributes(attributes).inner-page__block_inside
         +title({'tag': 'h3'})._inner._left-yellow Кейсы по консалтингу
         +slider(slider.prototype)._theme-prototype.inner-page__slider
             -for (var i = 0; i < 9; i++)
