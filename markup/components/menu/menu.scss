@@ -131,7 +131,10 @@
         right: em(20);
 
         @include below($tablet) {
-            display: none;
+            //display: none;
+            left: em(20);
+            right: auto;
+            top: em(12);
         }
     }
 }
