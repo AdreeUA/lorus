@@ -1,7 +1,10 @@
 .block-3 {
     min-height: rem(770);
-    margin: 0 rem(-27);
+    margin: 0 rem(-30);
     padding: rem(127) rem(136) 0;
+
+    background: linear-gradient(to bottom, rgba(#e2e725, .3) 0%, rgba(255, 255, 255, 0) 40%);
+    background-repeat: no-repeat;
 
     @include below($tablet) {
         min-height: 0;

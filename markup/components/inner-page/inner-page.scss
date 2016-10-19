@@ -51,7 +51,7 @@
             padding: 0 $mobile-gap;
 
             &:nth-child(odd) {
-                background-color: rgba(#dedcdb, .3);
+                background-color: $color-4;
             }
         }
     }
