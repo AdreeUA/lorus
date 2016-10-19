@@ -2114,6 +2114,7 @@ img.mfp-img {
 
 .decor-title__row:last-child {
   padding-bottom: 0.47761rem;
+  margin-top: -1px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3343,14 +3344,14 @@ img.mfp-img {
 
 .header__nav {
   display: inline-block;
-  width: 22.08955rem;
+  width: 25.37313rem;
   margin: -1.13433rem -0.59701rem;
   margin-top: -0.41791rem;
   vertical-align: top;
 }
 
 .header__nav-item {
-  width: 50%;
+  width: 33%;
   padding: 1.13433rem 0.59701rem;
 }
 
@@ -8276,8 +8277,8 @@ img.mfp-img {
 }
 
 .prototype-page__line_1 {
-  right: 0;
-  top: 4.6875rem;
+  right: -2.0625rem;
+  top: -21.25rem;
   width: 10rem;
   height: 45.6875rem;
 }
@@ -8474,6 +8475,10 @@ img.mfp-img {
 
 .photo-text__photo {
   margin-top: -2.3125rem;
+}
+
+.photo-text__photo_two-title-line {
+  margin-top: -5.4375rem;
 }
 
 .photo-text__text-wrap {
