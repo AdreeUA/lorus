@@ -30,6 +30,7 @@
 
         &:last-child {
             padding-bottom: rem-2(16);
+            margin-top: -1px;
         }
 
         @include below($tablet) {
