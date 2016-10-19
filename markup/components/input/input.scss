@@ -55,6 +55,11 @@
             right: rem(5);
             top: 50%;
             transform: translate(0, -50%);
+
+            @include below($tablet) {
+                left: rem(5);
+                right: auto;
+            }
         }
     }
 
@@ -69,6 +74,14 @@
 
             &_hidden {
                 padding: 0;
+            }
+
+            @include below($tablet) {
+                padding-left: rem(50);
+
+                &_hidden {
+                    padding: 0;
+                }
             }
         }
     }

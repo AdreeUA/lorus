@@ -4,9 +4,18 @@ var data = {slider: {
             "variableWidth": true,
             "dots": false,
             "infinite": false,
-            "arrows": false
+            "arrows": false,
+            "mobileFirst": true,
+            "responsive": [
+                {
+                    "breakpoint": 1024,
+                    "settings": {
+                        "slidesToShow": 4
+                    }
+                }
+            ]
         },
-        destroy: '(min-width: 1024px)'
+        // destroy: '(min-width: 1024px)'
     },
     prototype: {
         settings: {
