@@ -6,7 +6,7 @@ var data = {nav: {
             { text: 'Миссия', href: '#mission' },
             { text: 'Преимущества', href: '#advantages' },
             { text: 'Команда', href: '#team' },
-            { text: 'Контакты', href: '#contact' }
+            { text: 'Контакты', href: '#contact', mod: '_menu' }
         ]
     },
     menu: {
