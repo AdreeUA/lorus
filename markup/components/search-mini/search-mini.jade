@@ -8,7 +8,7 @@ mixin search-mini(data)
     +b.search-mini()&attributes(attributes)
         +e.FORM.form
 
-            +input({fieldHidden: true, autofocus: true})._icon.search-mini__input
+            +input({fieldHidden: true})._icon.search-mini__input
 
                 +e.BUTTON.submit_search(type='submit' value='')
                     +icon({'icon': 'search', 'class': 'input__icon'})
