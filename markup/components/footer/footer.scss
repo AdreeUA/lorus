@@ -83,6 +83,8 @@
 
             &::before {
                 width: rem-2(170);
+
+                background-color: #000;
             }
         }
 
@@ -91,6 +93,8 @@
 
             &::before {
                 width: rem-2(126);
+
+                background-color: rgba(#000, .5);
             }
 
             @include below($tablet) {
@@ -103,6 +107,8 @@
 
             &::before {
                 width: rem-2(60);
+
+                background-color: rgba(#000, .3);
             }
 
             @include below($tablet) {
