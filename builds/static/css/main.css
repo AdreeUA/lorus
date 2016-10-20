@@ -8565,6 +8565,8 @@ img.mfp-img {
   width: 33.33333%;
   margin-bottom: 3.5625rem;
   padding-left: 3.75rem;
+  text-decoration: none;
+  color: inherit;
   vertical-align: top;
 }
 
