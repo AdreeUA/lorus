@@ -57,10 +57,6 @@
                     }
                 }
             }
-
-            &__photo-title {
-                font-size: rem(34);
-            }
         }
 
         .par__content {
@@ -103,7 +99,7 @@
 
         margin-left: rem(10);
 
-        font-size: 2.125rem;
+        font-size: rem(31);
         border-top: rem(5) solid #e6ea63;
 
         @include below($tablet) {
@@ -113,6 +109,10 @@
 
     &__photo {
         margin-top: rem(-37);
+
+        &_two-title-line {
+            margin-top: rem(-87);
+        }
     }
 
     &__text-wrap {

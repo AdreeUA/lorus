@@ -13,11 +13,14 @@
     }
 
     &_not-page {
-        .dropdown {
-            position: absolute;
-        }
 
         .nav-extend__col {
+            max-width: 33%;
+
+            @include below($tablet) {
+                max-width: 100%;
+            }
+
             @include below($mobile) {
                 padding-right: 0;
             }
@@ -30,6 +33,7 @@
 
         @include below($tablet) {
             width: 100%;
+            margin-bottom: rem(25);
         }
     }
 
@@ -73,6 +77,7 @@
                 clip: auto;
 
                 height: auto;
+                width: auto;
                 transform: scale(1);
 
                 &_pad-open {
@@ -93,6 +98,7 @@
         padding-bottom: rem(3);
 
         font-size: em(18);
+        line-height: 1.4;
     }
 
     &__trigger {

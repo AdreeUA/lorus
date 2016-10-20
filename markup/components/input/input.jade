@@ -21,7 +21,8 @@ mixin input(data)
             name=data.name
             data-validate!=(JSON.stringify(data.validate))
             type=(data.type!='textarea' ? data.type : false)
-            required=data.required)
+            required=data.required
+            autofocus=data.autofocus)
 
 
         block

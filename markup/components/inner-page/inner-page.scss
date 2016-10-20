@@ -17,12 +17,16 @@
 .inner-page {
     position: relative;
 
+    border-bottom: 2px solid rgba(#000, .5);
+
     background-image: url('%=static=%assets/inner-page/bg-gray.png');
     background-position: left top;
     background-repeat: no-repeat;
     background-size: contain;
 
     @include below($tablet) {
+        border-bottom: none;
+
         background: none;
     }
 
@@ -51,7 +55,7 @@
             padding: 0 $mobile-gap;
 
             &:nth-child(odd) {
-                background-color: $color-4;
+                background-color: rgba(#000, .03);
             }
 
             &_first {
@@ -195,6 +199,7 @@
 
     &__questions {
         position: relative;
+        top: 1px;
         z-index: 2;
 
         margin-top: rem(20);

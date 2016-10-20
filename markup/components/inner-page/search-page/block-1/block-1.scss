@@ -4,6 +4,12 @@
         padding-bottom: rem(25);
     }
 
+    &__title {
+        @include below($tablet) {
+            margin-bottom: 0;
+        }
+    }
+
     &__content {
         width: rem(750);
 
