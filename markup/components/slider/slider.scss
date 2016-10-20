@@ -122,6 +122,7 @@
         .slick-arrow {
             position: absolute;
             top: rem(30);
+            z-index: 2;
 
             width: rem(60);
             height: rem(60);
@@ -136,6 +137,14 @@
                 height: rem(30);
                 border-left: rem(9) solid rgba(#000, .2);
                 border-bottom: rem(9) solid rgba(#000, .2);
+
+                transition: border .3s;
+            }
+
+            &:hover {
+                &:before {
+                    border-color: $color-2;
+                }
             }
         }
 

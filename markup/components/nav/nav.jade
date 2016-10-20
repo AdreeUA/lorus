@@ -16,7 +16,7 @@ mixin nav(data, classList, isExtend)
             if data.items
                 each item in data.items
                     +e.item(class=[(item.active ? '_active' : ''), classList.itemClass])
-                        +link({ href: item.href }).nav__link
+                        +link({ href: item.href }).nav__link(class=item.mod || '')
                             | #{item.text}
 
                         if item.subitems
