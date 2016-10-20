@@ -17,8 +17,19 @@
         top: rem(40);
         z-index: 10;
 
+        @include above($tablet) {
+            &_main {
+                display: none;
+            }
+        }
+
         @include below($tablet) {
-            display: none;
+            position: fixed;
+            right: rem(115);
+            top: rem(32);
+            z-index: 100;
+
+            display: block;
         }
     }
 }

@@ -19,6 +19,12 @@
         background: rgba(0, 0, 0, 0);
     }
 
+    &_overlay {
+        & + .page > .page__lang_main {
+            display: none;
+        }
+    }
+
     &__logo {
         display: inline-block;
         width: rem-2(452);

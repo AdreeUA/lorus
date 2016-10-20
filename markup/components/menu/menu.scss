@@ -132,7 +132,7 @@
 
         @include below($tablet) {
             //display: none;
-            left: em(20);
+            left: em(5);
             right: auto;
             top: em(12);
         }

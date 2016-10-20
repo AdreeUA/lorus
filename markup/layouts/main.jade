@@ -3,6 +3,7 @@ include ../../node_modules/bemto.jade/bemto
 include ../components/page/page
 include ../components/header/header
 include ../components/write/write
+include ../components/link/link
 
 -var pageSettings = {};
 -pageSettings.title = 'Главная';
@@ -16,6 +17,9 @@ html(lang='ru').page-index
     body
         +header(header.screen)
         +page
+            +link.page__lang_main
+                | in English
+
             block content
 
         +write()
