@@ -17,7 +17,7 @@ export class Figure extends Component {
                     <h2 class="figure__title">${data.title}</h2>
                     <div class="figure__descr">${data.descr}</div>
                 </div>
-            </a>
+            </article>
         `;
     }
 }
