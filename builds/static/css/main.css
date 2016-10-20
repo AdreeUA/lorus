@@ -5815,7 +5815,7 @@ img.mfp-img {
 .list-extend__item {
   padding-top: 1.875rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 1024px) {
@@ -6996,6 +6996,10 @@ img.mfp-img {
   background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.inner-page_no-line {
+  border-bottom: none;
 }
 
 @media screen and (max-width: 1024px) {
