@@ -3570,12 +3570,14 @@ img.mfp-img {
 .header_theme_inner {
   display: block;
   width: auto;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 1024px) {
   .header_theme_inner {
     width: 100%;
     padding-bottom: 1.875em;
+    font-size: 16px;
     background: #fff;
   }
 }
