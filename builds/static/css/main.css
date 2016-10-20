@@ -530,14 +530,18 @@ html {
 
 .hide-scroll {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 
-.hide-scroll body {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
+@media screen and (max-width: 1024px) {
+  .hide-scroll {
+    position: fixed;
+    width: 100%;
+  }
+  .hide-scroll body {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
 }
 
 .overlay {
@@ -1986,6 +1990,7 @@ img.mfp-img {
 .title_left-yellow {
   padding: 0.9375rem 1.4375rem;
   border-left: 0.5rem solid #e0e718;
+  font-weight: 400;
   border-radius: 0.3125rem;
 }
 
@@ -2566,6 +2571,7 @@ img.mfp-img {
 .slider_theme-prototype .slick-arrow {
   position: absolute;
   top: 1.875rem;
+  z-index: 2;
   width: 3.75rem;
   height: 3.75rem;
 }
@@ -2579,6 +2585,12 @@ img.mfp-img {
   height: 1.875rem;
   border-left: 0.5625rem solid rgba(0, 0, 0, 0.2);
   border-bottom: 0.5625rem solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: border .3s;
+  transition: border .3s;
+}
+
+.slider_theme-prototype .slick-arrow:hover:before {
+  border-color: #e0e718;
 }
 
 .slider_theme-prototype .slick-prev {
@@ -5199,6 +5211,7 @@ img.mfp-img {
 
 .photo__img {
   width: 100%;
+  max-height: 21.875rem;
   -o-object-fit: cover;
      object-fit: cover;
   font-family: "object-fit: cover";
@@ -5588,7 +5601,7 @@ img.mfp-img {
 
 .list__subtitle {
   display: inline-block;
-  padding: 1.25rem 2.5rem 0.625rem 1.875rem;
+  padding: 0.9375rem 2.5rem 0.625rem 1.875rem;
   vertical-align: top;
   max-width: 80%;
   color: #000;
@@ -5838,7 +5851,7 @@ img.mfp-img {
 
 .list-extend__title {
   font-size: 1.3125rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .list-extend__descr {
@@ -5846,12 +5859,7 @@ img.mfp-img {
   max-width: 33.125rem;
   font-size: 1rem;
   font-weight: 400;
-}
-
-@media screen and (max-width: 1024px) {
-  .list-extend__descr {
-    color: #666;
-  }
+  color: #666;
 }
 
 .house {
@@ -8186,12 +8194,6 @@ img.mfp-img {
   margin-top: 120rem;
 }
 
-.constructor-page__line_2 path {
-  -webkit-transform: translate(-9053.24px, -2035px);
-      -ms-transform: translate(-9053.24px, -2035px);
-          transform: translate(-9053.24px, -2035px);
-}
-
 .clients-page .block-1 {
   min-height: 32.1875rem;
 }
@@ -8312,6 +8314,10 @@ img.mfp-img {
 
 .not-page__btn {
   color: inherit;
+}
+
+.prototype-page {
+  padding-left: 1.875rem;
 }
 
 .prototype-page__line {
@@ -8603,7 +8609,7 @@ img.mfp-img {
 }
 
 .figure__img-wrap {
-  height: 10.625rem;
+  height: 10rem;
   text-align: center;
 }
 
@@ -8684,4 +8690,8 @@ img.mfp-img {
 
 .likely .likely__widget {
   background: none;
+}
+
+.slick-slide img {
+  display: inline-block;
 }
