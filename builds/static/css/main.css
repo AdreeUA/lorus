@@ -3314,7 +3314,7 @@ img.mfp-img {
 
 @media screen and (max-width: 1024px) {
   .menu__search {
-    left: 1.25em;
+    left: 0.3125em;
     right: auto;
     top: 0.75em;
   }
@@ -3341,6 +3341,10 @@ img.mfp-img {
   right: 0;
   height: 0;
   background: transparent;
+}
+
+.header_overlay + .page > .page__lang_main {
+  display: none;
 }
 
 .header__logo {
@@ -5049,9 +5053,19 @@ img.mfp-img {
   z-index: 10;
 }
 
+@media screen and (min-width: 1024px) {
+  .page__lang_main {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .page__lang {
-    display: none;
+    position: fixed;
+    right: 7.1875rem;
+    top: 2rem;
+    z-index: 100;
+    display: block;
   }
 }
 
