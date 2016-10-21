@@ -26,3 +26,11 @@ img.mfp-img {
 .slick-slide img {
     display: inline-block;
 }
+
+.mfp-zoom-out-cur {
+    cursor: default;
+}
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: pointer;
+}
