@@ -268,5 +268,39 @@
                 display: none;
             }
         }
+
+        .nav-extend {
+            font-size: rem(18);
+
+            @include below($tablet) {
+                font-size: rem(16);
+            }
+        }
+
+        .menu__wrapper {
+            padding-left: rem(80);
+            padding-top: rem(92);
+            padding-bottom: rem(56);
+
+            @include below($tablet) {
+                padding: rem(80) rem(30) rem(50) rem(30);
+            }
+        }
+
+        .menu__row {
+            & + & {
+                margin-top: rem(95);
+            }
+
+            @include below($tablet) {
+                & + & {
+                    margin-top: rem(55);
+                }
+            }
+        }
+
+        .menu__btn {
+            font-size: rem(18);
+        }
     }
 }
