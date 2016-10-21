@@ -67,7 +67,7 @@ export class InfinityScroll extends Component {
 
         case 'list-img__item':
             return `
-                <a class="list-img__item" href="${data.href}">
+                <a class="list-img__item" href="${data.href}" target="_blank">
                     ${Figure.makeTemplate(data)}
                 </a>
             `;
