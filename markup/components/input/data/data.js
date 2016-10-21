@@ -2,7 +2,8 @@ var data = {input: {
     'name': {
         'label': 'Как к вам обращаться?',
         'name': 'name',
-        'required': true
+        'required': true,
+        'message': 'This field must be fill'
     },
 
     'phone': {
