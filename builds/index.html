@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="telephone=no" name="format-detection">
         <meta name="HandheldFriendly" content="true">
-        <!--[if IE 9 ]><link href="static/css/main_ie9.min.css" rel="stylesheet" type="text/css"><![endif]-->
+
         <!--[if (gt IE 9)|!(IE)]><!-->
         <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
@@ -161,14 +161,14 @@
                 </div>
             </div>
             <div class="header__right">
-                <a href="javascript:void(0)" class="icon-btn header__nav-btn">
+                <a href="javascript:history.go(-1)" class="icon-btn header__nav-btn">
                     <svg class="icon icon_arrow icon-btn__icon" width="100%" height="100%">
                         <use xlink:href="svg-symbols.svg#arrow"></use>
                     </svg>
                 </a>
             </div>
         </header>
-        <div class="page">
+        <div class="page"><a href="javascript:void(0)" class="link page__lang page__lang_main">in English</a>
             <div class="screens">
                 <div class="screens__scroll">
                     <div id="home" class="screens__scene">
@@ -203,6 +203,8 @@
                                             <li class="nav__item header__nav-item"><a href="#advantages" class="link nav__link">Преимущества</a>
                                             </li>
                                             <li class="nav__item header__nav-item"><a href="#team" class="link nav__link">Команда</a>
+                                            </li>
+                                            <li class="nav__item header__nav-item"><a href="#contact" class="link nav__link nav__link_menu">Контакты</a>
                                             </li>
                                         </ul>
                                     </nav>
