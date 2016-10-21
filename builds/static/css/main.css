@@ -5229,7 +5229,7 @@ img.mfp-img {
 
 .photo__img {
   width: 100%;
-  max-height: 21.875rem;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   font-family: "object-fit: cover";
@@ -5265,12 +5265,6 @@ img.mfp-img {
 
 .photo_theme_simple .photo__wrapper {
   border-left: none;
-}
-
-@media screen and (min-width: 1024px) {
-  .photo_theme_simple .photo__img {
-    max-height: 16.875rem;
-  }
 }
 
 .photo_theme_text .photo__wrapper::before {
@@ -6409,38 +6403,11 @@ img.mfp-img {
   padding: 0 2.5rem;
 }
 
-.service__photo-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  line-height: 0;
-}
-
-.service__photo-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 5.375rem;
-  width: 17.8125rem;
-  background: url("../img/assets/service/service-photo-shadow.svg") no-repeat right top/auto 100%;
-}
-
 @media screen and (max-width: 1024px) {
-  .service__photo-wrapper {
-    width: auto;
-    margin-left: -1.5625rem;
-    margin-right: -1.5625rem;
-    border-radius: 0;
+  .service__photo {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
   }
-}
-
-.service__photo {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  font-family: "object-fit: cover";
 }
 
 .service__block {
@@ -6841,8 +6808,10 @@ img.mfp-img {
   .through-service .block-3__photo {
     width: auto;
     height: 18.75rem;
-    border-bottom: 0.5625rem solid rgba(224, 231, 24, 0.8);
     margin-bottom: 2.5rem;
+  }
+  .through-service .block-3__photo .photo__wrapper {
+    border-bottom: 0.5625rem solid rgba(224, 231, 24, 0.8);
   }
 }
 
@@ -6885,7 +6854,7 @@ img.mfp-img {
 .through-service .block-4__photo {
   width: 100%;
   height: 19.6875rem;
-  margin-top: 3.75rem;
+  margin-top: 2.5rem;
 }
 
 @media screen and (max-width: 1024px) {
