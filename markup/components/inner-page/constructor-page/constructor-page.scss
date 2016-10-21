@@ -46,4 +46,12 @@
             height: rem(808);
         }
     }
+
+    &__photo {
+        height: rem(258);
+
+        &_big {
+            height: rem(350);
+        }
+    }
 }
