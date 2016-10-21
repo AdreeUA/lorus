@@ -55,6 +55,10 @@ export class InfinityScroll extends Component {
 
             container.insertAdjacentHTML('beforeEnd', templates);
             scene.update();
+
+            if (data.last) {
+                scene = scene.destroy();
+            }
         }
     }
 
