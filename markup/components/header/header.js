@@ -59,7 +59,7 @@ export class Header extends Component {
         this.menu.open();
         document.documentElement.classList.add('hide-scroll');
         overlay.classList.add('overlay');
-        this.block.classList.add('header_overlay');
+        this.block.classList.add('header_overlay header_open');
 
         document.addEventListener('click', closeMenuExternalClick);
     }
@@ -68,7 +68,7 @@ export class Header extends Component {
         this.menu.close();
         document.documentElement.classList.remove('hide-scroll');
         overlay.classList.remove('overlay');
-        this.block.classList.remove('header_overlay');
+        this.block.classList.remove('header_overlay header_open');
     }
 
     toggleNavClasses(active) {
