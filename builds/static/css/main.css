@@ -3638,6 +3638,42 @@ img.mfp-img {
   }
 }
 
+.header_theme_inner .nav-extend {
+  font-size: 1.125rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .header_theme_inner .nav-extend {
+    font-size: 1rem;
+  }
+}
+
+.header_theme_inner .menu__wrapper {
+  padding-left: 5rem;
+  padding-top: 5.75rem;
+  padding-bottom: 3.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .header_theme_inner .menu__wrapper {
+    padding: 5rem 1.875rem 3.125rem 1.875rem;
+  }
+}
+
+.header_theme_inner .menu__row + .header_theme_inner .menu__row {
+  margin-top: 5.9375rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .header_theme_inner .menu__row + .header_theme_inner .menu__row {
+    margin-top: 3.4375rem;
+  }
+}
+
+.header_theme_inner .menu__btn {
+  font-size: 1.125rem;
+}
+
 .footer {
   padding-top: 1.79104rem;
   padding-bottom: 2.08955rem;
