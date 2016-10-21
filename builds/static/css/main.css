@@ -3218,7 +3218,7 @@ img.mfp-img {
 
 @media screen and (max-width: 1024px) {
   .menu__wrapper {
-    padding: 4.375rem 1.25rem 2.5rem;
+    padding: 4.375rem 1.25rem 2.5rem 1.875rem;
     height: 100vh;
     overflow-y: auto;
   }
@@ -3577,7 +3577,7 @@ img.mfp-img {
   .header_theme_inner {
     width: 100%;
     padding-bottom: 1.875em;
-    font-size: 16px;
+    font-size: inherit;
     background: #fff;
   }
 }
@@ -5748,7 +5748,7 @@ img.mfp-img {
 
 @media screen and (max-width: 1024px) {
   .input__submit_search {
-    left: 0.3125rem;
+    left: 0;
     right: auto;
   }
 }
@@ -6000,6 +6000,10 @@ img.mfp-img {
   font-weight: 400;
   color: #000;
   vertical-align: middle;
+}
+
+.pagination__item:hover {
+  border-bottom: none;
 }
 
 .pagination__item:not(:last-child) {
