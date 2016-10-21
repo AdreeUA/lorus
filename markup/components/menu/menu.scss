@@ -72,6 +72,9 @@
         @include below($tablet) {
             & + & {
                 margin-top: rem(45);
+            }
+
+            &_center {
                 text-align: center;
             }
         }

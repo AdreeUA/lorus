@@ -71,6 +71,13 @@
         .photo__wrapper {
             border-left: none;
         }
+
+        .photo__img {
+
+            @include above($tablet) {
+                max-height: rem(270);
+            }
+        }
     }
 
     &_theme_text {
