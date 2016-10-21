@@ -1,5 +1,8 @@
 .prototype-page {
-    padding-left: rem(30);
+
+    @include above($tablet) {
+        padding-left: rem(30);
+    }
 
     &__line {
         position: absolute;
@@ -22,6 +25,14 @@
 
         @include below($tablet) {
             display: none;
+        }
+    }
+
+    &__photo {
+        height: rem(258);
+
+        &_big {
+            height: rem(350);
         }
     }
 }
