@@ -19,12 +19,6 @@
         background: rgba(0, 0, 0, 0);
     }
 
-    &_overlay {
-        & + .page > .page__lang_main {
-            display: none;
-        }
-    }
-
     &__logo {
         display: inline-block;
         width: rem-2(452);
@@ -50,7 +44,7 @@
     &__right {
         position: relative;
         z-index: -1;
-        
+
         margin-left: auto;
     }
 
@@ -191,6 +185,18 @@
             .header__right {
                 transform: translateX(0);
             }
+        }
+    }
+
+    &_open {
+        visibility: visible;
+
+        & + .page > .page__lang_main {
+            display: none;
+        }
+
+        .header__left {
+            transform: translateX(0);
         }
     }
 
