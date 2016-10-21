@@ -30,6 +30,9 @@ $betweenText: 20;
         margin-bottom: rem(57);
         padding-left: rem($clientShift);
 
+        text-decoration: none;
+        color: inherit;
+
         vertical-align: top;
 
         @include below($tablet) {

@@ -7,6 +7,10 @@
 
     vertical-align: top;
 
+    @include below($tablet) {
+        width: 82%;
+    }
+
     &__field {
         position: absolute;
         right: 100%;

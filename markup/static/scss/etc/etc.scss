@@ -4,3 +4,25 @@
         padding-right: 0;
     }
 }
+
+.mfp-wrap {
+    @include below($tablet) {
+        overflow-y: auto;
+    }
+}
+
+img.mfp-img {
+    padding: 0;
+    margin: 40px auto;
+    border-radius: 4px;
+}
+
+.likely {
+    .likely__widget {
+        background: none;
+    }
+}
+
+.slick-slide img {
+    display: inline-block;
+}

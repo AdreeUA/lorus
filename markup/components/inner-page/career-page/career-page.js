@@ -33,10 +33,8 @@ export class CareerPage extends Component {
                 end = getCoords(line3.block).bottom;
 
             duration = start + end - 200;
+            duration = start + duration > documentHeight ? documentHeight - start - 200 : duration;
             duration = duration < 0 ? 0 : duration;
-            duration = start + duration > documentHeight ? documentHeight - start : duration;
-
-            console.log(duration);
         }
 
         calcDuration();

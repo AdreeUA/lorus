@@ -11,7 +11,15 @@ export class Write extends Component {
         var $button = $('.js-writeus');
 
         $button.magnificPopup({
-            type:'inline'
+            type:'inline',
+            callbacks: {
+                open: function() {
+                    $('body').addClass('hide-scroll')
+                },
+                close: function() {
+                    $('body').removeClass('hide-scroll')
+                }
+            }
         });
     }
 }

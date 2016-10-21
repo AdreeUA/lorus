@@ -4,5 +4,5 @@ mixin list-img(data)
     +b.list-img()&attributes(attributes)
         +e.wrap
             each item in data.items
-                +e.item
+                +e.A.item(href=jv0 target='_blank')
                     +figure(item)

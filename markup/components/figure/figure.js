@@ -9,13 +9,15 @@ export class Figure extends Component {
 
     static makeTemplate(data) {
         return `
-            <div class="figure__img-wrap">
-                <img src="${data.src}" class="figure__img" alt="${data.alt || ''}" role="presentation">
-            </div>
-            <div class="figure__text">
-                <div class="figure__title">${data.title}</div>
-                <div class="figure__descr">${data.descr}</div>
-            </div>
+            <article class="figure">
+                <div class="figure__img-wrap">
+                    <img src="${data.src}" class="figure__img" alt="${data.alt || ''}" role="presentation">
+                </div>
+                <div class="figure__text">
+                    <h2 class="figure__title">${data.title}</h2>
+                    <div class="figure__descr">${data.descr}</div>
+                </div>
+            </article>
         `;
     }
 }

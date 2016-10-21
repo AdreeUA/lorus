@@ -55,6 +55,10 @@ export class InfinityScroll extends Component {
 
             container.insertAdjacentHTML('beforeEnd', templates);
             scene.update();
+
+            if (data.last) {
+                scene = scene.destroy();
+            }
         }
     }
 
@@ -63,9 +67,9 @@ export class InfinityScroll extends Component {
 
         case 'list-img__item':
             return `
-                <div class="list-img__item">
+                <a class="list-img__item" href="${data.href}">
                     ${Figure.makeTemplate(data)}
-                </div>
+                </a>
             `;
         }
     }

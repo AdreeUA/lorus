@@ -30,7 +30,7 @@
         padding-bottom: rem(46);
 
         @include below($tablet) {
-            padding: rem(70) rem(20) rem(40);
+            padding: rem(70) rem(20) rem(40) rem(30);
             height: 100vh;
 
             overflow-y: auto;
@@ -131,7 +131,10 @@
         right: em(20);
 
         @include below($tablet) {
-            display: none;
+            //display: none;
+            left: em(5);
+            right: auto;
+            top: em(12);
         }
     }
 }

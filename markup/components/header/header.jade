@@ -6,37 +6,37 @@ include ../icon-btn/icon-btn
 include ../hamburger/hamburger
 include ../search-mini/search-mini
 
-mixin header(data, classList) 
+mixin header(data, classList)
     -data = data || {}
     -classList = classList || {}
 
     +b.HEADER.header(
         class={
-            '_theme_default': data.type === 'default', 
+            '_theme_default': data.type === 'default',
             '_theme_screen': data.type === 'screen',
             '_theme_inner': data.type === 'inner'}
         )&attributes(attributes)
-    
+
         //- ==================== хедер на главном экране ======================
         if data.type === 'default'
-    
+
             +e.left
                 +logo(logo.main).header__logo
-                +nav(nav.header, { itemClass: 'header__nav-item' })._horiz.header__nav 
-            
+                +nav(nav.header, { itemClass: 'header__nav-item js-open-menu' })._horiz.header__nav
+
             +e.right
                 +link.header__lang
                     | in English
-                    
+
         //- ========== хедер на остальных экранах и внутренних страницах =======
         if data.type === 'screen' || data.type === 'inner'
-        
+
             +e.left
                 +logo(logo.main).header__logo
                 +hamburger.header__hamburger
                 +menu.header__slide-menu
-            
+
             +e.right
-                +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn])
+                +icon-btn(iconBtn.nav)(class=['header__nav-btn', classList.navBtn] href='javascript:history.go(-1)')
 
         block

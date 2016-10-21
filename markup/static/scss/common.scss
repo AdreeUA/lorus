@@ -36,6 +36,18 @@ html {
 
 .hide-scroll {
     overflow: hidden;
+
+    @include below($tablet) {
+        position: fixed;
+        width: 100%;
+
+        body {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
+    }
+
 }
 
 .overlay {
