@@ -2,10 +2,7 @@ mixin block-4(data)
     +b.block-4.service__block
 
         +e.left.service__left
-            +e.photo.service__photo-wrapper.js-tween
-                img.service__photo(
-                    src='%=static=%img/assets/service/through-service/through-service-4.jpg'
-                    alt='')
+            +photo({ src: '%=static=%img/assets/service/through-service/through-service-4.jpg' })._theme_simple.block-4__photo.service__photo
 
         +e.right.service__right
             +title.service__title.block-4__title
