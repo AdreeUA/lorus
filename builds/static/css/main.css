@@ -8191,14 +8191,11 @@ img.mfp-img {
 .constructor-page__line_1 {
   right: -2.5rem;
   height: auto;
-  width: 100%;
+  width: 10.0625rem;
+  height: 46.125rem;
   margin-top: 11.875rem;
+  margin-left: auto;
   overflow: hidden;
-}
-
-.constructor-page__line_1 .line__icon {
-  width: 10rem;
-  float: right;
 }
 
 .constructor-page__line_1 .line__icon_active {
@@ -8209,9 +8206,10 @@ img.mfp-img {
 
 .constructor-page__line_2 {
   position: absolute;
-  left: -6.875rem;
   right: -2.5rem;
   margin-top: 120rem;
+  width: 78.9375rem;
+  height: 50.5rem;
 }
 
 .clients-page .block-1 {
