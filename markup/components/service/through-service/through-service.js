@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import TweenMax from 'gsap';
 
-import { Component, forEach, getCoords, toggleController } from 'helpers-js';
+import { Component, forEach, getCoords, toggleController, calcScrollHeight } from 'helpers-js';
 
 import { Line } from 'components/line/line';
 
@@ -23,8 +23,20 @@ export class ThroughService extends Component {
         let line1 = new Line(this.block.querySelector('.through-service__line_1')),
             line2 = new Line(this.block.querySelector('.through-service__line_2')),
             line3 = new Line(this.block.querySelector('.through-service__line_3')),
-            duration = document.body.scrollHeight - document.documentElement.clientHeight / 1.5,
+            documentHeight = calcScrollHeight(),
+            duration,
             tween = new TimelineMax();
+
+        const calcDuration = () => {
+            const start = getCoords(line1.block).top,
+                end = getCoords(line3.block).bottom;
+
+            duration = start + end - 200;
+            duration = start + duration > documentHeight ? documentHeight - start - 200 : duration;
+            duration = duration < 0 ? 0 : duration;
+        }
+
+        calcDuration();
 
         tween
             .add(line1.makeTween(.6))
