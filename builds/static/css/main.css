@@ -3355,10 +3355,6 @@ img.mfp-img {
   background: transparent;
 }
 
-.header_overlay + .page > .page__lang_main {
-  display: none;
-}
-
 .header__logo {
   display: inline-block;
   width: 13.49254rem;
@@ -3543,6 +3539,20 @@ img.mfp-img {
 
 .header_theme_screen.header_show .header__left,
 .header_theme_screen.header_show .header__right {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header_open {
+  visibility: visible;
+}
+
+.header_open + .page > .page__lang_main {
+  display: none;
+}
+
+.header_open .header__left {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
