@@ -3639,7 +3639,7 @@ img.mfp-img {
 }
 
 .header_theme_inner .nav-extend {
-  font-size: 1.125rem;
+  font-size: 0.75rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3649,29 +3649,47 @@ img.mfp-img {
 }
 
 .header_theme_inner .menu__wrapper {
-  padding-left: 5rem;
-  padding-top: 5.75rem;
-  padding-bottom: 3.5rem;
+  padding-left: 3.125rem;
+  padding-top: 3.875rem;
+  padding-bottom: 1.625rem;
 }
 
 @media screen and (max-width: 1024px) {
   .header_theme_inner .menu__wrapper {
-    padding: 5rem 1.875rem 3.125rem 1.875rem;
+    padding: 3.75rem 1.25rem 2.5rem 1.25rem;
   }
 }
 
-.header_theme_inner .menu__row + .header_theme_inner .menu__row {
-  margin-top: 5.9375rem;
+.header_theme_inner .menu__row + .menu__row {
+  margin-top: 3.4375rem;
 }
 
 @media screen and (max-width: 1024px) {
   .header_theme_inner .menu__row + .header_theme_inner .menu__row {
-    margin-top: 3.4375rem;
+    margin-top: 1.5625rem;
   }
 }
 
 .header_theme_inner .menu__btn {
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .header_theme_inner .menu__btn {
+    font-size: 1rem;
+  }
+}
+
+.header_theme_inner .menu__phone {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .header_theme_inner .menu__phone {
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
 }
 
 .footer {
