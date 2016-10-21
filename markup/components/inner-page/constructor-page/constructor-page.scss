@@ -21,13 +21,13 @@
             right: rem(-40);
 
             height: auto;
-            width: 100%;
+            width: rem(161);
+            height: rem(738);
             margin-top: rem(190);
+            margin-left: auto;
             overflow: hidden;
 
             .line__icon {
-                width: rem(160);
-                float: right;
 
                 &_active {
                     position: absolute;
@@ -39,9 +39,11 @@
 
         &_2 {
             position: absolute;
-            left: rem(-110);
             right: rem(-40);
             margin-top: rem(1920);
+
+            width: rem(1263);
+            height: rem(808);
         }
     }
 }
