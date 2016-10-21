@@ -38,8 +38,7 @@
 
     &__img {
         width: 100%;
-        max-height: rem(350);
-        //height: 100%;
+        height: 100%;
 
         @include object-fit(cover);
 
@@ -70,13 +69,6 @@
 
         .photo__wrapper {
             border-left: none;
-        }
-
-        .photo__img {
-
-            @include above($tablet) {
-                max-height: rem(270);
-            }
         }
     }
 
