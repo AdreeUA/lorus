@@ -8193,6 +8193,14 @@ img.mfp-img {
   height: 50.5rem;
 }
 
+.constructor-page__photo {
+  height: 16.125rem;
+}
+
+.constructor-page__photo_big {
+  height: 21.875rem;
+}
+
 .clients-page .block-1 {
   min-height: 32.1875rem;
 }
@@ -8315,8 +8323,10 @@ img.mfp-img {
   color: inherit;
 }
 
-.prototype-page {
-  padding-left: 1.875rem;
+@media screen and (min-width: 1024px) {
+  .prototype-page {
+    padding-left: 1.875rem;
+  }
 }
 
 .prototype-page__line {
@@ -8341,6 +8351,14 @@ img.mfp-img {
   .prototype-page__line {
     display: none;
   }
+}
+
+.prototype-page__photo {
+  height: 16.125rem;
+}
+
+.prototype-page__photo_big {
+  height: 21.875rem;
 }
 
 .modal {
