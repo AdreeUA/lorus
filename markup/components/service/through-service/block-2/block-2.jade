@@ -4,10 +4,7 @@ mixin block-2(data)
             +decor-title({ tag: 'div', rows: [
             'Поручите перевозку своего груза', 'опытному оператору:'
         ]}).block-2__subtitle
-            +e.photo.service__photo-wrapper.js-tween
-                img.service__photo(
-                        src='%=static=%img/assets/service/through-service/through-service-2.jpg'
-                        alt='')
+            +photo({ src: '%=static=%img/assets/service/through-service/through-service-2.jpg' })._theme_simple.block-2__photo.service__photo
             +e.icons
                 +e.calendar
                     != jadeHelpers.Icon.call(locals, {iconName: 'calendar', className: 'block-2__icon'})

@@ -19,17 +19,17 @@ export const addPhotoParallax = (block, controller) => {
         if (ind === 0) {
             triggerHook = 0;
             offset = -parseInt(window.getComputedStyle(photo.closest(block)).paddingTop);
-            tween = TweenMax.staggerTo([photoWrapper, photoShadow], 1, { y: '-40%' }, .3);
+            tween = TweenMax.staggerTo([photoWrapper, photoShadow], 1, { y: '-40%' }, .2);
 
         } else if (ind === photos.length - 1) {
 
             let coords = getCoords(photo);
 
-            tween = TweenMax.staggerFrom([photoWrapper, photoShadow], 1, { y: '35%' }, .3);
+            tween = TweenMax.staggerFrom([photoWrapper, photoShadow], 1, { y: '35%' }, .2);
             duration = document.body.scrollHeight - coords.top;
 
         } else {
-            tween = TweenMax.staggerFromTo([photoWrapper, photoShadow], 1, { y: '40%' }, { y: '-40%' }, .3);
+            tween = TweenMax.staggerFromTo([photoWrapper, photoShadow], 1, { y: '40%' }, { y: '-40%' }, .2);
         }
 
         new ScrollMagic.Scene({
