@@ -38,6 +38,10 @@
         color: #000;
         vertical-align: middle;
 
+        &:hover {
+            border-bottom: none;
+        }
+
         &:not(:last-child) {
             margin-right: rem(20);
         }
