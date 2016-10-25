@@ -3332,6 +3332,10 @@ img.mfp-img {
     right: auto;
     top: 0.75em;
   }
+  .menu__search .input__submit_search {
+    left: 0;
+    right: auto;
+  }
 }
 
 .header {
@@ -5814,13 +5818,6 @@ img.mfp-img {
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
-}
-
-@media screen and (max-width: 1024px) {
-  .input__submit_search {
-    left: 0;
-    right: auto;
-  }
 }
 
 .input__icon {
