@@ -18,7 +18,9 @@ export class Map extends Component {
                 } else {
                     map.panTo(options.center);
                 }
-            }
+            };
+
+            map.behaviors.disable('scrollZoom');
 
             setOptions();
             window.addEventListener('resize', setOptions);
