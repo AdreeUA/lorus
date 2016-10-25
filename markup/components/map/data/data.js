@@ -3,7 +3,8 @@ var data = {map: {
         options: {
             "center": [55.7519, 37.5297],
             "zoom": 15,
-            "controls": [],
+            "controls": ["zoomControl"],
+            "scroll": false,
             "mobile": {
                 "center": [55.7553, 37.5318]
             }

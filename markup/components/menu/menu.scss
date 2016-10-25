@@ -138,6 +138,11 @@
             left: em(5);
             right: auto;
             top: em(12);
+
+            .input__submit_search {
+                left: 0;
+                right: auto;
+            }
         }
     }
 }

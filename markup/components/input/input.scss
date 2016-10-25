@@ -55,11 +55,6 @@
             right: rem(5);
             top: 50%;
             transform: translate(0, -50%);
-
-            @include below($tablet) {
-                left: 0;
-                right: auto;
-            }
         }
     }
 
