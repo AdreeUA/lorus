@@ -21,6 +21,7 @@ import { Write } from 'components/write/write';
 import { Share } from 'components/share/share';
 import { Modal } from 'components/modal/modal';
 import { Gallery } from 'components/gallery/gallery';
+import { Preloader } from 'components/preloader/preloader';
 import { InfinityScroll } from 'components/infinity-scroll/infinity-scroll';
 
 $(() => {
@@ -44,6 +45,7 @@ $(() => {
     Component.init('.modal', Modal);
     Component.init('.gallery', Gallery);
     Component.init('.infinity-scroll', InfinityScroll);
+    Component.init('.preloader', Preloader);
     Service.initCurrentService();
     InnerPage.initCurrentPage();
 });
