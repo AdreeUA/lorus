@@ -8419,6 +8419,10 @@ img.mfp-img {
   height: 21.875rem;
 }
 
+.prototype-page__block {
+  margin-bottom: 4.6875rem;
+}
+
 .modal {
   position: relative;
   width: 50.8125rem;
