@@ -5321,6 +5321,12 @@ img.mfp-img {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .photo__shadow {
+    bottom: -35%;
+  }
+}
+
 .photo_theme_simple .photo__wrapper {
   border-left: none;
 }
@@ -8756,6 +8762,7 @@ img.mfp-img {
 
 .preloader_hidden {
   opacity: 0;
+  z-index: -1;
 }
 
 /* Additional style files. */
