@@ -8737,6 +8737,27 @@ img.mfp-img {
   }
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  background-color: #e0e718;
+  background-image: url(../img/assets/preloader/preloader.svg);
+  background-position: center center;
+  background-size: 6.25rem 6.25rem;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.preloader_hidden {
+  opacity: 0;
+}
+
 /* Additional style files. */
 @media screen and (max-width: 1024px) {
   .mfp-container {

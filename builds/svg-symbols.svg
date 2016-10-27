@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important;" class="root-svg-symbols-element">
+  <defs>
+      <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a"><stop stop-color="#fff" stop-opacity="0" offset="0%"/><stop stop-color="#fff" stop-opacity=".631" offset="63.146%"/><stop stop-color="#fff" offset="100%"/></linearGradient>
+  </defs>
     <symbol id="arrow" viewBox="0 0 9.87 15.5">
       <title>arrow</title><g id="Layer_2" data-name="Layer 2"><path class="cls-1" d="M8.81 14.44L2.12 7.75l6.69-6.69" id="Layer_1-2" data-name="Layer 1"/></g>
     </symbol>
@@ -52,6 +55,9 @@
     </symbol>
     <symbol id="pl" viewBox="0 0 66.68 37.06">
       <title>pl</title><g id="Layer_2" data-name="Layer 2"><g class="cls-1" id="Layer_1-2" data-name="Layer 1"><circle class="cls-2" cx="45.05" cy="18.57" r="17.99"/><path class="cls-2" d="M32.65 31.27h6.37m-9.49-4.32h13.03m-15.31-4.33H44.7M27.06 18.3H44.8m-16.82-4.33H43.8M29.6 9.64h12.99m-9.73-4.32h6.01"/><path class="cls-3" d="M26.73 18.81a18.3 18.3 0 0 0 9.09 15.81A18.3 18.3 0 0 0 35.83 3a18.3 18.3 0 0 0-9.1 15.81z"/><path class="cls-2" d="M0 18.17h16.08m-4.55-5.47L17 18.17l-5.47 5.47"/><path class="cls-2" d="M11.41 27.32c3.13 6 8.89 9.07 15.5 9.07A17.94 17.94 0 1 0 26.92.5a18.6 18.6 0 0 0-15.5 8.82"/><circle class="cls-2" cx="63.04" cy="18.62" r="3.14"/></g></g>
+    </symbol>
+    <symbol id="preloader" viewBox="0 0 38 38">
+      <g transform="translate(1 1)" fill="none" fill-rule="evenodd"><path d="M36 18c0-9.94-8.06-18-18-18" stroke="url(#a)" stroke-width="2"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"/></path><circle fill="#fff" cx="36" cy="18" r="1"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"/></circle></g>
     </symbol>
     <symbol id="roll" viewBox="0 0 23.625 22.75">
       <path fill="none" stroke="#E2E63F" stroke-width="4" stroke-miterlimit="10" d="M21.284 11.58a9.205 9.205 0 1 1-9.204-9.205"/>
