@@ -60,12 +60,17 @@
         pointer-events: none;
         background: url(%=static=%assets/photo/shadow.png) no-repeat center center / 100% 100%;
 
+
         @include below($tablet) {
             bottom: -25%;
         }
 
         @include below($mobile) {
             bottom: -35%;
+
+            &_large {
+                bottom: -45%;
+            }
         }
     }
 
