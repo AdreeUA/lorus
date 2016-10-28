@@ -1,5 +1,5 @@
 .block-1 {
-    min-height: rem(380);
+    min-height: rem(400);
 
     @include below($tablet) {
         min-height: 0;
