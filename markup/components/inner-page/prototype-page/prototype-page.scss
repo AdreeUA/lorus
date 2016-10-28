@@ -9,7 +9,8 @@
 
         &_1 {
             right: rem(-33);
-            top: rem(-340);
+            //top: rem(-340);
+            top: -29.25rem;
 
             width: rem(160);
             height: rem(731);
@@ -33,6 +34,14 @@
 
         &_big {
             height: rem(350);
+        }
+
+        @include below($tablet) {
+            height: auto;
+
+            &_big {
+                height: auto;
+            }
         }
     }
 
