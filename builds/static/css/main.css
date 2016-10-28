@@ -5297,9 +5297,7 @@ img.mfp-img {
   .photo__img {
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: top;
-       object-position: top;
-    font-family: "object-fit: cover; object-position: top";
+    font-family: "object-fit: cover";
   }
 }
 
