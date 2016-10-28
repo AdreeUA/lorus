@@ -43,7 +43,7 @@
         @include object-fit(cover);
 
         @include below($tablet) {
-            @include object-fit(cover, top);
+            @include object-fit(cover);
         }
     }
 
