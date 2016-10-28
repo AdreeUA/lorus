@@ -53,5 +53,21 @@
         &_big {
             height: rem(350);
         }
+
+        @include below($tablet) {
+            height: rem(300);
+
+            &_big {
+                height: rem(300);
+            }
+        }
+
+        @include below($mobile) {
+            height: rem(190);
+
+            &_big {
+                height: rem(190);
+            }
+        }
     }
 }

@@ -37,10 +37,18 @@
         }
 
         @include below($tablet) {
-            height: auto;
+            height: rem(300);
 
             &_big {
-                height: auto;
+                height: rem(300);
+            }
+        }
+
+        @include below($mobile) {
+            height: rem(190);
+
+            &_big {
+                height: rem(190);
             }
         }
     }
