@@ -8260,6 +8260,24 @@ img.mfp-img {
   height: 21.875rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .constructor-page__photo {
+    height: 18.75rem;
+  }
+  .constructor-page__photo_big {
+    height: 18.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .constructor-page__photo {
+    height: 11.875rem;
+  }
+  .constructor-page__photo_big {
+    height: 11.875rem;
+  }
+}
+
 .clients-page .block-1 {
   min-height: 32.1875rem;
 }
@@ -8422,10 +8440,19 @@ img.mfp-img {
 
 @media screen and (max-width: 1024px) {
   .prototype-page__photo {
-    height: auto;
+    height: 18.75rem;
   }
   .prototype-page__photo_big {
-    height: auto;
+    height: 18.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prototype-page__photo {
+    height: 11.875rem;
+  }
+  .prototype-page__photo_big {
+    height: 11.875rem;
   }
 }
 
