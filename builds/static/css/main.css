@@ -8394,7 +8394,7 @@ img.mfp-img {
 
 .prototype-page__line_1 {
   right: -2.0625rem;
-  top: -21.25rem;
+  top: -29.25rem;
   width: 10rem;
   height: 45.6875rem;
 }
@@ -8418,6 +8418,15 @@ img.mfp-img {
 
 .prototype-page__photo_big {
   height: 21.875rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .prototype-page__photo {
+    height: auto;
+  }
+  .prototype-page__photo_big {
+    height: auto;
+  }
 }
 
 .prototype-page__block {
