@@ -1,0 +1,10 @@
+include ../../../logo/logo
+include ../../../title/title
+include ../../../photo/photo
+
+mixin contacts-head(data)
+    +b.HEADER.contacts-head()&attributes(attributes)
+        +logo(logo.main).__logo
+        +title.__title Контакты
+        +e.right
+            +photo({ src: '%=static=%img/assets/photo/contacts-1.png' })._theme_simple.inner-page__main-photo

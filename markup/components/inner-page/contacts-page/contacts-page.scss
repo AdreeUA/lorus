@@ -1,0 +1,34 @@
+@import './contacts-head/contacts-head';
+
+.contacts-page {
+    position: relative;
+
+    padding-left: rem(50);
+    padding-right: rem(70);
+    //background-size: 100% 100%;
+
+    @include below($tablet) {
+        padding: rem(100) 0 0;
+
+        background: none;
+    }
+
+    &__line {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+
+        width: rem(230);
+        height: rem(517);
+
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__map {
+        z-index: 1;
+    }
+}

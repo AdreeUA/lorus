@@ -1,0 +1,22 @@
+include ../inner-page
+include ../../nav-extend/nav-extend
+include ../../btn/btn
+include ../../line/line
+
+mixin not-page(data)
+    +inner-page({ noForm: true})._gray-top
+        +b.ARTICLE.not-page()&attributes(attributes)
+            +line(line.notPage).__line
+            +e.content
+                +e.P.text
+                    +e.SPAN.text-bold Ошибка 404: <br>
+                    | Страница не найдена
+                +nav-extend(navExtend.default)._not-page
+                +e.contact
+                    +e.contact-item
+                        +e.phone(href='tel:+74957775457') 8 495 777 54 57
+
+                    +e.contact-item
+                        +btn.__btn
+                            | Написать нам
+

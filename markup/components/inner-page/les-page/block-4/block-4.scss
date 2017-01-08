@@ -1,0 +1,37 @@
+.block-4 {
+    margin-right: rem(20);
+
+    @include below($tablet) {
+        margin-right: 0;
+        padding-bottom: rem(70);
+
+        background: $color-4;
+    }
+
+    &__cite {
+        width: rem(942);
+        padding-right: 0;
+        margin-left: rem(67);
+        font-size: rem(34);
+        font-weight: 300;
+
+        @include below($tablet) {
+            width: auto;
+            margin-left: -$mobile-gap;
+            margin-bottom: rem(55);
+            padding-right: $mobile-gap;
+
+            font-size: rem(16);
+        }
+    }
+
+    &__after-cite {
+        margin-top: rem(59);
+        margin-left: rem(109);
+
+        @include below($tablet) {
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+}

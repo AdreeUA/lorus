@@ -1,10 +1,10 @@
 mixin slider(data, classList)
     -classList = classList || {}
 
-    +b.slider(data-slick=data.settings)&attributes(attributes)
+    +b.slider(data-slick=data.settings data-destroy=data.destroy)&attributes(attributes)
         if data.items
             each item in data.items
-                +e.item(class=attributes.itemClass)
+                +e.item(class=classList.itemClass)
                     +#{data.template}(item)(class=classList.contentClass)
 
         block

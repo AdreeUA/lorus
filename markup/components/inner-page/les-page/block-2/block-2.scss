@@ -1,0 +1,55 @@
+.block-2 {
+    position: relative;
+
+    margin-left: rem(33);
+
+    line-height: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: rem(-100);
+        right: rem(-40);
+        bottom: -1px;
+
+        height: 2px;
+
+        background: $color-2;
+    }
+
+    @include below($tablet) {
+        margin-left: 0;
+        padding-top: rem(55);
+
+        background: $color-4;
+
+        &::before {
+            left: -$mobile-gap;
+            right: -$mobile-gap;
+        }
+    }
+
+    &__house {
+        position: relative;
+        width: rem(930);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            right: 0;
+
+            height: rem(10);
+
+            background: #fff;
+        }
+
+        @include below($tablet) {
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

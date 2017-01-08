@@ -1,0 +1,27 @@
+include ../title/title
+include ../input/input
+include ../btn-inner/btn-inner
+include ../modal/modal
+include ../form/form
+
+mixin write(data)
+    +b.write()&attributes(attributes)
+        +modal().mfp-hide.white-popup#writeUs
+
+            +title({'tag': 'h3'})._inner.academy__form-title
+                | Написать нам
+
+            +form(form.write).write__form
+                +e.fields
+                    +e.row_col.__row_2
+                        +e.col
+                            +input(input.name)._border
+
+                        +e.col
+                            +input(input.phone)._border
+
+                    +e.row
+                        +input(input.message)._border
+
+                +e.submit.write__submit
+                    +btn-inner({'text': 'Отправить', 'type': 'submit'})

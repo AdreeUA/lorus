@@ -13,6 +13,7 @@ export class Header extends Component {
 
             this._onHamburgerOpen = this._onHamburgerOpen.bind(this);
             this._onHamburgerClose = this._onHamburgerClose.bind(this);
+            this._onOpenMenuLinkClicked = this._onOpenMenuLinkClicked.bind(this);
 
             this._init();
         });
@@ -29,7 +30,18 @@ export class Header extends Component {
 
             this.hamburger.block.addEventListener('open', this._onHamburgerOpen);
             this.hamburger.block.addEventListener('close', this._onHamburgerClose);
+
+            document.addEventListener('click', this._onOpenMenuLinkClicked);
         }
+    }
+
+    _onOpenMenuLinkClicked(e) {
+        const openMenuLink = e.target.closest('.js-open-menu');
+
+        if (!openMenuLink) return;
+
+        this.hamburger.open();
+        e.preventDefault();
     }
 
     _onHamburgerOpen(e) {
@@ -48,6 +60,7 @@ export class Header extends Component {
         document.documentElement.classList.add('hide-scroll');
         overlay.classList.add('overlay');
         this.block.classList.add('header_overlay');
+        this.block.classList.add('header_open');
 
         document.addEventListener('click', closeMenuExternalClick);
     }
@@ -57,6 +70,7 @@ export class Header extends Component {
         document.documentElement.classList.remove('hide-scroll');
         overlay.classList.remove('overlay');
         this.block.classList.remove('header_overlay');
+        this.block.classList.remove('header_open');
     }
 
     toggleNavClasses(active) {

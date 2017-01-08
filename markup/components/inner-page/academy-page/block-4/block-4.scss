@@ -1,0 +1,40 @@
+.block-4 {
+
+    @include below($tablet) {
+        min-height: 0;
+        margin-left: 0;
+        padding: rem(50) $mobile-gap rem(40);
+    }
+
+    &__title {
+        max-width: rem(585);
+
+        @include below($tablet) {
+            max-width: none;
+            margin: 0;
+
+            font-size: rem(20);
+        }
+    }
+
+    &__team {
+        font-size: 0;
+    }
+
+    &__photo-wrapper {
+        display: inline-block;
+
+        vertical-align: top;
+        font-size: 1rem;
+
+        &:not(:last-child) {
+            margin-right: rem(25);
+        }
+    }
+
+    &__photo {
+        height: rem(155);
+
+        border-radius: 10px;
+    }
+}

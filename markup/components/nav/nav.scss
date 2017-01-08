@@ -1,7 +1,18 @@
 .nav {
+    display: block;
 
     &__menu {
         @include list-reset();
+    }
+
+    &__submenu {
+        @include list-reset();
+
+        padding-left: rem(20);
+    }
+
+    &__subitem {
+        margin-top: rem(8);
     }
 
     &_horiz {
@@ -16,7 +27,8 @@
         margin: 0;
         margin-bottom: rem-2(38);
 
-        font-size: rem-2(48);
+        font-size: rem(24);
+        font-weight: 300;
         color: black;
     }
 
@@ -36,6 +48,12 @@
         .nav__link {
             color: #000;
             font-size: em(18);
+            font-weight: 400;
+        }
+
+        .nav__sublink {
+            color: #000;
+            font-size: em(15);
             font-weight: 400;
         }
 

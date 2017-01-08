@@ -1,0 +1,17 @@
+include ../inner-page
+include ../../line/line
+include ./block-1/block-1
+include ./block-2/block-2
+include ./block-3/block-3
+
+mixin search-page(data)
+    +inner-page({ noForm: true })
+        +b.ARTICLE.search-page()&attributes(attributes)
+            .inner-page__lines-wrapper
+                .inner-page__lines
+                    +line(line.throughSearch1).search-page__line_1
+
+            .inner-page__content
+                +block-1
+                +block-2
+                +block-3

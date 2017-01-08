@@ -3,7 +3,9 @@ include ../content/content
 include ../container/container
 include ../decor-title/decor-title
 include ../icon/icon
+include ../photo/photo
+include ./through-service/through-service
 
 mixin service(data)
     +b.ARTICLE.service()&attributes(attributes)
-        block
+        +through-service

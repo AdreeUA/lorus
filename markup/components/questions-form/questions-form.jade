@@ -1,0 +1,25 @@
+include ../title/title
+include ../form/form
+include ../input/input
+include ../btn-inner/btn-inner
+
+mixin questions-form(data)
+    +b.questions-form()&attributes(attributes)
+        +title({'tag': 'h3'})._inner.questions-form__title
+            | Остались вопросы?
+
+        +form(form.questions).questions-form__form
+            +e.fields_left
+                +e.row_col.__row_2
+                    +e.col
+                        +input(input.name)
+
+
+                    +e.col
+                        +input(input.phone)
+
+                +e.row
+                    +input(input.message)
+
+            +e.submit_left
+                +btn-inner({'text': 'Отправить', 'type': 'submit'})

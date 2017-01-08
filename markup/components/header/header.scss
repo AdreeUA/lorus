@@ -29,7 +29,7 @@
 
     &__nav {
         display: inline-block;
-        width: rem-2(740);
+        width: rem-2(850);
         margin: rem-2(-38) rem-2(-20);
         margin-top: rem-2(-14);
 
@@ -37,11 +37,14 @@
     }
 
     &__nav-item {
-        width: 50%;
+        width: 33%;
         padding: rem-2(38) rem-2(20);
     }
 
     &__right {
+        position: relative;
+        z-index: -1;
+
         margin-left: auto;
     }
 
@@ -94,7 +97,11 @@
         top: 0;
         z-index: 2;
 
-        width: $menu-width;
+        //width: $menu-width;
+
+        width: 100vw;
+        height: auto;
+        box-shadow: 0 rem(17) rem(25) rgba(0, 0, 0, 0.17);
 
         @include below($tablet) {
             width: 100% !important;
@@ -181,14 +188,26 @@
         }
     }
 
+    &_open {
+        visibility: visible;
+
+        & + .page > .page__lang_main {
+            display: none;
+        }
+
+        .header__left {
+            transform: translateX(0);
+        }
+    }
+
     &_overlay {
 
         &::after {
-            left: $menu-width;
+            //left: $menu-width;
 
             height: 100vh;
 
-            background: rgba(0, 0, 0, .5);
+            //background: rgba(0, 0, 0, .5);
 
             transition: background .4s .4s;
 
@@ -208,7 +227,9 @@
         display: block;
         width: auto;
 
-        font-size: 16/806 * 100 + vh;
+        @include above($tablet) {
+            font-size: 16/806 * 100 + vh;
+        }
 
         @include below($tablet) {
             width: 100%;
@@ -245,6 +266,53 @@
 
             @include below($tablet) {
                 display: none;
+            }
+        }
+
+        .nav-extend {
+            font-size: rem(12);
+
+            @include below($tablet) {
+                font-size: rem(16);
+            }
+        }
+
+        .menu__wrapper {
+            padding-left: rem(50);
+            padding-top: rem(62);
+            padding-bottom: rem(26);
+
+            @include below($tablet) {
+                padding: rem(60) rem(20) rem(40) rem(20);
+            }
+        }
+
+        .menu__row {
+            & + .menu__row {
+                margin-top: rem(55);
+            }
+
+            @include below($tablet) {
+                & + & {
+                    margin-top: rem(25);
+                }
+            }
+        }
+
+        .menu__btn {
+            font-size: rem(12);
+
+            @include below($tablet) {
+                font-size: rem(16);
+            }
+        }
+        .menu__phone {
+            font-size: rem(18);
+            line-height: rem(28);
+
+            @include below($tablet) {
+                font-size: rem(24);
+                line-height: 1.7;
             }
         }
     }

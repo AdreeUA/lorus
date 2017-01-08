@@ -1,0 +1,78 @@
+.les-page {
+
+    @import './block-1/block-1';
+    @import './block-2/block-2';
+    @import './block-3/block-3';
+    @import './block-4/block-4';
+
+    &__lines {
+        left: rem(55);
+    }
+
+    &__line {
+        font-size: rem(15.4);
+
+        &_1 {
+            width: em(789);
+            height: em(1025);
+            margin-left: auto;
+            margin-top: rem(-10);
+
+            font-size: rem(16.4);
+
+            overflow: hidden;
+
+            .line__icon {
+
+                &_active {
+                    position: absolute;
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+
+        &_2 {
+            position: absolute;
+
+            width: rem(172);
+            height: rem(98);
+            margin-top: rem(-233);
+            margin-left: rem(-82);
+        }
+
+        &_3 {
+            position: absolute;
+
+            width: rem(115);
+            height: rem(619);
+            right: rem(-75);
+            margin-top: rem(320);
+        }
+    }
+
+    &__row-logo {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: bottom;
+            width: rem(114);
+            height: rem(80);
+            margin-top: rem(-15);
+
+            background-image: url('%=static=%assets/title/les.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left top;
+        }
+
+        @include below($tablet) {
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

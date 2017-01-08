@@ -1,0 +1,8 @@
+include ../../../list-img/list-img
+include ../../../btn/btn
+include ../../../infinity-scroll/infinity-scroll
+
+mixin block-2(data)
+    +b.block-2.inner-page__block
+        +infinity-scroll(infinityScroll.clients).inner-page__clients
+            +list-img(listImg.clients)

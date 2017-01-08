@@ -69,4 +69,15 @@
         width: em(97);
         height: em(41);
     }
+
+    &_increase,
+    &_decrease {
+        width: rem(22);
+        height: rem(22);
+    }
+
+    &_roll {
+        width: rem(25);
+        height: rem(24);
+    }
 }

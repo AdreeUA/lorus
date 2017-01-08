@@ -1,0 +1,77 @@
+.not-page {
+    padding: rem(118) rem(80) rem(73) rem(72);
+
+    @include below($tablet) {
+        padding: rem(100) 0 0;
+    }
+
+    &__line {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+
+        width: rem(187);
+        height: rem(760);
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        margin: 0 0 rem(118) rem(60) !important;
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__text {
+        margin: 0 0 rem(95) rem(10);
+        padding-left: rem(56);
+        border-left: 2px solid #e5e4e3;
+
+        font-size: rem(43);
+        font-weight: 300;
+
+        @include below($tablet) {
+            padding: rem(50) rem(30) rem(45);
+            margin: 0 0 rem(50);
+
+            font-size: rem(34);
+
+            background-color: #FAFAF9;
+        }
+    }
+
+    &__text-bold {
+        font-weight: 500;
+    }
+
+    &__contact {
+        padding-top: rem(15);
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__contact-item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(50);
+
+        color: $color-1;
+    }
+
+    &__phone {
+        text-decoration: none;
+        color: inherit;
+        font-size: rem(24);
+    }
+
+    &__btn {
+        color: inherit;
+    }
+}

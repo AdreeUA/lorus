@@ -1,0 +1,21 @@
+mixin block-3(data)
+    +b.block-3()&attributes(attributes).inner-page__block_inside
+        +title({'tag': 'h3'})._inner._left-yellow Услуги в рамках консалтинга
+
+        +list(list.prototypeOl)._horiz-num._col.inner-page__ol_reset-margin-left
+
+        +b.photo-text_text-bg.inner-page__photo-text_-margin-top-small
+            +e.photo-wrap
+                +decor-title({
+                    tag: 'div', rows: [
+                        'Качестенный уровень',
+                        'услуг'
+                    ]
+                }).photo-text__photo-title
+
+                +photo({src: '%=static=%img/assets/photo-text/photo-1.jpg'})._theme_simple._theme_text.photo-text__photo_two-title-line.prototype-page__photo
+
+            +e.text-wrap
+                +par()._border-left.photo-text__text-content
+                    +e.content
+                        | Мы берём на себя в се этапы перевозки, вклая квалифицированную помощь с таможенным оформлением(средний срок оформления деклараций. Мы берём на себя в се этапы перевозки, вкл  ая квалифицированную помощь с таможенным оформлением (средний срок оформления деклараций.

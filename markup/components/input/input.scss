@@ -1,0 +1,90 @@
+.input {
+    position: relative;
+    display: block;
+
+    &__label {
+        display: block;
+        margin-bottom: rem(16);
+        font-size: rem(21);
+        font-weight: 300;
+    }
+
+    &__field {
+        width: 100%;
+        height: rem(45);
+        padding: rem(10);
+        padding-left: rem(20);
+        border: none;
+
+        font-size: rem(16);
+        line-height: normal;
+
+        border-radius: rem(5);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.17);
+
+        transition: .4s;
+
+        &::-ms-clear {
+            display: none;
+        }
+
+        + .error {
+            display: block;
+            margin-top: rem(5);
+
+            color: red;
+        }
+
+        &_textarea {
+            height: rem(110);
+            resize: none;
+        }
+
+        &_hidden {
+            width: 0;
+            padding: 0;
+        }
+    }
+
+    &__submit {
+        border: none;
+        background: transparent;
+
+        &_search {
+            position: absolute;
+            right: rem(5);
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__icon {
+        stroke: #b8b8b8;
+        width: rem(20);
+    }
+
+    &_icon {
+        .input__field {
+            padding-right: rem(43);
+
+            &_hidden {
+                padding: 0;
+            }
+
+            @include below($tablet) {
+                padding-left: rem(50);
+
+                &_hidden {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &_border {
+        .input__field {
+            box-shadow: none;
+            border: 1px solid #dddcda;
+        }
+    }
+}

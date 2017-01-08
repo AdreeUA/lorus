@@ -1,0 +1,15 @@
+include ../../../photo/photo
+include ../../../par/par
+include ../../../title/title
+
+mixin block-1(data)
+    +b.block-1.inner-page__block
+        +photo({ src: '%=static=%img/assets/photo/academy-1.jpg' }).inner-page__main-photo
+
+        +e.content.inner-page__descr
+            +title().inner-page__title.academy-page__title Академия
+                +e.bold= ' Lorus'
+
+            +par()._border-left
+                | Непрерывное улучшение качества и процессов невозможно без хорошо подготовленной команды. Академия ЛОРУС – корпоративный институт профессионального развития персонала – ищет потенциал и развивает сотрудников, исходя из стратегических задач компании.
+

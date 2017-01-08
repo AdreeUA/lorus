@@ -9,7 +9,8 @@
     transition: transform .5s;
 
     @include above($tablet) {
-        font-size: 16/806 * 100 + vh;
+        //font-size: 16/806 * 100 + vh;
+        transform: translateY(-100%);
     }
 
     &::after {
@@ -24,16 +25,26 @@
     }
 
     &__wrapper {
-        padding-left: em(70);
+        padding-left: rem(70);
+        padding-top: rem(82);
+        padding-bottom: rem(46);
+
+        @include below($tablet) {
+            padding: rem(70) rem(20) rem(40) rem(30);
+            height: 100vh;
+
+            overflow-y: auto;
+        }
     }
 
     &__nav-item {
-        padding: em(10) 0;
-        padding-left: em(15);
+        padding: em(7) 0;
+        //padding-left: em(15);
     }
 
     &__btn {
-        margin-top: em(80);
+        font-size: rem(16);
+        margin-left: rem(53);
 
         color: #5c5e1d;
 
@@ -45,23 +56,76 @@
             background: rgba(0, 0, 0, .6);
             box-shadow: 0 0 0 1px rgba(0, 0, 0, .6);
         }
+
+        @include below($tablet) {
+            margin-left: 0;
+        }
     }
 
-    &__service {
-        padding-top: em(80);
+    &__row {
+        @include clearfix();
+
+        & + & {
+            margin-top: rem(85);
+        }
+
+        @include below($tablet) {
+            & + & {
+                margin-top: rem(45);
+            }
+
+            &_center {
+                text-align: center;
+            }
+        }
+    }
+
+    &__col {
+        float: left;
+
+        @include below($tablet) {
+            float: none;
+
+        }
     }
 
     &__menu {
-        padding-top: em(50);
+        & + & {
+            margin-top: rem(70);
+        }
+
+        @include below($tablet) {
+            margin-bottom: rem(40);
+
+            & + & {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__service {
+        margin-left: rem(75);
+
+        @include below($tablet) {
+            margin-left: 0;
+            margin-bottom: rem(40);
+        }
     }
 
     &__phone {
         display: table;
-        margin-top: em(22, 25);
+        float: left;
 
         color: #5c5e1d;
         text-decoration: none;
-        font-size: em(25);
+        font-size: rem(24);
+        line-height: rem(45);
+
+        @include below($tablet) {
+            display: block;
+            float: none;
+            margin-top: rem(20);
+        }
     }
 
     &__search {
@@ -70,7 +134,15 @@
         right: em(20);
 
         @include below($tablet) {
-            display: none;
+            //display: none;
+            left: em(5);
+            right: auto;
+            top: em(12);
+
+            .input__submit_search {
+                left: 0;
+                right: auto;
+            }
         }
     }
 }

@@ -1,0 +1,59 @@
+.prototype-page {
+
+    @include above($tablet) {
+        padding-left: rem(30);
+    }
+
+    &__line {
+        position: absolute;
+
+        &_1 {
+            right: rem(-33);
+            //top: rem(-340);
+            top: -29.25rem;
+
+            width: rem(160);
+            height: rem(731);
+        }
+
+        &_2 {
+            right: rem(-45);
+            bottom: rem(1150);
+
+            width: rem(44);
+            height: rem(268);
+        }
+
+        @include below($tablet) {
+            display: none;
+        }
+    }
+
+    &__photo {
+        height: rem(258);
+
+        &_big {
+            height: rem(350);
+        }
+
+        @include below($tablet) {
+            height: rem(300);
+
+            &_big {
+                height: rem(300);
+            }
+        }
+
+        @include below($mobile) {
+            height: rem(190);
+
+            &_big {
+                height: rem(190);
+            }
+        }
+    }
+
+    &__block {
+        margin-bottom: rem(75);
+    }
+}

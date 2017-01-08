@@ -1,0 +1,23 @@
+.block-2 {
+    min-height: rem(540);
+    margin-left: rem(100);
+
+    @include below($tablet) {
+        position: relative;
+
+        min-height: 0;
+        margin-left: 0;
+        padding-top: rem(35);
+
+        background: url('%=static=%general/mobile-inner-bg.svg') no-repeat 100% rem(-190) / rem(210) rem(606);
+    }
+
+    &__targets {
+        margin-top: rem(25);
+        padding-left: rem(12);
+
+        @include below($tablet) {
+            margin-bottom: rem(20);
+        }
+    }
+}

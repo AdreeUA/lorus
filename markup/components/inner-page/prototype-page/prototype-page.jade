@@ -1,0 +1,26 @@
+include ../inner-page
+include ../../line/line
+include ./block-1/block-1
+include ./block-2/block-2
+include ./block-3/block-3
+include ./block-4/block-4
+include ./block-5/block-5
+include ../../photo/photo
+include ../../par/par
+include ../../title/title
+include ../../decor-title/decor-title
+include ../../list/list
+
+mixin prototype-page(data)
+    +inner-page
+        +b.ARTICLE.prototype-page()&attributes(attributes)
+            .inner-page__content
+                +block-1
+                +block-2
+                +block-3
+                +block-4
+
+            +e.lines.inner-page__lines-wrapper.inner-page__lines-wrapper_front
+                .inner-page__lines
+                    +line(line.prototype2).prototype-page__line_2
+

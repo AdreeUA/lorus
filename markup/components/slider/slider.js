@@ -7,7 +7,14 @@ export class Slider extends Component {
         super(block, 'slider', function() {
             this.initialized = false;
             this.inMove = false;
-            this.init();
+            this.destroyBreakpoint = this.block.getAttribute('data-destroy') || null;
+
+            if (this.destroyBreakpoint) {
+                this.reinitOnBreakpoint();
+                window.addEventListener('resize', this.reinitOnBreakpoint.bind(this));
+            } else {
+                this.init();
+            }
 
             $(this.block).on('beforeChange', this._onBeforeChange.bind(this));
             $(this.block).on('afterChange', this._onAfterChange.bind(this));

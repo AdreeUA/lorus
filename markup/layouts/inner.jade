@@ -4,6 +4,8 @@ include ../components/page/page
 include ../components/header/header
 include ../components/link/link
 include ../components/footer/footer
+include ../components/write/write
+include ../components/preloader/preloader
 
 -var pageSettings = {};
 -pageSettings.title = '';
@@ -17,14 +19,17 @@ html(lang='ru' class=pageSettings.pageClass)
     include ../components/head/head
 
     body
+        +preloader
         +header(header.inner)
 
         +page
             +link.page__lang
-                | In English
+                | in English
 
             block content
 
-            +footer({ inner: true })
+            +footer({ inner: true })(class=pageSettings.footerClass)
+
+        +write()
 
         script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,10 @@
+mixin mark(data)
+    +b.mark()&attributes(attributes)
+        +e.inner
+            +e.title= data.title
+            +e.content
+                +e.item= data.address
+                +e.item
+                    +e.A.email.link_theme_fill(href='mailto:#{data.email}')= data.email
+                +e.item
+                    +e.A.phone(href='tel:#{data.tel}')= data.phone

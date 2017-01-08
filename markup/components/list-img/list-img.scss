@@ -1,0 +1,44 @@
+$clientShift: 60;
+$betweenText: 20;
+
+.list-img {
+    margin-left: rem(-$clientShift);
+
+    font-size: 0;
+
+    @include below($tablet) {
+        margin-left: 0;
+
+        text-align: center;
+    }
+
+    &__wrap {
+        width: rem(1020);
+
+        margin: auto;
+
+        @include below($tablet) {
+            width: auto;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        width: percentage(1/3);
+
+        margin-bottom: rem(57);
+        padding-left: rem($clientShift);
+
+        text-decoration: none;
+        color: inherit;
+
+        vertical-align: top;
+
+        @include below($tablet) {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: rem(74);
+        }
+    }
+}

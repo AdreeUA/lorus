@@ -16,10 +16,7 @@ mixin block-1(data)
 
 
         +e.right.service__right
-            +e.photo.service__photo-wrapper_m.js-tween
-                img.service__photo(
-                    src='%=static=%img/assets/service/through-service/through-service-1.jpg'
-                    alt='')
+            +photo({ src: '%=static=%img/assets/service/through-service/through-service-1.jpg' })._theme_simple.block-1__photo.service__photo
 
             +content
                 p.block-1__decor

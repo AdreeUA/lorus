@@ -1,0 +1,10 @@
+.block-2 {
+    min-height: rem(425);
+
+    @include below($tablet) {
+        min-height: 0;
+        margin-left: 0;
+        padding-top: rem(15);
+        padding-bottom: rem(20);
+    }
+}

@@ -1,1 +1,3 @@
-var data = {inner-page: {}}
+var data = {innerPage: {
+
+}};

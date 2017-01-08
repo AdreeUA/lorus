@@ -1,0 +1,107 @@
+.academy-page {
+    @import './block-1/block-1';
+    @import './block-2/block-2';
+    @import './block-3/block-3';
+    @import './block-4/block-4';
+
+    &__line {
+        font-size: rem(15.4);
+
+        &_1 {
+            width: rem(476);
+            height: rem(987);
+            margin-left: auto;
+
+            overflow: hidden;
+        }
+
+        &_2 {
+            position: absolute;
+            right: rem(485);
+
+            width: rem(536);
+            height: rem(10);
+            margin-top: rem(-13);
+
+            transform: scaleX(-1);
+        }
+
+        &_3 {
+            width: rem(195);
+            height: rem(123);
+            margin-left: rem(-94);
+            margin-top: rem(-14);
+        }
+
+        &_4 {
+            position: absolute;
+            right: rem(-78);
+
+            width: rem(115);
+            height: rem(623);
+            margin-top: rem(258);
+        }
+    }
+
+    &__m-line {
+        margin: 0 rem(-30);
+
+        &_1 {
+
+            path {
+                stroke-width: 8px;
+            }
+        }
+    }
+
+    &__title {
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: rem(98);
+            height: rem(102);
+            margin-top: rem(-15);
+
+            vertical-align: middle;
+
+            background-image: url('%=static=%assets/title/academy.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left top;
+        }
+
+        @include below($tablet) {
+
+            &::after {
+                display: none;
+            }
+
+            .title__bold {
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__building {
+        position: absolute;
+        right: rem(281);
+        z-index: -1;
+
+        width: rem(116);
+        height: rem(94);
+        margin-top: rem(-104);
+
+        &_mobile {
+            bottom: rem(16);
+            right: auto;
+            left: rem(45);
+
+            margin-top: 0;
+
+            @include below($mobile) {
+                bottom: rem(10);
+            }
+        }
+    }
+}

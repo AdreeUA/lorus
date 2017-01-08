@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="374.273px" height="235.21px" viewBox="0 0 374.273 235.21" enable-background="new 0 0 374.273 235.21"
+	 xml:space="preserve">
+<g opacity="0.3">
+	<g>
+		<defs>
+			<rect id="SVGID_1_" width="374.273" height="235.21"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_2_)">
+			<defs>
+				<polyline id="SVGID_3_" points="284.682,0 0,0 19.281,235.212 374.273,208.556 				"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="374.273" height="235.212">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="0" y="0" width="374.273" height="235.212" id="SVGID_5_">
+				<g filter="url(#Adobe_OpacityMaskFilter)">
+					
+						<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-499.0713" y1="2274.708" x2="-498.0713" y2="2274.708" gradientTransform="matrix(-374.2731 0 0 -374.2731 -186414.6719 851479.75)">
+						<stop  offset="0" style="stop-color:#000000"/>
+						<stop  offset="1" style="stop-color:#FFFFFF"/>
+					</linearGradient>
+					<rect clip-path="url(#SVGID_4_)" fill="url(#SVGID_6_)" width="374.273" height="235.212"/>
+				</g>
+			</mask>
+			
+				<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="-499.0713" y1="2274.708" x2="-498.0713" y2="2274.708" gradientTransform="matrix(-374.2731 0 0 -374.2731 -186414.6875 851479.5)">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</linearGradient>
+			<rect clip-path="url(#SVGID_4_)" mask="url(#SVGID_5_)" fill="url(#SVGID_7_)" width="374.273" height="235.212"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,36 @@
+.mfp-container {
+    @include below($tablet) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.mfp-wrap {
+    @include below($tablet) {
+        overflow-y: auto;
+    }
+}
+
+img.mfp-img {
+    padding: 0;
+    margin: 40px auto;
+    border-radius: 4px;
+}
+
+.likely {
+    .likely__widget {
+        background: none;
+    }
+}
+
+.slick-slide img {
+    display: inline-block;
+}
+
+.mfp-zoom-out-cur {
+    cursor: default;
+}
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: pointer;
+}

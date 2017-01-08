@@ -1,0 +1,24 @@
+mixin pagination(data)
+    +b.pagination()&attributes(attributes)
+
+        if data.label
+            +e.label= data.label
+
+        +e.list
+
+            if data.prev
+                +e.item.link(href=jv0)= data.prev
+
+            if data.list
+                each i in data.list
+
+                    if !i.notLink
+                        +e.item_not-under.link(href=jv0 class=i.active || '')= i.val
+
+                    else
+                        +e.SPAN.item= i.val
+
+            if data.next
+                +e.item.link(href=jv0)= data.next
+
+        block

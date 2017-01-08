@@ -1,0 +1,28 @@
+mixin input(data)
+
+    -data = data || {}
+
+    +b.LABEL.input()&attributes(attributes)
+
+        if data.label
+            +e.label= data.label
+
+        -var tag
+        if (data.type == 'textarea')
+            -tag = 'textarea'
+
+        +e(tag || 'input').field(
+            class={
+                '_textarea': data.type === 'textarea',
+                '_input': data.type !== 'textarea',
+                '_hidden': data.fieldHidden,
+                'js-validate': data.validate
+            }
+            name=data.name
+            data-validate!=(JSON.stringify(data.validate))
+            type=(data.type!='textarea' ? data.type : false)
+            required=data.required
+            data-msg=data.message)
+
+
+        block

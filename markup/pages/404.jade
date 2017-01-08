@@ -1,0 +1,10 @@
+extends ../layouts/inner
+include ../components/inner-page/not-page/not-page
+
+block vars
+    -pageSettings.title = 'Страница не найдена';
+    -pageSettings.pageClass = 'page-inner page-not';
+    -pageSettings.footerClass = '_no-line';
+
+block content
+    +not-page

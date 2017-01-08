@@ -1,0 +1,8 @@
+include ../figure/figure
+
+mixin list-img(data)
+    +b.list-img()&attributes(attributes)
+        +e.wrap
+            each item in data.items
+                +e.A.item(href=jv0 target='_blank')
+                    +figure(item)

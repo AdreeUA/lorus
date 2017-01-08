@@ -1,0 +1,14 @@
+extends ../layouts/inner
+
+include ../components/inner-page/contacts-page/contacts-page
+
+block vars
+    -pageSettings.title = 'Контакты';
+    -pageSettings.pageClass = 'page-inner page-contacts';
+    -pageSettings.footerClass = '_no-line';
+
+block scripts
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+
+block content
+    +contacts-page

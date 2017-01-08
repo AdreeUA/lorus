@@ -1,0 +1,11 @@
+extends ../layouts/inner
+
+include ../components/inner-page/les-page/les-page
+
+block vars
+    -pageSettings.title = 'LES';
+    -pageSettings.pageClass = 'page-les page-inner';
+    -pageSettings.footerClass = '_no-line';
+
+block content
+    +les-page

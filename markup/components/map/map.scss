@@ -1,0 +1,21 @@
+.map {
+    position: relative;
+
+    height: rem(585);
+    border-left: rem(10) solid $color-2;
+
+    border-radius: rem(10);
+    overflow: hidden;
+
+    box-shadow: 0 rem(200) rem(100) rem(-150) rgba(#000, .3);
+
+    @include below($tablet) {
+        height: rem(510);
+        border: none;
+
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@import 'mark/mark';

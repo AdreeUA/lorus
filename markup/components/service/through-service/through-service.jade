@@ -1,4 +1,3 @@
-include ../service
 include ../../line/line
 include ./block-1/block-1
 include ./block-2/block-2
@@ -6,15 +5,14 @@ include ./block-3/block-3
 include ./block-4/block-4
 
 mixin through-service(data)
-    +service
-        +b.through-service()&attributes(attributes)
-            +e.wrapper
-                +e.lines
-                    +line(line.throughService1).through-service__line_1
-                    +line(line.throughService2)._dashed.through-service__line_2
-                    +line(line.throughService3).through-service__line_3
-                +e.content
-                    +block-1
-                    +block-2
-                    +block-3
-                    +block-4
+    +b.through-service()&attributes(attributes)
+        +e.wrapper
+            +e.lines
+                +line(line.throughService1).through-service__line_1
+                +line(line.throughService2)._dashed.through-service__line_2
+                +line(line.throughService3).through-service__line_3
+            +e.content
+                +block-1
+                +block-2
+                +block-3
+                +block-4

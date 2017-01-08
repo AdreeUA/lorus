@@ -1,0 +1,8 @@
+mixin figure(data)
+    +b.ARTICLE.figure()&attributes(attributes)
+        +e.img-wrap
+            +e.img(src=data.src)
+
+        +e.text
+            +e.H2.title= data.title
+            +e.descr= data.descr

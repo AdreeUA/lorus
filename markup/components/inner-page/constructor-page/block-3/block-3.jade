@@ -1,0 +1,31 @@
+include ../../../title/title
+include ../../../decor-title/decor-title
+include ../../../list/list
+include ../../../list-extend/list-extend
+
+mixin block-3(data)
+    +b.SECTION.block-3.inner-page__block_inside
+
+        +title({'tag': 'h3'})._inner.block-3__title.inner-page__subtitle_list-extend Ссылки, доп. материалы
+
+        +list-extend(listExtend.constructor).inner-page__extend
+
+        +title({'tag': 'h3'})._inner._top-yellow.block-3__title.inner-page__subtitle_roll Список Тип 2
+
+        +list(list.constructorRoll)._roll.inner-page__roll
+
+        +b.photo-text_special.inner-page__photo-text
+            +e.photo-wrap
+                +decor-title({ tag: 'div', rows: [
+                    'Фотография с заголовком'
+                ]}).photo-text__photo-title
+
+                +photo({ src: '%=static=%img/assets/photo-text/photo-1.jpg' })._theme_simple._theme_text.photo-text__photo.constructor-page__photo
+
+            +e.text-wrap
+                +title({'tag': 'h4'})._inner.photo-text__text-title Текстовый блок
+
+                +par()._border-left.photo-text__text-content
+                    +e.content
+                        | Мы берём на себя все этапы перевозки, включая квалифицированную помощь с таможенным оформлением (средний срок оформления деклараций).
+ 

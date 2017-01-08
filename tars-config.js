@@ -15,11 +15,11 @@ module.exports = {
     "js": {
         "workflow": "modular",
         "bundler": "webpack",
-        "lint": true,
+        "lint": false,
         "useBabel": true,
         "removeConsoleLog": true,
         "webpack": {
-            "useHMR": false
+            "useHMR": true
         },
         "jsPathsToConcatBeforeModulesJs": [],
         "lintJsCodeBeforeModules": false,
@@ -46,7 +46,7 @@ module.exports = {
     "generateStaticPath": true,
     "buildPath": "./builds/",
     "useBuildVersioning": false,
-    "useArchiver": true,
+    "useArchiver": false,
     "ulimit": 4096,
     "templater": "jade",
     "cssPreprocessor": "scss",

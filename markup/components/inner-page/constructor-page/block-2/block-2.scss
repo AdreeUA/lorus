@@ -1,0 +1,7 @@
+.block-2 {
+    margin-top: rem(75);
+
+    @include below($tablet) {
+        margin-top: 0;
+    }
+}

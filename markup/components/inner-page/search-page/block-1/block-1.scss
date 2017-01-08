@@ -1,0 +1,41 @@
+.block-1 {
+
+    @include below($tablet) {
+        padding-bottom: rem(25);
+    }
+
+    &__title {
+        @include below($tablet) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__content {
+        width: rem(750);
+
+        @include below($tablet) {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        margin-top: rem(55);
+        margin-left: rem(-65);
+
+        @include below($tablet) {
+            margin-left: 0;
+            margin-top: rem(20);
+        }
+    }
+
+    &__results {
+        margin-top: rem(33);
+
+        font-size: rem(15);
+        font-weight: 400;
+    }
+
+    &__results-item {
+        font-style: italic;
+    }
+}

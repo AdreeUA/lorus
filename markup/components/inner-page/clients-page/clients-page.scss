@@ -1,0 +1,35 @@
+.clients-page {
+    @import './block-1/block-1';
+    @import './block-2/block-2';
+
+    &__lines {
+        left: rem(70);
+    }
+
+    &__line {
+
+        &_1 {
+            height: em(589);
+            width: em(1203);
+            margin-left: rem(-120);
+
+            font-size: rem(16.4);
+        }
+
+        &_2 {
+            position: absolute;
+            right: rem(-40);
+
+            width: rem(44);
+
+            margin-top: rem(220);
+        }
+
+        &_3 {
+            width: rem(93);
+            height: rem(618);
+            margin-left: rem(-100);
+            margin-top: rem(560);
+        }
+    }
+}

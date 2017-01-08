@@ -1,0 +1,11 @@
+include ../../../title/title
+include ../../../list/list
+
+mixin block-2(data)
+    +b.SECTION.block-2.inner-page__block
+
+        +title({'tag': 'h3'})._inner._top-yellow.inner-page__subtitle Мы предлагаем соискателям
+
+        .inner-page__list-wrap
+            +list(list.careerOffers)._check
+                    
