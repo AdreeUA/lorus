@@ -1,0 +1,10 @@
+extends ../layouts/inner
+
+include ../components/inner-page/list-pages/list-pages
+
+block vars
+    -pageSettings.title = 'Типовая страница';
+    -pageSettings.pageClass = 'page-inner';
+
+block content
+    +list-pages

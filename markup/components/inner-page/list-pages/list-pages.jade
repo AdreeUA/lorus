@@ -1,0 +1,14 @@
+include ../inner-page
+
+mixin list-pages(data)
+    +b.list-pages()&attributes(attributes)
+        +inner-page({ noForm: true })
+            +e.content
+                +b.UL.list
+
+                    each page in __pages
+
+                        if page.name != 'pages'
+
+                            +e.LI.item
+                                +e.title.link(href=page.href)=page.name
